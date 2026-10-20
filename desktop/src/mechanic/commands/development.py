@@ -15,6 +15,7 @@ from afd import CommandResult, error, success
 from afd.core.metadata import WarningSeverity, create_source, create_warning
 from pydantic import BaseModel, Field
 
+from .. import toc_flavors
 from ..config import find_addon_path
 from ..resources import resource_path
 from ._common import addon_not_found, is_under_libs
@@ -30,6 +31,17 @@ class AddonInput(BaseModel):
     path: Optional[str] = Field(None, description="Override path to addon folder")
 
 
+class TocReport(BaseModel):
+    file: str
+    suffix: Optional[str] = Field(
+        None, description="Client-flavor suffix such as Forever or Mainline"
+    )
+    games: List[str] = Field(
+        [], description="Game types whose client would load this TOC"
+    )
+    interface_versions: List[str] = []
+
+
 class ValidationResult(BaseModel):
     addon: str
     valid: bool
@@ -39,6 +51,12 @@ class ValidationResult(BaseModel):
     errors: List[str] = []
     warnings: List[str] = []
     info: List[str] = []
+    tocs: List[TocReport] = Field(
+        [], description="Every TOC in the addon folder with the clients it targets"
+    )
+    forever_toc: Optional[str] = Field(
+        None, description="The TOC a WoW: Forever client loads, if any"
+    )
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -150,19 +168,121 @@ def check_interface_versions(versions: List[str]) -> Tuple[List[str], List[str]]
     return errors, warnings
 
 
+def _missing_toc_files(addon_path: Path, files: List[Dict[str, Any]]) -> List[str]:
+    """TOC file entries with no matching file; ``[Game]``-style variables match
+    when any of their expansions exists."""
+    missing = []
+    for file_info in files:
+        candidates = toc_flavors.expand_toc_path(file_info["path"])
+        if not any(
+            (addon_path / candidate.replace("\\", "/")).exists()
+            for candidate in candidates
+        ):
+            missing.append(file_info["path"])
+    return missing
+
+
+def _main_toc(toc_files: List[Path], addon_name: str) -> Path:
+    """The TOC whose metadata represents the addon: the unsuffixed one, else the
+    Mainline-family one, else the first by name."""
+    exact = next((toc for toc in toc_files if toc.stem == addon_name), None)
+    return (
+        exact
+        or toc_flavors.toc_for_game(toc_files, addon_name, "standard")
+        or sorted(toc_files, key=lambda p: p.name.lower())[0]
+    )
+
+
+def _check_forever(
+    result: ValidationResult,
+    toc_files: List[Path],
+    addon_name: str,
+    interfaces: Dict[Path, List[str]],
+) -> None:
+    """Report which TOC a WoW: Forever client loads and whether it is current."""
+    forever_toc = toc_flavors.toc_for_game(toc_files, addon_name, "forever")
+    if forever_toc is None:
+        result.info.append(
+            f"No TOC is loaded by {toc_flavors.FOREVER_LABEL} (no _Forever, _Camelot, "
+            "_Mainline or unsuffixed TOC)"
+        )
+        return
+    result.forever_toc = forever_toc.name
+    flavor = toc_flavors.classify_toc(forever_toc, addon_name)
+    result.info.append(f"{toc_flavors.FOREVER_LABEL} loads {forever_toc.name}")
+
+    if not toc_flavors.FOREVER_INTERFACES & set(interfaces.get(forever_toc, [])):
+        expected = ", ".join(sorted(toc_flavors.FOREVER_INTERFACES))
+        result.warnings.append(
+            f"{toc_flavors.FOREVER_LABEL} loads {forever_toc.name}, but its Interface "
+            f"line lacks {expected}, so the addon shows as out of date there"
+        )
+
+    if flavor.suffix and flavor.suffix.lower() == "forever":
+        has_camelot = any(
+            (toc_flavors.classify_toc(p, addon_name).suffix or "").lower() == "camelot"
+            for p in toc_files
+        )
+        if not has_camelot:
+            result.info.append(
+                "The _Forever suffix is recognised from 1.60.1 beta 4; earlier Forever "
+                "builds only load _Camelot"
+            )
+
+
 def validate_toc(addon_path: Path, addon_name: str) -> ValidationResult:
-    """Validate a single addon's .toc file."""
+    """Validate an addon's .toc files.
+
+    The main TOC (unsuffixed, else Mainline-family) gets the full metadata
+    checks; every other TOC is checked for Interface syntax, missing files and
+    line-level problems, and the TOC a WoW: Forever client loads is reported.
+    """
     result = ValidationResult(addon=addon_name, valid=True)
 
     # Find .toc file
-    toc_files = list(addon_path.glob("*.toc"))
+    toc_files = sorted(addon_path.glob("*.toc"), key=lambda p: p.name.lower())
     if not toc_files:
         result.errors.append("No .toc file found")
         result.valid = False
         return result
 
-    # Prefer .toc matching addon name
-    main_toc = next((toc for toc in toc_files if toc.stem == addon_name), toc_files[0])
+    main_toc = _main_toc(toc_files, addon_name)
+    interfaces: Dict[Path, List[str]] = {}
+
+    for toc in toc_files:
+        raw_lines = toc.read_text(encoding="utf-8", errors="replace").splitlines()
+        parsed_toc = parse_toc_file(toc)
+        interfaces[toc] = parsed_toc["interface_versions"]
+        flavor = toc_flavors.classify_toc(toc, addon_name)
+        result.tocs.append(
+            TocReport(
+                file=toc.name,
+                suffix=flavor.suffix,
+                games=list(flavor.games),
+                interface_versions=parsed_toc["interface_versions"],
+            )
+        )
+        prefix = f"{toc.name}: " if len(toc_files) > 1 else ""
+        result.warnings.extend(
+            prefix + warning for warning in toc_flavors.lint_toc_lines(raw_lines)
+        )
+        if toc == main_toc:
+            continue
+
+        # Secondary flavor TOCs target other clients, so only syntax is checked here.
+        syntax_errors = [
+            e
+            for e in check_interface_versions(parsed_toc["interface_versions"])[0]
+            if not e.startswith("Interface version outdated")
+        ]
+        missing = _missing_toc_files(addon_path, parsed_toc["files"])
+        if missing:
+            syntax_errors.append(f"Missing files: {', '.join(missing)}")
+        if syntax_errors:
+            result.errors.extend(prefix + e for e in syntax_errors)
+            result.valid = False
+
+    _check_forever(result, toc_files, addon_name, interfaces)
 
     parsed = parse_toc_file(main_toc)
     metadata = parsed["metadata"]
@@ -204,12 +324,8 @@ def validate_toc(addon_path: Path, addon_name: str) -> ValidationResult:
                 f"SavedVariables '{sv_name}' doesn't match addon name '{addon_name}'"
             )
 
-    # Check 4: File existence (TOC paths use backslashes)
-    missing_files = [
-        file_info["path"]
-        for file_info in files
-        if not (addon_path / file_info["path"].replace("\\", "/")).exists()
-    ]
+    # Check 4: File existence (TOC paths use backslashes; variables may expand)
+    missing_files = _missing_toc_files(addon_path, files)
 
     if missing_files:
         result.errors.append(f"Missing files: {', '.join(missing_files)}")

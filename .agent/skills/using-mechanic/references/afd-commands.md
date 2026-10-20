@@ -222,7 +222,7 @@ Validate a WoW addon's .toc file for common issues
 | `addon` | string | yes |  | Name of the addon to operate on |
 | `path` | string | no | null | Override path to addon folder |
 
-Output fields: `addon`, `valid`, `interface_version`, `version`, `file_count`, `errors`, `warnings`, `info`
+Output fields: `addon`, `valid`, `interface_version`, `version`, `file_count`, `errors`, `warnings`, `info`, `tocs`, `forever_toc`
 
 ### api
 

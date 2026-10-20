@@ -41,6 +41,7 @@ from ..analysis_common import (
 )
 from ..config import find_addon_path
 from ..lua_analyzer import Confidence, LuaAnalyzer, WOW_SAFE_PATTERNS
+from ..toc_flavors import expand_toc_path
 from .development import parse_toc_file
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -147,10 +148,12 @@ def get_loaded_files(addon_path: Path, addon_name: str) -> Set[Path]:
     for toc in toc_files:
         parsed = parse_toc_file(toc)
         for file_info in parsed.get("files", []):
-            file_path = addon_path / _normalize(file_info["path"])
-            loaded.add(file_path.resolve())
-            if file_path.suffix.lower() == ".xml" and file_path.exists():
-                loaded.update(parse_xml_includes(file_path, addon_path))
+            # "Core_[Game].lua" may load Core_Forever.lua, Core_Mists.lua, ...
+            for candidate in expand_toc_path(file_info["path"]):
+                file_path = addon_path / _normalize(candidate)
+                loaded.add(file_path.resolve())
+                if file_path.suffix.lower() == ".xml" and file_path.exists():
+                    loaded.update(parse_xml_includes(file_path, addon_path))
 
     return loaded
 
