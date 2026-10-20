@@ -11,6 +11,7 @@ APIDefs["C_UserFeedback.SubmitBug"] = {
     params = { { name = "bugInfo", type = "cstring", default = nil }, { name = "suppressNotification", type = "bool", default = false } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,5 +24,6 @@ APIDefs["C_UserFeedback.SubmitSuggestion"] = {
     params = { { name = "suggestion", type = "cstring", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_ContentTracking.GetBestMapForTrackable"] = {
     params = { { name = "trackableType", type = "ContentTrackingType", default = nil }, { name = "trackableID", type = "number", default = nil }, { name = "ignoreWaypoint", type = "bool", default = false } },
     returns = { { name = "result", type = "ContentTrackingResult", canBeSecret = false }, { name = "mapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ContentTracking.GetCollectableSourceTrackingEnabled"] = {
     params = {  },
     returns = { { name = "isEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ContentTracking.GetCollectableSourceTypes"] = {
@@ -34,6 +36,7 @@ APIDefs["C_ContentTracking.GetCollectableSourceTypes"] = {
     params = {  },
     returns = { { name = "collectableSourceTypes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ContentTracking.GetCurrentTrackingTarget"] = {
@@ -45,6 +48,7 @@ APIDefs["C_ContentTracking.GetCurrentTrackingTarget"] = {
     params = { { name = "type", type = "ContentTrackingType", default = nil }, { name = "id", type = "number", default = nil } },
     returns = { { name = "targetType", type = "ContentTrackingTargetType", canBeSecret = false }, { name = "targetID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_ContentTracking.GetEncounterTrackingInfo"] = {
     params = { { name = "journalEncounterID", type = "number", default = nil } },
     returns = { { name = "trackingInfo", type = "EncounterTrackingInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_ContentTracking.GetNextWaypointForTrackable"] = {
     params = { { name = "trackableType", type = "ContentTrackingType", default = nil }, { name = "trackableID", type = "number", default = nil }, { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "result", type = "ContentTrackingResult", canBeSecret = false }, { name = "mapInfo", type = "ContentTrackingMapInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_ContentTracking.GetObjectiveText"] = {
     params = { { name = "targetType", type = "ContentTrackingTargetType", default = nil }, { name = "targetID", type = "number", default = nil }, { name = "includeHyperlinks", type = "bool", default = true } },
     returns = { { name = "objectiveText", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -93,6 +100,7 @@ APIDefs["C_ContentTracking.GetTitle"] = {
     params = { { name = "trackableType", type = "ContentTrackingType", default = nil }, { name = "trackableID", type = "number", default = nil } },
     returns = { { name = "title", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -105,6 +113,7 @@ APIDefs["C_ContentTracking.GetTrackablesOnMap"] = {
     params = { { name = "trackableType", type = "ContentTrackingType", default = nil }, { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "result", type = "ContentTrackingResult", canBeSecret = false }, { name = "trackableMapInfos", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -117,6 +126,7 @@ APIDefs["C_ContentTracking.GetTrackedIDs"] = {
     params = { { name = "trackableType", type = "ContentTrackingType", default = nil } },
     returns = { { name = "entryIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -129,6 +139,7 @@ APIDefs["C_ContentTracking.GetVendorTrackingInfo"] = {
     params = { { name = "collectableEntryID", type = "number", default = nil } },
     returns = { { name = "vendorTrackingInfo", type = "VendorTrackingInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -141,6 +152,7 @@ APIDefs["C_ContentTracking.GetWaypointText"] = {
     params = { { name = "trackableType", type = "ContentTrackingType", default = nil }, { name = "trackableID", type = "number", default = nil } },
     returns = { { name = "waypointText", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -153,6 +165,7 @@ APIDefs["C_ContentTracking.IsNavigable"] = {
     params = { { name = "trackableType", type = "ContentTrackingType", default = nil }, { name = "trackableID", type = "number", default = nil } },
     returns = { { name = "result", type = "ContentTrackingResult", canBeSecret = false }, { name = "isNavigable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -165,6 +178,7 @@ APIDefs["C_ContentTracking.IsTrackable"] = {
     params = { { name = "type", type = "ContentTrackingType", default = nil }, { name = "id", type = "number", default = nil } },
     returns = { { name = "isTrackable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -177,6 +191,7 @@ APIDefs["C_ContentTracking.IsTracking"] = {
     params = { { name = "type", type = "ContentTrackingType", default = nil }, { name = "id", type = "number", default = nil } },
     returns = { { name = "isTracking", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -189,6 +204,7 @@ APIDefs["C_ContentTracking.StartTracking"] = {
     params = { { name = "type", type = "ContentTrackingType", default = nil }, { name = "id", type = "number", default = nil } },
     returns = { { name = "error", type = "ContentTrackingError", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -201,6 +217,7 @@ APIDefs["C_ContentTracking.StopTracking"] = {
     params = { { name = "type", type = "ContentTrackingType", default = nil }, { name = "id", type = "number", default = nil }, { name = "stopType", type = "ContentTrackingStopType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -213,5 +230,6 @@ APIDefs["C_ContentTracking.ToggleTracking"] = {
     params = { { name = "type", type = "ContentTrackingType", default = nil }, { name = "id", type = "number", default = nil }, { name = "stopType", type = "ContentTrackingStopType", default = nil } },
     returns = { { name = "error", type = "ContentTrackingError", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

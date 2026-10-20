@@ -2,6 +2,18 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_StableInfo.BuyStableSlot"] = {
+    key = "C_StableInfo.BuyStableSlot",
+    name = "BuyStableSlot",
+    category = "general",
+    subcategory = "c_stableinfo",
+    funcPath = "C_StableInfo.BuyStableSlot",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
 APIDefs["C_StableInfo.ClosePetStables"] = {
     key = "C_StableInfo.ClosePetStables",
     name = "ClosePetStables",
@@ -11,6 +23,7 @@ APIDefs["C_StableInfo.ClosePetStables"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_StableInfo.GetActivePetList"] = {
@@ -22,6 +35,7 @@ APIDefs["C_StableInfo.GetActivePetList"] = {
     params = {  },
     returns = { { name = "activePets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_StableInfo.GetAvailablePetSpecInfos"] = {
@@ -33,6 +47,19 @@ APIDefs["C_StableInfo.GetAvailablePetSpecInfos"] = {
     params = {  },
     returns = { { name = "petSpecInfos", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_StableInfo.GetNextStableSlotCost"] = {
+    key = "C_StableInfo.GetNextStableSlotCost",
+    name = "GetNextStableSlotCost",
+    category = "general",
+    subcategory = "c_stableinfo",
+    funcPath = "C_StableInfo.GetNextStableSlotCost",
+    params = {  },
+    returns = { { name = "cost", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_StableInfo.GetNumActivePets"] = {
@@ -44,6 +71,7 @@ APIDefs["C_StableInfo.GetNumActivePets"] = {
     params = {  },
     returns = { { name = "numActivePets", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_StableInfo.GetNumStablePets"] = {
@@ -55,6 +83,19 @@ APIDefs["C_StableInfo.GetNumStablePets"] = {
     params = {  },
     returns = { { name = "numStablePets", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_StableInfo.GetNumStableSlots"] = {
+    key = "C_StableInfo.GetNumStableSlots",
+    name = "GetNumStableSlots",
+    category = "general",
+    subcategory = "c_stableinfo",
+    funcPath = "C_StableInfo.GetNumStableSlots",
+    params = {  },
+    returns = { { name = "numSlots", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_StableInfo.GetStablePetFoodTypes"] = {
@@ -66,6 +107,7 @@ APIDefs["C_StableInfo.GetStablePetFoodTypes"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "foodTypes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -78,6 +120,7 @@ APIDefs["C_StableInfo.GetStablePetInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "petInfo", type = "PetInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -90,6 +133,7 @@ APIDefs["C_StableInfo.GetStabledPetList"] = {
     params = {  },
     returns = { { name = "stabledPets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_StableInfo.IsAtStableMaster"] = {
@@ -101,6 +145,7 @@ APIDefs["C_StableInfo.IsAtStableMaster"] = {
     params = {  },
     returns = { { name = "isAtStableMaster", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_StableInfo.IsBonusPetSlotAvailable"] = {
@@ -112,6 +157,7 @@ APIDefs["C_StableInfo.IsBonusPetSlotAvailable"] = {
     params = {  },
     returns = { { name = "isAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_StableInfo.IsPetFavorite"] = {
@@ -123,6 +169,7 @@ APIDefs["C_StableInfo.IsPetFavorite"] = {
     params = { { name = "slot", type = "luaIndex", default = nil } },
     returns = { { name = "isFavorite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -135,6 +182,7 @@ APIDefs["C_StableInfo.PickupStablePet"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -147,6 +195,7 @@ APIDefs["C_StableInfo.SetPetFavorite"] = {
     params = { { name = "slot", type = "luaIndex", default = nil }, { name = "isFavorite", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -159,5 +208,6 @@ APIDefs["C_StableInfo.SetPetSlot"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "slot", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

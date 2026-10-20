@@ -11,5 +11,6 @@ APIDefs["C_ResearchInfo.GetDigSitesForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "digSites", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

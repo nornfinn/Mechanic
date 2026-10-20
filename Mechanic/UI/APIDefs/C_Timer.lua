@@ -11,6 +11,7 @@ APIDefs["C_Timer.After"] = {
     params = { { name = "seconds", type = "number", default = nil }, { name = "callback", type = "TimerCallback", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,20 @@ APIDefs["C_Timer.NewTicker"] = {
     params = { { name = "seconds", type = "number", default = nil }, { name = "callback", type = "TickerCallback", default = nil }, { name = "iterations", type = "number", default = nil } },
     returns = { { name = "cbObject", type = "TickerCallback", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Timer.NewTimedSignalMap"] = {
+    key = "C_Timer.NewTimedSignalMap",
+    name = "NewTimedSignalMap",
+    category = "general",
+    subcategory = "c_timer",
+    funcPath = "C_Timer.NewTimedSignalMap",
+    params = { { name = "callback", type = "TimedSignalMapCallback", default = nil } },
+    returns = { { name = "signalMap", type = "TimedSignalMap", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,5 +50,6 @@ APIDefs["C_Timer.NewTimer"] = {
     params = { { name = "seconds", type = "number", default = nil }, { name = "callback", type = "TickerCallback", default = nil } },
     returns = { { name = "cbObject", type = "TickerCallback", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

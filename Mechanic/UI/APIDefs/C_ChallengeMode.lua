@@ -11,6 +11,7 @@ APIDefs["C_ChallengeMode.CanUseKeystoneInCurrentMap"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "canUse", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ChallengeMode.ClearKeystone"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.CloseKeystoneFrame"] = {
@@ -34,6 +36,7 @@ APIDefs["C_ChallengeMode.CloseKeystoneFrame"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetActiveChallengeMapID"] = {
@@ -45,6 +48,7 @@ APIDefs["C_ChallengeMode.GetActiveChallengeMapID"] = {
     params = {  },
     returns = { { name = "mapChallengeModeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetActiveKeystoneInfo"] = {
@@ -56,6 +60,7 @@ APIDefs["C_ChallengeMode.GetActiveKeystoneInfo"] = {
     params = {  },
     returns = { { name = "activeKeystoneLevel", type = "number", canBeSecret = false }, { name = "activeAffixIDs", type = "table", canBeSecret = false }, { name = "wasActiveKeystoneCharged", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetAffixInfo"] = {
@@ -67,6 +72,7 @@ APIDefs["C_ChallengeMode.GetAffixInfo"] = {
     params = { { name = "affixID", type = "number", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "description", type = "cstring", canBeSecret = false }, { name = "filedataid", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -79,6 +85,7 @@ APIDefs["C_ChallengeMode.GetChallengeCompletionInfo"] = {
     params = {  },
     returns = { { name = "info", type = "ChallengeCompletionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetDeathCount"] = {
@@ -90,6 +97,7 @@ APIDefs["C_ChallengeMode.GetDeathCount"] = {
     params = {  },
     returns = { { name = "numDeaths", type = "number", canBeSecret = false }, { name = "timeLost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetDungeonScoreRarityColor"] = {
@@ -101,6 +109,7 @@ APIDefs["C_ChallengeMode.GetDungeonScoreRarityColor"] = {
     params = { { name = "dungeonScore", type = "number", default = nil } },
     returns = { { name = "scoreColor", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -113,6 +122,7 @@ APIDefs["C_ChallengeMode.GetGuildLeaders"] = {
     params = {  },
     returns = { { name = "topAttempt", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetKeystoneLevelRarityColor"] = {
@@ -124,6 +134,7 @@ APIDefs["C_ChallengeMode.GetKeystoneLevelRarityColor"] = {
     params = { { name = "level", type = "number", default = nil } },
     returns = { { name = "levelScore", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -136,6 +147,7 @@ APIDefs["C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft"] = {
     params = {  },
     returns = { { name = "timeLeftSeconds", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetMapScoreInfo"] = {
@@ -147,6 +159,7 @@ APIDefs["C_ChallengeMode.GetMapScoreInfo"] = {
     params = {  },
     returns = { { name = "displayScores", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetMapTable"] = {
@@ -158,6 +171,7 @@ APIDefs["C_ChallengeMode.GetMapTable"] = {
     params = {  },
     returns = { { name = "mapChallengeModeIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetMapUIInfo"] = {
@@ -169,6 +183,7 @@ APIDefs["C_ChallengeMode.GetMapUIInfo"] = {
     params = { { name = "mapChallengeModeID", type = "number", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "id", type = "number", canBeSecret = false }, { name = "timeLimit", type = "number", canBeSecret = false }, { name = "texture", type = "number", canBeSecret = false }, { name = "backgroundTexture", type = "number", canBeSecret = false }, { name = "mapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -181,6 +196,7 @@ APIDefs["C_ChallengeMode.GetOverallDungeonScore"] = {
     params = {  },
     returns = { { name = "overallDungeonScore", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetPowerLevelDamageHealthMod"] = {
@@ -192,6 +208,7 @@ APIDefs["C_ChallengeMode.GetPowerLevelDamageHealthMod"] = {
     params = { { name = "powerLevel", type = "number", default = nil } },
     returns = { { name = "damageMod", type = "number", canBeSecret = false }, { name = "healthMod", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -204,6 +221,7 @@ APIDefs["C_ChallengeMode.GetSlottedKeystoneInfo"] = {
     params = {  },
     returns = { { name = "mapChallengeModeID", type = "number", canBeSecret = false }, { name = "affixIDs", type = "table", canBeSecret = false }, { name = "keystoneLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor"] = {
@@ -215,6 +233,7 @@ APIDefs["C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor"] = {
     params = { { name = "specificDungeonOverallScore", type = "number", default = nil } },
     returns = { { name = "specificDungeonOverallScoreColor", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -227,6 +246,7 @@ APIDefs["C_ChallengeMode.GetSpecificDungeonScoreRarityColor"] = {
     params = { { name = "specificDungeonScore", type = "number", default = nil } },
     returns = { { name = "specificDungeonScoreColor", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -239,6 +259,7 @@ APIDefs["C_ChallengeMode.GetStartTime"] = {
     params = {  },
     returns = { { name = "startTime", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.HasSlottedKeystone"] = {
@@ -250,6 +271,7 @@ APIDefs["C_ChallengeMode.HasSlottedKeystone"] = {
     params = {  },
     returns = { { name = "hasSlottedKeystone", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.IsChallengeModeActive"] = {
@@ -261,6 +283,7 @@ APIDefs["C_ChallengeMode.IsChallengeModeActive"] = {
     params = {  },
     returns = { { name = "challengeModeActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.IsChallengeModeResettable"] = {
@@ -272,6 +295,7 @@ APIDefs["C_ChallengeMode.IsChallengeModeResettable"] = {
     params = {  },
     returns = { { name = "canReset", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.RemoveKeystone"] = {
@@ -283,6 +307,7 @@ APIDefs["C_ChallengeMode.RemoveKeystone"] = {
     params = {  },
     returns = { { name = "removalSuccessful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.RequestLeaders"] = {
@@ -294,6 +319,7 @@ APIDefs["C_ChallengeMode.RequestLeaders"] = {
     params = { { name = "mapChallengeModeID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -306,6 +332,7 @@ APIDefs["C_ChallengeMode.Reset"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.SlotKeystone"] = {
@@ -317,6 +344,7 @@ APIDefs["C_ChallengeMode.SlotKeystone"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChallengeMode.StartChallengeMode"] = {
@@ -328,4 +356,5 @@ APIDefs["C_ChallengeMode.StartChallengeMode"] = {
     params = {  },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

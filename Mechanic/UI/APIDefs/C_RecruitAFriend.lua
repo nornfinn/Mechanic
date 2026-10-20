@@ -9,8 +9,9 @@ APIDefs["C_RecruitAFriend.CanSummonFriend"] = {
     subcategory = "c_recruitafriend",
     funcPath = "C_RecruitAFriend.CanSummonFriend",
     params = { { name = "guid", type = "WOWGUID", default = nil } },
-    returns = { { name = "result", type = "bool", canBeSecret = false } },
+    returns = { { name = "canSummon", type = "bool", canBeSecret = false }, { name = "reason", type = "RecruitAFriendFailure", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_RecruitAFriend.ClaimActivityReward"] = {
     params = { { name = "activityID", type = "number", default = nil }, { name = "acceptanceID", type = "RecruitAcceptanceID", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_RecruitAFriend.ClaimNextReward"] = {
     params = { { name = "rafVersion", type = "RecruitAFriendRewardsVersion", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_RecruitAFriend.GenerateRecruitmentLink"] = {
     params = {  },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecruitAFriend.GetRAFInfo"] = {
@@ -58,6 +62,7 @@ APIDefs["C_RecruitAFriend.GetRAFInfo"] = {
     params = {  },
     returns = { { name = "info", type = "RafInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecruitAFriend.GetRAFSystemInfo"] = {
@@ -69,6 +74,7 @@ APIDefs["C_RecruitAFriend.GetRAFSystemInfo"] = {
     params = {  },
     returns = { { name = "systemInfo", type = "RafSystemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecruitAFriend.GetRecruitActivityRequirementsText"] = {
@@ -80,6 +86,7 @@ APIDefs["C_RecruitAFriend.GetRecruitActivityRequirementsText"] = {
     params = { { name = "activityID", type = "number", default = nil }, { name = "acceptanceID", type = "RecruitAcceptanceID", default = nil } },
     returns = { { name = "requirementsText", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -92,6 +99,7 @@ APIDefs["C_RecruitAFriend.GetRecruitInfo"] = {
     params = {  },
     returns = { { name = "active", type = "bool", canBeSecret = false }, { name = "faction", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecruitAFriend.GetSummonFriendCooldown"] = {
@@ -103,17 +111,7 @@ APIDefs["C_RecruitAFriend.GetSummonFriendCooldown"] = {
     params = {  },
     returns = { { name = "startTimeSeconds", type = "number", canBeSecret = false }, { name = "durationSeconds", type = "number", canBeSecret = false }, { name = "enableCooldownTimer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
-}
-
-APIDefs["C_RecruitAFriend.IsEnabled"] = {
-    key = "C_RecruitAFriend.IsEnabled",
-    name = "IsEnabled",
-    category = "social",
-    subcategory = "c_recruitafriend",
-    funcPath = "C_RecruitAFriend.IsEnabled",
-    params = {  },
-    returns = { { name = "enabled", type = "bool", canBeSecret = false } },
-    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecruitAFriend.IsRecruitAFriendLinked"] = {
@@ -125,6 +123,7 @@ APIDefs["C_RecruitAFriend.IsRecruitAFriendLinked"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -137,6 +136,31 @@ APIDefs["C_RecruitAFriend.IsRecruitingEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_RecruitAFriend.IsSystemEnabled"] = {
+    key = "C_RecruitAFriend.IsSystemEnabled",
+    name = "IsSystemEnabled",
+    category = "social",
+    subcategory = "c_recruitafriend",
+    funcPath = "C_RecruitAFriend.IsSystemEnabled",
+    params = {  },
+    returns = { { name = "isSystemEnabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_RecruitAFriend.IsSystemSupported"] = {
+    key = "C_RecruitAFriend.IsSystemSupported",
+    name = "IsSystemSupported",
+    category = "social",
+    subcategory = "c_recruitafriend",
+    funcPath = "C_RecruitAFriend.IsSystemSupported",
+    params = {  },
+    returns = { { name = "isSystemSupported", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecruitAFriend.RemoveRAFRecruit"] = {
@@ -148,6 +172,7 @@ APIDefs["C_RecruitAFriend.RemoveRAFRecruit"] = {
     params = { { name = "wowAccountGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -160,6 +185,7 @@ APIDefs["C_RecruitAFriend.RequestUpdatedRecruitmentInfo"] = {
     params = {  },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecruitAFriend.SummonFriend"] = {
@@ -171,5 +197,6 @@ APIDefs["C_RecruitAFriend.SummonFriend"] = {
     params = { { name = "target", type = "WOWGUID", default = nil }, { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

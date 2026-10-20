@@ -11,6 +11,7 @@ APIDefs["C_ColorOverrides.ClearColorOverrides"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ColorOverrides.GetColorForQuality"] = {
@@ -22,6 +23,7 @@ APIDefs["C_ColorOverrides.GetColorForQuality"] = {
     params = { { name = "quality", type = "ItemQuality", default = nil } },
     returns = { { name = "color", type = "colorRGBA", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_ColorOverrides.GetColorOverrideInfo"] = {
     params = { { name = "overrideType", type = "ColorOverride", default = nil } },
     returns = { { name = "overrideInfo", type = "ColorOverrideInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_ColorOverrides.GetDefaultColorForQuality"] = {
     params = { { name = "quality", type = "ItemQuality", default = nil } },
     returns = { { name = "color", type = "colorRGBA", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_ColorOverrides.RemoveColorOverride"] = {
     params = { { name = "overrideType", type = "ColorOverride", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,5 +75,6 @@ APIDefs["C_ColorOverrides.SetColorOverride"] = {
     params = { { name = "overrideType", type = "ColorOverride", default = nil }, { name = "color", type = "colorRGBA", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

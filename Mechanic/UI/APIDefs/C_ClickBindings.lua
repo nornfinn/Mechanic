@@ -8,9 +8,10 @@ APIDefs["C_ClickBindings.CanSpellBeClickBound"] = {
     category = "general",
     subcategory = "c_clickbindings",
     funcPath = "C_ClickBindings.CanSpellBeClickBound",
-    params = { { name = "spellID", type = "number", default = nil } },
+    params = { { name = "spellID", type = "SpellIdentifier", default = nil } },
     returns = { { name = "canBeBound", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ClickBindings.ExecuteBinding"] = {
     params = { { name = "targetToken", type = "cstring", default = nil }, { name = "button", type = "cstring", default = nil }, { name = "modifiers", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_ClickBindings.GetBindingType"] = {
     params = { { name = "button", type = "cstring", default = nil }, { name = "modifiers", type = "number", default = nil } },
     returns = { { name = "type", type = "ClickBindingType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_ClickBindings.GetEffectiveInteractionButton"] = {
     params = { { name = "button", type = "cstring", default = nil }, { name = "modifiers", type = "number", default = nil } },
     returns = { { name = "effectiveButton", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,18 +63,7 @@ APIDefs["C_ClickBindings.GetProfileInfo"] = {
     params = {  },
     returns = { { name = "infoVec", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
-}
-
-APIDefs["C_ClickBindings.GetStringFromModifiers"] = {
-    key = "C_ClickBindings.GetStringFromModifiers",
-    name = "GetStringFromModifiers",
-    category = "general",
-    subcategory = "c_clickbindings",
-    funcPath = "C_ClickBindings.GetStringFromModifiers",
-    params = { { name = "modifiers", type = "number", default = nil } },
-    returns = { { name = "modifierString", type = "string", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClickBindings.GetTutorialShown"] = {
@@ -82,17 +75,7 @@ APIDefs["C_ClickBindings.GetTutorialShown"] = {
     params = {  },
     returns = { { name = "tutorialShown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
-}
-
-APIDefs["C_ClickBindings.MakeModifiers"] = {
-    key = "C_ClickBindings.MakeModifiers",
-    name = "MakeModifiers",
-    category = "general",
-    subcategory = "c_clickbindings",
-    funcPath = "C_ClickBindings.MakeModifiers",
-    params = {  },
-    returns = { { name = "modifiers", type = "number", canBeSecret = false } },
-    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClickBindings.ResetCurrentProfile"] = {
@@ -104,6 +87,7 @@ APIDefs["C_ClickBindings.ResetCurrentProfile"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClickBindings.SetProfileByInfo"] = {
@@ -115,6 +99,7 @@ APIDefs["C_ClickBindings.SetProfileByInfo"] = {
     params = { { name = "infoVec", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -127,4 +112,5 @@ APIDefs["C_ClickBindings.SetTutorialShown"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

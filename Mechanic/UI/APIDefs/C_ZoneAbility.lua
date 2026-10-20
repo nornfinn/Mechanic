@@ -11,6 +11,7 @@ APIDefs["C_ZoneAbility.GetActiveAbilities"] = {
     params = {  },
     returns = { { name = "zoneAbilities", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ZoneAbility.GetZoneAbilityIcon"] = {
@@ -22,5 +23,6 @@ APIDefs["C_ZoneAbility.GetZoneAbilityIcon"] = {
     params = { { name = "zoneAbilitySpellID", type = "number", default = nil } },
     returns = { { name = "zoneAbilityIconID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

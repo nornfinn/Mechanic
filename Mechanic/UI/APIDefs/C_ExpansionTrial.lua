@@ -11,6 +11,7 @@ APIDefs["C_ExpansionTrial.OnTrialLevelUpDialogClicked"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ExpansionTrial.OnTrialLevelUpDialogShown"] = {
@@ -22,4 +23,5 @@ APIDefs["C_ExpansionTrial.OnTrialLevelUpDialogShown"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

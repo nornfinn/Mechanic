@@ -11,6 +11,7 @@ APIDefs["C_Map.CanSetUserWaypointOnMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "canSet", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_Map.ClearUserWaypoint"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Map.CloseWorldMapInteraction"] = {
@@ -34,6 +36,7 @@ APIDefs["C_Map.CloseWorldMapInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Map.GetAreaInfo"] = {
@@ -45,6 +48,7 @@ APIDefs["C_Map.GetAreaInfo"] = {
     params = { { name = "areaID", type = "number", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_Map.GetBestMapForUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "uiMapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_Map.GetBountySetMaps"] = {
     params = { { name = "bountySetID", type = "number", default = nil } },
     returns = { { name = "mapIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_Map.GetFallbackWorldMapID"] = {
     params = {  },
     returns = { { name = "uiMapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Map.GetMapArtBackgroundAtlas"] = {
@@ -92,6 +99,7 @@ APIDefs["C_Map.GetMapArtBackgroundAtlas"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "atlasName", type = "textureAtlas", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_Map.GetMapArtHelpTextPosition"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "position", type = "MapCanvasPosition", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -116,6 +125,7 @@ APIDefs["C_Map.GetMapArtID"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "uiMapArtID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -128,6 +138,7 @@ APIDefs["C_Map.GetMapArtLayerTextures"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "layerIndex", type = "luaIndex", default = nil } },
     returns = { { name = "textures", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -140,6 +151,7 @@ APIDefs["C_Map.GetMapArtLayers"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "layerInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -152,6 +164,7 @@ APIDefs["C_Map.GetMapArtZoneTextPosition"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "position", type = "MapCanvasPosition", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -164,6 +177,7 @@ APIDefs["C_Map.GetMapBannersForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "mapBanners", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -176,6 +190,7 @@ APIDefs["C_Map.GetMapChildrenInfo"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "mapType", type = "UIMapType", default = nil }, { name = "allDescendants", type = "bool", default = nil } },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -188,6 +203,7 @@ APIDefs["C_Map.GetMapDisplayInfo"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "hideIcons", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -200,6 +216,7 @@ APIDefs["C_Map.GetMapGroupID"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "uiMapGroupID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -212,6 +229,7 @@ APIDefs["C_Map.GetMapGroupMembersInfo"] = {
     params = { { name = "uiMapGroupID", type = "number", default = nil } },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -224,6 +242,7 @@ APIDefs["C_Map.GetMapHighlightInfoAtPosition"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "x", type = "number", default = nil }, { name = "y", type = "number", default = nil } },
     returns = { { name = "fileDataID", type = "fileID", canBeSecret = false }, { name = "atlasID", type = "textureAtlas", canBeSecret = false }, { name = "texturePercentageX", type = "number", canBeSecret = false }, { name = "texturePercentageY", type = "number", canBeSecret = false }, { name = "textureX", type = "number", canBeSecret = false }, { name = "textureY", type = "number", canBeSecret = false }, { name = "scrollChildX", type = "number", canBeSecret = false }, { name = "scrollChildY", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -236,6 +255,7 @@ APIDefs["C_Map.GetMapHighlightPulseInfo"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "fileDataID", type = "fileID", canBeSecret = false }, { name = "atlasID", type = "textureAtlas", canBeSecret = false }, { name = "texturePercentageX", type = "number", canBeSecret = false }, { name = "texturePercentageY", type = "number", canBeSecret = false }, { name = "textureX", type = "number", canBeSecret = false }, { name = "textureY", type = "number", canBeSecret = false }, { name = "scrollChildX", type = "number", canBeSecret = false }, { name = "scrollChildY", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -248,6 +268,7 @@ APIDefs["C_Map.GetMapInfo"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "info", type = "UiMapDetails", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -260,6 +281,7 @@ APIDefs["C_Map.GetMapInfoAtPosition"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "x", type = "number", default = nil }, { name = "y", type = "number", default = nil }, { name = "ignoreZoneMapPositionData", type = "bool", default = nil } },
     returns = { { name = "info", type = "UiMapDetails", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -272,6 +294,7 @@ APIDefs["C_Map.GetMapLevels"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "playerMinLevel", type = "number", canBeSecret = false }, { name = "playerMaxLevel", type = "number", canBeSecret = false }, { name = "petMinLevel", type = "number", canBeSecret = false }, { name = "petMaxLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -284,6 +307,7 @@ APIDefs["C_Map.GetMapLinksForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "mapLinks", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -296,6 +320,7 @@ APIDefs["C_Map.GetMapPosFromWorldPos"] = {
     params = { { name = "continentID", type = "number", default = nil }, { name = "worldPosition", type = "vector2", default = nil }, { name = "overrideUiMapID", type = "number", default = nil } },
     returns = { { name = "uiMapID", type = "number", canBeSecret = false }, { name = "mapPosition", type = "vector2", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -308,6 +333,7 @@ APIDefs["C_Map.GetMapRectOnMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "topUiMapID", type = "number", default = nil } },
     returns = { { name = "minX", type = "number", canBeSecret = false }, { name = "maxX", type = "number", canBeSecret = false }, { name = "minY", type = "number", canBeSecret = false }, { name = "maxY", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -320,6 +346,7 @@ APIDefs["C_Map.GetMapWorldSize"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "width", type = "number", canBeSecret = false }, { name = "height", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -332,6 +359,7 @@ APIDefs["C_Map.GetPlayerMapPosition"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "position", type = "vector2", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -344,6 +372,7 @@ APIDefs["C_Map.GetUserWaypoint"] = {
     params = {  },
     returns = { { name = "point", type = "UiMapPoint", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Map.GetUserWaypointFromHyperlink"] = {
@@ -355,6 +384,7 @@ APIDefs["C_Map.GetUserWaypointFromHyperlink"] = {
     params = { { name = "hyperlink", type = "string", default = nil } },
     returns = { { name = "point", type = "UiMapPoint", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -367,6 +397,7 @@ APIDefs["C_Map.GetUserWaypointHyperlink"] = {
     params = {  },
     returns = { { name = "hyperlink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Map.GetUserWaypointPositionForMap"] = {
@@ -378,6 +409,7 @@ APIDefs["C_Map.GetUserWaypointPositionForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "mapPosition", type = "vector2", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -390,6 +422,7 @@ APIDefs["C_Map.GetWorldPosFromMapPos"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "mapPosition", type = "vector2", default = nil } },
     returns = { { name = "continentID", type = "number", canBeSecret = false }, { name = "worldPosition", type = "vector2", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -402,6 +435,7 @@ APIDefs["C_Map.HasUserWaypoint"] = {
     params = {  },
     returns = { { name = "hasUserWaypoint", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Map.IsCityMap"] = {
@@ -413,6 +447,7 @@ APIDefs["C_Map.IsCityMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "isCityMap", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -425,6 +460,7 @@ APIDefs["C_Map.IsMapValidForNavBarDropdown"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "isValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -437,6 +473,7 @@ APIDefs["C_Map.MapHasArt"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "hasArt", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -449,6 +486,7 @@ APIDefs["C_Map.OpenWorldMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -461,6 +499,7 @@ APIDefs["C_Map.RequestPreloadMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -471,7 +510,8 @@ APIDefs["C_Map.SetUserWaypoint"] = {
     subcategory = "c_map",
     funcPath = "C_Map.SetUserWaypoint",
     params = { { name = "point", type = "UiMapPoint", default = nil } },
-    returns = {  },
+    returns = { { name = "wasSet", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

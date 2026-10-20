@@ -11,6 +11,7 @@ APIDefs["C_MapExplorationInfo.GetExploredAreaIDsAtPosition"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "normalizedPosition", type = "vector2", default = nil } },
     returns = { { name = "areaID", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,5 +24,6 @@ APIDefs["C_MapExplorationInfo.GetExploredMapTextures"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "overlayInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

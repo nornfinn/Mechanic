@@ -11,6 +11,7 @@ APIDefs["C_Log.LogErrorMessage"] = {
     params = { { name = "message", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_Log.LogMessage"] = {
     params = { { name = "message", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_Log.LogMessageWithPriority"] = {
     params = { { name = "priority", type = "LogPriority", default = nil }, { name = "message", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,5 +50,6 @@ APIDefs["C_Log.LogWarningMessage"] = {
     params = { { name = "message", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

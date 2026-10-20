@@ -2,6 +2,18 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_GameRules.AccountHasSDEnabled"] = {
+    key = "C_GameRules.AccountHasSDEnabled",
+    name = "AccountHasSDEnabled",
+    category = "general",
+    subcategory = "c_gamerules",
+    funcPath = "C_GameRules.AccountHasSDEnabled",
+    params = {  },
+    returns = { { name = "isSDEnabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
 APIDefs["C_GameRules.AutoConnectToGameModeRealm"] = {
     key = "C_GameRules.AutoConnectToGameModeRealm",
     name = "AutoConnectToGameModeRealm",
@@ -11,6 +23,7 @@ APIDefs["C_GameRules.AutoConnectToGameModeRealm"] = {
     params = { { name = "gameModeRecordID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +36,7 @@ APIDefs["C_GameRules.DoesGameModeHavePromo"] = {
     params = { { name = "gameModeRecordID", type = "number", default = nil } },
     returns = { { name = "hasPromo", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +49,7 @@ APIDefs["C_GameRules.GetActiveGameMode"] = {
     params = {  },
     returns = { { name = "gameMode", type = "GameMode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.GetCurrentEventRealmQueues"] = {
@@ -46,6 +61,7 @@ APIDefs["C_GameRules.GetCurrentEventRealmQueues"] = {
     params = {  },
     returns = { { name = "eventRealmQueues", type = "EventRealmQueues", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.GetCurrentGameModeDisplayInfo"] = {
@@ -57,6 +73,7 @@ APIDefs["C_GameRules.GetCurrentGameModeDisplayInfo"] = {
     params = {  },
     returns = { { name = "info", type = "GameModeDisplayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.GetCurrentGameModeRecordID"] = {
@@ -68,6 +85,7 @@ APIDefs["C_GameRules.GetCurrentGameModeRecordID"] = {
     params = {  },
     returns = { { name = "gameModeRecordID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.GetDisplayedGameModeRecordIDAtIndex"] = {
@@ -79,7 +97,20 @@ APIDefs["C_GameRules.GetDisplayedGameModeRecordIDAtIndex"] = {
     params = { { name = "displayIndex", type = "luaIndex", default = nil } },
     returns = { { name = "gameModeRecordID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_GameRules.GetForeverExperiencePreset"] = {
+    key = "C_GameRules.GetForeverExperiencePreset",
+    name = "GetForeverExperiencePreset",
+    category = "general",
+    subcategory = "c_gamerules",
+    funcPath = "C_GameRules.GetForeverExperiencePreset",
+    params = {  },
+    returns = { { name = "preset", type = "ForeverExperiencePreset", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_GameRules.GetGameModeDisplayInfoByRecordID"] = {
@@ -91,6 +122,7 @@ APIDefs["C_GameRules.GetGameModeDisplayInfoByRecordID"] = {
     params = { { name = "gameModeRecordID", type = "number", default = nil } },
     returns = { { name = "info", type = "GameModeDisplayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -103,6 +135,7 @@ APIDefs["C_GameRules.GetGameModeGlueScreenName"] = {
     params = {  },
     returns = { { name = "screenName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.GetGameModePromoGlobalString"] = {
@@ -114,6 +147,7 @@ APIDefs["C_GameRules.GetGameModePromoGlobalString"] = {
     params = { { name = "gameModeRecordID", type = "number", default = nil } },
     returns = { { name = "promoGlobalString", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -126,6 +160,7 @@ APIDefs["C_GameRules.GetGameRuleAsFloat"] = {
     params = { { name = "gameRule", type = "GameRule", default = nil }, { name = "decimalPlaces", type = "number", default = 0 } },
     returns = { { name = "value", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -138,6 +173,7 @@ APIDefs["C_GameRules.GetGameRuleAsFrameStrata"] = {
     params = { { name = "gameRule", type = "GameRule", default = nil } },
     returns = { { name = "frameStrata", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -150,6 +186,7 @@ APIDefs["C_GameRules.GetNumDisplayedGameModes"] = {
     params = {  },
     returns = { { name = "numDisplayedGameModes", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.IsCharacterlessLoginActive"] = {
@@ -161,6 +198,7 @@ APIDefs["C_GameRules.IsCharacterlessLoginActive"] = {
     params = {  },
     returns = { { name = "active", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.IsClassAllowedForGameMode"] = {
@@ -172,6 +210,7 @@ APIDefs["C_GameRules.IsClassAllowedForGameMode"] = {
     params = { { name = "classID", type = "number", default = nil } },
     returns = { { name = "valid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -184,6 +223,7 @@ APIDefs["C_GameRules.IsGameModeEnabled"] = {
     params = { { name = "gameModeRecordID", type = "number", default = nil } },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -196,7 +236,20 @@ APIDefs["C_GameRules.IsGameRuleActive"] = {
     params = { { name = "gameRule", type = "GameRule", default = nil } },
     returns = { { name = "isActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_GameRules.IsHardcoreActive"] = {
+    key = "C_GameRules.IsHardcoreActive",
+    name = "IsHardcoreActive",
+    category = "general",
+    subcategory = "c_gamerules",
+    funcPath = "C_GameRules.IsHardcoreActive",
+    params = {  },
+    returns = { { name = "active", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_GameRules.IsMultiActionBarVisibilityForced"] = {
@@ -208,6 +261,7 @@ APIDefs["C_GameRules.IsMultiActionBarVisibilityForced"] = {
     params = {  },
     returns = { { name = "valid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.IsPersonalResourceDisplayEnabled"] = {
@@ -219,6 +273,7 @@ APIDefs["C_GameRules.IsPersonalResourceDisplayEnabled"] = {
     params = {  },
     returns = { { name = "isPersonalResourceDisplayEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.IsPlunderstorm"] = {
@@ -230,6 +285,31 @@ APIDefs["C_GameRules.IsPlunderstorm"] = {
     params = {  },
     returns = { { name = "active", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_GameRules.IsSDHDToggleEnabled"] = {
+    key = "C_GameRules.IsSDHDToggleEnabled",
+    name = "IsSDHDToggleEnabled",
+    category = "general",
+    subcategory = "c_gamerules",
+    funcPath = "C_GameRules.IsSDHDToggleEnabled",
+    params = {  },
+    returns = { { name = "isEnabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
+APIDefs["C_GameRules.IsSelfFoundAllowed"] = {
+    key = "C_GameRules.IsSelfFoundAllowed",
+    name = "IsSelfFoundAllowed",
+    category = "general",
+    subcategory = "c_gamerules",
+    funcPath = "C_GameRules.IsSelfFoundAllowed",
+    params = {  },
+    returns = { { name = "active", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_GameRules.IsStandard"] = {
@@ -241,6 +321,7 @@ APIDefs["C_GameRules.IsStandard"] = {
     params = {  },
     returns = { { name = "active", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GameRules.IsWoWHack"] = {
@@ -252,4 +333,31 @@ APIDefs["C_GameRules.IsWoWHack"] = {
     params = {  },
     returns = { { name = "active", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_GameRules.SetForeverExperiencePreset"] = {
+    key = "C_GameRules.SetForeverExperiencePreset",
+    name = "SetForeverExperiencePreset",
+    category = "general",
+    subcategory = "c_gamerules",
+    funcPath = "C_GameRules.SetForeverExperiencePreset",
+    params = { { name = "preset", type = "ForeverExperiencePreset", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_GameRules.SetSDHDToggleValue"] = {
+    key = "C_GameRules.SetSDHDToggleValue",
+    name = "SetSDHDToggleValue",
+    category = "general",
+    subcategory = "c_gamerules",
+    funcPath = "C_GameRules.SetSDHDToggleValue",
+    params = { { name = "setToSD", type = "bool", default = nil }, { name = "usageLocation", type = "SdToggleUsageLocationUI", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

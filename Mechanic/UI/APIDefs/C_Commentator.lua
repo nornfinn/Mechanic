@@ -11,6 +11,7 @@ APIDefs["C_Commentator.AddPlayerOverrideName"] = {
     params = { { name = "playerName", type = "string", default = nil }, { name = "overrideName", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_Commentator.AddTrackedDefensiveAuras"] = {
     params = { { name = "spellIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_Commentator.AddTrackedOffensiveAuras"] = {
     params = { { name = "spellIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_Commentator.AreTeamsSwapped"] = {
     params = {  },
     returns = { { name = "teamsAreSwapped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.AssignPlayerToTeam"] = {
@@ -58,6 +62,7 @@ APIDefs["C_Commentator.AssignPlayerToTeam"] = {
     params = { { name = "playerName", type = "string", default = nil }, { name = "teamName", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_Commentator.AssignPlayersToTeam"] = {
     params = { { name = "playerName", type = "table", default = nil }, { name = "teamName", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_Commentator.AssignPlayersToTeamInCurrentInstance"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "teamName", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +101,7 @@ APIDefs["C_Commentator.CanUseCommentatorCheats"] = {
     params = {  },
     returns = { { name = "canUseCommentatorCheats", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ClearCameraTarget"] = {
@@ -105,6 +113,7 @@ APIDefs["C_Commentator.ClearCameraTarget"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ClearFollowTarget"] = {
@@ -116,6 +125,7 @@ APIDefs["C_Commentator.ClearFollowTarget"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ClearLookAtTarget"] = {
@@ -127,6 +137,7 @@ APIDefs["C_Commentator.ClearLookAtTarget"] = {
     params = { { name = "lookAtIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -139,6 +150,7 @@ APIDefs["C_Commentator.EnterInstance"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ExitInstance"] = {
@@ -150,6 +162,7 @@ APIDefs["C_Commentator.ExitInstance"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.FindSpectatedUnit"] = {
@@ -161,6 +174,7 @@ APIDefs["C_Commentator.FindSpectatedUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "playerIndex", type = "luaIndex", canBeSecret = false }, { name = "teamIndex", type = "luaIndex", canBeSecret = false }, { name = "isPet", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -173,6 +187,7 @@ APIDefs["C_Commentator.FindTeamNameInCurrentInstance"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil } },
     returns = { { name = "teamName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -185,6 +200,7 @@ APIDefs["C_Commentator.FindTeamNameInDirectory"] = {
     params = { { name = "playerNames", type = "table", default = nil } },
     returns = { { name = "teamName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -197,6 +213,7 @@ APIDefs["C_Commentator.FlushCommentatorHistory"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.FollowPlayer"] = {
@@ -208,6 +225,7 @@ APIDefs["C_Commentator.FollowPlayer"] = {
     params = { { name = "factionIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "forceInstantTransition", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -220,6 +238,7 @@ APIDefs["C_Commentator.FollowUnit"] = {
     params = { { name = "token", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -232,6 +251,7 @@ APIDefs["C_Commentator.ForceFollowTransition"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetAdditionalCameraWeight"] = {
@@ -243,6 +263,7 @@ APIDefs["C_Commentator.GetAdditionalCameraWeight"] = {
     params = {  },
     returns = { { name = "teamIndex", type = "luaIndex", canBeSecret = false }, { name = "playerIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetAdditionalCameraWeightByToken"] = {
@@ -254,6 +275,7 @@ APIDefs["C_Commentator.GetAdditionalCameraWeightByToken"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "weight", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -266,6 +288,7 @@ APIDefs["C_Commentator.GetAllPlayerOverrideNames"] = {
     params = {  },
     returns = { { name = "nameEntries", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetCamera"] = {
@@ -277,6 +300,7 @@ APIDefs["C_Commentator.GetCamera"] = {
     params = {  },
     returns = { { name = "xPos", type = "number", canBeSecret = false }, { name = "yPos", type = "number", canBeSecret = false }, { name = "zPos", type = "number", canBeSecret = false }, { name = "yaw", type = "number", canBeSecret = false }, { name = "pitch", type = "number", canBeSecret = false }, { name = "roll", type = "number", canBeSecret = false }, { name = "fov", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetCameraCollision"] = {
@@ -288,6 +312,7 @@ APIDefs["C_Commentator.GetCameraCollision"] = {
     params = {  },
     returns = { { name = "isColliding", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetCameraPosition"] = {
@@ -299,6 +324,7 @@ APIDefs["C_Commentator.GetCameraPosition"] = {
     params = {  },
     returns = { { name = "xPos", type = "number", canBeSecret = false }, { name = "yPos", type = "number", canBeSecret = false }, { name = "zPos", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetCombatEventInfo"] = {
@@ -310,6 +336,7 @@ APIDefs["C_Commentator.GetCombatEventInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetCommentatorHistory"] = {
@@ -321,6 +348,19 @@ APIDefs["C_Commentator.GetCommentatorHistory"] = {
     params = {  },
     returns = { { name = "history", type = "CommentatorHistory", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_Commentator.GetCommentatorMatchDataState"] = {
+    key = "C_Commentator.GetCommentatorMatchDataState",
+    name = "GetCommentatorMatchDataState",
+    category = "general",
+    subcategory = "c_commentator",
+    funcPath = "C_Commentator.GetCommentatorMatchDataState",
+    params = {  },
+    returns = { { name = "state", type = "CommentatorMatchDataState", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetCurrentMapID"] = {
@@ -332,6 +372,7 @@ APIDefs["C_Commentator.GetCurrentMapID"] = {
     params = {  },
     returns = { { name = "mapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetDampeningPercent"] = {
@@ -343,6 +384,7 @@ APIDefs["C_Commentator.GetDampeningPercent"] = {
     params = {  },
     returns = { { name = "percentage", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetDistanceBeforeForcedHorizontalConvergence"] = {
@@ -354,6 +396,7 @@ APIDefs["C_Commentator.GetDistanceBeforeForcedHorizontalConvergence"] = {
     params = {  },
     returns = { { name = "distance", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetDurationToForceHorizontalConvergence"] = {
@@ -365,6 +408,7 @@ APIDefs["C_Commentator.GetDurationToForceHorizontalConvergence"] = {
     params = {  },
     returns = { { name = "ms", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetExcludeDistance"] = {
@@ -376,6 +420,7 @@ APIDefs["C_Commentator.GetExcludeDistance"] = {
     params = {  },
     returns = { { name = "excludeDistance", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetHardlockWeight"] = {
@@ -387,6 +432,7 @@ APIDefs["C_Commentator.GetHardlockWeight"] = {
     params = {  },
     returns = { { name = "weight", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetHorizontalAngleThresholdToSmooth"] = {
@@ -398,6 +444,7 @@ APIDefs["C_Commentator.GetHorizontalAngleThresholdToSmooth"] = {
     params = {  },
     returns = { { name = "angle", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetIndirectSpellID"] = {
@@ -409,6 +456,7 @@ APIDefs["C_Commentator.GetIndirectSpellID"] = {
     params = { { name = "trackedSpellID", type = "number", default = nil } },
     returns = { { name = "indirectSpellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -421,6 +469,7 @@ APIDefs["C_Commentator.GetInstanceInfo"] = {
     params = { { name = "mapIndex", type = "luaIndex", default = nil }, { name = "instanceIndex", type = "luaIndex", default = nil } },
     returns = { { name = "mapID", type = "number", canBeSecret = false }, { name = "mapName", type = "string", canBeSecret = false }, { name = "status", type = "number", canBeSecret = false }, { name = "instanceIDLow", type = "number", canBeSecret = false }, { name = "instanceIDHigh", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -433,6 +482,7 @@ APIDefs["C_Commentator.GetLookAtLerpAmount"] = {
     params = {  },
     returns = { { name = "amount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetMapInfo"] = {
@@ -444,6 +494,7 @@ APIDefs["C_Commentator.GetMapInfo"] = {
     params = { { name = "mapIndex", type = "luaIndex", default = nil } },
     returns = { { name = "teamSize", type = "number", canBeSecret = false }, { name = "minLevel", type = "number", canBeSecret = false }, { name = "maxLevel", type = "number", canBeSecret = false }, { name = "numInstances", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -456,6 +507,7 @@ APIDefs["C_Commentator.GetMatchDuration"] = {
     params = {  },
     returns = { { name = "seconds", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetMaxNumPlayersPerTeam"] = {
@@ -467,6 +519,7 @@ APIDefs["C_Commentator.GetMaxNumPlayersPerTeam"] = {
     params = {  },
     returns = { { name = "maxNumPlayersPerTeam", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetMaxNumTeams"] = {
@@ -478,6 +531,7 @@ APIDefs["C_Commentator.GetMaxNumTeams"] = {
     params = {  },
     returns = { { name = "maxNumTeams", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetMode"] = {
@@ -489,6 +543,7 @@ APIDefs["C_Commentator.GetMode"] = {
     params = {  },
     returns = { { name = "commentatorMode", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetMsToHoldForHorizontalMovement"] = {
@@ -500,6 +555,7 @@ APIDefs["C_Commentator.GetMsToHoldForHorizontalMovement"] = {
     params = {  },
     returns = { { name = "ms", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetMsToHoldForVerticalMovement"] = {
@@ -511,6 +567,7 @@ APIDefs["C_Commentator.GetMsToHoldForVerticalMovement"] = {
     params = {  },
     returns = { { name = "ms", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetMsToSmoothHorizontalChange"] = {
@@ -522,6 +579,7 @@ APIDefs["C_Commentator.GetMsToSmoothHorizontalChange"] = {
     params = {  },
     returns = { { name = "ms", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetMsToSmoothVerticalChange"] = {
@@ -533,6 +591,7 @@ APIDefs["C_Commentator.GetMsToSmoothVerticalChange"] = {
     params = {  },
     returns = { { name = "ms", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetNumMaps"] = {
@@ -544,6 +603,7 @@ APIDefs["C_Commentator.GetNumMaps"] = {
     params = {  },
     returns = { { name = "numMaps", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetNumPlayers"] = {
@@ -555,6 +615,7 @@ APIDefs["C_Commentator.GetNumPlayers"] = {
     params = { { name = "factionIndex", type = "luaIndex", default = nil } },
     returns = { { name = "numPlayers", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -567,6 +628,7 @@ APIDefs["C_Commentator.GetOrCreateSeries"] = {
     params = { { name = "teamName1", type = "string", default = nil }, { name = "teamName2", type = "string", default = nil } },
     returns = { { name = "data", type = "CommentatorSeries", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -579,6 +641,7 @@ APIDefs["C_Commentator.GetPlayerAuraInfo"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "spellID", type = "number", default = nil } },
     returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false }, { name = "enable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -591,6 +654,7 @@ APIDefs["C_Commentator.GetPlayerAuraInfoByUnit"] = {
     params = { { name = "token", type = "UnitToken", default = "player" }, { name = "spellID", type = "number", default = nil } },
     returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false }, { name = "enable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -603,6 +667,7 @@ APIDefs["C_Commentator.GetPlayerCooldownInfo"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "spellID", type = "number", default = nil } },
     returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false }, { name = "enable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -615,6 +680,7 @@ APIDefs["C_Commentator.GetPlayerCooldownInfoByUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "spellID", type = "number", default = nil } },
     returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false }, { name = "enable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -627,6 +693,7 @@ APIDefs["C_Commentator.GetPlayerCrowdControlInfo"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil } },
     returns = { { name = "spellID", type = "number", canBeSecret = false }, { name = "expiration", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -639,6 +706,7 @@ APIDefs["C_Commentator.GetPlayerCrowdControlInfoByUnit"] = {
     params = { { name = "token", type = "UnitToken", default = "player" } },
     returns = { { name = "spellID", type = "number", canBeSecret = false }, { name = "expiration", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -651,6 +719,7 @@ APIDefs["C_Commentator.GetPlayerData"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "CommentatorPlayerData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -663,6 +732,7 @@ APIDefs["C_Commentator.GetPlayerFlagInfo"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil } },
     returns = { { name = "hasFlag", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -675,6 +745,7 @@ APIDefs["C_Commentator.GetPlayerFlagInfoByUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "hasFlag", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -687,6 +758,7 @@ APIDefs["C_Commentator.GetPlayerItemCooldownInfo"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "itemID", type = "number", default = nil } },
     returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false }, { name = "enable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -699,6 +771,7 @@ APIDefs["C_Commentator.GetPlayerItemCooldownInfoByUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "itemID", type = "number", default = nil } },
     returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false }, { name = "enable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -711,6 +784,7 @@ APIDefs["C_Commentator.GetPlayerOverrideName"] = {
     params = { { name = "originalName", type = "string", default = nil } },
     returns = { { name = "overrideName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -723,6 +797,7 @@ APIDefs["C_Commentator.GetPlayerSpellCharges"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "spellID", type = "number", default = nil } },
     returns = { { name = "charges", type = "number", canBeSecret = false }, { name = "maxCharges", type = "number", canBeSecret = false }, { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -735,6 +810,7 @@ APIDefs["C_Commentator.GetPlayerSpellChargesByUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "spellID", type = "number", default = nil } },
     returns = { { name = "charges", type = "number", canBeSecret = false }, { name = "maxCharges", type = "number", canBeSecret = false }, { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -747,6 +823,7 @@ APIDefs["C_Commentator.GetPositionLerpAmount"] = {
     params = {  },
     returns = { { name = "amount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetSmoothFollowTransitioning"] = {
@@ -758,6 +835,7 @@ APIDefs["C_Commentator.GetSmoothFollowTransitioning"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetSoftlockWeight"] = {
@@ -769,6 +847,7 @@ APIDefs["C_Commentator.GetSoftlockWeight"] = {
     params = {  },
     returns = { { name = "weight", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetSpeedFactor"] = {
@@ -780,6 +859,7 @@ APIDefs["C_Commentator.GetSpeedFactor"] = {
     params = {  },
     returns = { { name = "factor", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetStartLocation"] = {
@@ -791,6 +871,7 @@ APIDefs["C_Commentator.GetStartLocation"] = {
     params = { { name = "mapID", type = "number", default = nil } },
     returns = { { name = "pos", type = "vector3", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -803,6 +884,7 @@ APIDefs["C_Commentator.GetTeamColor"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil } },
     returns = { { name = "color", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -815,6 +897,7 @@ APIDefs["C_Commentator.GetTeamColorByUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "color", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -827,6 +910,7 @@ APIDefs["C_Commentator.GetTimeLeftInMatch"] = {
     params = {  },
     returns = { { name = "timeLeft", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.GetTrackedSpellID"] = {
@@ -838,6 +922,7 @@ APIDefs["C_Commentator.GetTrackedSpellID"] = {
     params = { { name = "indirectSpellID", type = "number", default = nil } },
     returns = { { name = "trackedSpellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -848,8 +933,9 @@ APIDefs["C_Commentator.GetTrackedSpells"] = {
     subcategory = "c_commentator",
     funcPath = "C_Commentator.GetTrackedSpells",
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "category", type = "TrackedSpellCategory", default = nil } },
-    returns = { { name = "spells", type = "table", canBeSecret = false } },
+    returns = { { name = "spells", type = "table", canBeSecret = false }, { name = "result", type = "TrackedSpellsResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -860,8 +946,9 @@ APIDefs["C_Commentator.GetTrackedSpellsByUnit"] = {
     subcategory = "c_commentator",
     funcPath = "C_Commentator.GetTrackedSpellsByUnit",
     params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "category", type = "TrackedSpellCategory", default = nil } },
-    returns = { { name = "spells", type = "table", canBeSecret = false } },
+    returns = { { name = "spells", type = "table", canBeSecret = false }, { name = "result", type = "TrackedSpellsResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -874,6 +961,7 @@ APIDefs["C_Commentator.GetUnitData"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "data", type = "CommentatorUnitData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -886,6 +974,7 @@ APIDefs["C_Commentator.GetWargameInfo"] = {
     params = { { name = "listID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "minPlayers", type = "number", canBeSecret = false }, { name = "maxPlayers", type = "number", canBeSecret = false }, { name = "isArena", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -898,6 +987,7 @@ APIDefs["C_Commentator.HasTrackedAuras"] = {
     params = { { name = "token", type = "UnitToken", default = "player" } },
     returns = { { name = "hasOffensiveAura", type = "bool", canBeSecret = false }, { name = "hasDefensiveAura", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -910,6 +1000,7 @@ APIDefs["C_Commentator.IsSmartCameraLocked"] = {
     params = {  },
     returns = { { name = "isSmartCameraLocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.IsSpectating"] = {
@@ -921,6 +1012,7 @@ APIDefs["C_Commentator.IsSpectating"] = {
     params = {  },
     returns = { { name = "isSpectating", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.IsTrackedDefensiveAura"] = {
@@ -932,6 +1024,7 @@ APIDefs["C_Commentator.IsTrackedDefensiveAura"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "isDefensiveTrigger", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -944,6 +1037,7 @@ APIDefs["C_Commentator.IsTrackedOffensiveAura"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "isOffensiveTrigger", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -956,6 +1050,7 @@ APIDefs["C_Commentator.IsTrackedSpell"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "spellID", type = "number", default = nil }, { name = "category", type = "TrackedSpellCategory", default = nil } },
     returns = { { name = "isTracked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -968,6 +1063,7 @@ APIDefs["C_Commentator.IsTrackedSpellByUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "spellID", type = "number", default = nil }, { name = "category", type = "TrackedSpellCategory", default = nil } },
     returns = { { name = "isTracked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -980,6 +1076,7 @@ APIDefs["C_Commentator.IsUsingSmartCamera"] = {
     params = {  },
     returns = { { name = "isUsingSmartCamera", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.LookAtPlayer"] = {
@@ -991,6 +1088,7 @@ APIDefs["C_Commentator.LookAtPlayer"] = {
     params = { { name = "factionIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "lookAtIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1003,6 +1101,7 @@ APIDefs["C_Commentator.RemoveAllOverrideNames"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.RemovePlayerOverrideName"] = {
@@ -1014,6 +1113,7 @@ APIDefs["C_Commentator.RemovePlayerOverrideName"] = {
     params = { { name = "originalPlayerName", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1026,6 +1126,7 @@ APIDefs["C_Commentator.RequestPlayerCooldownInfo"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1038,6 +1139,7 @@ APIDefs["C_Commentator.ResetFoVTarget"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ResetSeriesScores"] = {
@@ -1049,6 +1151,7 @@ APIDefs["C_Commentator.ResetSeriesScores"] = {
     params = { { name = "teamName1", type = "string", default = nil }, { name = "teamName2", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1061,6 +1164,7 @@ APIDefs["C_Commentator.ResetSettings"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ResetTrackedAuras"] = {
@@ -1072,6 +1176,33 @@ APIDefs["C_Commentator.ResetTrackedAuras"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_Commentator.SendAddonMessage"] = {
+    key = "C_Commentator.SendAddonMessage",
+    name = "SendAddonMessage",
+    category = "general",
+    subcategory = "c_commentator",
+    funcPath = "C_Commentator.SendAddonMessage",
+    params = { { name = "prefix", type = "cstring", default = nil }, { name = "message", type = "cstring", default = nil }, { name = "chatType", type = "cstring", default = nil }, { name = "target", type = "cstring", default = nil } },
+    returns = { { name = "result", type = "SendAddonMessageResult", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Commentator.SendAddonMessageLogged"] = {
+    key = "C_Commentator.SendAddonMessageLogged",
+    name = "SendAddonMessageLogged",
+    category = "general",
+    subcategory = "c_commentator",
+    funcPath = "C_Commentator.SendAddonMessageLogged",
+    params = { { name = "prefix", type = "cstring", default = nil }, { name = "message", type = "cstring", default = nil }, { name = "chatType", type = "cstring", default = nil }, { name = "target", type = "cstring", default = nil } },
+    returns = { { name = "result", type = "SendAddonMessageResult", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_Commentator.SetAdditionalCameraWeight"] = {
@@ -1083,6 +1214,7 @@ APIDefs["C_Commentator.SetAdditionalCameraWeight"] = {
     params = { { name = "teamIndex", type = "luaIndex", default = nil }, { name = "playerIndex", type = "luaIndex", default = nil }, { name = "weight", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1095,6 +1227,7 @@ APIDefs["C_Commentator.SetAdditionalCameraWeightByToken"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "weight", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1107,6 +1240,7 @@ APIDefs["C_Commentator.SetBlocklistedAuras"] = {
     params = { { name = "spellIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1119,6 +1253,7 @@ APIDefs["C_Commentator.SetBlocklistedCooldowns"] = {
     params = { { name = "specID", type = "number", default = nil }, { name = "spellIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1131,6 +1266,7 @@ APIDefs["C_Commentator.SetBlocklistedItemCooldowns"] = {
     params = { { name = "itemIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1143,6 +1279,7 @@ APIDefs["C_Commentator.SetCamera"] = {
     params = { { name = "xPos", type = "number", default = nil }, { name = "yPos", type = "number", default = nil }, { name = "zPos", type = "number", default = nil }, { name = "yaw", type = "number", default = nil }, { name = "pitch", type = "number", default = nil }, { name = "roll", type = "number", default = nil }, { name = "fov", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1155,6 +1292,7 @@ APIDefs["C_Commentator.SetCameraCollision"] = {
     params = { { name = "collide", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1167,6 +1305,7 @@ APIDefs["C_Commentator.SetCameraPosition"] = {
     params = { { name = "xPos", type = "number", default = nil }, { name = "yPos", type = "number", default = nil }, { name = "zPos", type = "number", default = nil }, { name = "snapToLocation", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1179,6 +1318,7 @@ APIDefs["C_Commentator.SetCheatsEnabled"] = {
     params = { { name = "enableCheats", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1191,6 +1331,7 @@ APIDefs["C_Commentator.SetCommentatorHistory"] = {
     params = { { name = "history", type = "CommentatorHistory", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1203,6 +1344,7 @@ APIDefs["C_Commentator.SetDistanceBeforeForcedHorizontalConvergence"] = {
     params = { { name = "distance", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1215,6 +1357,7 @@ APIDefs["C_Commentator.SetDurationToForceHorizontalConvergence"] = {
     params = { { name = "ms", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1227,6 +1370,7 @@ APIDefs["C_Commentator.SetExcludeDistance"] = {
     params = { { name = "excludeDistance", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1239,6 +1383,7 @@ APIDefs["C_Commentator.SetFollowCameraSpeeds"] = {
     params = { { name = "elasticSpeed", type = "number", default = nil }, { name = "minSpeed", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1251,6 +1396,7 @@ APIDefs["C_Commentator.SetHardlockWeight"] = {
     params = { { name = "weight", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1263,6 +1409,7 @@ APIDefs["C_Commentator.SetHorizontalAngleThresholdToSmooth"] = {
     params = { { name = "angle", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1275,6 +1422,7 @@ APIDefs["C_Commentator.SetLookAtLerpAmount"] = {
     params = { { name = "amount", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1287,6 +1435,7 @@ APIDefs["C_Commentator.SetMapAndInstanceIndex"] = {
     params = { { name = "mapIndex", type = "luaIndex", default = nil }, { name = "instanceIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1299,6 +1448,7 @@ APIDefs["C_Commentator.SetMouseDisabled"] = {
     params = { { name = "disabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1311,6 +1461,7 @@ APIDefs["C_Commentator.SetMoveSpeed"] = {
     params = { { name = "newSpeed", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1323,6 +1474,7 @@ APIDefs["C_Commentator.SetMsToHoldForHorizontalMovement"] = {
     params = { { name = "ms", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1335,6 +1487,7 @@ APIDefs["C_Commentator.SetMsToHoldForVerticalMovement"] = {
     params = { { name = "ms", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1347,6 +1500,7 @@ APIDefs["C_Commentator.SetMsToSmoothHorizontalChange"] = {
     params = { { name = "ms", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1359,6 +1513,7 @@ APIDefs["C_Commentator.SetMsToSmoothVerticalChange"] = {
     params = { { name = "ms", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1371,6 +1526,7 @@ APIDefs["C_Commentator.SetPositionLerpAmount"] = {
     params = { { name = "amount", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1383,6 +1539,7 @@ APIDefs["C_Commentator.SetRequestedDebuffCooldowns"] = {
     params = { { name = "specID", type = "number", default = nil }, { name = "spellIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1395,6 +1552,7 @@ APIDefs["C_Commentator.SetRequestedDefensiveCooldowns"] = {
     params = { { name = "specID", type = "number", default = nil }, { name = "spellIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1407,6 +1565,7 @@ APIDefs["C_Commentator.SetRequestedItemCooldowns"] = {
     params = { { name = "itemIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1419,6 +1578,7 @@ APIDefs["C_Commentator.SetRequestedOffensiveCooldowns"] = {
     params = { { name = "specID", type = "number", default = nil }, { name = "spellIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1431,6 +1591,7 @@ APIDefs["C_Commentator.SetSeriesScore"] = {
     params = { { name = "teamName1", type = "string", default = nil }, { name = "teamName2", type = "string", default = nil }, { name = "scoringTeamName", type = "string", default = nil }, { name = "score", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1443,6 +1604,7 @@ APIDefs["C_Commentator.SetSeriesScores"] = {
     params = { { name = "teamName1", type = "string", default = nil }, { name = "teamName2", type = "string", default = nil }, { name = "score1", type = "number", default = nil }, { name = "score2", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1455,6 +1617,7 @@ APIDefs["C_Commentator.SetSmartCameraLocked"] = {
     params = { { name = "locked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1467,6 +1630,7 @@ APIDefs["C_Commentator.SetSmoothFollowTransitioning"] = {
     params = { { name = "enabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1479,6 +1643,7 @@ APIDefs["C_Commentator.SetSoftlockWeight"] = {
     params = { { name = "weight", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1491,6 +1656,7 @@ APIDefs["C_Commentator.SetSpeedFactor"] = {
     params = { { name = "factor", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1503,6 +1669,7 @@ APIDefs["C_Commentator.SetTargetHeightOffset"] = {
     params = { { name = "offset", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1515,6 +1682,7 @@ APIDefs["C_Commentator.SetUseSmartCamera"] = {
     params = { { name = "useSmartCamera", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1527,6 +1695,7 @@ APIDefs["C_Commentator.SnapCameraLookAtPoint"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.SpellUsesItemCharges"] = {
@@ -1538,6 +1707,7 @@ APIDefs["C_Commentator.SpellUsesItemCharges"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "spellUsesItemCharges", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1550,6 +1720,7 @@ APIDefs["C_Commentator.StartWargame"] = {
     params = { { name = "listID", type = "number", default = nil }, { name = "teamSize", type = "number", default = nil }, { name = "tournamentRules", type = "bool", default = nil }, { name = "teamOneCaptain", type = "string", default = nil }, { name = "teamTwoCaptain", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1562,6 +1733,7 @@ APIDefs["C_Commentator.SwapTeamSides"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ToggleCheats"] = {
@@ -1573,6 +1745,7 @@ APIDefs["C_Commentator.ToggleCheats"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.UpdateMapInfo"] = {
@@ -1584,6 +1757,7 @@ APIDefs["C_Commentator.UpdateMapInfo"] = {
     params = { { name = "targetPlayer", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1596,6 +1770,7 @@ APIDefs["C_Commentator.UpdatePlayerInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ZoomIn"] = {
@@ -1607,6 +1782,7 @@ APIDefs["C_Commentator.ZoomIn"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ZoomIn_Position"] = {
@@ -1618,6 +1794,7 @@ APIDefs["C_Commentator.ZoomIn_Position"] = {
     params = { { name = "zoomAmount", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1630,6 +1807,7 @@ APIDefs["C_Commentator.ZoomOut"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Commentator.ZoomOut_Position"] = {
@@ -1641,5 +1819,6 @@ APIDefs["C_Commentator.ZoomOut_Position"] = {
     params = { { name = "zoomAmount", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

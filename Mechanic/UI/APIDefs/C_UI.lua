@@ -11,6 +11,7 @@ APIDefs["C_UI.DoesAnyDisplayHaveNotch"] = {
     params = {  },
     returns = { { name = "notchPresent", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UI.GetTopLeftNotchSafeRegion"] = {
@@ -22,6 +23,7 @@ APIDefs["C_UI.GetTopLeftNotchSafeRegion"] = {
     params = {  },
     returns = { { name = "left", type = "number", canBeSecret = false }, { name = "right", type = "number", canBeSecret = false }, { name = "top", type = "number", canBeSecret = false }, { name = "bottom", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UI.GetTopRightNotchSafeRegion"] = {
@@ -33,6 +35,7 @@ APIDefs["C_UI.GetTopRightNotchSafeRegion"] = {
     params = {  },
     returns = { { name = "left", type = "number", canBeSecret = false }, { name = "right", type = "number", canBeSecret = false }, { name = "top", type = "number", canBeSecret = false }, { name = "bottom", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UI.GetUIParent"] = {
@@ -44,6 +47,7 @@ APIDefs["C_UI.GetUIParent"] = {
     params = {  },
     returns = { { name = "uiParent", type = "SimpleFrame", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UI.GetWorldFrame"] = {
@@ -55,6 +59,7 @@ APIDefs["C_UI.GetWorldFrame"] = {
     params = {  },
     returns = { { name = "worldFrame", type = "SimpleFrame", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UI.Reload"] = {
@@ -66,6 +71,7 @@ APIDefs["C_UI.Reload"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UI.ShouldUIParentAvoidNotch"] = {
@@ -77,4 +83,5 @@ APIDefs["C_UI.ShouldUIParentAvoidNotch"] = {
     params = {  },
     returns = { { name = "willAvoidNotch", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

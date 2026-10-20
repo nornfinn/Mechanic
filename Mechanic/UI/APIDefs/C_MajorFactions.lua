@@ -11,6 +11,7 @@ APIDefs["C_MajorFactions.GetCurrentRenownLevel"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "level", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_MajorFactions.GetMajorFactionData"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "data", type = "MajorFactionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,20 @@ APIDefs["C_MajorFactions.GetMajorFactionIDs"] = {
     params = { { name = "expansionID", type = "number", default = nil } },
     returns = { { name = "majorFactionIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_MajorFactions.GetMajorFactionProgressionInfo"] = {
+    key = "C_MajorFactions.GetMajorFactionProgressionInfo",
+    name = "GetMajorFactionProgressionInfo",
+    category = "achievement",
+    subcategory = "c_majorfactions",
+    funcPath = "C_MajorFactions.GetMajorFactionProgressionInfo",
+    params = { { name = "majorFactionID", type = "number", default = nil } },
+    returns = { { name = "data", type = "MajorFactionProgressionInfo", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +63,7 @@ APIDefs["C_MajorFactions.GetMajorFactionRenownInfo"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "data", type = "MajorFactionRenownInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +76,7 @@ APIDefs["C_MajorFactions.GetRenownLevels"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "levels", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +89,7 @@ APIDefs["C_MajorFactions.GetRenownNPCFactionID"] = {
     params = {  },
     returns = { { name = "renownNPCFactionID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MajorFactions.GetRenownRewardsForLevel"] = {
@@ -82,6 +101,20 @@ APIDefs["C_MajorFactions.GetRenownRewardsForLevel"] = {
     params = { { name = "majorFactionID", type = "number", default = nil }, { name = "renownLevel", type = "number", default = nil } },
     returns = { { name = "rewards", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_MajorFactions.GetTotalReputationForRenownLevel"] = {
+    key = "C_MajorFactions.GetTotalReputationForRenownLevel",
+    name = "GetTotalReputationForRenownLevel",
+    category = "achievement",
+    subcategory = "c_majorfactions",
+    funcPath = "C_MajorFactions.GetTotalReputationForRenownLevel",
+    params = { { name = "majorFactionID", type = "number", default = nil }, { name = "renownLevel", type = "number", default = nil } },
+    returns = { { name = "totalReputation", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +127,7 @@ APIDefs["C_MajorFactions.HasMaximumRenown"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "hasMaxRenown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -106,6 +140,7 @@ APIDefs["C_MajorFactions.IsMajorFactionHiddenFromExpansionPage"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "isHidden", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,6 +153,7 @@ APIDefs["C_MajorFactions.IsWeeklyRenownCapped"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "isWeeklyCapped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -130,6 +166,7 @@ APIDefs["C_MajorFactions.ShouldDisplayMajorFactionAsJourney"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "shouldDisplayMajorFactionAsJourney", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -142,5 +179,6 @@ APIDefs["C_MajorFactions.ShouldUseJourneyRewardTrack"] = {
     params = { { name = "majorFactionID", type = "number", default = nil } },
     returns = { { name = "shouldUseJourneyRewardTrack", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

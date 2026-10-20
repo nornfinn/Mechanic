@@ -9,9 +9,13 @@ The desktop package is versioned separately from the addons (`mechanic-desktop`,
 ## [Unreleased]
 
 ### Added
+- `addon.validate` checks every TOC in the addon folder and models the client's suffix resolution (game type, family, then unsuffixed). It reports `tocs` and `forever_toc` (the TOC a WoW: Forever client loads, including the `_Mainline` fallback) and warns when that TOC lacks Interface 16001, on a `#` comment before `## Interface:`, on indented `#` lines, on unknown `AllowLoadGameType`/`ExcludeLoadGameType` values and on variables in directives.
+- Game-tagged API data: `api.populate`/`api.refresh` take `compare_sources` and tag each API with the games that document it (`games` in the APIDefs). `api.search`, `api.list`, `sandbox.exec`, `sandbox.test` and `addon.deprecations` accept a `game` filter; `deprecations_builder` accepts `--compare`, and keeps entries a rebuild no longer finds as `removed` errors (`--drop-removed` to omit them).
+- The bundled APIDefs (5,077 APIs) and deprecation list (413 entries) are regenerated from Retail 12.1.5.70448 and WoW: Forever 1.60.1.70450 (Gethe/wow-ui-source `live` and `forever`), replacing 12.0.1.64914 and 11.2.7.64978. The 91 shims Blizzard deleted since 11.2.7 (mostly the old item and socket globals) stay in the list as `"origin": "removed"` errors, because the old names no longer exist.
 - `additional_wow_roots` config setting (and `MECHANIC_ADDITIONAL_WOW_ROOTS`) adds extra WoW installations, such as a client on another drive, to diagnostic discovery. `diagnostic.targets`, `sv.discover` and the file watcher search them in addition to `wow_root`; `addon.sync` and `env.status` still use only `wow_root`.
 
 ### Fixed
+- TOC file lines using `[Game]`, `[Family]`, `[TextLocale]` or `[RegionalTextLocale]` are no longer reported as missing by `addon.validate`, and `addon.deadcode` counts their expansions as loaded.
 - The README and `config.json.example` listed the default flavors without `_classic_beta_`, which the code includes.
 
 ## [0.5.0] - 2026-09-30

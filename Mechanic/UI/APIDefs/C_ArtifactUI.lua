@@ -11,6 +11,7 @@ APIDefs["C_ArtifactUI.AddPower"] = {
     params = { { name = "powerID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ArtifactUI.ApplyCursorRelicToSlot"] = {
     params = { { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_ArtifactUI.CanApplyArtifactRelic"] = {
     params = { { name = "relicItemID", type = "number", default = nil }, { name = "onlyUnlocked", type = "bool", default = nil } },
     returns = { { name = "canApply", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_ArtifactUI.CanApplyCursorRelicToSlot"] = {
     params = { { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "canApply", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot"] = {
     params = { { name = "relicItemID", type = "number", default = nil }, { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "canApply", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_ArtifactUI.CanApplyRelicItemIDToSlot"] = {
     params = { { name = "relicItemID", type = "number", default = nil }, { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "canApply", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_ArtifactUI.CheckRespecNPC"] = {
     params = {  },
     returns = { { name = "canRespec", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.Clear"] = {
@@ -94,6 +101,7 @@ APIDefs["C_ArtifactUI.Clear"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.ClearForgeCamera"] = {
@@ -105,6 +113,7 @@ APIDefs["C_ArtifactUI.ClearForgeCamera"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.ConfirmRespec"] = {
@@ -116,6 +125,7 @@ APIDefs["C_ArtifactUI.ConfirmRespec"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted"] = {
@@ -127,6 +137,7 @@ APIDefs["C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted"] = {
     params = {  },
     returns = { { name = "hasAnyRelicsSlotted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetAppearanceInfo"] = {
@@ -138,6 +149,7 @@ APIDefs["C_ArtifactUI.GetAppearanceInfo"] = {
     params = { { name = "appearanceSetIndex", type = "number", default = nil }, { name = "appearanceIndex", type = "number", default = nil } },
     returns = { { name = "artifactAppearanceID", type = "number", canBeSecret = false }, { name = "appearanceName", type = "string", canBeSecret = false }, { name = "displayIndex", type = "number", canBeSecret = false }, { name = "unlocked", type = "bool", canBeSecret = false }, { name = "failureDescription", type = "string", canBeSecret = false }, { name = "uiCameraID", type = "number", canBeSecret = false }, { name = "altHandCameraID", type = "number", canBeSecret = false }, { name = "swatchColorR", type = "number", canBeSecret = false }, { name = "swatchColorG", type = "number", canBeSecret = false }, { name = "swatchColorB", type = "number", canBeSecret = false }, { name = "modelOpacity", type = "number", canBeSecret = false }, { name = "modelSaturation", type = "number", canBeSecret = false }, { name = "obtainable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -150,6 +162,7 @@ APIDefs["C_ArtifactUI.GetAppearanceInfoByID"] = {
     params = { { name = "artifactAppearanceID", type = "number", default = nil } },
     returns = { { name = "artifactAppearanceSetID", type = "number", canBeSecret = false }, { name = "artifactAppearanceID", type = "number", canBeSecret = false }, { name = "appearanceName", type = "string", canBeSecret = false }, { name = "displayIndex", type = "number", canBeSecret = false }, { name = "unlocked", type = "bool", canBeSecret = false }, { name = "failureDescription", type = "string", canBeSecret = false }, { name = "uiCameraID", type = "number", canBeSecret = false }, { name = "altHandCameraID", type = "number", canBeSecret = false }, { name = "swatchColorR", type = "number", canBeSecret = false }, { name = "swatchColorG", type = "number", canBeSecret = false }, { name = "swatchColorB", type = "number", canBeSecret = false }, { name = "modelOpacity", type = "number", canBeSecret = false }, { name = "modelSaturation", type = "number", canBeSecret = false }, { name = "obtainable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -162,6 +175,7 @@ APIDefs["C_ArtifactUI.GetAppearanceSetInfo"] = {
     params = { { name = "appearanceSetIndex", type = "number", default = nil } },
     returns = { { name = "artifactAppearanceSetID", type = "number", canBeSecret = false }, { name = "appearanceSetName", type = "string", canBeSecret = false }, { name = "appearanceSetDescription", type = "string", canBeSecret = false }, { name = "numAppearances", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -174,6 +188,7 @@ APIDefs["C_ArtifactUI.GetArtifactArtInfo"] = {
     params = {  },
     returns = { { name = "artifactArtInfo", type = "ArtifactArtInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetArtifactInfo"] = {
@@ -185,6 +200,7 @@ APIDefs["C_ArtifactUI.GetArtifactInfo"] = {
     params = {  },
     returns = { { name = "itemID", type = "number", canBeSecret = false }, { name = "altItemID", type = "number", canBeSecret = false }, { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "xp", type = "number", canBeSecret = false }, { name = "pointsSpent", type = "number", canBeSecret = false }, { name = "quality", type = "number", canBeSecret = false }, { name = "artifactAppearanceID", type = "number", canBeSecret = false }, { name = "appearanceModID", type = "number", canBeSecret = false }, { name = "itemAppearanceID", type = "number", canBeSecret = false }, { name = "altItemAppearanceID", type = "number", canBeSecret = false }, { name = "altOnTop", type = "bool", canBeSecret = false }, { name = "tier", type = "ArtifactTiers", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetArtifactItemID"] = {
@@ -196,6 +212,7 @@ APIDefs["C_ArtifactUI.GetArtifactItemID"] = {
     params = {  },
     returns = { { name = "itemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetArtifactTier"] = {
@@ -207,6 +224,7 @@ APIDefs["C_ArtifactUI.GetArtifactTier"] = {
     params = {  },
     returns = { { name = "tier", type = "ArtifactTiers", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetArtifactXPRewardTargetInfo"] = {
@@ -218,6 +236,7 @@ APIDefs["C_ArtifactUI.GetArtifactXPRewardTargetInfo"] = {
     params = { { name = "artifactCategoryID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -230,6 +249,7 @@ APIDefs["C_ArtifactUI.GetCostForPointAtRank"] = {
     params = { { name = "rank", type = "number", default = nil }, { name = "tier", type = "ArtifactTiers", default = nil } },
     returns = { { name = "cost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -242,6 +262,7 @@ APIDefs["C_ArtifactUI.GetEquippedArtifactArtInfo"] = {
     params = {  },
     returns = { { name = "artifactArtInfo", type = "ArtifactArtInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetEquippedArtifactInfo"] = {
@@ -253,6 +274,7 @@ APIDefs["C_ArtifactUI.GetEquippedArtifactInfo"] = {
     params = {  },
     returns = { { name = "itemID", type = "number", canBeSecret = false }, { name = "altItemID", type = "number", canBeSecret = false }, { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "xp", type = "number", canBeSecret = false }, { name = "pointsSpent", type = "number", canBeSecret = false }, { name = "quality", type = "number", canBeSecret = false }, { name = "artifactAppearanceID", type = "number", canBeSecret = false }, { name = "appearanceModID", type = "number", canBeSecret = false }, { name = "itemAppearanceID", type = "number", canBeSecret = false }, { name = "altItemAppearanceID", type = "number", canBeSecret = false }, { name = "altOnTop", type = "bool", canBeSecret = false }, { name = "tier", type = "ArtifactTiers", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetEquippedArtifactItemID"] = {
@@ -264,6 +286,7 @@ APIDefs["C_ArtifactUI.GetEquippedArtifactItemID"] = {
     params = {  },
     returns = { { name = "itemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetEquippedArtifactNumRelicSlots"] = {
@@ -275,6 +298,7 @@ APIDefs["C_ArtifactUI.GetEquippedArtifactNumRelicSlots"] = {
     params = { { name = "onlyUnlocked", type = "bool", default = false } },
     returns = { { name = "numRelicSlots", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -287,6 +311,7 @@ APIDefs["C_ArtifactUI.GetEquippedArtifactRelicInfo"] = {
     params = { { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "slotTypeName", type = "cstring", canBeSecret = false }, { name = "link", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -299,6 +324,7 @@ APIDefs["C_ArtifactUI.GetEquippedRelicLockedReason"] = {
     params = { { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "lockedReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -311,6 +337,7 @@ APIDefs["C_ArtifactUI.GetForgeRotation"] = {
     params = {  },
     returns = { { name = "forgeRotationX", type = "number", canBeSecret = false }, { name = "forgeRotationY", type = "number", canBeSecret = false }, { name = "forgeRotationZ", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic"] = {
@@ -322,6 +349,7 @@ APIDefs["C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic"] = {
     params = { { name = "itemLinkOrID", type = "ItemInfo", default = nil } },
     returns = { { name = "itemIevelIncrease", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -334,6 +362,7 @@ APIDefs["C_ArtifactUI.GetMetaPowerInfo"] = {
     params = {  },
     returns = { { name = "spellID", type = "number", canBeSecret = false }, { name = "powerCost", type = "number", canBeSecret = false }, { name = "currentRank", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetNumAppearanceSets"] = {
@@ -345,6 +374,7 @@ APIDefs["C_ArtifactUI.GetNumAppearanceSets"] = {
     params = {  },
     returns = { { name = "numAppearanceSets", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetNumObtainedArtifacts"] = {
@@ -356,6 +386,7 @@ APIDefs["C_ArtifactUI.GetNumObtainedArtifacts"] = {
     params = {  },
     returns = { { name = "numObtainedArtifacts", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetNumRelicSlots"] = {
@@ -367,6 +398,7 @@ APIDefs["C_ArtifactUI.GetNumRelicSlots"] = {
     params = { { name = "onlyUnlocked", type = "bool", default = false } },
     returns = { { name = "numRelicSlots", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -379,6 +411,7 @@ APIDefs["C_ArtifactUI.GetPointsRemaining"] = {
     params = {  },
     returns = { { name = "pointsRemaining", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetPowerHyperlink"] = {
@@ -390,6 +423,7 @@ APIDefs["C_ArtifactUI.GetPowerHyperlink"] = {
     params = { { name = "powerID", type = "number", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -402,6 +436,7 @@ APIDefs["C_ArtifactUI.GetPowerInfo"] = {
     params = { { name = "powerID", type = "number", default = nil } },
     returns = { { name = "powerInfo", type = "ArtifactPowerInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -414,6 +449,7 @@ APIDefs["C_ArtifactUI.GetPowerLinks"] = {
     params = { { name = "powerID", type = "number", default = nil } },
     returns = { { name = "linkingPowerID", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -426,6 +462,7 @@ APIDefs["C_ArtifactUI.GetPowers"] = {
     params = {  },
     returns = { { name = "powerID", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetPowersAffectedByRelic"] = {
@@ -437,6 +474,7 @@ APIDefs["C_ArtifactUI.GetPowersAffectedByRelic"] = {
     params = { { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "powerIDs", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -449,6 +487,7 @@ APIDefs["C_ArtifactUI.GetPowersAffectedByRelicItemLink"] = {
     params = { { name = "relicItemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "powerIDs", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -461,6 +500,7 @@ APIDefs["C_ArtifactUI.GetPreviewAppearance"] = {
     params = {  },
     returns = { { name = "artifactAppearanceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetRelicInfo"] = {
@@ -472,6 +512,7 @@ APIDefs["C_ArtifactUI.GetRelicInfo"] = {
     params = { { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "slotTypeName", type = "cstring", canBeSecret = false }, { name = "link", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -484,6 +525,7 @@ APIDefs["C_ArtifactUI.GetRelicInfoByItemID"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "slotTypeName", type = "cstring", canBeSecret = false }, { name = "link", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -496,6 +538,7 @@ APIDefs["C_ArtifactUI.GetRelicLockedReason"] = {
     params = { { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "lockedReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -508,6 +551,7 @@ APIDefs["C_ArtifactUI.GetRelicSlotType"] = {
     params = { { name = "relicSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "slotTypeName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -520,6 +564,7 @@ APIDefs["C_ArtifactUI.GetRespecArtifactArtInfo"] = {
     params = {  },
     returns = { { name = "artifactArtInfo", type = "ArtifactArtInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetRespecArtifactInfo"] = {
@@ -531,6 +576,7 @@ APIDefs["C_ArtifactUI.GetRespecArtifactInfo"] = {
     params = {  },
     returns = { { name = "itemID", type = "number", canBeSecret = false }, { name = "altItemID", type = "number", canBeSecret = false }, { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "xp", type = "number", canBeSecret = false }, { name = "pointsSpent", type = "number", canBeSecret = false }, { name = "quality", type = "number", canBeSecret = false }, { name = "artifactAppearanceID", type = "number", canBeSecret = false }, { name = "appearanceModID", type = "number", canBeSecret = false }, { name = "itemAppearanceID", type = "number", canBeSecret = false }, { name = "altItemAppearanceID", type = "number", canBeSecret = false }, { name = "altOnTop", type = "bool", canBeSecret = false }, { name = "tier", type = "ArtifactTiers", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetRespecCost"] = {
@@ -542,6 +588,7 @@ APIDefs["C_ArtifactUI.GetRespecCost"] = {
     params = {  },
     returns = { { name = "cost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.GetTotalPowerCost"] = {
@@ -553,6 +600,7 @@ APIDefs["C_ArtifactUI.GetTotalPowerCost"] = {
     params = { { name = "startingTrait", type = "luaIndex", default = nil }, { name = "numTraits", type = "number", default = nil }, { name = "artifactTier", type = "ArtifactTiers", default = nil } },
     returns = { { name = "totalArtifactPowerCost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -565,6 +613,7 @@ APIDefs["C_ArtifactUI.GetTotalPurchasedRanks"] = {
     params = {  },
     returns = { { name = "totalPurchasedRanks", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.IsArtifactDisabled"] = {
@@ -576,6 +625,7 @@ APIDefs["C_ArtifactUI.IsArtifactDisabled"] = {
     params = {  },
     returns = { { name = "artifactDisabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.IsArtifactItem"] = {
@@ -587,6 +637,7 @@ APIDefs["C_ArtifactUI.IsArtifactItem"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "isArtifact", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -599,6 +650,7 @@ APIDefs["C_ArtifactUI.IsAtForge"] = {
     params = {  },
     returns = { { name = "isAtForge", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.IsEquippedArtifactDisabled"] = {
@@ -610,6 +662,7 @@ APIDefs["C_ArtifactUI.IsEquippedArtifactDisabled"] = {
     params = {  },
     returns = { { name = "artifactDisabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.IsEquippedArtifactMaxed"] = {
@@ -621,6 +674,7 @@ APIDefs["C_ArtifactUI.IsEquippedArtifactMaxed"] = {
     params = {  },
     returns = { { name = "artifactMaxed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.IsMaxedByRulesOrEffect"] = {
@@ -632,6 +686,7 @@ APIDefs["C_ArtifactUI.IsMaxedByRulesOrEffect"] = {
     params = {  },
     returns = { { name = "isEffectivelyMaxed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.IsPowerKnown"] = {
@@ -643,6 +698,7 @@ APIDefs["C_ArtifactUI.IsPowerKnown"] = {
     params = { { name = "powerID", type = "number", default = nil } },
     returns = { { name = "known", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -655,6 +711,7 @@ APIDefs["C_ArtifactUI.IsViewedArtifactEquipped"] = {
     params = {  },
     returns = { { name = "isViewedArtifactEquipped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.SetAppearance"] = {
@@ -666,6 +723,7 @@ APIDefs["C_ArtifactUI.SetAppearance"] = {
     params = { { name = "artifactAppearanceID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -678,6 +736,7 @@ APIDefs["C_ArtifactUI.SetForgeCamera"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArtifactUI.SetForgeRotation"] = {
@@ -689,6 +748,7 @@ APIDefs["C_ArtifactUI.SetForgeRotation"] = {
     params = { { name = "forgeRotationX", type = "number", default = nil }, { name = "forgeRotationY", type = "number", default = nil }, { name = "forgeRotationZ", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -701,6 +761,7 @@ APIDefs["C_ArtifactUI.SetPreviewAppearance"] = {
     params = { { name = "artifactAppearanceID", type = "number", default = 0 } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -713,4 +774,5 @@ APIDefs["C_ArtifactUI.ShouldSuppressForgeRotation"] = {
     params = {  },
     returns = { { name = "shouldSuppressForgeRotation", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

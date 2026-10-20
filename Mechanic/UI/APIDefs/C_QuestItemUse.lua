@@ -11,5 +11,6 @@ APIDefs["C_QuestItemUse.CanUseQuestItemOnObject"] = {
     params = { { name = "item", type = "ItemLocation", default = nil }, { name = "unit", type = "UnitToken", default = "player" }, { name = "checkRange", type = "bool", default = nil } },
     returns = { { name = "canUse", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

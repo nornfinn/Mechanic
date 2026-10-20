@@ -11,6 +11,7 @@ APIDefs["C_RemixArtifactUI.ClearRemixArtifactItem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RemixArtifactUI.GetAppearanceInfoByID"] = {
@@ -22,6 +23,7 @@ APIDefs["C_RemixArtifactUI.GetAppearanceInfoByID"] = {
     params = { { name = "artifactAppearanceID", type = "number", default = nil } },
     returns = { { name = "uiCameraID", type = "number", canBeSecret = false }, { name = "altHandUICameraID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_RemixArtifactUI.GetArtifactArtInfo"] = {
     params = {  },
     returns = { { name = "artifactArtInfo", type = "RemixArtifactArtInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RemixArtifactUI.GetArtifactItemInfo"] = {
@@ -45,6 +48,7 @@ APIDefs["C_RemixArtifactUI.GetArtifactItemInfo"] = {
     params = {  },
     returns = { { name = "itemID", type = "number", canBeSecret = false }, { name = "altItemID", type = "number", canBeSecret = false }, { name = "artifactAppearanceID", type = "number", canBeSecret = false }, { name = "appearanceModID", type = "number", canBeSecret = false }, { name = "itemAppearanceID", type = "number", canBeSecret = false }, { name = "altItemAppearanceID", type = "number", canBeSecret = false }, { name = "altOnTop", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RemixArtifactUI.GetCurrArtifactItemID"] = {
@@ -56,6 +60,7 @@ APIDefs["C_RemixArtifactUI.GetCurrArtifactItemID"] = {
     params = {  },
     returns = { { name = "reqitemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RemixArtifactUI.GetCurrItemSpecIndex"] = {
@@ -67,6 +72,7 @@ APIDefs["C_RemixArtifactUI.GetCurrItemSpecIndex"] = {
     params = {  },
     returns = { { name = "specIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RemixArtifactUI.GetCurrTraitTreeID"] = {
@@ -78,6 +84,7 @@ APIDefs["C_RemixArtifactUI.GetCurrTraitTreeID"] = {
     params = {  },
     returns = { { name = "traitTreeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RemixArtifactUI.ItemInSlotIsRemixArtifact"] = {
@@ -89,5 +96,6 @@ APIDefs["C_RemixArtifactUI.ItemInSlotIsRemixArtifact"] = {
     params = { { name = "invSlot", type = "luaIndex", default = nil } },
     returns = { { name = "isRemixArtifact", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

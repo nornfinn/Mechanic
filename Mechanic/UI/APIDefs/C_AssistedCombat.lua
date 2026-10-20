@@ -11,6 +11,7 @@ APIDefs["C_AssistedCombat.GetActionSpell"] = {
     params = {  },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AssistedCombat.GetNextCastSpell"] = {
@@ -22,6 +23,7 @@ APIDefs["C_AssistedCombat.GetNextCastSpell"] = {
     params = { { name = "checkForVisibleButton", type = "bool", default = false } },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_AssistedCombat.GetRotationSpells"] = {
     params = {  },
     returns = { { name = "spellIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AssistedCombat.IsAvailable"] = {
@@ -45,4 +48,5 @@ APIDefs["C_AssistedCombat.IsAvailable"] = {
     params = {  },
     returns = { { name = "isAvailable", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

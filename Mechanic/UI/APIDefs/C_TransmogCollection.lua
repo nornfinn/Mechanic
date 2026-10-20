@@ -11,6 +11,7 @@ APIDefs["C_TransmogCollection.AccountCanCollectSource"] = {
     params = { { name = "sourceID", type = "number", default = nil } },
     returns = { { name = "hasItemData", type = "bool", canBeSecret = false }, { name = "canCollect", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_TransmogCollection.AreAllCollectionTypeFiltersChecked"] = {
     params = {  },
     returns = { { name = "areAllCollectionTypeFiltersChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.AreAllSourceTypeFiltersChecked"] = {
@@ -34,6 +36,7 @@ APIDefs["C_TransmogCollection.AreAllSourceTypeFiltersChecked"] = {
     params = {  },
     returns = { { name = "areAllSourceTypeFiltersChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.CanAppearanceHaveIllusion"] = {
@@ -45,6 +48,7 @@ APIDefs["C_TransmogCollection.CanAppearanceHaveIllusion"] = {
     params = { { name = "appearanceID", type = "number", default = nil } },
     returns = { { name = "canHaveIllusion", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_TransmogCollection.ClearNewAppearance"] = {
     params = { { name = "visualID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_TransmogCollection.ClearSearch"] = {
     params = { { name = "searchType", type = "TransmogSearchType", default = nil } },
     returns = { { name = "completed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_TransmogCollection.DeleteCustomSet"] = {
     params = { { name = "customSetID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -93,6 +100,7 @@ APIDefs["C_TransmogCollection.EndSearch"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetAllAppearanceSources"] = {
@@ -104,6 +112,7 @@ APIDefs["C_TransmogCollection.GetAllAppearanceSources"] = {
     params = { { name = "itemAppearanceID", type = "number", default = nil } },
     returns = { { name = "itemModifiedAppearanceIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -116,6 +125,7 @@ APIDefs["C_TransmogCollection.GetAllFactionsShown"] = {
     params = {  },
     returns = { { name = "shown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetAllRacesShown"] = {
@@ -127,6 +137,7 @@ APIDefs["C_TransmogCollection.GetAllRacesShown"] = {
     params = {  },
     returns = { { name = "shown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetAppearanceCameraID"] = {
@@ -138,6 +149,7 @@ APIDefs["C_TransmogCollection.GetAppearanceCameraID"] = {
     params = { { name = "itemAppearanceID", type = "number", default = nil }, { name = "variation", type = "TransmogCameraVariation", default = nil } },
     returns = { { name = "cameraID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -150,6 +162,7 @@ APIDefs["C_TransmogCollection.GetAppearanceCameraIDBySource"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil }, { name = "variation", type = "TransmogCameraVariation", default = nil } },
     returns = { { name = "cameraID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -162,6 +175,7 @@ APIDefs["C_TransmogCollection.GetAppearanceInfoBySource"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "info", type = "TransmogAppearanceInfoBySourceData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -174,6 +188,7 @@ APIDefs["C_TransmogCollection.GetAppearanceSourceDrops"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "encounterInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -186,6 +201,7 @@ APIDefs["C_TransmogCollection.GetAppearanceSourceInfo"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "info", type = "TransmogAppearanceSourceInfoData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -198,6 +214,7 @@ APIDefs["C_TransmogCollection.GetAppearanceSources"] = {
     params = { { name = "appearanceID", type = "number", default = nil }, { name = "categoryType", type = "TransmogCollectionType", default = nil }, { name = "transmogLocation", type = "TransmogLocation", default = nil } },
     returns = { { name = "sources", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -210,6 +227,7 @@ APIDefs["C_TransmogCollection.GetArtifactAppearanceStrings"] = {
     params = { { name = "appearanceID", type = "number", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "hyperlink", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -222,6 +240,7 @@ APIDefs["C_TransmogCollection.GetCategoryAppearances"] = {
     params = { { name = "category", type = "TransmogCollectionType", default = nil }, { name = "transmogLocation", type = "TransmogLocation", default = nil } },
     returns = { { name = "appearances", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -234,6 +253,7 @@ APIDefs["C_TransmogCollection.GetCategoryCollectedCount"] = {
     params = { { name = "category", type = "TransmogCollectionType", default = nil } },
     returns = { { name = "count", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -246,6 +266,7 @@ APIDefs["C_TransmogCollection.GetCategoryForItem"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "collectionCategory", type = "TransmogCollectionType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -258,6 +279,7 @@ APIDefs["C_TransmogCollection.GetCategoryInfo"] = {
     params = { { name = "category", type = "TransmogCollectionType", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "isWeapon", type = "bool", canBeSecret = false }, { name = "canHaveIllusions", type = "bool", canBeSecret = false }, { name = "canMainHand", type = "bool", canBeSecret = false }, { name = "canOffHand", type = "bool", canBeSecret = false }, { name = "canRanged", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -270,6 +292,7 @@ APIDefs["C_TransmogCollection.GetCategoryTotal"] = {
     params = { { name = "category", type = "TransmogCollectionType", default = nil } },
     returns = { { name = "total", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -282,6 +305,7 @@ APIDefs["C_TransmogCollection.GetClassFilter"] = {
     params = {  },
     returns = { { name = "classID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetCollectedShown"] = {
@@ -293,6 +317,7 @@ APIDefs["C_TransmogCollection.GetCollectedShown"] = {
     params = {  },
     returns = { { name = "shown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetCustomSetHyperlinkFromItemTransmogInfoList"] = {
@@ -304,6 +329,7 @@ APIDefs["C_TransmogCollection.GetCustomSetHyperlinkFromItemTransmogInfoList"] = 
     params = { { name = "itemTransmogInfoList", type = "table", default = nil } },
     returns = { { name = "hyperlink", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -316,6 +342,7 @@ APIDefs["C_TransmogCollection.GetCustomSetInfo"] = {
     params = { { name = "customSetID", type = "number", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -328,6 +355,7 @@ APIDefs["C_TransmogCollection.GetCustomSetItemTransmogInfoList"] = {
     params = { { name = "customSetID", type = "number", default = nil } },
     returns = { { name = "list", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -340,6 +368,7 @@ APIDefs["C_TransmogCollection.GetCustomSets"] = {
     params = {  },
     returns = { { name = "customSetID", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetFallbackWeaponAppearance"] = {
@@ -351,6 +380,7 @@ APIDefs["C_TransmogCollection.GetFallbackWeaponAppearance"] = {
     params = {  },
     returns = { { name = "appearanceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetFilteredCategoryCollectedCount"] = {
@@ -362,6 +392,7 @@ APIDefs["C_TransmogCollection.GetFilteredCategoryCollectedCount"] = {
     params = { { name = "category", type = "TransmogCollectionType", default = nil } },
     returns = { { name = "count", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -374,6 +405,7 @@ APIDefs["C_TransmogCollection.GetFilteredCategoryTotal"] = {
     params = { { name = "category", type = "TransmogCollectionType", default = nil } },
     returns = { { name = "total", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -386,6 +418,7 @@ APIDefs["C_TransmogCollection.GetIllusionInfo"] = {
     params = { { name = "illusionID", type = "number", default = nil } },
     returns = { { name = "info", type = "TransmogIllusionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -398,6 +431,7 @@ APIDefs["C_TransmogCollection.GetIllusionStrings"] = {
     params = { { name = "illusionID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "hyperlink", type = "string", canBeSecret = false }, { name = "sourceText", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -407,9 +441,11 @@ APIDefs["C_TransmogCollection.GetIllusions"] = {
     category = "general",
     subcategory = "c_transmogcollection",
     funcPath = "C_TransmogCollection.GetIllusions",
-    params = {  },
+    params = { { name = "category", type = "TransmogCollectionType", default = nil } },
     returns = { { name = "illusions", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_TransmogCollection.GetInspectItemTransmogInfoList"] = {
@@ -421,6 +457,7 @@ APIDefs["C_TransmogCollection.GetInspectItemTransmogInfoList"] = {
     params = {  },
     returns = { { name = "list", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetIsAppearanceFavorite"] = {
@@ -432,6 +469,7 @@ APIDefs["C_TransmogCollection.GetIsAppearanceFavorite"] = {
     params = { { name = "itemAppearanceID", type = "number", default = nil } },
     returns = { { name = "isFavorite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -444,6 +482,7 @@ APIDefs["C_TransmogCollection.GetItemInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemAppearanceID", type = "number", canBeSecret = false }, { name = "itemModifiedAppearanceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -456,6 +495,7 @@ APIDefs["C_TransmogCollection.GetItemTransmogInfoListFromCustomSetHyperlink"] = 
     params = { { name = "hyperlink", type = "cstring", default = nil } },
     returns = { { name = "list", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -468,6 +508,7 @@ APIDefs["C_TransmogCollection.GetLatestAppearance"] = {
     params = {  },
     returns = { { name = "visualID", type = "number", canBeSecret = false }, { name = "category", type = "TransmogCollectionType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetNumMaxCustomSets"] = {
@@ -479,6 +520,7 @@ APIDefs["C_TransmogCollection.GetNumMaxCustomSets"] = {
     params = {  },
     returns = { { name = "maxCustomSets", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetNumTransmogSources"] = {
@@ -490,6 +532,7 @@ APIDefs["C_TransmogCollection.GetNumTransmogSources"] = {
     params = {  },
     returns = { { name = "count", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetPairedArtifactAppearance"] = {
@@ -501,6 +544,7 @@ APIDefs["C_TransmogCollection.GetPairedArtifactAppearance"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "pairedItemModifiedAppearanceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -513,6 +557,7 @@ APIDefs["C_TransmogCollection.GetSourceIcon"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "icon", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -525,6 +570,7 @@ APIDefs["C_TransmogCollection.GetSourceInfo"] = {
     params = { { name = "sourceID", type = "number", default = nil } },
     returns = { { name = "sourceInfo", type = "AppearanceSourceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -537,6 +583,7 @@ APIDefs["C_TransmogCollection.GetSourceItemID"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "itemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -549,6 +596,7 @@ APIDefs["C_TransmogCollection.GetSourceRequiredHoliday"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "holidayName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -561,6 +609,7 @@ APIDefs["C_TransmogCollection.GetUncollectedShown"] = {
     params = {  },
     returns = { { name = "shown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.GetValidAppearanceSourcesForClass"] = {
@@ -572,7 +621,20 @@ APIDefs["C_TransmogCollection.GetValidAppearanceSourcesForClass"] = {
     params = { { name = "appearanceID", type = "number", default = nil }, { name = "classID", type = "number", default = nil }, { name = "categoryType", type = "TransmogCollectionType", default = nil }, { name = "transmogLocation", type = "TransmogLocation", default = nil } },
     returns = { { name = "sources", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogCollection.HasAnyAppearance"] = {
+    key = "C_TransmogCollection.HasAnyAppearance",
+    name = "HasAnyAppearance",
+    category = "general",
+    subcategory = "c_transmogcollection",
+    funcPath = "C_TransmogCollection.HasAnyAppearance",
+    params = {  },
+    returns = { { name = "hasAnyAppearance", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_TransmogCollection.HasFavorites"] = {
@@ -584,6 +646,7 @@ APIDefs["C_TransmogCollection.HasFavorites"] = {
     params = {  },
     returns = { { name = "hasFavorites", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.IsAppearanceHiddenVisual"] = {
@@ -595,6 +658,7 @@ APIDefs["C_TransmogCollection.IsAppearanceHiddenVisual"] = {
     params = { { name = "appearanceID", type = "number", default = nil } },
     returns = { { name = "isHiddenVisual", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -607,6 +671,7 @@ APIDefs["C_TransmogCollection.IsCategoryValidForItem"] = {
     params = { { name = "category", type = "TransmogCollectionType", default = nil }, { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -619,6 +684,7 @@ APIDefs["C_TransmogCollection.IsNewAppearance"] = {
     params = { { name = "visualID", type = "number", default = nil } },
     returns = { { name = "isNew", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -631,6 +697,7 @@ APIDefs["C_TransmogCollection.IsSearchDBLoading"] = {
     params = {  },
     returns = { { name = "isLoading", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.IsSearchInProgress"] = {
@@ -642,6 +709,7 @@ APIDefs["C_TransmogCollection.IsSearchInProgress"] = {
     params = { { name = "searchType", type = "TransmogSearchType", default = nil } },
     returns = { { name = "inProgress", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -654,6 +722,20 @@ APIDefs["C_TransmogCollection.IsSourceTypeFilterChecked"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "checked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogCollection.IsSpellItemEnchantmentHiddenVisual"] = {
+    key = "C_TransmogCollection.IsSpellItemEnchantmentHiddenVisual",
+    name = "IsSpellItemEnchantmentHiddenVisual",
+    category = "general",
+    subcategory = "c_transmogcollection",
+    funcPath = "C_TransmogCollection.IsSpellItemEnchantmentHiddenVisual",
+    params = { { name = "spellItemEnchantmentID", type = "number", default = nil } },
+    returns = { { name = "isHiddenVisual", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -666,6 +748,7 @@ APIDefs["C_TransmogCollection.IsUsingDefaultFilters"] = {
     params = {  },
     returns = { { name = "isUsingDefaultFilters", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.IsValidCustomSetName"] = {
@@ -677,6 +760,7 @@ APIDefs["C_TransmogCollection.IsValidCustomSetName"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "isApproved", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -689,6 +773,7 @@ APIDefs["C_TransmogCollection.IsValidTransmogSource"] = {
     params = { { name = "source", type = "TransmogSource", default = nil } },
     returns = { { name = "valid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -701,6 +786,7 @@ APIDefs["C_TransmogCollection.ModifyCustomSet"] = {
     params = { { name = "customSetID", type = "number", default = nil }, { name = "itemTransmogInfoList", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -713,6 +799,7 @@ APIDefs["C_TransmogCollection.NewCustomSet"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "icon", type = "fileID", default = nil }, { name = "itemTransmogInfoList", type = "table", default = nil } },
     returns = { { name = "customSetID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -725,6 +812,7 @@ APIDefs["C_TransmogCollection.PlayerCanCollectSource"] = {
     params = { { name = "sourceID", type = "number", default = nil } },
     returns = { { name = "hasItemData", type = "bool", canBeSecret = false }, { name = "canCollect", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -737,6 +825,7 @@ APIDefs["C_TransmogCollection.PlayerHasTransmog"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "itemAppearanceModID", type = "number", default = 0 } },
     returns = { { name = "hasTransmog", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -749,6 +838,7 @@ APIDefs["C_TransmogCollection.PlayerHasTransmogByItemInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "hasTransmog", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -761,6 +851,7 @@ APIDefs["C_TransmogCollection.PlayerHasTransmogItemModifiedAppearance"] = {
     params = { { name = "itemModifiedAppearanceID", type = "number", default = nil } },
     returns = { { name = "hasTransmog", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -773,6 +864,7 @@ APIDefs["C_TransmogCollection.PlayerKnowsSource"] = {
     params = { { name = "sourceID", type = "number", default = nil } },
     returns = { { name = "isKnown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -785,6 +877,7 @@ APIDefs["C_TransmogCollection.RenameCustomSet"] = {
     params = { { name = "customSetID", type = "number", default = nil }, { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -797,6 +890,7 @@ APIDefs["C_TransmogCollection.SearchProgress"] = {
     params = { { name = "searchType", type = "TransmogSearchType", default = nil } },
     returns = { { name = "progress", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -809,6 +903,7 @@ APIDefs["C_TransmogCollection.SearchSize"] = {
     params = { { name = "searchType", type = "TransmogSearchType", default = nil } },
     returns = { { name = "size", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -821,6 +916,7 @@ APIDefs["C_TransmogCollection.SetAllCollectionTypeFilters"] = {
     params = { { name = "checked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -833,6 +929,7 @@ APIDefs["C_TransmogCollection.SetAllFactionsShown"] = {
     params = { { name = "shown", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -845,6 +942,7 @@ APIDefs["C_TransmogCollection.SetAllRacesShown"] = {
     params = { { name = "shown", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -857,6 +955,7 @@ APIDefs["C_TransmogCollection.SetAllSourceTypeFilters"] = {
     params = { { name = "checked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -869,6 +968,7 @@ APIDefs["C_TransmogCollection.SetClassFilter"] = {
     params = { { name = "classID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -881,6 +981,7 @@ APIDefs["C_TransmogCollection.SetCollectedShown"] = {
     params = { { name = "shown", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -893,6 +994,7 @@ APIDefs["C_TransmogCollection.SetDefaultFilters"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogCollection.SetIsAppearanceFavorite"] = {
@@ -904,6 +1006,7 @@ APIDefs["C_TransmogCollection.SetIsAppearanceFavorite"] = {
     params = { { name = "itemAppearanceID", type = "number", default = nil }, { name = "isFavorite", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -916,6 +1019,7 @@ APIDefs["C_TransmogCollection.SetSearch"] = {
     params = { { name = "searchType", type = "TransmogSearchType", default = nil }, { name = "searchText", type = "string", default = nil } },
     returns = { { name = "completed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -928,6 +1032,7 @@ APIDefs["C_TransmogCollection.SetSearchAndFilterCategory"] = {
     params = { { name = "category", type = "TransmogCollectionType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -940,6 +1045,7 @@ APIDefs["C_TransmogCollection.SetSourceTypeFilter"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "checked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -952,6 +1058,7 @@ APIDefs["C_TransmogCollection.SetUncollectedShown"] = {
     params = { { name = "shown", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -964,4 +1071,5 @@ APIDefs["C_TransmogCollection.UpdateUsableAppearances"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

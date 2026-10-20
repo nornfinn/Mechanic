@@ -11,6 +11,7 @@ APIDefs["C_IncomingSummon.HasIncomingSummon"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" } },
     returns = { { name = "summon", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,5 +24,6 @@ APIDefs["C_IncomingSummon.IncomingSummonStatus"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" } },
     returns = { { name = "status", type = "SummonStatus", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

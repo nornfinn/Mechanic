@@ -11,6 +11,7 @@ APIDefs["C_MythicPlus.GetCurrentAffixes"] = {
     params = {  },
     returns = { { name = "affixIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetCurrentSeason"] = {
@@ -22,6 +23,7 @@ APIDefs["C_MythicPlus.GetCurrentSeason"] = {
     params = {  },
     returns = { { name = "seasonID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetCurrentSeasonValues"] = {
@@ -33,6 +35,7 @@ APIDefs["C_MythicPlus.GetCurrentSeasonValues"] = {
     params = {  },
     returns = { { name = "displaySeasonID", type = "number", canBeSecret = false }, { name = "milestoneSeasonID", type = "number", canBeSecret = false }, { name = "rewardSeasonID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetCurrentUIDisplaySeason"] = {
@@ -44,6 +47,7 @@ APIDefs["C_MythicPlus.GetCurrentUIDisplaySeason"] = {
     params = {  },
     returns = { { name = "seasonID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetEndOfRunGearSequenceLevel"] = {
@@ -55,6 +59,7 @@ APIDefs["C_MythicPlus.GetEndOfRunGearSequenceLevel"] = {
     params = { { name = "keystoneLevel", type = "number", default = nil } },
     returns = { { name = "sequenceLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -67,6 +72,7 @@ APIDefs["C_MythicPlus.GetLastWeeklyBestInformation"] = {
     params = {  },
     returns = { { name = "challengeMapId", type = "number", canBeSecret = false }, { name = "level", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetOwnedKeystoneChallengeMapID"] = {
@@ -78,6 +84,7 @@ APIDefs["C_MythicPlus.GetOwnedKeystoneChallengeMapID"] = {
     params = {  },
     returns = { { name = "challengeMapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetOwnedKeystoneLevel"] = {
@@ -89,6 +96,7 @@ APIDefs["C_MythicPlus.GetOwnedKeystoneLevel"] = {
     params = {  },
     returns = { { name = "keyStoneLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetOwnedKeystoneMapID"] = {
@@ -100,6 +108,7 @@ APIDefs["C_MythicPlus.GetOwnedKeystoneMapID"] = {
     params = {  },
     returns = { { name = "mapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetRewardLevelForDifficultyLevel"] = {
@@ -111,6 +120,7 @@ APIDefs["C_MythicPlus.GetRewardLevelForDifficultyLevel"] = {
     params = { { name = "difficultyLevel", type = "number", default = nil } },
     returns = { { name = "weeklyRewardLevel", type = "number", canBeSecret = false }, { name = "endOfRunRewardLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -123,6 +133,7 @@ APIDefs["C_MythicPlus.GetRewardLevelFromKeystoneLevel"] = {
     params = { { name = "keystoneLevel", type = "number", default = nil } },
     returns = { { name = "rewardLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -135,6 +146,7 @@ APIDefs["C_MythicPlus.GetRunHistory"] = {
     params = { { name = "includePreviousWeeks", type = "bool", default = false }, { name = "includeIncompleteRuns", type = "bool", default = false }, { name = "currentSeasonOnly", type = "bool", default = false } },
     returns = { { name = "runs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -147,6 +159,7 @@ APIDefs["C_MythicPlus.GetSeasonBestAffixScoreInfoForMap"] = {
     params = { { name = "mapChallengeModeID", type = "number", default = nil } },
     returns = { { name = "affixScores", type = "table", canBeSecret = false }, { name = "bestOverAllScore", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -159,6 +172,7 @@ APIDefs["C_MythicPlus.GetSeasonBestForMap"] = {
     params = { { name = "mapChallengeModeID", type = "number", default = nil } },
     returns = { { name = "intimeInfo", type = "MapSeasonBestInfo", canBeSecret = false }, { name = "overtimeInfo", type = "MapSeasonBestInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -171,6 +185,7 @@ APIDefs["C_MythicPlus.GetSeasonBestMythicRatingFromThisExpansion"] = {
     params = {  },
     returns = { { name = "bestSeasonScore", type = "number", canBeSecret = false }, { name = "bestSeason", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.GetWeeklyBestForMap"] = {
@@ -180,8 +195,9 @@ APIDefs["C_MythicPlus.GetWeeklyBestForMap"] = {
     subcategory = "c_mythicplus",
     funcPath = "C_MythicPlus.GetWeeklyBestForMap",
     params = { { name = "mapChallengeModeID", type = "number", default = nil } },
-    returns = { { name = "durationSec", type = "number", canBeSecret = false }, { name = "level", type = "number", canBeSecret = false }, { name = "completionDate", type = "MythicPlusDate", canBeSecret = false }, { name = "affixIDs", type = "table", canBeSecret = false }, { name = "members", type = "table", canBeSecret = false }, { name = "dungeonScore", type = "number", canBeSecret = false } },
+    returns = { { name = "durationSec", type = "number", canBeSecret = false }, { name = "level", type = "number", canBeSecret = false }, { name = "completionDate", type = "CalendarTime", canBeSecret = false }, { name = "affixIDs", type = "table", canBeSecret = false }, { name = "members", type = "table", canBeSecret = false }, { name = "dungeonScore", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -194,6 +210,7 @@ APIDefs["C_MythicPlus.GetWeeklyChestRewardLevel"] = {
     params = {  },
     returns = { { name = "currentWeekBestLevel", type = "number", canBeSecret = false }, { name = "weeklyRewardLevel", type = "number", canBeSecret = false }, { name = "nextDifficultyWeeklyRewardLevel", type = "number", canBeSecret = false }, { name = "nextBestLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.IsMythicPlusActive"] = {
@@ -205,6 +222,7 @@ APIDefs["C_MythicPlus.IsMythicPlusActive"] = {
     params = {  },
     returns = { { name = "isMythicPlusActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.RequestCurrentAffixes"] = {
@@ -216,6 +234,7 @@ APIDefs["C_MythicPlus.RequestCurrentAffixes"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.RequestMapInfo"] = {
@@ -227,6 +246,7 @@ APIDefs["C_MythicPlus.RequestMapInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MythicPlus.RequestRewards"] = {
@@ -238,4 +258,5 @@ APIDefs["C_MythicPlus.RequestRewards"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

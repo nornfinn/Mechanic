@@ -11,6 +11,7 @@ APIDefs["C_BarberShop.ApplyCustomizationChoices"] = {
     params = {  },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.Cancel"] = {
@@ -22,6 +23,7 @@ APIDefs["C_BarberShop.Cancel"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.ClearPreviewChoices"] = {
@@ -33,6 +35,7 @@ APIDefs["C_BarberShop.ClearPreviewChoices"] = {
     params = { { name = "clearSavedChoices", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,6 +48,7 @@ APIDefs["C_BarberShop.GetAvailableCustomizations"] = {
     params = {  },
     returns = { { name = "categories", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.GetCurrentCameraZoom"] = {
@@ -56,6 +60,7 @@ APIDefs["C_BarberShop.GetCurrentCameraZoom"] = {
     params = {  },
     returns = { { name = "zoomLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.GetCurrentCharacterData"] = {
@@ -67,6 +72,7 @@ APIDefs["C_BarberShop.GetCurrentCharacterData"] = {
     params = {  },
     returns = { { name = "characterData", type = "PlayerInfoCharacterData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.GetCurrentCost"] = {
@@ -78,6 +84,7 @@ APIDefs["C_BarberShop.GetCurrentCost"] = {
     params = {  },
     returns = { { name = "cost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.GetViewingChrModel"] = {
@@ -89,6 +96,7 @@ APIDefs["C_BarberShop.GetViewingChrModel"] = {
     params = {  },
     returns = { { name = "chrModelID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.HasAlteredForm"] = {
@@ -100,6 +108,7 @@ APIDefs["C_BarberShop.HasAlteredForm"] = {
     params = {  },
     returns = { { name = "hasAlteredForm", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.HasAnyChanges"] = {
@@ -111,6 +120,7 @@ APIDefs["C_BarberShop.HasAnyChanges"] = {
     params = {  },
     returns = { { name = "hasChanges", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.HasCustomizationFeature"] = {
@@ -122,6 +132,7 @@ APIDefs["C_BarberShop.HasCustomizationFeature"] = {
     params = { { name = "featureMask", type = "ChrModelFeatureFlags", default = nil } },
     returns = { { name = "hasCustomizationFeature", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -134,6 +145,7 @@ APIDefs["C_BarberShop.IsViewingAlteredForm"] = {
     params = {  },
     returns = { { name = "isViewingAlteredForm", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.MarkCustomizationChoiceAsSeen"] = {
@@ -145,6 +157,7 @@ APIDefs["C_BarberShop.MarkCustomizationChoiceAsSeen"] = {
     params = { { name = "choiceID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -157,6 +170,7 @@ APIDefs["C_BarberShop.MarkCustomizationOptionAsSeen"] = {
     params = { { name = "optionID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -169,6 +183,7 @@ APIDefs["C_BarberShop.PreviewCustomizationChoice"] = {
     params = { { name = "optionID", type = "number", default = nil }, { name = "choiceID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -181,6 +196,7 @@ APIDefs["C_BarberShop.RandomizeCustomizationChoices"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.ResetCameraRotation"] = {
@@ -192,6 +208,7 @@ APIDefs["C_BarberShop.ResetCameraRotation"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.ResetCustomizationChoices"] = {
@@ -203,6 +220,7 @@ APIDefs["C_BarberShop.ResetCustomizationChoices"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.RotateCamera"] = {
@@ -214,6 +232,7 @@ APIDefs["C_BarberShop.RotateCamera"] = {
     params = { { name = "diffDegrees", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -226,6 +245,7 @@ APIDefs["C_BarberShop.SaveSeenChoices"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_BarberShop.SetCameraDistanceOffset"] = {
@@ -237,6 +257,7 @@ APIDefs["C_BarberShop.SetCameraDistanceOffset"] = {
     params = { { name = "offset", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -249,6 +270,7 @@ APIDefs["C_BarberShop.SetCameraZoomLevel"] = {
     params = { { name = "zoomLevel", type = "number", default = nil }, { name = "keepCustomZoom", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -261,6 +283,7 @@ APIDefs["C_BarberShop.SetCustomizationChoice"] = {
     params = { { name = "optionID", type = "number", default = nil }, { name = "choiceID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -273,6 +296,7 @@ APIDefs["C_BarberShop.SetModelDressState"] = {
     params = { { name = "dressedState", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -285,6 +309,7 @@ APIDefs["C_BarberShop.SetSelectedSex"] = {
     params = { { name = "sex", type = "UnitSex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -297,6 +322,7 @@ APIDefs["C_BarberShop.SetViewingAlteredForm"] = {
     params = { { name = "isViewingAlteredForm", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -309,6 +335,7 @@ APIDefs["C_BarberShop.SetViewingChrModel"] = {
     params = { { name = "chrModelID", type = "number", default = nil }, { name = "spellShapeshiftFormID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -321,6 +348,7 @@ APIDefs["C_BarberShop.SetViewingShapeshiftForm"] = {
     params = { { name = "shapeshiftFormID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -333,5 +361,6 @@ APIDefs["C_BarberShop.ZoomCamera"] = {
     params = { { name = "zoomAmount", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

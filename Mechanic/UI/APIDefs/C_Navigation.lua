@@ -11,6 +11,7 @@ APIDefs["C_Navigation.GetDistance"] = {
     params = {  },
     returns = { { name = "distance", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Navigation.GetFrame"] = {
@@ -22,6 +23,7 @@ APIDefs["C_Navigation.GetFrame"] = {
     params = {  },
     returns = { { name = "frame", type = "ScriptRegion", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Navigation.GetNearestPartyMemberToken"] = {
@@ -33,6 +35,20 @@ APIDefs["C_Navigation.GetNearestPartyMemberToken"] = {
     params = {  },
     returns = { { name = "unitToken", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_Navigation.GetNextWaypointForMap"] = {
+    key = "C_Navigation.GetNextWaypointForMap",
+    name = "GetNextWaypointForMap",
+    category = "map",
+    subcategory = "c_navigation",
+    funcPath = "C_Navigation.GetNextWaypointForMap",
+    params = { { name = "uiMapID", type = "number", default = nil } },
+    returns = { { name = "x", type = "number", canBeSecret = false }, { name = "y", type = "number", canBeSecret = false }, { name = "waypointDescription", type = "string", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_Navigation.GetTargetState"] = {
@@ -44,6 +60,7 @@ APIDefs["C_Navigation.GetTargetState"] = {
     params = {  },
     returns = { { name = "state", type = "NavigationState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Navigation.HasValidScreenPosition"] = {
@@ -55,6 +72,7 @@ APIDefs["C_Navigation.HasValidScreenPosition"] = {
     params = {  },
     returns = { { name = "hasValidScreenPosition", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Navigation.WasClampedToScreen"] = {
@@ -66,4 +84,5 @@ APIDefs["C_Navigation.WasClampedToScreen"] = {
     params = {  },
     returns = { { name = "wasClamped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

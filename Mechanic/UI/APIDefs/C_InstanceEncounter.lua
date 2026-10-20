@@ -11,6 +11,7 @@ APIDefs["C_InstanceEncounter.IsEncounterInProgress"] = {
     params = {  },
     returns = { { name = "isInProgress", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_InstanceEncounter.IsEncounterLimitingResurrections"] = {
@@ -22,6 +23,7 @@ APIDefs["C_InstanceEncounter.IsEncounterLimitingResurrections"] = {
     params = {  },
     returns = { { name = "isLimitingResurrections", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_InstanceEncounter.IsEncounterSuppressingRelease"] = {
@@ -33,6 +35,7 @@ APIDefs["C_InstanceEncounter.IsEncounterSuppressingRelease"] = {
     params = {  },
     returns = { { name = "isSuppressingRelease", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_InstanceEncounter.ShouldShowTimelineForEncounter"] = {
@@ -44,4 +47,5 @@ APIDefs["C_InstanceEncounter.ShouldShowTimelineForEncounter"] = {
     params = {  },
     returns = { { name = "shouldShow", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

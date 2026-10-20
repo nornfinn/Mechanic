@@ -14,7 +14,7 @@
 | **Interface Version** | `120100` (Retail 12.1.0); this repository's TOCs use `120100, 16001` (adds WoW: Forever) |
 | **Midnight Pre-patch** | January 20, 2026 (as published at the time) |
 | **Midnight Release** | March 2, 2026 (as published at the time) |
-| **Blizzard source in Mechanic's API data** | 12.0.1.64914 (beta) |
+| **Blizzard source in Mechanic's API data** | Retail 12.1.5.70448 and WoW: Forever 1.60.1.70450 (entries tagged by game) |
 
 ---
 

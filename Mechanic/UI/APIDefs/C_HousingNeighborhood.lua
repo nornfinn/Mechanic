@@ -11,6 +11,7 @@ APIDefs["C_HousingNeighborhood.CanReturnAfterVisitingHouse"] = {
     params = {  },
     returns = { { name = "canReturn", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.CancelInviteToNeighborhood"] = {
@@ -22,6 +23,7 @@ APIDefs["C_HousingNeighborhood.CancelInviteToNeighborhood"] = {
     params = { { name = "playerName", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_HousingNeighborhood.DemoteToResident"] = {
     params = { { name = "playerGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_HousingNeighborhood.GetCornerstoneHouseInfo"] = {
     params = {  },
     returns = { { name = "houseInfo", type = "HouseInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.GetCornerstoneNeighborhoodInfo"] = {
@@ -57,6 +61,7 @@ APIDefs["C_HousingNeighborhood.GetCornerstoneNeighborhoodInfo"] = {
     params = {  },
     returns = { { name = "neighborhoodInfo", type = "NeighborhoodInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.GetCornerstonePurchaseMode"] = {
@@ -68,6 +73,7 @@ APIDefs["C_HousingNeighborhood.GetCornerstonePurchaseMode"] = {
     params = {  },
     returns = { { name = "purchaseMode", type = "CornerstonePurchaseMode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.GetCurrentNeighborhoodTextureSuffix"] = {
@@ -79,6 +85,7 @@ APIDefs["C_HousingNeighborhood.GetCurrentNeighborhoodTextureSuffix"] = {
     params = {  },
     returns = { { name = "neighborhoodTextureSuffix", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.GetDiscountedMovePrice"] = {
@@ -90,6 +97,7 @@ APIDefs["C_HousingNeighborhood.GetDiscountedMovePrice"] = {
     params = {  },
     returns = { { name = "movePrice", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.GetMoveCooldownTime"] = {
@@ -101,6 +109,7 @@ APIDefs["C_HousingNeighborhood.GetMoveCooldownTime"] = {
     params = {  },
     returns = { { name = "movecooldownTime", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.GetNeighborhoodMapData"] = {
@@ -112,6 +121,7 @@ APIDefs["C_HousingNeighborhood.GetNeighborhoodMapData"] = {
     params = {  },
     returns = { { name = "neighborhoodPlots", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.GetNeighborhoodName"] = {
@@ -123,6 +133,7 @@ APIDefs["C_HousingNeighborhood.GetNeighborhoodName"] = {
     params = {  },
     returns = { { name = "neighborhoodName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.GetNeighborhoodPlotName"] = {
@@ -134,6 +145,7 @@ APIDefs["C_HousingNeighborhood.GetNeighborhoodPlotName"] = {
     params = { { name = "plotIndex", type = "number", default = nil } },
     returns = { { name = "neighborhoodName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -146,6 +158,7 @@ APIDefs["C_HousingNeighborhood.GetPreviousHouseIdentifier"] = {
     params = {  },
     returns = { { name = "previousHouseIdentifier", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.HasPermissionToPurchase"] = {
@@ -157,6 +170,7 @@ APIDefs["C_HousingNeighborhood.HasPermissionToPurchase"] = {
     params = {  },
     returns = { { name = "cantPurchaseReason", type = "PurchaseHouseDisabledReason", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.InvitePlayerToNeighborhood"] = {
@@ -168,6 +182,7 @@ APIDefs["C_HousingNeighborhood.InvitePlayerToNeighborhood"] = {
     params = { { name = "playerName", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -180,6 +195,7 @@ APIDefs["C_HousingNeighborhood.IsNeighborhoodManager"] = {
     params = {  },
     returns = { { name = "isManager", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.IsNeighborhoodOwner"] = {
@@ -191,6 +207,7 @@ APIDefs["C_HousingNeighborhood.IsNeighborhoodOwner"] = {
     params = {  },
     returns = { { name = "isOwner", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.IsPlayerInOtherPlayersPlot"] = {
@@ -202,6 +219,7 @@ APIDefs["C_HousingNeighborhood.IsPlayerInOtherPlayersPlot"] = {
     params = {  },
     returns = { { name = "isInUnownedPlot", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.IsPlotAvailableForPurchase"] = {
@@ -213,6 +231,7 @@ APIDefs["C_HousingNeighborhood.IsPlotAvailableForPurchase"] = {
     params = {  },
     returns = { { name = "isAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.IsPlotOwnedByPlayer"] = {
@@ -224,6 +243,7 @@ APIDefs["C_HousingNeighborhood.IsPlotOwnedByPlayer"] = {
     params = {  },
     returns = { { name = "isPlayerOwned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.OnBulletinBoardClosed"] = {
@@ -235,6 +255,19 @@ APIDefs["C_HousingNeighborhood.OnBulletinBoardClosed"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingNeighborhood.OnCornerstoneClosed"] = {
+    key = "C_HousingNeighborhood.OnCornerstoneClosed",
+    name = "OnCornerstoneClosed",
+    category = "general",
+    subcategory = "c_housingneighborhood",
+    funcPath = "C_HousingNeighborhood.OnCornerstoneClosed",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.PromoteToManager"] = {
@@ -246,6 +279,7 @@ APIDefs["C_HousingNeighborhood.PromoteToManager"] = {
     params = { { name = "playerGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -258,6 +292,7 @@ APIDefs["C_HousingNeighborhood.RequestNeighborhoodInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.RequestNeighborhoodRoster"] = {
@@ -269,6 +304,7 @@ APIDefs["C_HousingNeighborhood.RequestNeighborhoodRoster"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.RequestPendingNeighborhoodInvites"] = {
@@ -280,6 +316,7 @@ APIDefs["C_HousingNeighborhood.RequestPendingNeighborhoodInvites"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.TransferNeighborhoodOwnership"] = {
@@ -291,6 +328,7 @@ APIDefs["C_HousingNeighborhood.TransferNeighborhoodOwnership"] = {
     params = { { name = "playerGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -303,6 +341,7 @@ APIDefs["C_HousingNeighborhood.TryEvictPlayer"] = {
     params = { { name = "plotID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -315,6 +354,7 @@ APIDefs["C_HousingNeighborhood.TryMoveHouse"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingNeighborhood.TryPurchasePlot"] = {
@@ -326,4 +366,5 @@ APIDefs["C_HousingNeighborhood.TryPurchasePlot"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

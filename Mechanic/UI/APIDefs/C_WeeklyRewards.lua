@@ -11,6 +11,7 @@ APIDefs["C_WeeklyRewards.AreRewardsForCurrentRewardPeriod"] = {
     params = {  },
     returns = { { name = "isCurrentPeriod", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.CanClaimRewards"] = {
@@ -22,6 +23,7 @@ APIDefs["C_WeeklyRewards.CanClaimRewards"] = {
     params = {  },
     returns = { { name = "canClaimRewards", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.ClaimReward"] = {
@@ -33,6 +35,7 @@ APIDefs["C_WeeklyRewards.ClaimReward"] = {
     params = { { name = "id", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,6 +48,7 @@ APIDefs["C_WeeklyRewards.CloseInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.GetActivities"] = {
@@ -56,6 +60,7 @@ APIDefs["C_WeeklyRewards.GetActivities"] = {
     params = { { name = "type", type = "WeeklyRewardChestThresholdType", default = nil } },
     returns = { { name = "activities", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -68,6 +73,7 @@ APIDefs["C_WeeklyRewards.GetActivityEncounterInfo"] = {
     params = { { name = "type", type = "WeeklyRewardChestThresholdType", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -80,6 +86,7 @@ APIDefs["C_WeeklyRewards.GetConquestWeeklyProgress"] = {
     params = {  },
     returns = { { name = "weeklyProgress", type = "ConquestWeeklyProgress", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.GetDifficultyIDForActivityTier"] = {
@@ -91,6 +98,7 @@ APIDefs["C_WeeklyRewards.GetDifficultyIDForActivityTier"] = {
     params = { { name = "activityTierID", type = "number", default = nil } },
     returns = { { name = "difficultyID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -103,6 +111,7 @@ APIDefs["C_WeeklyRewards.GetExampleRewardItemHyperlinks"] = {
     params = { { name = "id", type = "number", default = nil } },
     returns = { { name = "hyperlink", type = "string", canBeSecret = false }, { name = "upgradeHyperlink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -115,6 +124,7 @@ APIDefs["C_WeeklyRewards.GetItemHyperlink"] = {
     params = { { name = "itemDBID", type = "WeeklyRewardItemDBID", default = nil } },
     returns = { { name = "hyperlink", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -127,6 +137,7 @@ APIDefs["C_WeeklyRewards.GetNextActivitiesIncrease"] = {
     params = { { name = "activityTierID", type = "number", default = nil }, { name = "level", type = "number", default = nil } },
     returns = { { name = "hasSeasonData", type = "bool", canBeSecret = false }, { name = "nextActivityTierID", type = "number", canBeSecret = false }, { name = "nextLevel", type = "number", canBeSecret = false }, { name = "itemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -139,6 +150,7 @@ APIDefs["C_WeeklyRewards.GetNextMythicPlusIncrease"] = {
     params = { { name = "mythicPlusLevel", type = "number", default = nil } },
     returns = { { name = "hasSeasonData", type = "bool", canBeSecret = false }, { name = "nextMythicPlusLevel", type = "number", canBeSecret = false }, { name = "itemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -151,6 +163,7 @@ APIDefs["C_WeeklyRewards.GetNumCompletedDungeonRuns"] = {
     params = {  },
     returns = { { name = "numHeroic", type = "number", canBeSecret = false }, { name = "numMythic", type = "number", canBeSecret = false }, { name = "numMythicPlus", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.GetSortedProgressForActivity"] = {
@@ -162,6 +175,7 @@ APIDefs["C_WeeklyRewards.GetSortedProgressForActivity"] = {
     params = { { name = "type", type = "WeeklyRewardChestThresholdType", default = nil }, { name = "combineSharedDifficulty", type = "bool", default = nil } },
     returns = { { name = "progress", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -174,6 +188,7 @@ APIDefs["C_WeeklyRewards.HasAvailableRewards"] = {
     params = {  },
     returns = { { name = "hasAvailableRewards", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.HasGeneratedRewards"] = {
@@ -185,6 +200,7 @@ APIDefs["C_WeeklyRewards.HasGeneratedRewards"] = {
     params = {  },
     returns = { { name = "hasGeneratedRewards", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.HasInteraction"] = {
@@ -196,6 +212,7 @@ APIDefs["C_WeeklyRewards.HasInteraction"] = {
     params = {  },
     returns = { { name = "isInteracting", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.IsWeeklyChestRetired"] = {
@@ -207,6 +224,7 @@ APIDefs["C_WeeklyRewards.IsWeeklyChestRetired"] = {
     params = {  },
     returns = { { name = "isRetired", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.OnUIInteract"] = {
@@ -218,6 +236,7 @@ APIDefs["C_WeeklyRewards.OnUIInteract"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.ShouldShowFinalRetirementMessage"] = {
@@ -229,6 +248,7 @@ APIDefs["C_WeeklyRewards.ShouldShowFinalRetirementMessage"] = {
     params = {  },
     returns = { { name = "showRetirementMessage", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WeeklyRewards.ShouldShowRetirementMessage"] = {
@@ -240,4 +260,5 @@ APIDefs["C_WeeklyRewards.ShouldShowRetirementMessage"] = {
     params = {  },
     returns = { { name = "showRetirementMessage", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

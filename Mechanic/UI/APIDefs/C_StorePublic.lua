@@ -11,6 +11,7 @@ APIDefs["C_StorePublic.DoesGroupHavePurchaseableProducts"] = {
     params = { { name = "groupID", type = "number", default = nil } },
     returns = { { name = "hasPurchaseableProducts", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_StorePublic.EventStoreUISetShown"] = {
     params = { { name = "newShown", type = "bool", default = nil }, { name = "contextKey", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,4 +37,5 @@ APIDefs["C_StorePublic.IsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

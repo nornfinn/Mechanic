@@ -11,6 +11,7 @@ APIDefs["C_AddOns.DisableAddOn"] = {
     params = { { name = "name", type = "uiAddon", default = nil }, { name = "character", type = "cstring", default = "0" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AddOns.DisableAllAddOns"] = {
     params = { { name = "character", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_AddOns.DoesAddOnExist"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "exists", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_AddOns.DoesAddOnHaveLoadError"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "hadError", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_AddOns.EnableAddOn"] = {
     params = { { name = "name", type = "uiAddon", default = nil }, { name = "character", type = "cstring", default = "0" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_AddOns.EnableAllAddOns"] = {
     params = { { name = "character", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_AddOns.GetAddOnDependencies"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "deps", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,6 +102,7 @@ APIDefs["C_AddOns.GetAddOnEnableState"] = {
     params = { { name = "name", type = "uiAddon", default = nil }, { name = "character", type = "cstring", default = "0" } },
     returns = { { name = "state", type = "AddOnEnableState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -107,6 +115,7 @@ APIDefs["C_AddOns.GetAddOnInfo"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "title", type = "cstring", canBeSecret = false }, { name = "notes", type = "cstring", canBeSecret = false }, { name = "loadable", type = "bool", canBeSecret = false }, { name = "reason", type = "cstring", canBeSecret = false }, { name = "security", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -119,6 +128,7 @@ APIDefs["C_AddOns.GetAddOnInterfaceVersion"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "interfaceVersion", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -131,6 +141,7 @@ APIDefs["C_AddOns.GetAddOnLocalTable"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "table", type = "LuaValueVariant", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -143,6 +154,7 @@ APIDefs["C_AddOns.GetAddOnMetadata"] = {
     params = { { name = "name", type = "uiAddon", default = nil }, { name = "variable", type = "cstring", default = nil } },
     returns = { { name = "value", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -155,6 +167,7 @@ APIDefs["C_AddOns.GetAddOnName"] = {
     params = { { name = "index", type = "uiAddon", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -167,6 +180,7 @@ APIDefs["C_AddOns.GetAddOnNotes"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "notes", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -179,6 +193,7 @@ APIDefs["C_AddOns.GetAddOnOptionalDependencies"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "deps", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -191,6 +206,7 @@ APIDefs["C_AddOns.GetAddOnSecurity"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "security", type = "AddOnSecurityStatus", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -203,6 +219,7 @@ APIDefs["C_AddOns.GetAddOnTitle"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "title", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -215,6 +232,7 @@ APIDefs["C_AddOns.GetNumAddOns"] = {
     params = {  },
     returns = { { name = "numAddOns", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOns.GetScriptsDisallowedForBeta"] = {
@@ -226,6 +244,7 @@ APIDefs["C_AddOns.GetScriptsDisallowedForBeta"] = {
     params = {  },
     returns = { { name = "disallowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOns.IsAddOnDefaultEnabled"] = {
@@ -237,6 +256,7 @@ APIDefs["C_AddOns.IsAddOnDefaultEnabled"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "defaultEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -249,6 +269,7 @@ APIDefs["C_AddOns.IsAddOnLoadOnDemand"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "loadOnDemand", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -261,6 +282,7 @@ APIDefs["C_AddOns.IsAddOnLoadable"] = {
     params = { { name = "name", type = "uiAddon", default = nil }, { name = "character", type = "cstring", default = "0" }, { name = "demandLoaded", type = "bool", default = false } },
     returns = { { name = "loadable", type = "bool", canBeSecret = false }, { name = "reason", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -273,6 +295,7 @@ APIDefs["C_AddOns.IsAddOnLoaded"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "loadedOrLoading", type = "bool", canBeSecret = false }, { name = "loaded", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -285,6 +308,7 @@ APIDefs["C_AddOns.IsAddonVersionCheckEnabled"] = {
     params = {  },
     returns = { { name = "isEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOns.LoadAddOn"] = {
@@ -296,6 +320,7 @@ APIDefs["C_AddOns.LoadAddOn"] = {
     params = { { name = "name", type = "uiAddon", default = nil } },
     returns = { { name = "loaded", type = "bool", canBeSecret = false }, { name = "value", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -308,6 +333,7 @@ APIDefs["C_AddOns.ResetAddOns"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOns.ResetDisabledAddOns"] = {
@@ -319,6 +345,7 @@ APIDefs["C_AddOns.ResetDisabledAddOns"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOns.SaveAddOns"] = {
@@ -330,6 +357,7 @@ APIDefs["C_AddOns.SaveAddOns"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOns.SetAddonVersionCheck"] = {
@@ -341,5 +369,6 @@ APIDefs["C_AddOns.SetAddonVersionCheck"] = {
     params = { { name = "enabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

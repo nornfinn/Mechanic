@@ -11,6 +11,7 @@ APIDefs["C_CreatureInfo.GetClassInfo"] = {
     params = { { name = "classID", type = "number", default = nil } },
     returns = { { name = "classInfo", type = "ClassInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_CreatureInfo.GetCreatureFamilyIDs"] = {
     params = {  },
     returns = { { name = "creatureFamilyIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CreatureInfo.GetCreatureFamilyInfo"] = {
@@ -34,6 +36,7 @@ APIDefs["C_CreatureInfo.GetCreatureFamilyInfo"] = {
     params = { { name = "creatureFamilyID", type = "number", default = nil } },
     returns = { { name = "creatureFamilyInfo", type = "CreatureFamilyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_CreatureInfo.GetCreatureID"] = {
     params = { { name = "creatureGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "creatureID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_CreatureInfo.GetCreatureTypeIDs"] = {
     params = {  },
     returns = { { name = "creatureTypeIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CreatureInfo.GetCreatureTypeInfo"] = {
@@ -69,6 +74,7 @@ APIDefs["C_CreatureInfo.GetCreatureTypeInfo"] = {
     params = { { name = "creatureTypeID", type = "number", default = nil } },
     returns = { { name = "creatureTypeInfo", type = "CreatureTypeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_CreatureInfo.GetFactionInfo"] = {
     params = { { name = "raceID", type = "number", default = nil } },
     returns = { { name = "factionInfo", type = "FactionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -93,5 +100,6 @@ APIDefs["C_CreatureInfo.GetRaceInfo"] = {
     params = { { name = "raceID", type = "number", default = nil } },
     returns = { { name = "raceInfo", type = "RaceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

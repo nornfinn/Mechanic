@@ -11,6 +11,7 @@ APIDefs["C_InvasionInfo.AreInvasionsAvailable"] = {
     params = {  },
     returns = { { name = "areInvasionsAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_InvasionInfo.GetInvasionForUiMapID"] = {
@@ -22,6 +23,7 @@ APIDefs["C_InvasionInfo.GetInvasionForUiMapID"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "invasionID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_InvasionInfo.GetInvasionInfo"] = {
     params = { { name = "invasionID", type = "number", default = nil } },
     returns = { { name = "invasionInfo", type = "InvasionMapInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,5 +49,6 @@ APIDefs["C_InvasionInfo.GetInvasionTimeLeft"] = {
     params = { { name = "invasionID", type = "number", default = nil } },
     returns = { { name = "timeLeftMinutes", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

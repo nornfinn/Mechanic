@@ -11,6 +11,7 @@ APIDefs["C_GenericWidgetDisplay.Acknowledge"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GenericWidgetDisplay.Close"] = {
@@ -22,4 +23,5 @@ APIDefs["C_GenericWidgetDisplay.Close"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

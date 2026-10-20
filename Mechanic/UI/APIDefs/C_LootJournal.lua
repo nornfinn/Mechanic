@@ -11,6 +11,7 @@ APIDefs["C_LootJournal.GetItemSetItems"] = {
     params = { { name = "setID", type = "number", default = nil } },
     returns = { { name = "items", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,5 +24,6 @@ APIDefs["C_LootJournal.GetItemSets"] = {
     params = { { name = "classID", type = "number", default = nil }, { name = "specID", type = "number", default = nil } },
     returns = { { name = "itemSets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

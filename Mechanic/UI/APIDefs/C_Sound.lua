@@ -11,6 +11,7 @@ APIDefs["C_Sound.GetSoundScaledVolume"] = {
     params = { { name = "soundHandle", type = "number", default = nil } },
     returns = { { name = "scaledVolume", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_Sound.IsPlaying"] = {
     params = { { name = "soundHandle", type = "number", default = nil } },
     returns = { { name = "isPlaying", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_Sound.PlayItemSound"] = {
     params = { { name = "soundType", type = "ItemSoundType", default = nil }, { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -44,9 +47,23 @@ APIDefs["C_Sound.PlaySound"] = {
     category = "general",
     subcategory = "c_sound",
     funcPath = "C_Sound.PlaySound",
-    params = { { name = "soundKitID", type = "number", default = nil }, { name = "uiSoundSubType", type = "UISoundSubType", default = "g_defaultSI3UISoundSubTypeForLua" }, { name = "forceNoDuplicates", type = "bool", default = false }, { name = "runFinishCallback", type = "bool", default = false }, { name = "overridePriority", type = "number", default = nil } },
+    params = { { name = "soundKitID", type = "number", default = nil }, { name = "uiSoundSubType", type = "UISoundSubType", default = "g_defaultSI3UISoundSubTypeForLua" }, { name = "forceNoDuplicates", type = "bool", default = false }, { name = "runFinishCallback", type = "bool", default = false }, { name = "overridePriority", type = "number", default = nil }, { name = "volumeOverride", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false }, { name = "soundHandle", type = "SoundHandle", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Sound.PlaySoundWithOptions"] = {
+    key = "C_Sound.PlaySoundWithOptions",
+    name = "PlaySoundWithOptions",
+    category = "general",
+    subcategory = "c_sound",
+    funcPath = "C_Sound.PlaySoundWithOptions",
+    params = { { name = "params", type = "PlaySoundParams", default = nil } },
+    returns = { { name = "success", type = "bool", canBeSecret = false }, { name = "soundHandle", type = "SoundHandle", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,5 +76,6 @@ APIDefs["C_Sound.PlayVocalErrorSound"] = {
     params = { { name = "vocalErrorSoundID", type = "Vocalerrorsounds", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,4 +11,5 @@ APIDefs["C_GuildBank.IsGuildBankEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

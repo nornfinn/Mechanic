@@ -11,4 +11,5 @@ APIDefs["C_ImmersiveInteraction.HasImmersiveInteraction"] = {
     params = {  },
     returns = { { name = "immersiveInteraction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

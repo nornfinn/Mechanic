@@ -11,6 +11,20 @@ APIDefs["C_HousingLayout.AnyRoomsOnFloor"] = {
     params = { { name = "floor", type = "number", default = nil } },
     returns = { { name = "anyRooms", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HousingLayout.CanSetViewedFloor"] = {
+    key = "C_HousingLayout.CanSetViewedFloor",
+    name = "CanSetViewedFloor",
+    category = "general",
+    subcategory = "c_housinglayout",
+    funcPath = "C_HousingLayout.CanSetViewedFloor",
+    params = { { name = "floor", type = "number", default = nil } },
+    returns = { { name = "canSet", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +37,7 @@ APIDefs["C_HousingLayout.CancelActiveLayoutEditing"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.ConfirmStairChoice"] = {
@@ -34,6 +49,7 @@ APIDefs["C_HousingLayout.ConfirmStairChoice"] = {
     params = { { name = "choice", type = "HousingLayoutStairDirection", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +62,7 @@ APIDefs["C_HousingLayout.DeselectFloorplan"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.DeselectRoomOrDoor"] = {
@@ -57,6 +74,43 @@ APIDefs["C_HousingLayout.DeselectRoomOrDoor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingLayout.GetBaseRoomFloor"] = {
+    key = "C_HousingLayout.GetBaseRoomFloor",
+    name = "GetBaseRoomFloor",
+    category = "general",
+    subcategory = "c_housinglayout",
+    funcPath = "C_HousingLayout.GetBaseRoomFloor",
+    params = {  },
+    returns = { { name = "floor", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingLayout.GetHighestOccupiedFloorIndex"] = {
+    key = "C_HousingLayout.GetHighestOccupiedFloorIndex",
+    name = "GetHighestOccupiedFloorIndex",
+    category = "general",
+    subcategory = "c_housinglayout",
+    funcPath = "C_HousingLayout.GetHighestOccupiedFloorIndex",
+    params = {  },
+    returns = { { name = "highestFloorIndex", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingLayout.GetLowestOccupiedFloorIndex"] = {
+    key = "C_HousingLayout.GetLowestOccupiedFloorIndex",
+    name = "GetLowestOccupiedFloorIndex",
+    category = "general",
+    subcategory = "c_housinglayout",
+    funcPath = "C_HousingLayout.GetLowestOccupiedFloorIndex",
+    params = {  },
+    returns = { { name = "lowestFloorIndex", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.GetNumActiveRooms"] = {
@@ -68,6 +122,7 @@ APIDefs["C_HousingLayout.GetNumActiveRooms"] = {
     params = {  },
     returns = { { name = "numRooms", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.GetRoomPlacementBudget"] = {
@@ -79,6 +134,31 @@ APIDefs["C_HousingLayout.GetRoomPlacementBudget"] = {
     params = {  },
     returns = { { name = "placementBudget", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingLayout.GetRoomPlayerIsIn"] = {
+    key = "C_HousingLayout.GetRoomPlayerIsIn",
+    name = "GetRoomPlayerIsIn",
+    category = "general",
+    subcategory = "c_housinglayout",
+    funcPath = "C_HousingLayout.GetRoomPlayerIsIn",
+    params = {  },
+    returns = { { name = "roomGUID", type = "WOWGUID", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingLayout.GetSelectedBlueprintFloorplan"] = {
+    key = "C_HousingLayout.GetSelectedBlueprintFloorplan",
+    name = "GetSelectedBlueprintFloorplan",
+    category = "general",
+    subcategory = "c_housinglayout",
+    funcPath = "C_HousingLayout.GetSelectedBlueprintFloorplan",
+    params = {  },
+    returns = { { name = "roomID", type = "number", canBeSecret = false }, { name = "shareCode", type = "cstring", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.GetSelectedDoor"] = {
@@ -90,6 +170,7 @@ APIDefs["C_HousingLayout.GetSelectedDoor"] = {
     params = {  },
     returns = { { name = "selectedDoorComponentID", type = "number", canBeSecret = false }, { name = "roomGUID", type = "WOWGUID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.GetSelectedFloorplan"] = {
@@ -101,6 +182,7 @@ APIDefs["C_HousingLayout.GetSelectedFloorplan"] = {
     params = {  },
     returns = { { name = "roomID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.GetSelectedRoom"] = {
@@ -112,6 +194,7 @@ APIDefs["C_HousingLayout.GetSelectedRoom"] = {
     params = {  },
     returns = { { name = "roomGUID", type = "WOWGUID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.GetSelectedStairwellRoomCount"] = {
@@ -123,6 +206,7 @@ APIDefs["C_HousingLayout.GetSelectedStairwellRoomCount"] = {
     params = {  },
     returns = { { name = "stairwellRoomCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.GetSpentPlacementBudget"] = {
@@ -134,6 +218,7 @@ APIDefs["C_HousingLayout.GetSpentPlacementBudget"] = {
     params = {  },
     returns = { { name = "spentPlacementBudget", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.GetViewedFloor"] = {
@@ -145,6 +230,7 @@ APIDefs["C_HousingLayout.GetViewedFloor"] = {
     params = {  },
     returns = { { name = "floor", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.HasAnySelections"] = {
@@ -156,6 +242,7 @@ APIDefs["C_HousingLayout.HasAnySelections"] = {
     params = {  },
     returns = { { name = "hasAnySelections", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.HasRoomPlacementBudget"] = {
@@ -167,6 +254,19 @@ APIDefs["C_HousingLayout.HasRoomPlacementBudget"] = {
     params = {  },
     returns = { { name = "hasBudget", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingLayout.HasSelectedBlueprintFloorplan"] = {
+    key = "C_HousingLayout.HasSelectedBlueprintFloorplan",
+    name = "HasSelectedBlueprintFloorplan",
+    category = "general",
+    subcategory = "c_housinglayout",
+    funcPath = "C_HousingLayout.HasSelectedBlueprintFloorplan",
+    params = {  },
+    returns = { { name = "hasSelectedBlueprintFloorplan", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.HasSelectedDoor"] = {
@@ -178,6 +278,7 @@ APIDefs["C_HousingLayout.HasSelectedDoor"] = {
     params = {  },
     returns = { { name = "hasSelectedDoor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.HasSelectedFloorplan"] = {
@@ -189,6 +290,7 @@ APIDefs["C_HousingLayout.HasSelectedFloorplan"] = {
     params = {  },
     returns = { { name = "hasSelectedFloorplan", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.HasSelectedRoom"] = {
@@ -200,6 +302,7 @@ APIDefs["C_HousingLayout.HasSelectedRoom"] = {
     params = {  },
     returns = { { name = "hasSelectedRoom", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.HasStairs"] = {
@@ -211,6 +314,7 @@ APIDefs["C_HousingLayout.HasStairs"] = {
     params = { { name = "roomRecordID", type = "number", default = nil } },
     returns = { { name = "hasStairs", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -223,6 +327,7 @@ APIDefs["C_HousingLayout.HasValidConnection"] = {
     params = { { name = "roomGUID", type = "WOWGUID", default = nil }, { name = "componentID", type = "number", default = nil }, { name = "roomId", type = "number", default = nil } },
     returns = { { name = "canPlace", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -235,6 +340,7 @@ APIDefs["C_HousingLayout.IsBaseRoom"] = {
     params = { { name = "roomGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "isBaseRoom", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -247,6 +353,7 @@ APIDefs["C_HousingLayout.IsDraggingRoom"] = {
     params = {  },
     returns = { { name = "isDragging", type = "bool", canBeSecret = false }, { name = "isAccessibleDrag", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.MoveDraggedRoom"] = {
@@ -258,6 +365,7 @@ APIDefs["C_HousingLayout.MoveDraggedRoom"] = {
     params = { { name = "sourceDoorIndex", type = "number", default = nil }, { name = "destRoom", type = "WOWGUID", default = nil }, { name = "destDoorIndex", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -270,6 +378,7 @@ APIDefs["C_HousingLayout.MoveLayoutCamera"] = {
     params = { { name = "direction", type = "HousingLayoutCameraDirection", default = nil }, { name = "isPressed", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -282,6 +391,20 @@ APIDefs["C_HousingLayout.RemoveRoom"] = {
     params = { { name = "roomGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HousingLayout.RoomHasStairs"] = {
+    key = "C_HousingLayout.RoomHasStairs",
+    name = "RoomHasStairs",
+    category = "general",
+    subcategory = "c_housinglayout",
+    funcPath = "C_HousingLayout.RoomHasStairs",
+    params = { { name = "roomGUID", type = "WOWGUID", default = nil } },
+    returns = { { name = "hasStairs", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -294,6 +417,7 @@ APIDefs["C_HousingLayout.RotateFocusedRoom"] = {
     params = { { name = "isLeft", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -306,6 +430,7 @@ APIDefs["C_HousingLayout.RotateRoom"] = {
     params = { { name = "roomGUID", type = "WOWGUID", default = nil }, { name = "isLeft", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -318,6 +443,7 @@ APIDefs["C_HousingLayout.SelectFloorplan"] = {
     params = { { name = "roomID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -330,6 +456,7 @@ APIDefs["C_HousingLayout.SetViewedFloor"] = {
     params = { { name = "floor", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -342,6 +469,7 @@ APIDefs["C_HousingLayout.StartDrag"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.StopDrag"] = {
@@ -353,6 +481,7 @@ APIDefs["C_HousingLayout.StopDrag"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.StopDraggingRoom"] = {
@@ -364,6 +493,7 @@ APIDefs["C_HousingLayout.StopDraggingRoom"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingLayout.ZoomLayoutCamera"] = {
@@ -375,5 +505,6 @@ APIDefs["C_HousingLayout.ZoomLayoutCamera"] = {
     params = { { name = "zoomIn", type = "bool", default = nil } },
     returns = { { name = "zoomChanged", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

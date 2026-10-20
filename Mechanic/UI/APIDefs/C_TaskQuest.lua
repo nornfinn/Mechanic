@@ -11,6 +11,7 @@ APIDefs["C_TaskQuest.DoesMapShowTaskQuestObjectives"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "showsTaskQuestObjectives", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_TaskQuest.GetQuestInfoByQuestID"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "questTitle", type = "cstring", canBeSecret = false }, { name = "factionID", type = "number", canBeSecret = false }, { name = "capped", type = "bool", canBeSecret = false }, { name = "displayAsObjective", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_TaskQuest.GetQuestLocation"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "locationX", type = "number", canBeSecret = false }, { name = "locationY", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_TaskQuest.GetQuestProgressBarInfo"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "progress", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_TaskQuest.GetQuestTimeLeftMinutes"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "minutesLeft", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_TaskQuest.GetQuestTimeLeftSeconds"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "secondsLeft", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_TaskQuest.GetQuestUIWidgetSetByType"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "type", type = "MapIconUIWidgetSetType", default = nil } },
     returns = { { name = "widgetSet", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,6 +102,7 @@ APIDefs["C_TaskQuest.GetQuestZoneID"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "uiMapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -107,6 +115,7 @@ APIDefs["C_TaskQuest.GetQuestsOnMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "taskPOIs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -119,6 +128,7 @@ APIDefs["C_TaskQuest.GetThreatQuests"] = {
     params = {  },
     returns = { { name = "quests", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TaskQuest.IsActive"] = {
@@ -130,6 +140,7 @@ APIDefs["C_TaskQuest.IsActive"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "active", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -142,5 +153,6 @@ APIDefs["C_TaskQuest.RequestPreloadRewardData"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

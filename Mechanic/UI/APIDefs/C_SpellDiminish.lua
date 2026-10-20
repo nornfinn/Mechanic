@@ -11,6 +11,7 @@ APIDefs["C_SpellDiminish.GetAllSpellDiminishCategories"] = {
     params = { { name = "ruleset", type = "SpellDiminishRuleset", default = nil } },
     returns = { { name = "categories", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_SpellDiminish.GetSpellDiminishCategoryInfo"] = {
     params = { { name = "category", type = "SpellDiminishCategory", default = nil } },
     returns = { { name = "categoryInfo", type = "SpellDiminishCategoryInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_SpellDiminish.IsSystemSupported"] = {
     params = {  },
     returns = { { name = "isSystemSupported", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SpellDiminish.ShouldTrackSpellDiminishCategory"] = {
@@ -46,5 +49,6 @@ APIDefs["C_SpellDiminish.ShouldTrackSpellDiminishCategory"] = {
     params = { { name = "category", type = "SpellDiminishCategory", default = nil }, { name = "ruleset", type = "SpellDiminishRuleset", default = nil } },
     returns = { { name = "isTracked", type = "bool", canBeSecret = true } },
     midnightImpact = "HIGH",
-    midnightNote = "Secret behavior: SecretReturns, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretReturns",
 }

@@ -11,6 +11,7 @@ APIDefs["C_TradeInfo.AddTradeMoney"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeInfo.PickupTradeMoney"] = {
@@ -22,6 +23,7 @@ APIDefs["C_TradeInfo.PickupTradeMoney"] = {
     params = { { name = "amount", type = "WOWMONEY", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,5 +36,18 @@ APIDefs["C_TradeInfo.SetTradeMoney"] = {
     params = { { name = "amount", type = "WOWMONEY", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TradeInfo.ShouldShowTradeOfferWarning"] = {
+    key = "C_TradeInfo.ShouldShowTradeOfferWarning",
+    name = "ShouldShowTradeOfferWarning",
+    category = "general",
+    subcategory = "c_tradeinfo",
+    funcPath = "C_TradeInfo.ShouldShowTradeOfferWarning",
+    params = {  },
+    returns = { { name = "shouldShow", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

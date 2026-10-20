@@ -11,6 +11,7 @@ APIDefs["C_GamePad.AddSDLMapping"] = {
     params = { { name = "platform", type = "ClientPlatformType", default = nil }, { name = "mapping", type = "cstring", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_GamePad.ApplyConfigs"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GamePad.AxisIndexToConfigName"] = {
@@ -34,6 +36,7 @@ APIDefs["C_GamePad.AxisIndexToConfigName"] = {
     params = { { name = "axisIndex", type = "number", default = nil } },
     returns = { { name = "configName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_GamePad.ButtonBindingToIndex"] = {
     params = { { name = "bindingName", type = "cstring", default = nil } },
     returns = { { name = "buttonIndex", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_GamePad.ButtonIndexToBinding"] = {
     params = { { name = "buttonIndex", type = "number", default = nil } },
     returns = { { name = "bindingName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_GamePad.ButtonIndexToConfigName"] = {
     params = { { name = "buttonIndex", type = "number", default = nil } },
     returns = { { name = "configName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_GamePad.ClearLedColor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GamePad.DeleteConfig"] = {
@@ -93,6 +100,7 @@ APIDefs["C_GamePad.DeleteConfig"] = {
     params = { { name = "configID", type = "GamePadConfigID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -105,6 +113,7 @@ APIDefs["C_GamePad.GetActiveDeviceID"] = {
     params = {  },
     returns = { { name = "deviceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GamePad.GetAllConfigIDs"] = {
@@ -116,6 +125,7 @@ APIDefs["C_GamePad.GetAllConfigIDs"] = {
     params = {  },
     returns = { { name = "configIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GamePad.GetAllDeviceIDs"] = {
@@ -127,6 +137,19 @@ APIDefs["C_GamePad.GetAllDeviceIDs"] = {
     params = {  },
     returns = { { name = "deviceIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_GamePad.GetAllowHoverEventsWithFreeLook"] = {
+    key = "C_GamePad.GetAllowHoverEventsWithFreeLook",
+    name = "GetAllowHoverEventsWithFreeLook",
+    category = "general",
+    subcategory = "c_gamepad",
+    funcPath = "C_GamePad.GetAllowHoverEventsWithFreeLook",
+    params = {  },
+    returns = { { name = "enabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_GamePad.GetCombinedDeviceID"] = {
@@ -138,6 +161,7 @@ APIDefs["C_GamePad.GetCombinedDeviceID"] = {
     params = {  },
     returns = { { name = "deviceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GamePad.GetConfig"] = {
@@ -149,6 +173,7 @@ APIDefs["C_GamePad.GetConfig"] = {
     params = { { name = "configID", type = "GamePadConfigID", default = nil } },
     returns = { { name = "config", type = "GamePadConfig", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -161,6 +186,7 @@ APIDefs["C_GamePad.GetDeviceMappedState"] = {
     params = { { name = "deviceID", type = "number", default = nil } },
     returns = { { name = "state", type = "GamePadMappedState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -173,6 +199,7 @@ APIDefs["C_GamePad.GetDeviceRawState"] = {
     params = { { name = "deviceID", type = "number", default = nil } },
     returns = { { name = "rawState", type = "GamePadRawState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -185,6 +212,7 @@ APIDefs["C_GamePad.GetLedColor"] = {
     params = {  },
     returns = { { name = "color", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GamePad.GetPowerLevel"] = {
@@ -196,6 +224,7 @@ APIDefs["C_GamePad.GetPowerLevel"] = {
     params = { { name = "deviceID", type = "number", default = nil } },
     returns = { { name = "powerLevel", type = "GamePadPowerLevel", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -208,6 +237,20 @@ APIDefs["C_GamePad.IsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_GamePad.SetAllowHoverEventsWithFreeLook"] = {
+    key = "C_GamePad.SetAllowHoverEventsWithFreeLook",
+    name = "SetAllowHoverEventsWithFreeLook",
+    category = "general",
+    subcategory = "c_gamepad",
+    funcPath = "C_GamePad.SetAllowHoverEventsWithFreeLook",
+    params = { { name = "enable", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_GamePad.SetConfig"] = {
@@ -219,6 +262,7 @@ APIDefs["C_GamePad.SetConfig"] = {
     params = { { name = "config", type = "GamePadConfig", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -231,6 +275,7 @@ APIDefs["C_GamePad.SetLedColor"] = {
     params = { { name = "color", type = "colorRGB", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -243,6 +288,7 @@ APIDefs["C_GamePad.SetVibration"] = {
     params = { { name = "vibrationType", type = "cstring", default = nil }, { name = "intensity", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -255,6 +301,7 @@ APIDefs["C_GamePad.StickIndexToConfigName"] = {
     params = { { name = "stickIndex", type = "number", default = nil } },
     returns = { { name = "configName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -267,4 +314,5 @@ APIDefs["C_GamePad.StopVibration"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

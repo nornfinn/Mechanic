@@ -11,6 +11,7 @@ APIDefs["C_CooldownViewer.GetCooldownViewerCategorySet"] = {
     params = { { name = "category", type = "CooldownViewerCategory", default = nil }, { name = "allowUnlearned", type = "bool", default = false } },
     returns = { { name = "cooldownIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,7 +24,20 @@ APIDefs["C_CooldownViewer.GetCooldownViewerCooldownInfo"] = {
     params = { { name = "cooldownID", type = "number", default = nil } },
     returns = { { name = "cooldownInfo", type = "CooldownViewerCooldown", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_CooldownViewer.GetGroupBuffItems"] = {
+    key = "C_CooldownViewer.GetGroupBuffItems",
+    name = "GetGroupBuffItems",
+    category = "spell",
+    subcategory = "c_cooldownviewer",
+    funcPath = "C_CooldownViewer.GetGroupBuffItems",
+    params = {  },
+    returns = { { name = "groupBuffItems", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CooldownViewer.GetLayoutData"] = {
@@ -35,6 +49,7 @@ APIDefs["C_CooldownViewer.GetLayoutData"] = {
     params = {  },
     returns = { { name = "data", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CooldownViewer.GetValidAlertTypes"] = {
@@ -46,6 +61,7 @@ APIDefs["C_CooldownViewer.GetValidAlertTypes"] = {
     params = { { name = "cooldownID", type = "number", default = nil } },
     returns = { { name = "validAlertTypes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +74,7 @@ APIDefs["C_CooldownViewer.IsCooldownViewerAvailable"] = {
     params = {  },
     returns = { { name = "isAvailable", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CooldownViewer.SetLayoutData"] = {
@@ -69,5 +86,6 @@ APIDefs["C_CooldownViewer.SetLayoutData"] = {
     params = { { name = "data", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

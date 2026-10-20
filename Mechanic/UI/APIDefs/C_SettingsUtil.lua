@@ -11,6 +11,7 @@ APIDefs["C_SettingsUtil.NotifySettingsLoaded"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SettingsUtil.OpenSettingsPanel"] = {
@@ -22,5 +23,6 @@ APIDefs["C_SettingsUtil.OpenSettingsPanel"] = {
     params = { { name = "openToCategoryID", type = "number", default = nil }, { name = "scrollToElementName", type = "stringView", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_CampaignInfo.GetAvailableCampaigns"] = {
     params = {  },
     returns = { { name = "campaignIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CampaignInfo.GetCampaignChapterInfo"] = {
@@ -22,6 +23,7 @@ APIDefs["C_CampaignInfo.GetCampaignChapterInfo"] = {
     params = { { name = "campaignChapterID", type = "number", default = nil } },
     returns = { { name = "campaignChapterInfo", type = "CampaignChapterInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_CampaignInfo.GetCampaignID"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "campaignID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_CampaignInfo.GetCampaignInfo"] = {
     params = { { name = "campaignID", type = "number", default = nil } },
     returns = { { name = "campaignInfo", type = "CampaignInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_CampaignInfo.GetChapterIDs"] = {
     params = { { name = "campaignID", type = "number", default = nil } },
     returns = { { name = "chapterIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_CampaignInfo.GetCurrentChapterID"] = {
     params = { { name = "campaignID", type = "number", default = nil } },
     returns = { { name = "currentChapterID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_CampaignInfo.GetFailureReason"] = {
     params = { { name = "campaignID", type = "number", default = nil } },
     returns = { { name = "failureReason", type = "CampaignFailureReason", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +101,7 @@ APIDefs["C_CampaignInfo.GetState"] = {
     params = { { name = "campaignID", type = "number", default = nil } },
     returns = { { name = "state", type = "CampaignState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -106,6 +114,7 @@ APIDefs["C_CampaignInfo.IsCampaignQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isCampaignQuest", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,5 +127,6 @@ APIDefs["C_CampaignInfo.SortAsNormalQuest"] = {
     params = { { name = "campaignID", type = "number", default = nil } },
     returns = { { name = "sortAsNormalQuest", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

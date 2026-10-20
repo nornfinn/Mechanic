@@ -2,6 +2,19 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_SpellBook.AbortSpellIntro"] = {
+    key = "C_SpellBook.AbortSpellIntro",
+    name = "AbortSpellIntro",
+    category = "spell",
+    subcategory = "c_spellbook",
+    funcPath = "C_SpellBook.AbortSpellIntro",
+    params = { { name = "spellID", type = "number", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
 APIDefs["C_SpellBook.CastSpellBookItem"] = {
     key = "C_SpellBook.CastSpellBookItem",
     name = "CastSpellBookItem",
@@ -11,6 +24,7 @@ APIDefs["C_SpellBook.CastSpellBookItem"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil }, { name = "targetSelf", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +37,7 @@ APIDefs["C_SpellBook.ContainsAnyDisenchantSpell"] = {
     params = {  },
     returns = { { name = "contains", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SpellBook.FindBaseSpellByID"] = {
@@ -34,6 +49,7 @@ APIDefs["C_SpellBook.FindBaseSpellByID"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "baseSpellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +62,7 @@ APIDefs["C_SpellBook.FindFlyoutSlotBySpellID"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "flyoutSlot", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +75,7 @@ APIDefs["C_SpellBook.FindSpellBookSlotForSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "includeHidden", type = "bool", default = false }, { name = "includeFlyouts", type = "bool", default = true }, { name = "includeFutureSpells", type = "bool", default = false }, { name = "includeOffSpec", type = "bool", default = false } },
     returns = { { name = "spellBookItemSlotIndex", type = "luaIndex", canBeSecret = false }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,7 +88,20 @@ APIDefs["C_SpellBook.FindSpellOverrideByID"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "overrideSpellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_SpellBook.GetClassSkillLineInfo"] = {
+    key = "C_SpellBook.GetClassSkillLineInfo",
+    name = "GetClassSkillLineInfo",
+    category = "spell",
+    subcategory = "c_spellbook",
+    funcPath = "C_SpellBook.GetClassSkillLineInfo",
+    params = {  },
+    returns = { { name = "skillLineInfo", type = "SpellBookSkillLineInfo", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_SpellBook.GetCurrentLevelSpells"] = {
@@ -82,6 +113,7 @@ APIDefs["C_SpellBook.GetCurrentLevelSpells"] = {
     params = { { name = "level", type = "number", default = nil } },
     returns = { { name = "spellIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +126,7 @@ APIDefs["C_SpellBook.GetNumSpellBookSkillLines"] = {
     params = {  },
     returns = { { name = "numSpellBookSkillLines", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SpellBook.GetSkillLineIndexByID"] = {
@@ -105,6 +138,7 @@ APIDefs["C_SpellBook.GetSkillLineIndexByID"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "skillIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -117,6 +151,7 @@ APIDefs["C_SpellBook.GetSpellBookItemAutoCast"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "autoCastAllowed", type = "bool", canBeSecret = false }, { name = "autoCastEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -129,7 +164,8 @@ APIDefs["C_SpellBook.GetSpellBookItemCastCount"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "castCount", type = "number", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellBookItemCooldownRestricted, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_SpellBook.GetSpellBookItemChargeDuration"] = {
@@ -141,6 +177,7 @@ APIDefs["C_SpellBook.GetSpellBookItemChargeDuration"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -153,7 +190,8 @@ APIDefs["C_SpellBook.GetSpellBookItemCharges"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "chargeInfo", type = "SpellChargeInfo", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellBookItemCooldownRestricted, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_SpellBook.GetSpellBookItemCooldown"] = {
@@ -165,7 +203,8 @@ APIDefs["C_SpellBook.GetSpellBookItemCooldown"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "spellCooldownInfo", type = "SpellCooldownInfo", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellBookItemCooldownRestricted, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_SpellBook.GetSpellBookItemCooldownDuration"] = {
@@ -174,9 +213,10 @@ APIDefs["C_SpellBook.GetSpellBookItemCooldownDuration"] = {
     category = "spell",
     subcategory = "c_spellbook",
     funcPath = "C_SpellBook.GetSpellBookItemCooldownDuration",
-    params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
+    params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil }, { name = "ignoreGCD", type = "bool", default = false } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -189,6 +229,7 @@ APIDefs["C_SpellBook.GetSpellBookItemDescription"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -201,6 +242,7 @@ APIDefs["C_SpellBook.GetSpellBookItemInfo"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "spellBookItemInfo", type = "SpellBookItemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -213,6 +255,7 @@ APIDefs["C_SpellBook.GetSpellBookItemLevelLearned"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "levelLearned", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -225,19 +268,8 @@ APIDefs["C_SpellBook.GetSpellBookItemLink"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil }, { name = "glyphID", type = "number", default = nil } },
     returns = { { name = "spellLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
-}
-
-APIDefs["C_SpellBook.GetSpellBookItemLossOfControlCooldown"] = {
-    key = "C_SpellBook.GetSpellBookItemLossOfControlCooldown",
-    name = "GetSpellBookItemLossOfControlCooldown",
-    category = "combat_midnight",
-    subcategory = "c_spellbook",
-    funcPath = "C_SpellBook.GetSpellBookItemLossOfControlCooldown",
-    params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
-    returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false } },
-    midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellBookItemCooldownRestricted, SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_SpellBook.GetSpellBookItemLossOfControlCooldownDuration"] = {
@@ -249,7 +281,21 @@ APIDefs["C_SpellBook.GetSpellBookItemLossOfControlCooldownDuration"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_SpellBook.GetSpellBookItemLossOfControlCooldownInfo"] = {
+    key = "C_SpellBook.GetSpellBookItemLossOfControlCooldownInfo",
+    name = "GetSpellBookItemLossOfControlCooldownInfo",
+    category = "combat_midnight",
+    subcategory = "c_spellbook",
+    funcPath = "C_SpellBook.GetSpellBookItemLossOfControlCooldownInfo",
+    params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
+    returns = { { name = "lossOfControlInfo", type = "SpellLossOfControlInfo", canBeSecret = false } },
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_SpellBook.GetSpellBookItemName"] = {
@@ -261,6 +307,7 @@ APIDefs["C_SpellBook.GetSpellBookItemName"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "subName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -273,6 +320,7 @@ APIDefs["C_SpellBook.GetSpellBookItemPowerCost"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "powerCosts", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -285,6 +333,7 @@ APIDefs["C_SpellBook.GetSpellBookItemSkillLineIndex"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "skillLineIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -297,6 +346,7 @@ APIDefs["C_SpellBook.GetSpellBookItemTexture"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "iconID", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -309,6 +359,7 @@ APIDefs["C_SpellBook.GetSpellBookItemTradeSkillLink"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "spellLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -321,6 +372,7 @@ APIDefs["C_SpellBook.GetSpellBookItemType"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "itemType", type = "SpellBookItemType", canBeSecret = false }, { name = "actionID", type = "number", canBeSecret = false }, { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -333,6 +385,7 @@ APIDefs["C_SpellBook.GetSpellBookSkillLineInfo"] = {
     params = { { name = "skillLineIndex", type = "luaIndex", default = nil } },
     returns = { { name = "skillLineInfo", type = "SpellBookSkillLineInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -345,6 +398,7 @@ APIDefs["C_SpellBook.HasPetSpells"] = {
     params = {  },
     returns = { { name = "numPetSpells", type = "number", canBeSecret = false }, { name = "petNameToken", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SpellBook.IsAutoAttackSpellBookItem"] = {
@@ -356,6 +410,7 @@ APIDefs["C_SpellBook.IsAutoAttackSpellBookItem"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isAutoAttack", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -368,6 +423,7 @@ APIDefs["C_SpellBook.IsClassTalentSpellBookItem"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isClassTalent", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -380,6 +436,7 @@ APIDefs["C_SpellBook.IsPvPTalentSpellBookItem"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isPvPTalent", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -392,6 +449,7 @@ APIDefs["C_SpellBook.IsRangedAutoAttackSpellBookItem"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isRangedAutoAttack", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -404,6 +462,7 @@ APIDefs["C_SpellBook.IsSpellBookItemHarmful"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isHarmful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -416,6 +475,7 @@ APIDefs["C_SpellBook.IsSpellBookItemHelpful"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isHelpful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -428,6 +488,33 @@ APIDefs["C_SpellBook.IsSpellBookItemInRange"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil }, { name = "targetUnit", type = "UnitToken", default = "player" } },
     returns = { { name = "inRange", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_SpellBook.IsSpellBookItemLooseFlyoutMember"] = {
+    key = "C_SpellBook.IsSpellBookItemLooseFlyoutMember",
+    name = "IsSpellBookItemLooseFlyoutMember",
+    category = "spell",
+    subcategory = "c_spellbook",
+    funcPath = "C_SpellBook.IsSpellBookItemLooseFlyoutMember",
+    params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
+    returns = { { name = "isFlyoutMember", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_SpellBook.IsSpellBookItemLowRank"] = {
+    key = "C_SpellBook.IsSpellBookItemLowRank",
+    name = "IsSpellBookItemLowRank",
+    category = "spell",
+    subcategory = "c_spellbook",
+    funcPath = "C_SpellBook.IsSpellBookItemLowRank",
+    params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
+    returns = { { name = "isLowRank", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -440,6 +527,7 @@ APIDefs["C_SpellBook.IsSpellBookItemOffSpec"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isOffSpec", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -452,6 +540,7 @@ APIDefs["C_SpellBook.IsSpellBookItemPassive"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isPassive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -464,6 +553,7 @@ APIDefs["C_SpellBook.IsSpellBookItemUsable"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "isUsable", type = "bool", canBeSecret = false }, { name = "insufficientPower", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -476,6 +566,7 @@ APIDefs["C_SpellBook.IsSpellInSpellBook"] = {
     params = { { name = "spellID", type = "number", default = nil }, { name = "spellBank", type = "SpellBookSpellBank", default = "Player" }, { name = "includeOverrides", type = "bool", default = true } },
     returns = { { name = "isInSpellBook", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -488,6 +579,7 @@ APIDefs["C_SpellBook.IsSpellKnown"] = {
     params = { { name = "spellID", type = "number", default = nil }, { name = "spellBank", type = "SpellBookSpellBank", default = "Player" } },
     returns = { { name = "isKnown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -500,6 +592,7 @@ APIDefs["C_SpellBook.IsSpellKnownOrInSpellBook"] = {
     params = { { name = "spellID", type = "number", default = nil }, { name = "spellBank", type = "SpellBookSpellBank", default = "Player" }, { name = "includeOverrides", type = "bool", default = true } },
     returns = { { name = "isKnownOrInSpellBook", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -512,6 +605,20 @@ APIDefs["C_SpellBook.PickupSpellBookItem"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_SpellBook.SetBarSlotFromIntro"] = {
+    key = "C_SpellBook.SetBarSlotFromIntro",
+    name = "SetBarSlotFromIntro",
+    category = "spell",
+    subcategory = "c_spellbook",
+    funcPath = "C_SpellBook.SetBarSlotFromIntro",
+    params = { { name = "spellID", type = "number", default = nil }, { name = "slotIndex", type = "luaIndex", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -524,6 +631,7 @@ APIDefs["C_SpellBook.SetSpellBookItemAutoCastEnabled"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil }, { name = "enabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -536,6 +644,7 @@ APIDefs["C_SpellBook.SpellBookItemHasRange"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = { { name = "hasRange", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -548,5 +657,6 @@ APIDefs["C_SpellBook.ToggleSpellBookItemAutoCast"] = {
     params = { { name = "spellBookItemSlotIndex", type = "luaIndex", default = nil }, { name = "spellBookItemSpellBank", type = "SpellBookSpellBank", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

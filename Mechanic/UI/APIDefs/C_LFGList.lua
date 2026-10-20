@@ -11,6 +11,7 @@ APIDefs["C_LFGList.CanActiveEntryUseAutoAccept"] = {
     params = {  },
     returns = { { name = "canUseAutoAccept", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.CanCreateQuestGroup"] = {
@@ -22,6 +23,7 @@ APIDefs["C_LFGList.CanCreateQuestGroup"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "canCreate", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_LFGList.CanCreateScenarioGroup"] = {
     params = { { name = "scenarioID", type = "number", default = nil } },
     returns = { { name = "canCreate", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_LFGList.ClearApplicationTextFields"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.ClearCreationTextFields"] = {
@@ -57,6 +61,7 @@ APIDefs["C_LFGList.ClearCreationTextFields"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.ClearSearchTextFields"] = {
@@ -68,6 +73,19 @@ APIDefs["C_LFGList.ClearSearchTextFields"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_LFGList.ConfirmCensoredActiveEntry"] = {
+    key = "C_LFGList.ConfirmCensoredActiveEntry",
+    name = "ConfirmCensoredActiveEntry",
+    category = "general",
+    subcategory = "c_lfglist",
+    funcPath = "C_LFGList.ConfirmCensoredActiveEntry",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.CopyActiveEntryInfoToCreationFields"] = {
@@ -79,6 +97,7 @@ APIDefs["C_LFGList.CopyActiveEntryInfoToCreationFields"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.CreateListing"] = {
@@ -90,6 +109,7 @@ APIDefs["C_LFGList.CreateListing"] = {
     params = { { name = "createData", type = "LfgListingCreateData", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -102,6 +122,20 @@ APIDefs["C_LFGList.CreateScenarioListing"] = {
     params = { { name = "activityID", type = "number", default = nil }, { name = "itemLevel", type = "number", default = nil }, { name = "autoAccept", type = "bool", default = nil }, { name = "privateGroup", type = "bool", default = nil }, { name = "scenarioID", type = "number", default = nil } },
     returns = { { name = "canCreate", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_LFGList.DoesCensoredTextMatch"] = {
+    key = "C_LFGList.DoesCensoredTextMatch",
+    name = "DoesCensoredTextMatch",
+    category = "general",
+    subcategory = "c_lfglist",
+    funcPath = "C_LFGList.DoesCensoredTextMatch",
+    params = { { name = "name", type = "cstring", default = nil }, { name = "comment", type = "cstring", default = nil } },
+    returns = { { name = "isMatch", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -114,18 +148,21 @@ APIDefs["C_LFGList.DoesEntryTitleMatchPrebuiltTitle"] = {
     params = { { name = "activityID", type = "number", default = nil }, { name = "groupID", type = "number", default = nil }, { name = "playstyle", type = "LFGEntryPlaystyle", default = nil }, { name = "generalPlaystyle", type = "LFGEntryGeneralPlaystyle", default = nil } },
     returns = { { name = "matches", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_LFGList.GetActiveEntryInfo"] = {
     key = "C_LFGList.GetActiveEntryInfo",
     name = "GetActiveEntryInfo",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_lfglist",
     funcPath = "C_LFGList.GetActiveEntryInfo",
     params = {  },
     returns = { { name = "entryData", type = "LfgEntryData", canBeSecret = false } },
-    midnightImpact = "NORMAL",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_LFGList.GetActivityFullName"] = {
@@ -137,6 +174,7 @@ APIDefs["C_LFGList.GetActivityFullName"] = {
     params = { { name = "activityID", type = "number", default = nil }, { name = "questID", type = "number", default = nil }, { name = "showWarmode", type = "bool", default = nil } },
     returns = { { name = "fullName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -149,6 +187,7 @@ APIDefs["C_LFGList.GetActivityGroupInfo"] = {
     params = { { name = "groupID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "orderIndex", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -161,6 +200,7 @@ APIDefs["C_LFGList.GetActivityInfoTable"] = {
     params = { { name = "activityID", type = "number", default = nil }, { name = "questID", type = "number", default = nil }, { name = "showWarmode", type = "bool", default = nil } },
     returns = { { name = "activityInfo", type = "GroupFinderActivityInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -173,6 +213,7 @@ APIDefs["C_LFGList.GetAdvancedFilter"] = {
     params = {  },
     returns = { { name = "options", type = "AdvancedFilterOptions", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.GetApplicantBestDungeonScore"] = {
@@ -184,6 +225,7 @@ APIDefs["C_LFGList.GetApplicantBestDungeonScore"] = {
     params = { { name = "localID", type = "number", default = nil }, { name = "applicantIndex", type = "luaIndex", default = nil } },
     returns = { { name = "bestDungeonScoreForListing", type = "BestDungeonScoreMapInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -196,19 +238,21 @@ APIDefs["C_LFGList.GetApplicantDungeonScoreForListing"] = {
     params = { { name = "localID", type = "number", default = nil }, { name = "applicantIndex", type = "luaIndex", default = nil }, { name = "activityID", type = "number", default = nil } },
     returns = { { name = "bestDungeonScoreForListing", type = "BestDungeonScoreMapInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_LFGList.GetApplicantInfo"] = {
     key = "C_LFGList.GetApplicantInfo",
     name = "GetApplicantInfo",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_lfglist",
     funcPath = "C_LFGList.GetApplicantInfo",
     params = { { name = "applicantID", type = "number", default = nil } },
     returns = { { name = "applicantData", type = "LfgApplicantData", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_LFGList.GetApplicantPvpRatingInfoForListing"] = {
@@ -220,6 +264,7 @@ APIDefs["C_LFGList.GetApplicantPvpRatingInfoForListing"] = {
     params = { { name = "localID", type = "number", default = nil }, { name = "applicantIndex", type = "luaIndex", default = nil }, { name = "activityID", type = "number", default = nil } },
     returns = { { name = "pvpRatingInfo", type = "PvpRatingInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -232,6 +277,7 @@ APIDefs["C_LFGList.GetAvailableActivityGroups"] = {
     params = { { name = "categoryID", type = "number", default = nil }, { name = "filter", type = "number", default = 0 } },
     returns = { { name = "activityIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -244,6 +290,7 @@ APIDefs["C_LFGList.GetFilteredSearchResults"] = {
     params = {  },
     returns = { { name = "totalResultsFound", type = "number", canBeSecret = false }, { name = "filteredResults", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.GetGroupLeaverCountsByRole"] = {
@@ -255,6 +302,7 @@ APIDefs["C_LFGList.GetGroupLeaverCountsByRole"] = {
     params = {  },
     returns = { { name = "tankLeavers", type = "number", canBeSecret = false }, { name = "healerLeavers", type = "number", canBeSecret = false }, { name = "damageLeavers", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.GetKeystoneForActivity"] = {
@@ -266,6 +314,7 @@ APIDefs["C_LFGList.GetKeystoneForActivity"] = {
     params = { { name = "activityID", type = "number", default = nil } },
     returns = { { name = "level", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -278,6 +327,7 @@ APIDefs["C_LFGList.GetLfgCategoryInfo"] = {
     params = { { name = "categoryID", type = "number", default = nil } },
     returns = { { name = "categoryData", type = "LfgCategoryData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -290,6 +340,7 @@ APIDefs["C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel"] = {
     params = { { name = "getTimewalking", type = "bool", default = false } },
     returns = { { name = "activityID", type = "number", canBeSecret = false }, { name = "groupID", type = "number", canBeSecret = false }, { name = "keystoneLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -302,6 +353,7 @@ APIDefs["C_LFGList.GetPlaystyleString"] = {
     params = { { name = "playstyle", type = "LFGEntryPlaystyle", default = nil }, { name = "generalPlaystyle", type = "LFGEntryGeneralPlaystyle", default = nil }, { name = "activityInfo", type = "GroupFinderActivityInfo", default = nil } },
     returns = { { name = "playstyleString", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -314,42 +366,46 @@ APIDefs["C_LFGList.GetPremadeGroupFinderStyle"] = {
     params = {  },
     returns = { { name = "style", type = "PremadeGroupFinderStyle", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.GetSearchResultInfo"] = {
     key = "C_LFGList.GetSearchResultInfo",
     name = "GetSearchResultInfo",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_lfglist",
     funcPath = "C_LFGList.GetSearchResultInfo",
     params = { { name = "searchResultID", type = "number", default = nil } },
     returns = { { name = "searchResultData", type = "LfgSearchResultData", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_LFGList.GetSearchResultLeaderInfo"] = {
     key = "C_LFGList.GetSearchResultLeaderInfo",
     name = "GetSearchResultLeaderInfo",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_lfglist",
     funcPath = "C_LFGList.GetSearchResultLeaderInfo",
     params = { { name = "searchResultID", type = "number", default = nil } },
     returns = { { name = "leaderInfo", type = "LfgSearchResultPlayerInfo", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_LFGList.GetSearchResultPlayerInfo"] = {
     key = "C_LFGList.GetSearchResultPlayerInfo",
     name = "GetSearchResultPlayerInfo",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_lfglist",
     funcPath = "C_LFGList.GetSearchResultPlayerInfo",
     params = { { name = "searchResultID", type = "number", default = nil }, { name = "memberIndex", type = "luaIndex", default = nil } },
     returns = { { name = "playerInfo", type = "LfgSearchResultPlayerInfo", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_LFGList.GetSearchResults"] = {
@@ -361,6 +417,7 @@ APIDefs["C_LFGList.GetSearchResults"] = {
     params = {  },
     returns = { { name = "totalResultsFound", type = "number", canBeSecret = false }, { name = "results", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.HasActiveEntryInfo"] = {
@@ -372,6 +429,7 @@ APIDefs["C_LFGList.HasActiveEntryInfo"] = {
     params = {  },
     returns = { { name = "hasActiveEntryInfo", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.HasSearchResultInfo"] = {
@@ -383,7 +441,20 @@ APIDefs["C_LFGList.HasSearchResultInfo"] = {
     params = { { name = "searchResultID", type = "number", default = nil } },
     returns = { { name = "hasSearchResultInfo", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_LFGList.IsCensoredActiveEntryUnresolved"] = {
+    key = "C_LFGList.IsCensoredActiveEntryUnresolved",
+    name = "IsCensoredActiveEntryUnresolved",
+    category = "general",
+    subcategory = "c_lfglist",
+    funcPath = "C_LFGList.IsCensoredActiveEntryUnresolved",
+    params = {  },
+    returns = { { name = "isUnresolved", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.IsPlayerAuthenticatedForLFG"] = {
@@ -395,7 +466,20 @@ APIDefs["C_LFGList.IsPlayerAuthenticatedForLFG"] = {
     params = { { name = "activityCategoryID", type = "number", default = nil } },
     returns = { { name = "isAuthenticated", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_LFGList.IsPlayerValidForEndgameFieldEdits"] = {
+    key = "C_LFGList.IsPlayerValidForEndgameFieldEdits",
+    name = "IsPlayerValidForEndgameFieldEdits",
+    category = "general",
+    subcategory = "c_lfglist",
+    funcPath = "C_LFGList.IsPlayerValidForEndgameFieldEdits",
+    params = {  },
+    returns = { { name = "isValid", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGList.IsPremadeGroupFinderEnabled"] = {
@@ -407,6 +491,20 @@ APIDefs["C_LFGList.IsPremadeGroupFinderEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_LFGList.ListingUsesEndgameEditRestrictions"] = {
+    key = "C_LFGList.ListingUsesEndgameEditRestrictions",
+    name = "ListingUsesEndgameEditRestrictions",
+    category = "general",
+    subcategory = "c_lfglist",
+    funcPath = "C_LFGList.ListingUsesEndgameEditRestrictions",
+    params = { { name = "activityID", type = "number", default = nil } },
+    returns = { { name = "isEndgameListing", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_LFGList.ReportGroupAsAdvertisement"] = {
@@ -418,6 +516,32 @@ APIDefs["C_LFGList.ReportGroupAsAdvertisement"] = {
     params = { { name = "searchResultID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_LFGList.RevealCensoredActiveEntry"] = {
+    key = "C_LFGList.RevealCensoredActiveEntry",
+    name = "RevealCensoredActiveEntry",
+    category = "general",
+    subcategory = "c_lfglist",
+    funcPath = "C_LFGList.RevealCensoredActiveEntry",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_LFGList.RevealCensoredSearchResult"] = {
+    key = "C_LFGList.RevealCensoredSearchResult",
+    name = "RevealCensoredSearchResult",
+    category = "general",
+    subcategory = "c_lfglist",
+    funcPath = "C_LFGList.RevealCensoredSearchResult",
+    params = { { name = "searchResultID", type = "number", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -430,6 +554,7 @@ APIDefs["C_LFGList.SaveAdvancedFilter"] = {
     params = { { name = "options", type = "AdvancedFilterOptions", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -442,6 +567,7 @@ APIDefs["C_LFGList.Search"] = {
     params = { { name = "categoryID", type = "number", default = nil }, { name = "filter", type = "number", default = 0 }, { name = "preferredFilters", type = "number", default = 0 }, { name = "languageFilter", type = "WowLocale", default = nil }, { name = "searchCrossFactionListings", type = "bool", default = false }, { name = "advancedFilter", type = "AdvancedFilterOptions", default = nil }, { name = "activityIDsFilter", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -454,6 +580,7 @@ APIDefs["C_LFGList.SetEntryTitle"] = {
     params = { { name = "activityID", type = "number", default = nil }, { name = "groupID", type = "number", default = nil }, { name = "playstyle", type = "LFGEntryPlaystyle", default = nil }, { name = "generalPlaystyle", type = "LFGEntryGeneralPlaystyle", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -466,6 +593,7 @@ APIDefs["C_LFGList.SetSearchToActivity"] = {
     params = { { name = "activityID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -478,6 +606,7 @@ APIDefs["C_LFGList.SetSearchToQuestID"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -490,6 +619,7 @@ APIDefs["C_LFGList.SetSearchToScenarioID"] = {
     params = { { name = "scenarioID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -502,6 +632,7 @@ APIDefs["C_LFGList.UpdateListing"] = {
     params = { { name = "createData", type = "LfgListingCreateData", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -514,6 +645,7 @@ APIDefs["C_LFGList.ValidateRequiredDungeonScore"] = {
     params = { { name = "dungeonScore", type = "number", default = nil } },
     returns = { { name = "passes", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -526,5 +658,6 @@ APIDefs["C_LFGList.ValidateRequiredPvpRatingForActivity"] = {
     params = { { name = "activityID", type = "number", default = nil }, { name = "rating", type = "number", default = nil } },
     returns = { { name = "passes", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

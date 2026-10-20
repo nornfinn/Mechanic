@@ -11,6 +11,7 @@ APIDefs["C_AzeriteEssence.ActivateEssence"] = {
     params = { { name = "essenceID", type = "number", default = nil }, { name = "milestoneID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AzeriteEssence.CanActivateEssence"] = {
     params = { { name = "essenceID", type = "number", default = nil }, { name = "milestoneID", type = "number", default = nil } },
     returns = { { name = "canActivate", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_AzeriteEssence.CanDeactivateEssence"] = {
     params = { { name = "milestoneID", type = "number", default = nil } },
     returns = { { name = "canDeactivate", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_AzeriteEssence.CanOpenUI"] = {
     params = {  },
     returns = { { name = "canOpen", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.ClearPendingActivationEssence"] = {
@@ -58,6 +62,7 @@ APIDefs["C_AzeriteEssence.ClearPendingActivationEssence"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.CloseForge"] = {
@@ -69,6 +74,7 @@ APIDefs["C_AzeriteEssence.CloseForge"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.GetEssenceHyperlink"] = {
@@ -80,6 +86,7 @@ APIDefs["C_AzeriteEssence.GetEssenceHyperlink"] = {
     params = { { name = "essenceID", type = "number", default = nil }, { name = "rank", type = "number", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -92,6 +99,7 @@ APIDefs["C_AzeriteEssence.GetEssenceInfo"] = {
     params = { { name = "essenceID", type = "number", default = nil } },
     returns = { { name = "info", type = "AzeriteEssenceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_AzeriteEssence.GetEssences"] = {
     params = {  },
     returns = { { name = "essences", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.GetMilestoneEssence"] = {
@@ -115,6 +124,7 @@ APIDefs["C_AzeriteEssence.GetMilestoneEssence"] = {
     params = { { name = "milestoneID", type = "number", default = nil } },
     returns = { { name = "essenceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -127,6 +137,7 @@ APIDefs["C_AzeriteEssence.GetMilestoneInfo"] = {
     params = { { name = "milestoneID", type = "number", default = nil } },
     returns = { { name = "info", type = "AzeriteMilestoneInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -139,6 +150,7 @@ APIDefs["C_AzeriteEssence.GetMilestoneSpell"] = {
     params = { { name = "milestoneID", type = "number", default = nil } },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -151,6 +163,7 @@ APIDefs["C_AzeriteEssence.GetMilestones"] = {
     params = {  },
     returns = { { name = "milestones", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.GetNumUnlockedEssences"] = {
@@ -162,6 +175,7 @@ APIDefs["C_AzeriteEssence.GetNumUnlockedEssences"] = {
     params = {  },
     returns = { { name = "numUnlockedEssences", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.GetNumUsableEssences"] = {
@@ -173,6 +187,7 @@ APIDefs["C_AzeriteEssence.GetNumUsableEssences"] = {
     params = {  },
     returns = { { name = "numUsableEssences", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.GetPendingActivationEssence"] = {
@@ -184,6 +199,7 @@ APIDefs["C_AzeriteEssence.GetPendingActivationEssence"] = {
     params = {  },
     returns = { { name = "essenceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.HasNeverActivatedAnyEssences"] = {
@@ -195,6 +211,7 @@ APIDefs["C_AzeriteEssence.HasNeverActivatedAnyEssences"] = {
     params = {  },
     returns = { { name = "hasNeverActivatedAnyEssences", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.HasPendingActivationEssence"] = {
@@ -206,6 +223,7 @@ APIDefs["C_AzeriteEssence.HasPendingActivationEssence"] = {
     params = {  },
     returns = { { name = "hasEssence", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.IsAtForge"] = {
@@ -217,6 +235,7 @@ APIDefs["C_AzeriteEssence.IsAtForge"] = {
     params = {  },
     returns = { { name = "isAtForge", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEssence.SetPendingActivationEssence"] = {
@@ -228,6 +247,7 @@ APIDefs["C_AzeriteEssence.SetPendingActivationEssence"] = {
     params = { { name = "essenceID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -240,5 +260,6 @@ APIDefs["C_AzeriteEssence.UnlockMilestone"] = {
     params = { { name = "milestoneID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

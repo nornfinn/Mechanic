@@ -11,6 +11,20 @@ APIDefs["C_QuestInfoSystem.GetQuestClassification"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "questInfoID", type = "number", default = nil } },
     returns = { { name = "classification", type = "QuestClassification", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_QuestInfoSystem.GetQuestHasShortExpirationWarning"] = {
+    key = "C_QuestInfoSystem.GetQuestHasShortExpirationWarning",
+    name = "GetQuestHasShortExpirationWarning",
+    category = "achievement",
+    subcategory = "c_questinfosystem",
+    funcPath = "C_QuestInfoSystem.GetQuestHasShortExpirationWarning",
+    params = { { name = "questID", type = "number", default = nil } },
+    returns = { { name = "hasShortExpirationWarning", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -20,9 +34,10 @@ APIDefs["C_QuestInfoSystem.GetQuestLogRewardFavor"] = {
     category = "achievement",
     subcategory = "c_questinfosystem",
     funcPath = "C_QuestInfoSystem.GetQuestLogRewardFavor",
-    params = { { name = "questID", type = "number", default = nil } },
+    params = { { name = "questID", type = "number", default = nil }, { name = "clampFavorToCycleCap", type = "bool", default = nil } },
     returns = { { name = "amount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +50,7 @@ APIDefs["C_QuestInfoSystem.GetQuestRewardCurrencies"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "questRewardCurrencyInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +63,7 @@ APIDefs["C_QuestInfoSystem.GetQuestRewardSpellInfo"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "spellID", type = "number", default = nil } },
     returns = { { name = "info", type = "QuestRewardSpellInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +76,7 @@ APIDefs["C_QuestInfoSystem.GetQuestRewardSpells"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "spellIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +89,7 @@ APIDefs["C_QuestInfoSystem.GetQuestShouldToastCompletion"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "shouldToast", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +102,7 @@ APIDefs["C_QuestInfoSystem.HasQuestRewardCurrencies"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "hasQuestRewardCurrencies", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,5 +115,6 @@ APIDefs["C_QuestInfoSystem.HasQuestRewardSpells"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "hasRewardSpells", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

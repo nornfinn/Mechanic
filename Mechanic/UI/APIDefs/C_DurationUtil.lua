@@ -11,15 +11,29 @@ APIDefs["C_DurationUtil.CreateDuration"] = {
     params = {  },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
-APIDefs["C_DurationUtil.GetCurrentTime"] = {
-    key = "C_DurationUtil.GetCurrentTime",
-    name = "GetCurrentTime",
+APIDefs["C_DurationUtil.CreateDurationTextBinding"] = {
+    key = "C_DurationUtil.CreateDurationTextBinding",
+    name = "CreateDurationTextBinding",
     category = "general",
     subcategory = "c_durationutil",
-    funcPath = "C_DurationUtil.GetCurrentTime",
+    funcPath = "C_DurationUtil.CreateDurationTextBinding",
     params = {  },
-    returns = { { name = "currentTime", type = "FrameTime", canBeSecret = false } },
+    returns = { { name = "binding", type = "DurationTextBinding", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_DurationUtil.CreateManualClock"] = {
+    key = "C_DurationUtil.CreateManualClock",
+    name = "CreateManualClock",
+    category = "general",
+    subcategory = "c_durationutil",
+    funcPath = "C_DurationUtil.CreateManualClock",
+    params = {  },
+    returns = { { name = "clock", type = "LuaDurationManualClock", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

@@ -11,6 +11,7 @@ APIDefs["C_LFGInfo.AreCrossFactionGroupQueuesAllowed"] = {
     params = { { name = "lfgDungeonID", type = "number", default = nil } },
     returns = { { name = "areCrossFactionGroupQueuesAllowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_LFGInfo.CanPlayerUseGroupFinder"] = {
     params = {  },
     returns = { { name = "canUse", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.CanPlayerUseLFD"] = {
@@ -34,6 +36,7 @@ APIDefs["C_LFGInfo.CanPlayerUseLFD"] = {
     params = {  },
     returns = { { name = "canUse", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.CanPlayerUseLFR"] = {
@@ -45,6 +48,7 @@ APIDefs["C_LFGInfo.CanPlayerUseLFR"] = {
     params = {  },
     returns = { { name = "canUse", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.CanPlayerUsePVP"] = {
@@ -56,6 +60,7 @@ APIDefs["C_LFGInfo.CanPlayerUsePVP"] = {
     params = {  },
     returns = { { name = "canUse", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.CanPlayerUsePremadeGroup"] = {
@@ -67,6 +72,7 @@ APIDefs["C_LFGInfo.CanPlayerUsePremadeGroup"] = {
     params = {  },
     returns = { { name = "canUse", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.CanPlayerUseScenarioFinder"] = {
@@ -78,6 +84,7 @@ APIDefs["C_LFGInfo.CanPlayerUseScenarioFinder"] = {
     params = {  },
     returns = { { name = "canUse", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.ConfirmLfgExpandSearch"] = {
@@ -89,6 +96,7 @@ APIDefs["C_LFGInfo.ConfirmLfgExpandSearch"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount"] = {
@@ -100,6 +108,7 @@ APIDefs["C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount"] = {
     params = { { name = "lfgDungeonID", type = "number", default = nil } },
     returns = { { name = "doesActivePartyMeetPremadeLaunchCount", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -112,7 +121,20 @@ APIDefs["C_LFGInfo.DoesCrossFactionQueueRequireFullPremade"] = {
     params = { { name = "lfgDungeonID", type = "number", default = nil } },
     returns = { { name = "doesCrossFactionQueueRequireFullPremade", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_LFGInfo.GetActiveLFGDungeonName"] = {
+    key = "C_LFGInfo.GetActiveLFGDungeonName",
+    name = "GetActiveLFGDungeonName",
+    category = "general",
+    subcategory = "c_lfginfo",
+    funcPath = "C_LFGInfo.GetActiveLFGDungeonName",
+    params = {  },
+    returns = { { name = "name", type = "string", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.GetAllEntriesForCategory"] = {
@@ -124,6 +146,7 @@ APIDefs["C_LFGInfo.GetAllEntriesForCategory"] = {
     params = { { name = "category", type = "luaIndex", default = nil } },
     returns = { { name = "lfgDungeonIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -136,6 +159,7 @@ APIDefs["C_LFGInfo.GetDungeonInfo"] = {
     params = { { name = "lfgDungeonID", type = "number", default = nil } },
     returns = { { name = "dungeonInfo", type = "LFGDungeonInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -148,6 +172,7 @@ APIDefs["C_LFGInfo.GetLFDLockStates"] = {
     params = {  },
     returns = { { name = "lockInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.GetLevelUpInstances"] = {
@@ -159,6 +184,7 @@ APIDefs["C_LFGInfo.GetLevelUpInstances"] = {
     params = { { name = "currPlayerLevel", type = "number", default = nil }, { name = "isRaid", type = "bool", default = nil } },
     returns = { { name = "instances", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -171,6 +197,7 @@ APIDefs["C_LFGInfo.GetRoleCheckDifficultyDetails"] = {
     params = {  },
     returns = { { name = "maxLevel", type = "number", canBeSecret = false }, { name = "isLevelReduced", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.HideNameFromUI"] = {
@@ -182,6 +209,7 @@ APIDefs["C_LFGInfo.HideNameFromUI"] = {
     params = { { name = "dungeonID", type = "number", default = nil } },
     returns = { { name = "shouldHide", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -194,6 +222,7 @@ APIDefs["C_LFGInfo.IsGroupFinderEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.IsInLFGFollowerDungeon"] = {
@@ -205,6 +234,19 @@ APIDefs["C_LFGInfo.IsInLFGFollowerDungeon"] = {
     params = {  },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_LFGInfo.IsInMatchmadeRaidWithoutRoleRequirements"] = {
+    key = "C_LFGInfo.IsInMatchmadeRaidWithoutRoleRequirements",
+    name = "IsInMatchmadeRaidWithoutRoleRequirements",
+    category = "general",
+    subcategory = "c_lfginfo",
+    funcPath = "C_LFGInfo.IsInMatchmadeRaidWithoutRoleRequirements",
+    params = {  },
+    returns = { { name = "result", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.IsLFDEnabled"] = {
@@ -216,6 +258,7 @@ APIDefs["C_LFGInfo.IsLFDEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LFGInfo.IsLFGFollowerDungeon"] = {
@@ -227,6 +270,7 @@ APIDefs["C_LFGInfo.IsLFGFollowerDungeon"] = {
     params = { { name = "dungeonID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -239,4 +283,5 @@ APIDefs["C_LFGInfo.IsLFREnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

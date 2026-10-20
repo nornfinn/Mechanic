@@ -11,6 +11,7 @@ APIDefs["C_AnimaDiversion.CloseUI"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AnimaDiversion.GetAnimaDiversionNodes"] = {
@@ -22,6 +23,7 @@ APIDefs["C_AnimaDiversion.GetAnimaDiversionNodes"] = {
     params = {  },
     returns = { { name = "animaNodes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AnimaDiversion.GetOriginPosition"] = {
@@ -33,6 +35,7 @@ APIDefs["C_AnimaDiversion.GetOriginPosition"] = {
     params = {  },
     returns = { { name = "normalizedPosition", type = "vector2", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AnimaDiversion.GetReinforceProgress"] = {
@@ -44,6 +47,7 @@ APIDefs["C_AnimaDiversion.GetReinforceProgress"] = {
     params = {  },
     returns = { { name = "progress", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AnimaDiversion.GetTextureKit"] = {
@@ -55,6 +59,7 @@ APIDefs["C_AnimaDiversion.GetTextureKit"] = {
     params = {  },
     returns = { { name = "textureKit", type = "textureKit", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AnimaDiversion.OpenAnimaDiversionUI"] = {
@@ -66,6 +71,7 @@ APIDefs["C_AnimaDiversion.OpenAnimaDiversionUI"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AnimaDiversion.SelectAnimaNode"] = {
@@ -77,5 +83,6 @@ APIDefs["C_AnimaDiversion.SelectAnimaNode"] = {
     params = { { name = "talentID", type = "number", default = nil }, { name = "temporary", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

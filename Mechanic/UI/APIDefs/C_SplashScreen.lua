@@ -11,6 +11,7 @@ APIDefs["C_SplashScreen.AcknowledgeSplash"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SplashScreen.CanViewSplashScreen"] = {
@@ -22,6 +23,7 @@ APIDefs["C_SplashScreen.CanViewSplashScreen"] = {
     params = {  },
     returns = { { name = "canView", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SplashScreen.RequestLatestSplashScreen"] = {
@@ -33,6 +35,7 @@ APIDefs["C_SplashScreen.RequestLatestSplashScreen"] = {
     params = { { name = "fromGameMenu", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,6 +48,7 @@ APIDefs["C_SplashScreen.SendSplashScreenActionLaunchedTelem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SplashScreen.SendSplashScreenCloseTelem"] = {
@@ -56,4 +60,5 @@ APIDefs["C_SplashScreen.SendSplashScreenCloseTelem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

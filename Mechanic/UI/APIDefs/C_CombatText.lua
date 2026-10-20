@@ -11,6 +11,7 @@ APIDefs["C_CombatText.GetActiveUnit"] = {
     params = {  },
     returns = { { name = "unitTarget", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CombatText.GetCurrentEventInfo"] = {
@@ -22,6 +23,7 @@ APIDefs["C_CombatText.GetCurrentEventInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "HIGH",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretReturns",
 }
 
@@ -34,5 +36,6 @@ APIDefs["C_CombatText.SetActiveUnit"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

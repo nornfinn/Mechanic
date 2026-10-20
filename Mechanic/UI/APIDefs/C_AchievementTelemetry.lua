@@ -11,6 +11,7 @@ APIDefs["C_AchievementTelemetry.LinkAchievementInClub"] = {
     params = { { name = "achievementID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AchievementTelemetry.LinkAchievementInWhisper"] = {
     params = { { name = "achievementID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,4 +37,5 @@ APIDefs["C_AchievementTelemetry.ShowAchievements"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

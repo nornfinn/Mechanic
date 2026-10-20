@@ -11,6 +11,7 @@ APIDefs["C_ColorUtil.ConvertHSLToHSV"] = {
     params = { { name = "hslH", type = "number", default = nil }, { name = "hslS", type = "number", default = nil }, { name = "hslL", type = "number", default = nil } },
     returns = { { name = "hsvH", type = "number", canBeSecret = false }, { name = "hsvS", type = "number", canBeSecret = false }, { name = "hsvV", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ColorUtil.ConvertHSVToHSL"] = {
     params = { { name = "hsvH", type = "number", default = nil }, { name = "hsvS", type = "number", default = nil }, { name = "hsvV", type = "number", default = nil } },
     returns = { { name = "hslH", type = "number", canBeSecret = false }, { name = "hslS", type = "number", canBeSecret = false }, { name = "hslL", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_ColorUtil.ConvertHSVToRGB"] = {
     params = { { name = "hsvH", type = "number", default = nil }, { name = "hsvS", type = "number", default = nil }, { name = "hsvV", type = "number", default = nil } },
     returns = { { name = "rgbR", type = "number", canBeSecret = false }, { name = "rgbG", type = "number", canBeSecret = false }, { name = "rgbB", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_ColorUtil.ConvertRGBToHSV"] = {
     params = { { name = "rgbR", type = "number", default = nil }, { name = "rgbG", type = "number", default = nil }, { name = "rgbB", type = "number", default = nil } },
     returns = { { name = "hsvH", type = "number", canBeSecret = false }, { name = "hsvS", type = "number", canBeSecret = false }, { name = "hsvV", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_ColorUtil.GenerateTextColorCode"] = {
     params = { { name = "color", type = "colorRGB", default = nil } },
     returns = { { name = "textColorCode", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_ColorUtil.WrapTextInColor"] = {
     params = { { name = "text", type = "cstring", default = nil }, { name = "color", type = "colorRGB", default = nil } },
     returns = { { name = "coloredText", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -83,5 +89,6 @@ APIDefs["C_ColorUtil.WrapTextInColorCode"] = {
     params = { { name = "text", type = "cstring", default = nil }, { name = "textColorCode", type = "cstring", default = nil } },
     returns = { { name = "coloredText", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }

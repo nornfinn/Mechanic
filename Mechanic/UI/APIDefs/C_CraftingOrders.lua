@@ -11,6 +11,7 @@ APIDefs["C_CraftingOrders.AreOrderNotesDisabled"] = {
     params = {  },
     returns = { { name = "areNotesDisabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.CalculateCraftingOrderPostingFee"] = {
@@ -22,6 +23,7 @@ APIDefs["C_CraftingOrders.CalculateCraftingOrderPostingFee"] = {
     params = { { name = "skillLineAbilityID", type = "number", default = nil }, { name = "orderType", type = "CraftingOrderType", default = nil }, { name = "orderDuration", type = "CraftingOrderDuration", default = nil } },
     returns = { { name = "deposit", type = "WOWMONEY", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_CraftingOrders.CanOrderSkillAbility"] = {
     params = { { name = "skillLineAbilityID", type = "number", default = nil } },
     returns = { { name = "canOrder", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_CraftingOrders.CancelOrder"] = {
     params = { { name = "orderID", type = "BigUInteger", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_CraftingOrders.ClaimOrder"] = {
     params = { { name = "orderID", type = "BigUInteger", default = nil }, { name = "profession", type = "Profession", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_CraftingOrders.CloseCrafterCraftingOrders"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.CloseCustomerCraftingOrders"] = {
@@ -81,6 +87,7 @@ APIDefs["C_CraftingOrders.CloseCustomerCraftingOrders"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.FulfillOrder"] = {
@@ -92,6 +99,7 @@ APIDefs["C_CraftingOrders.FulfillOrder"] = {
     params = { { name = "orderID", type = "BigUInteger", default = nil }, { name = "crafterNote", type = "string", default = nil }, { name = "profession", type = "Profession", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_CraftingOrders.GetClaimedOrder"] = {
     params = {  },
     returns = { { name = "order", type = "CraftingOrderInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetCrafterBuckets"] = {
@@ -115,6 +124,7 @@ APIDefs["C_CraftingOrders.GetCrafterBuckets"] = {
     params = {  },
     returns = { { name = "buckets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetCrafterOrders"] = {
@@ -126,6 +136,7 @@ APIDefs["C_CraftingOrders.GetCrafterOrders"] = {
     params = {  },
     returns = { { name = "orders", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetCraftingOrderTime"] = {
@@ -137,6 +148,7 @@ APIDefs["C_CraftingOrders.GetCraftingOrderTime"] = {
     params = {  },
     returns = { { name = "time", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetCustomerCategories"] = {
@@ -148,6 +160,7 @@ APIDefs["C_CraftingOrders.GetCustomerCategories"] = {
     params = {  },
     returns = { { name = "categories", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetCustomerOptions"] = {
@@ -159,6 +172,7 @@ APIDefs["C_CraftingOrders.GetCustomerOptions"] = {
     params = { { name = "params", type = "CraftingOrderCustomerSearchParams", default = nil } },
     returns = { { name = "results", type = "CraftingOrderCustomerSearchResults", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -171,6 +185,7 @@ APIDefs["C_CraftingOrders.GetCustomerOrders"] = {
     params = {  },
     returns = { { name = "customerOrders", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetDefaultOrdersSkillLine"] = {
@@ -182,6 +197,7 @@ APIDefs["C_CraftingOrders.GetDefaultOrdersSkillLine"] = {
     params = {  },
     returns = { { name = "skillLineID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetMyOrders"] = {
@@ -193,6 +209,7 @@ APIDefs["C_CraftingOrders.GetMyOrders"] = {
     params = {  },
     returns = { { name = "myOrders", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetNumFavoriteCustomerOptions"] = {
@@ -204,6 +221,7 @@ APIDefs["C_CraftingOrders.GetNumFavoriteCustomerOptions"] = {
     params = {  },
     returns = { { name = "numFavorites", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.GetOrderClaimInfo"] = {
@@ -215,6 +233,7 @@ APIDefs["C_CraftingOrders.GetOrderClaimInfo"] = {
     params = { { name = "profession", type = "Profession", default = nil } },
     returns = { { name = "claimInfo", type = "CraftingOrderClaimsRemainingInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -227,6 +246,7 @@ APIDefs["C_CraftingOrders.GetPersonalOrdersInfo"] = {
     params = {  },
     returns = { { name = "infos", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.HasFavoriteCustomerOptions"] = {
@@ -238,6 +258,7 @@ APIDefs["C_CraftingOrders.HasFavoriteCustomerOptions"] = {
     params = {  },
     returns = { { name = "hasFavorites", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.IsCustomerOptionFavorited"] = {
@@ -249,6 +270,7 @@ APIDefs["C_CraftingOrders.IsCustomerOptionFavorited"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "favorited", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -261,6 +283,7 @@ APIDefs["C_CraftingOrders.ListMyOrders"] = {
     params = { { name = "request", type = "CraftingOrderRequestMyOrdersInfo", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -273,6 +296,7 @@ APIDefs["C_CraftingOrders.OpenCrafterCraftingOrders"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.OpenCustomerCraftingOrders"] = {
@@ -284,6 +308,7 @@ APIDefs["C_CraftingOrders.OpenCustomerCraftingOrders"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.OrderCanBeRecrafted"] = {
@@ -295,6 +320,7 @@ APIDefs["C_CraftingOrders.OrderCanBeRecrafted"] = {
     params = { { name = "orderID", type = "BigUInteger", default = nil } },
     returns = { { name = "recraftable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -307,6 +333,7 @@ APIDefs["C_CraftingOrders.ParseCustomerOptions"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.PlaceNewOrder"] = {
@@ -318,6 +345,7 @@ APIDefs["C_CraftingOrders.PlaceNewOrder"] = {
     params = { { name = "orderInfo", type = "NewCraftingOrderInfo", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -330,6 +358,7 @@ APIDefs["C_CraftingOrders.RejectOrder"] = {
     params = { { name = "orderID", type = "BigUInteger", default = nil }, { name = "crafterNote", type = "string", default = nil }, { name = "profession", type = "Profession", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -342,6 +371,7 @@ APIDefs["C_CraftingOrders.ReleaseOrder"] = {
     params = { { name = "orderID", type = "BigUInteger", default = nil }, { name = "profession", type = "Profession", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -354,6 +384,7 @@ APIDefs["C_CraftingOrders.RequestCrafterOrders"] = {
     params = { { name = "request", type = "CraftingOrderRequestInfo", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -366,6 +397,7 @@ APIDefs["C_CraftingOrders.RequestCustomerOrders"] = {
     params = { { name = "request", type = "CraftingOrderRequestInfo", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -378,6 +410,7 @@ APIDefs["C_CraftingOrders.SetCustomerOptionFavorited"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "favorited", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -390,6 +423,7 @@ APIDefs["C_CraftingOrders.ShouldShowCraftingOrderTab"] = {
     params = {  },
     returns = { { name = "showTab", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CraftingOrders.SkillLineHasOrders"] = {
@@ -401,6 +435,7 @@ APIDefs["C_CraftingOrders.SkillLineHasOrders"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "hasOrders", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -413,4 +448,5 @@ APIDefs["C_CraftingOrders.UpdateIgnoreList"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

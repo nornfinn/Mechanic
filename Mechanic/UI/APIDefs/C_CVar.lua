@@ -2,6 +2,18 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_CVar.AreCVarsLoaded"] = {
+    key = "C_CVar.AreCVarsLoaded",
+    name = "AreCVarsLoaded",
+    category = "general",
+    subcategory = "c_cvar",
+    funcPath = "C_CVar.AreCVarsLoaded",
+    params = {  },
+    returns = { { name = "loaded", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
 APIDefs["C_CVar.GetCVar"] = {
     key = "C_CVar.GetCVar",
     name = "GetCVar",
@@ -11,6 +23,7 @@ APIDefs["C_CVar.GetCVar"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "value", type = "string", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -24,6 +37,7 @@ APIDefs["C_CVar.GetCVarBitfield"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "value", type = "bool", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -37,6 +51,7 @@ APIDefs["C_CVar.GetCVarBool"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "value", type = "bool", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -50,6 +65,7 @@ APIDefs["C_CVar.GetCVarDefault"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "defaultValue", type = "string", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -63,6 +79,7 @@ APIDefs["C_CVar.GetCVarInfo"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "value", type = "cstring", canBeSecret = false }, { name = "defaultValue", type = "cstring", canBeSecret = false }, { name = "isStoredServerAccount", type = "bool", canBeSecret = false }, { name = "isStoredServerCharacter", type = "bool", canBeSecret = false }, { name = "isLockedFromUser", type = "bool", canBeSecret = false }, { name = "isSecure", type = "bool", canBeSecret = false }, { name = "isReadOnly", type = "bool", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -76,6 +93,21 @@ APIDefs["C_CVar.RegisterCVar"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "value", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
+    protected = true,
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed",
+}
+
+APIDefs["C_CVar.RemoveTempCVar"] = {
+    key = "C_CVar.RemoveTempCVar",
+    name = "RemoveTempCVar",
+    category = "combat_midnight",
+    subcategory = "c_cvar",
+    funcPath = "C_CVar.RemoveTempCVar",
+    params = { { name = "name", type = "cstring", default = nil } },
+    returns = {  },
+    midnightImpact = "RESTRICTED",
+    games = { "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -89,6 +121,7 @@ APIDefs["C_CVar.ResetTestCVars"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CVar.SetCVar"] = {
@@ -100,6 +133,7 @@ APIDefs["C_CVar.SetCVar"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "value", type = "cstring", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -113,6 +147,21 @@ APIDefs["C_CVar.SetCVarBitfield"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "index", type = "luaIndex", default = nil }, { name = "value", type = "bool", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
+    protected = true,
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed",
+}
+
+APIDefs["C_CVar.SetTempCVar"] = {
+    key = "C_CVar.SetTempCVar",
+    name = "SetTempCVar",
+    category = "combat_midnight",
+    subcategory = "c_cvar",
+    funcPath = "C_CVar.SetTempCVar",
+    params = { { name = "name", type = "cstring", default = nil }, { name = "value", type = "cstring", default = nil } },
+    returns = {  },
+    midnightImpact = "RESTRICTED",
+    games = { "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }

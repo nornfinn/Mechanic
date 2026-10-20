@@ -11,6 +11,7 @@ APIDefs["C_MerchantFrame.GetBuybackItemID"] = {
     params = { { name = "buybackSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "buybackItemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,7 +24,20 @@ APIDefs["C_MerchantFrame.GetItemInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "MerchantItemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_MerchantFrame.GetMerchantCurrencies"] = {
+    key = "C_MerchantFrame.GetMerchantCurrencies",
+    name = "GetMerchantCurrencies",
+    category = "ui",
+    subcategory = "c_merchantframe",
+    funcPath = "C_MerchantFrame.GetMerchantCurrencies",
+    params = {  },
+    returns = { { name = "currencies", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MerchantFrame.GetNumJunkItems"] = {
@@ -35,6 +49,7 @@ APIDefs["C_MerchantFrame.GetNumJunkItems"] = {
     params = {  },
     returns = { { name = "numJunkItems", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MerchantFrame.IsMerchantItemRefundable"] = {
@@ -46,6 +61,7 @@ APIDefs["C_MerchantFrame.IsMerchantItemRefundable"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "refundable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +74,7 @@ APIDefs["C_MerchantFrame.IsSellAllJunkEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MerchantFrame.SellAllJunkItems"] = {
@@ -69,4 +86,5 @@ APIDefs["C_MerchantFrame.SellAllJunkItems"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

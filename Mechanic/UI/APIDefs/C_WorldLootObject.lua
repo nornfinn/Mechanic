@@ -11,6 +11,7 @@ APIDefs["C_WorldLootObject.DoesSlotMatchInventoryType"] = {
     params = { { name = "slot", type = "number", default = nil }, { name = "inventoryType", type = "InventoryType", default = nil } },
     returns = { { name = "matches", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_WorldLootObject.GetWorldLootObjectDistanceSquared"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "distanceSquared", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_WorldLootObject.GetWorldLootObjectInfo"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "info", type = "WorldLootObjectInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_WorldLootObject.GetWorldLootObjectInfoByGUID"] = {
     params = { { name = "objectGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "info", type = "WorldLootObjectInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_WorldLootObject.IsWorldLootObject"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "isWorldLootObject", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_WorldLootObject.IsWorldLootObjectByGUID"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "isWorldLootObject", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_WorldLootObject.IsWorldLootObjectInRange"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "isWorldLootObjectInRange", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,5 +102,6 @@ APIDefs["C_WorldLootObject.OnWorldLootObjectClick"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "isLeftClick", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

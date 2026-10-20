@@ -11,4 +11,5 @@ APIDefs["C_EndOfMatchUI.GetEndOfMatchDetails"] = {
     params = {  },
     returns = { { name = "matchDetails", type = "MatchDetails", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

@@ -11,6 +11,7 @@ APIDefs["C_AuctionHouse.CalculateCommodityDeposit"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "duration", type = "luaIndex", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = { { name = "depositCost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AuctionHouse.CalculateItemDeposit"] = {
     params = { { name = "item", type = "ItemLocation", default = nil }, { name = "duration", type = "luaIndex", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = { { name = "depositCost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_AuctionHouse.CanCancelAuction"] = {
     params = { { name = "ownedAuctionID", type = "number", default = nil } },
     returns = { { name = "canCancelAuction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_AuctionHouse.CancelAuction"] = {
     params = { { name = "ownedAuctionID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_AuctionHouse.CancelCommoditiesPurchase"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.CancelSell"] = {
@@ -70,6 +75,7 @@ APIDefs["C_AuctionHouse.CancelSell"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.CloseAuctionHouse"] = {
@@ -81,6 +87,7 @@ APIDefs["C_AuctionHouse.CloseAuctionHouse"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.ConfirmCommoditiesPurchase"] = {
@@ -92,6 +99,7 @@ APIDefs["C_AuctionHouse.ConfirmCommoditiesPurchase"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_AuctionHouse.ConfirmPostCommodity"] = {
     params = { { name = "item", type = "ItemLocation", default = nil }, { name = "duration", type = "luaIndex", default = nil }, { name = "quantity", type = "number", default = nil }, { name = "unitPrice", type = "BigUInteger", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -116,6 +125,7 @@ APIDefs["C_AuctionHouse.ConfirmPostItem"] = {
     params = { { name = "item", type = "ItemLocation", default = nil }, { name = "duration", type = "luaIndex", default = nil }, { name = "quantity", type = "number", default = nil }, { name = "bid", type = "BigUInteger", default = nil }, { name = "buyout", type = "BigUInteger", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -128,6 +138,7 @@ APIDefs["C_AuctionHouse.FavoritesAreAvailable"] = {
     params = {  },
     returns = { { name = "favoritesAreAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetAuctionInfoByID"] = {
@@ -139,6 +150,7 @@ APIDefs["C_AuctionHouse.GetAuctionInfoByID"] = {
     params = { { name = "auctionID", type = "number", default = nil } },
     returns = { { name = "priceInfo", type = "AuctionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -151,6 +163,7 @@ APIDefs["C_AuctionHouse.GetAuctionItemSubClasses"] = {
     params = { { name = "classID", type = "number", default = nil } },
     returns = { { name = "subClasses", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -163,6 +176,7 @@ APIDefs["C_AuctionHouse.GetAvailablePostCount"] = {
     params = { { name = "item", type = "ItemLocation", default = nil } },
     returns = { { name = "listCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -175,6 +189,7 @@ APIDefs["C_AuctionHouse.GetBidInfo"] = {
     params = { { name = "bidIndex", type = "luaIndex", default = nil } },
     returns = { { name = "bid", type = "BidInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -187,6 +202,7 @@ APIDefs["C_AuctionHouse.GetBidType"] = {
     params = { { name = "bidTypeIndex", type = "luaIndex", default = nil } },
     returns = { { name = "typeItemKey", type = "ItemKey", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -199,6 +215,7 @@ APIDefs["C_AuctionHouse.GetBids"] = {
     params = {  },
     returns = { { name = "bids", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetBrowseResults"] = {
@@ -210,6 +227,7 @@ APIDefs["C_AuctionHouse.GetBrowseResults"] = {
     params = {  },
     returns = { { name = "browseResults", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetCancelCost"] = {
@@ -221,6 +239,7 @@ APIDefs["C_AuctionHouse.GetCancelCost"] = {
     params = { { name = "ownedAuctionID", type = "number", default = nil } },
     returns = { { name = "cancelCost", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -233,6 +252,7 @@ APIDefs["C_AuctionHouse.GetCommoditySearchResultInfo"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "commoditySearchResultIndex", type = "luaIndex", default = nil } },
     returns = { { name = "result", type = "CommoditySearchResultInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -245,6 +265,7 @@ APIDefs["C_AuctionHouse.GetCommoditySearchResultsQuantity"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "totalQuantity", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -257,6 +278,7 @@ APIDefs["C_AuctionHouse.GetExtraBrowseInfo"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "extraInfo", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -269,6 +291,7 @@ APIDefs["C_AuctionHouse.GetFilterGroups"] = {
     params = {  },
     returns = { { name = "filterGroups", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetItemCommodityStatus"] = {
@@ -280,6 +303,7 @@ APIDefs["C_AuctionHouse.GetItemCommodityStatus"] = {
     params = { { name = "item", type = "ItemLocation", default = nil } },
     returns = { { name = "isCommodity", type = "ItemCommodityStatus", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -292,6 +316,7 @@ APIDefs["C_AuctionHouse.GetItemKeyFromItem"] = {
     params = { { name = "item", type = "ItemLocation", default = nil } },
     returns = { { name = "itemKey", type = "ItemKey", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -304,6 +329,7 @@ APIDefs["C_AuctionHouse.GetItemKeyInfo"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil }, { name = "restrictQualityToFilter", type = "bool", default = false } },
     returns = { { name = "itemKeyInfo", type = "ItemKeyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -316,6 +342,20 @@ APIDefs["C_AuctionHouse.GetItemKeyRequiredLevel"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "requiredLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_AuctionHouse.GetItemKeySampleLink"] = {
+    key = "C_AuctionHouse.GetItemKeySampleLink",
+    name = "GetItemKeySampleLink",
+    category = "general",
+    subcategory = "c_auctionhouse",
+    funcPath = "C_AuctionHouse.GetItemKeySampleLink",
+    params = { { name = "itemKey", type = "ItemKey", default = nil } },
+    returns = { { name = "sampleItemLink", type = "string", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -328,6 +368,7 @@ APIDefs["C_AuctionHouse.GetItemSearchResultInfo"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil }, { name = "itemSearchResultIndex", type = "luaIndex", default = nil } },
     returns = { { name = "result", type = "ItemSearchResultInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -340,6 +381,7 @@ APIDefs["C_AuctionHouse.GetItemSearchResultsQuantity"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "totalQuantity", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -352,6 +394,7 @@ APIDefs["C_AuctionHouse.GetMaxBidItemBid"] = {
     params = {  },
     returns = { { name = "maxBid", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetMaxBidItemBuyout"] = {
@@ -363,6 +406,7 @@ APIDefs["C_AuctionHouse.GetMaxBidItemBuyout"] = {
     params = {  },
     returns = { { name = "maxBuyout", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetMaxCommoditySearchResultPrice"] = {
@@ -374,6 +418,7 @@ APIDefs["C_AuctionHouse.GetMaxCommoditySearchResultPrice"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "maxUnitPrice", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -386,6 +431,7 @@ APIDefs["C_AuctionHouse.GetMaxItemSearchResultBid"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "maxBid", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -398,6 +444,7 @@ APIDefs["C_AuctionHouse.GetMaxItemSearchResultBuyout"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "maxBuyout", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -410,6 +457,7 @@ APIDefs["C_AuctionHouse.GetMaxOwnedAuctionBid"] = {
     params = {  },
     returns = { { name = "maxBid", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetMaxOwnedAuctionBuyout"] = {
@@ -421,6 +469,7 @@ APIDefs["C_AuctionHouse.GetMaxOwnedAuctionBuyout"] = {
     params = {  },
     returns = { { name = "maxBuyout", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetNumBidTypes"] = {
@@ -432,6 +481,7 @@ APIDefs["C_AuctionHouse.GetNumBidTypes"] = {
     params = {  },
     returns = { { name = "numBidTypes", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetNumBids"] = {
@@ -443,6 +493,7 @@ APIDefs["C_AuctionHouse.GetNumBids"] = {
     params = {  },
     returns = { { name = "numBids", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetNumCommoditySearchResults"] = {
@@ -454,6 +505,7 @@ APIDefs["C_AuctionHouse.GetNumCommoditySearchResults"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "numSearchResults", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -466,6 +518,7 @@ APIDefs["C_AuctionHouse.GetNumItemSearchResults"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "numItemSearchResults", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -478,6 +531,7 @@ APIDefs["C_AuctionHouse.GetNumOwnedAuctionTypes"] = {
     params = {  },
     returns = { { name = "numOwnedAuctionTypes", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetNumOwnedAuctions"] = {
@@ -489,6 +543,7 @@ APIDefs["C_AuctionHouse.GetNumOwnedAuctions"] = {
     params = {  },
     returns = { { name = "numOwnedAuctions", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetNumReplicateItems"] = {
@@ -500,6 +555,7 @@ APIDefs["C_AuctionHouse.GetNumReplicateItems"] = {
     params = {  },
     returns = { { name = "numReplicateItems", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetOwnedAuctionInfo"] = {
@@ -511,6 +567,7 @@ APIDefs["C_AuctionHouse.GetOwnedAuctionInfo"] = {
     params = { { name = "ownedAuctionIndex", type = "luaIndex", default = nil } },
     returns = { { name = "ownedAuction", type = "OwnedAuctionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -523,6 +580,7 @@ APIDefs["C_AuctionHouse.GetOwnedAuctionType"] = {
     params = { { name = "ownedAuctionTypeIndex", type = "luaIndex", default = nil } },
     returns = { { name = "typeItemKey", type = "ItemKey", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -535,6 +593,7 @@ APIDefs["C_AuctionHouse.GetOwnedAuctions"] = {
     params = {  },
     returns = { { name = "ownedAuctions", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetQuoteDurationRemaining"] = {
@@ -546,6 +605,7 @@ APIDefs["C_AuctionHouse.GetQuoteDurationRemaining"] = {
     params = {  },
     returns = { { name = "quoteDurationSeconds", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.GetReplicateItemBattlePetInfo"] = {
@@ -557,6 +617,7 @@ APIDefs["C_AuctionHouse.GetReplicateItemBattlePetInfo"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = { { name = "creatureID", type = "number", canBeSecret = false }, { name = "displayID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -569,6 +630,7 @@ APIDefs["C_AuctionHouse.GetReplicateItemInfo"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "texture", type = "fileID", canBeSecret = false }, { name = "count", type = "number", canBeSecret = false }, { name = "qualityID", type = "number", canBeSecret = false }, { name = "usable", type = "bool", canBeSecret = false }, { name = "level", type = "number", canBeSecret = false }, { name = "levelType", type = "string", canBeSecret = false }, { name = "minBid", type = "BigUInteger", canBeSecret = false }, { name = "minIncrement", type = "BigUInteger", canBeSecret = false }, { name = "buyoutPrice", type = "BigUInteger", canBeSecret = false }, { name = "bidAmount", type = "BigUInteger", canBeSecret = false }, { name = "highBidder", type = "string", canBeSecret = false }, { name = "bidderFullName", type = "string", canBeSecret = false }, { name = "owner", type = "string", canBeSecret = false }, { name = "ownerFullName", type = "string", canBeSecret = false }, { name = "saleStatus", type = "number", canBeSecret = false }, { name = "itemID", type = "number", canBeSecret = false }, { name = "hasAllInfo", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -581,6 +643,7 @@ APIDefs["C_AuctionHouse.GetReplicateItemLink"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = { { name = "itemLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -593,6 +656,7 @@ APIDefs["C_AuctionHouse.GetReplicateItemTimeLeft"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = { { name = "timeLeft", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -605,6 +669,7 @@ APIDefs["C_AuctionHouse.GetTimeLeftBandInfo"] = {
     params = { { name = "timeLeftBand", type = "AuctionHouseTimeLeftBand", default = nil } },
     returns = { { name = "timeLeftMinSeconds", type = "number", canBeSecret = false }, { name = "timeLeftMaxSeconds", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -617,6 +682,7 @@ APIDefs["C_AuctionHouse.HasFavorites"] = {
     params = {  },
     returns = { { name = "hasFavorites", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.HasFullBidResults"] = {
@@ -628,6 +694,7 @@ APIDefs["C_AuctionHouse.HasFullBidResults"] = {
     params = {  },
     returns = { { name = "hasFullBidResults", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.HasFullBrowseResults"] = {
@@ -639,6 +706,7 @@ APIDefs["C_AuctionHouse.HasFullBrowseResults"] = {
     params = {  },
     returns = { { name = "hasFullBrowseResults", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.HasFullCommoditySearchResults"] = {
@@ -650,6 +718,7 @@ APIDefs["C_AuctionHouse.HasFullCommoditySearchResults"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "hasFullResults", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -662,6 +731,7 @@ APIDefs["C_AuctionHouse.HasFullItemSearchResults"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "hasFullResults", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -674,6 +744,7 @@ APIDefs["C_AuctionHouse.HasFullOwnedAuctionResults"] = {
     params = {  },
     returns = { { name = "hasFullOwnedAuctionResults", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.HasMaxFavorites"] = {
@@ -685,6 +756,7 @@ APIDefs["C_AuctionHouse.HasMaxFavorites"] = {
     params = {  },
     returns = { { name = "hasMaxFavorites", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.HasSearchResults"] = {
@@ -696,6 +768,7 @@ APIDefs["C_AuctionHouse.HasSearchResults"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "hasSearchResults", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -708,6 +781,7 @@ APIDefs["C_AuctionHouse.IsFavoriteItem"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "isFavorite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -720,6 +794,7 @@ APIDefs["C_AuctionHouse.IsSellItemValid"] = {
     params = { { name = "item", type = "ItemLocation", default = nil }, { name = "displayError", type = "bool", default = true } },
     returns = { { name = "valid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -732,6 +807,7 @@ APIDefs["C_AuctionHouse.IsThrottledMessageSystemReady"] = {
     params = {  },
     returns = { { name = "canSendThrottledMessage", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.MakeItemKey"] = {
@@ -743,6 +819,7 @@ APIDefs["C_AuctionHouse.MakeItemKey"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "itemLevel", type = "number", default = 0 }, { name = "itemSuffix", type = "number", default = 0 }, { name = "battlePetSpeciesID", type = "number", default = 0 } },
     returns = { { name = "itemKey", type = "ItemKey", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -755,6 +832,7 @@ APIDefs["C_AuctionHouse.PlaceBid"] = {
     params = { { name = "auctionID", type = "number", default = nil }, { name = "bidAmount", type = "BigUInteger", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -767,6 +845,7 @@ APIDefs["C_AuctionHouse.PostCommodity"] = {
     params = { { name = "item", type = "ItemLocation", default = nil }, { name = "duration", type = "luaIndex", default = nil }, { name = "quantity", type = "number", default = nil }, { name = "unitPrice", type = "BigUInteger", default = nil } },
     returns = { { name = "needsConfirmation", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -779,6 +858,7 @@ APIDefs["C_AuctionHouse.PostItem"] = {
     params = { { name = "item", type = "ItemLocation", default = nil }, { name = "duration", type = "luaIndex", default = nil }, { name = "quantity", type = "number", default = nil }, { name = "bid", type = "BigUInteger", default = nil }, { name = "buyout", type = "BigUInteger", default = nil } },
     returns = { { name = "needsConfirmation", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -791,6 +871,7 @@ APIDefs["C_AuctionHouse.QueryBids"] = {
     params = { { name = "sorts", type = "table", default = nil }, { name = "auctionIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -803,6 +884,7 @@ APIDefs["C_AuctionHouse.QueryOwnedAuctions"] = {
     params = { { name = "sorts", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -815,6 +897,7 @@ APIDefs["C_AuctionHouse.RefreshCommoditySearchResults"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -827,6 +910,7 @@ APIDefs["C_AuctionHouse.RefreshItemSearchResults"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil }, { name = "minLevelFilter", type = "number", default = nil }, { name = "maxLevelFilter", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -839,6 +923,7 @@ APIDefs["C_AuctionHouse.ReplicateItems"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.RequestMoreBrowseResults"] = {
@@ -850,6 +935,7 @@ APIDefs["C_AuctionHouse.RequestMoreBrowseResults"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.RequestMoreCommoditySearchResults"] = {
@@ -861,6 +947,7 @@ APIDefs["C_AuctionHouse.RequestMoreCommoditySearchResults"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "hasFullResults", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -873,6 +960,7 @@ APIDefs["C_AuctionHouse.RequestMoreItemSearchResults"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil } },
     returns = { { name = "hasFullResults", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -885,6 +973,7 @@ APIDefs["C_AuctionHouse.RequestOwnedAuctionBidderInfo"] = {
     params = { { name = "auctionID", type = "number", default = nil } },
     returns = { { name = "bidderName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -897,6 +986,7 @@ APIDefs["C_AuctionHouse.SearchForFavorites"] = {
     params = { { name = "sorts", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -909,6 +999,7 @@ APIDefs["C_AuctionHouse.SearchForItemKeys"] = {
     params = { { name = "itemKeys", type = "table", default = nil }, { name = "sorts", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -921,6 +1012,7 @@ APIDefs["C_AuctionHouse.SendBrowseQuery"] = {
     params = { { name = "query", type = "AuctionHouseBrowseQuery", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -933,6 +1025,7 @@ APIDefs["C_AuctionHouse.SendSearchQuery"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil }, { name = "sorts", type = "table", default = nil }, { name = "separateOwnerItems", type = "bool", default = nil }, { name = "minLevelFilter", type = "number", default = 0 }, { name = "maxLevelFilter", type = "number", default = 0 } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -945,6 +1038,7 @@ APIDefs["C_AuctionHouse.SendSellSearchQuery"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil }, { name = "sorts", type = "table", default = nil }, { name = "separateOwnerItems", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -957,6 +1051,7 @@ APIDefs["C_AuctionHouse.SetFavoriteItem"] = {
     params = { { name = "itemKey", type = "ItemKey", default = nil }, { name = "setFavorite", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -969,6 +1064,7 @@ APIDefs["C_AuctionHouse.ShouldAutoPopulatePrice"] = {
     params = {  },
     returns = { { name = "shouldAutoPopulatePrice", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AuctionHouse.StartCommoditiesPurchase"] = {
@@ -980,6 +1076,7 @@ APIDefs["C_AuctionHouse.StartCommoditiesPurchase"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -992,4 +1089,5 @@ APIDefs["C_AuctionHouse.SupportsCopperValues"] = {
     params = {  },
     returns = { { name = "supportsCopperValues", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

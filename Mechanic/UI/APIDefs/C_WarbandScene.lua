@@ -11,6 +11,7 @@ APIDefs["C_WarbandScene.GetRandomEntryID"] = {
     params = {  },
     returns = { { name = "warbandSceneID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WarbandScene.GetWarbandSceneEntry"] = {
@@ -22,6 +23,7 @@ APIDefs["C_WarbandScene.GetWarbandSceneEntry"] = {
     params = { { name = "warbandSceneID", type = "number", default = nil } },
     returns = { { name = "warbandSceneEntry", type = "WarbandSceneEntry", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_WarbandScene.HasWarbandScene"] = {
     params = { { name = "warbandSceneID", type = "number", default = nil } },
     returns = { { name = "owned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_WarbandScene.IsFavorite"] = {
     params = { { name = "warbandSceneID", type = "number", default = nil } },
     returns = { { name = "favorite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_WarbandScene.SearchWarbandSceneEntries"] = {
     params = { { name = "searchParams", type = "WarbandSceneSearchInfo", default = nil } },
     returns = { { name = "matchingEntryIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,5 +75,18 @@ APIDefs["C_WarbandScene.SetFavorite"] = {
     params = { { name = "warbandSceneID", type = "number", default = nil }, { name = "favorite", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_WarbandScene.WarbandScenesAvailable"] = {
+    key = "C_WarbandScene.WarbandScenesAvailable",
+    name = "WarbandScenesAvailable",
+    category = "general",
+    subcategory = "c_warbandscene",
+    funcPath = "C_WarbandScene.WarbandScenesAvailable",
+    params = {  },
+    returns = { { name = "areWarbandScenesAvailable", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }

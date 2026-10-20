@@ -11,6 +11,7 @@ APIDefs["C_PerksActivities.AddTrackedPerksActivity"] = {
     params = { { name = "perksActivityID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_PerksActivities.ClearPerksActivitiesPendingCompletion"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksActivities.GetAllPerksActivityTags"] = {
@@ -34,6 +36,7 @@ APIDefs["C_PerksActivities.GetAllPerksActivityTags"] = {
     params = {  },
     returns = { { name = "tags", type = "PerksActivityTags", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksActivities.GetPerksActivitiesInfo"] = {
@@ -45,6 +48,7 @@ APIDefs["C_PerksActivities.GetPerksActivitiesInfo"] = {
     params = {  },
     returns = { { name = "info", type = "PerksActivitiesInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksActivities.GetPerksActivitiesPendingCompletion"] = {
@@ -56,6 +60,7 @@ APIDefs["C_PerksActivities.GetPerksActivitiesPendingCompletion"] = {
     params = {  },
     returns = { { name = "pending", type = "PerksActivitiesPending", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksActivities.GetPerksActivityChatLink"] = {
@@ -67,6 +72,7 @@ APIDefs["C_PerksActivities.GetPerksActivityChatLink"] = {
     params = { { name = "perksActivityID", type = "number", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -79,6 +85,7 @@ APIDefs["C_PerksActivities.GetPerksActivityInfo"] = {
     params = { { name = "perksActivityID", type = "number", default = nil } },
     returns = { { name = "info", type = "PerksActivityInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -91,6 +98,7 @@ APIDefs["C_PerksActivities.GetPerksUIThemePrefix"] = {
     params = {  },
     returns = { { name = "kitPrefix", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksActivities.GetTrackedPerksActivities"] = {
@@ -102,6 +110,7 @@ APIDefs["C_PerksActivities.GetTrackedPerksActivities"] = {
     params = {  },
     returns = { { name = "trackedPerksActivities", type = "PerksActivitiesTracked", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksActivities.RemoveTrackedPerksActivity"] = {
@@ -113,5 +122,6 @@ APIDefs["C_PerksActivities.RemoveTrackedPerksActivity"] = {
     params = { { name = "perksActivityID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_LobbyMatchmakerInfo.AbandonQueue"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LobbyMatchmakerInfo.EnterQueue"] = {
@@ -22,6 +23,7 @@ APIDefs["C_LobbyMatchmakerInfo.EnterQueue"] = {
     params = { { name = "playlistEntry", type = "PartyPlaylistEntry", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_LobbyMatchmakerInfo.GetCurrQueuePlaylistEntry"] = {
     params = {  },
     returns = { { name = "playlistEntry", type = "PartyPlaylistEntry", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LobbyMatchmakerInfo.GetCurrQueueState"] = {
@@ -45,6 +48,7 @@ APIDefs["C_LobbyMatchmakerInfo.GetCurrQueueState"] = {
     params = {  },
     returns = { { name = "queueState", type = "PlunderstormQueueState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LobbyMatchmakerInfo.GetQueueFromMainlineEnabled"] = {
@@ -56,6 +60,7 @@ APIDefs["C_LobbyMatchmakerInfo.GetQueueFromMainlineEnabled"] = {
     params = {  },
     returns = { { name = "queueFromMainlineEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LobbyMatchmakerInfo.GetQueueStartTime"] = {
@@ -67,6 +72,7 @@ APIDefs["C_LobbyMatchmakerInfo.GetQueueStartTime"] = {
     params = {  },
     returns = { { name = "queueStartTime", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LobbyMatchmakerInfo.IsInQueue"] = {
@@ -78,6 +84,7 @@ APIDefs["C_LobbyMatchmakerInfo.IsInQueue"] = {
     params = {  },
     returns = { { name = "isInQueue", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LobbyMatchmakerInfo.RespondToQueuePop"] = {
@@ -89,5 +96,6 @@ APIDefs["C_LobbyMatchmakerInfo.RespondToQueuePop"] = {
     params = { { name = "acceptQueue", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

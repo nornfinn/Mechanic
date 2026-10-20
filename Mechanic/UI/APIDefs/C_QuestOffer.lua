@@ -11,6 +11,7 @@ APIDefs["C_QuestOffer.GetHideRequiredItems"] = {
     params = {  },
     returns = { { name = "hideRequiredItems", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestOffer.GetQuestOfferMajorFactionReputationRewards"] = {
@@ -22,6 +23,7 @@ APIDefs["C_QuestOffer.GetQuestOfferMajorFactionReputationRewards"] = {
     params = {  },
     returns = { { name = "reputationRewards", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestOffer.GetQuestRequiredCurrencyInfo"] = {
@@ -33,6 +35,7 @@ APIDefs["C_QuestOffer.GetQuestRequiredCurrencyInfo"] = {
     params = { { name = "questRewardIndex", type = "luaIndex", default = nil } },
     returns = { { name = "questRequiredCurrencyInfo", type = "QuestRequiredCurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,5 +48,6 @@ APIDefs["C_QuestOffer.GetQuestRewardCurrencyInfo"] = {
     params = { { name = "questInfoType", type = "cstring", default = nil }, { name = "questRewardIndex", type = "luaIndex", default = nil } },
     returns = { { name = "questRewardCurrencyInfo", type = "QuestRewardCurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

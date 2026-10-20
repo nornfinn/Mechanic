@@ -11,6 +11,7 @@ APIDefs["C_HouseEditor.ActivateHouseEditorMode"] = {
     params = { { name = "editMode", type = "HouseEditorMode", default = nil } },
     returns = { { name = "result", type = "HousingResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_HouseEditor.EnterHouseEditor"] = {
     params = {  },
     returns = { { name = "result", type = "HousingResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseEditor.GetActiveHouseEditorMode"] = {
@@ -34,6 +36,7 @@ APIDefs["C_HouseEditor.GetActiveHouseEditorMode"] = {
     params = {  },
     returns = { { name = "editMode", type = "HouseEditorMode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseEditor.GetHouseEditorAvailability"] = {
@@ -45,6 +48,7 @@ APIDefs["C_HouseEditor.GetHouseEditorAvailability"] = {
     params = {  },
     returns = { { name = "result", type = "HousingResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseEditor.GetHouseEditorModeAvailability"] = {
@@ -56,7 +60,20 @@ APIDefs["C_HouseEditor.GetHouseEditorModeAvailability"] = {
     params = { { name = "editMode", type = "HouseEditorMode", default = nil } },
     returns = { { name = "result", type = "HousingResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HouseEditor.GetHouseEditorPlayerType"] = {
+    key = "C_HouseEditor.GetHouseEditorPlayerType",
+    name = "GetHouseEditorPlayerType",
+    category = "general",
+    subcategory = "c_houseeditor",
+    funcPath = "C_HouseEditor.GetHouseEditorPlayerType",
+    params = {  },
+    returns = { { name = "playerType", type = "HouseEditorPlayerType", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseEditor.IsHouseEditorActive"] = {
@@ -68,6 +85,7 @@ APIDefs["C_HouseEditor.IsHouseEditorActive"] = {
     params = {  },
     returns = { { name = "isEditorActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseEditor.IsHouseEditorModeActive"] = {
@@ -79,6 +97,7 @@ APIDefs["C_HouseEditor.IsHouseEditorModeActive"] = {
     params = { { name = "editMode", type = "HouseEditorMode", default = nil } },
     returns = { { name = "isModeActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -91,6 +110,7 @@ APIDefs["C_HouseEditor.IsHouseEditorStatusAvailable"] = {
     params = {  },
     returns = { { name = "editorStatusAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseEditor.LeaveHouseEditor"] = {
@@ -102,4 +122,5 @@ APIDefs["C_HouseEditor.LeaveHouseEditor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

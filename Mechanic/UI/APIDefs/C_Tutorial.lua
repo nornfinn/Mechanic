@@ -11,6 +11,7 @@ APIDefs["C_Tutorial.AbandonTutorialArea"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Tutorial.GetCombatEventInfo"] = {
@@ -22,6 +23,7 @@ APIDefs["C_Tutorial.GetCombatEventInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Tutorial.ReturnToTutorialArea"] = {
@@ -33,4 +35,18 @@ APIDefs["C_Tutorial.ReturnToTutorialArea"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_Tutorial.SendTutorialStartButtonTelem"] = {
+    key = "C_Tutorial.SendTutorialStartButtonTelem",
+    name = "SendTutorialStartButtonTelem",
+    category = "general",
+    subcategory = "c_tutorial",
+    funcPath = "C_Tutorial.SendTutorialStartButtonTelem",
+    params = { { name = "skipTutorial", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

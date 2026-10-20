@@ -11,6 +11,7 @@ APIDefs["C_Covenants.GetActiveCovenantID"] = {
     params = {  },
     returns = { { name = "covenantID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Covenants.GetCovenantData"] = {
@@ -22,6 +23,7 @@ APIDefs["C_Covenants.GetCovenantData"] = {
     params = { { name = "covenantID", type = "number", default = nil } },
     returns = { { name = "data", type = "CovenantData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,4 +36,5 @@ APIDefs["C_Covenants.GetCovenantIDs"] = {
     params = {  },
     returns = { { name = "covenantID", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

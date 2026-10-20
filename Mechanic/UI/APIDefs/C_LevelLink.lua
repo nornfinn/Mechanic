@@ -11,6 +11,7 @@ APIDefs["C_LevelLink.IsActionLocked"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isLocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,5 +24,6 @@ APIDefs["C_LevelLink.IsSpellLocked"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "isLocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

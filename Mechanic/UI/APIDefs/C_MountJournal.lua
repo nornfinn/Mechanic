@@ -11,6 +11,7 @@ APIDefs["C_MountJournal.ApplyMountEquipment"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "canContinue", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_MountJournal.AreMountEquipmentEffectsSuppressed"] = {
     params = {  },
     returns = { { name = "areEffectsSuppressed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.ClearFanfare"] = {
@@ -34,6 +36,7 @@ APIDefs["C_MountJournal.ClearFanfare"] = {
     params = { { name = "mountID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_MountJournal.ClearRecentFanfares"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.Dismiss"] = {
@@ -57,6 +61,7 @@ APIDefs["C_MountJournal.Dismiss"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.GetAllCreatureDisplayIDsForMountID"] = {
@@ -68,6 +73,7 @@ APIDefs["C_MountJournal.GetAllCreatureDisplayIDsForMountID"] = {
     params = { { name = "mountID", type = "number", default = nil } },
     returns = { { name = "creatureDisplayIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -80,6 +86,7 @@ APIDefs["C_MountJournal.GetAppliedMountEquipmentID"] = {
     params = {  },
     returns = { { name = "itemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.GetCollectedDragonridingMounts"] = {
@@ -91,6 +98,7 @@ APIDefs["C_MountJournal.GetCollectedDragonridingMounts"] = {
     params = {  },
     returns = { { name = "mountIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.GetCollectedFilterSetting"] = {
@@ -102,6 +110,7 @@ APIDefs["C_MountJournal.GetCollectedFilterSetting"] = {
     params = { { name = "filterIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -114,6 +123,7 @@ APIDefs["C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo"] = {
     params = { { name = "mountIndex", type = "luaIndex", default = nil } },
     returns = { { name = "allDisplayInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -126,6 +136,7 @@ APIDefs["C_MountJournal.GetDisplayedMountID"] = {
     params = { { name = "displayIndex", type = "luaIndex", default = nil } },
     returns = { { name = "mountID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -138,6 +149,7 @@ APIDefs["C_MountJournal.GetDisplayedMountInfo"] = {
     params = { { name = "displayIndex", type = "luaIndex", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "spellID", type = "number", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "isActive", type = "bool", canBeSecret = false }, { name = "isUsable", type = "bool", canBeSecret = false }, { name = "sourceType", type = "number", canBeSecret = false }, { name = "isFavorite", type = "bool", canBeSecret = false }, { name = "isFactionSpecific", type = "bool", canBeSecret = false }, { name = "faction", type = "PvPFaction", canBeSecret = false }, { name = "shouldHideOnChar", type = "bool", canBeSecret = false }, { name = "isCollected", type = "bool", canBeSecret = false }, { name = "mountID", type = "number", canBeSecret = false }, { name = "isSteadyFlight", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -150,6 +162,7 @@ APIDefs["C_MountJournal.GetDisplayedMountInfoExtra"] = {
     params = { { name = "mountIndex", type = "luaIndex", default = nil } },
     returns = { { name = "creatureDisplayInfoID", type = "number", canBeSecret = false }, { name = "description", type = "cstring", canBeSecret = false }, { name = "source", type = "cstring", canBeSecret = false }, { name = "isSelfMount", type = "bool", canBeSecret = false }, { name = "mountTypeID", type = "number", canBeSecret = false }, { name = "uiModelSceneID", type = "number", canBeSecret = false }, { name = "animID", type = "number", canBeSecret = false }, { name = "spellVisualKitID", type = "number", canBeSecret = false }, { name = "disablePlayerMountPreview", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -162,6 +175,7 @@ APIDefs["C_MountJournal.GetDynamicFlightModeSpellID"] = {
     params = {  },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.GetIsFavorite"] = {
@@ -173,6 +187,7 @@ APIDefs["C_MountJournal.GetIsFavorite"] = {
     params = { { name = "mountIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isFavorite", type = "bool", canBeSecret = false }, { name = "canSetFavorite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -185,6 +200,7 @@ APIDefs["C_MountJournal.GetMountAllCreatureDisplayInfoByID"] = {
     params = { { name = "mountID", type = "number", default = nil } },
     returns = { { name = "allDisplayInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -197,6 +213,7 @@ APIDefs["C_MountJournal.GetMountEquipmentUnlockLevel"] = {
     params = {  },
     returns = { { name = "level", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.GetMountFromItem"] = {
@@ -208,6 +225,7 @@ APIDefs["C_MountJournal.GetMountFromItem"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "mountID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -217,9 +235,10 @@ APIDefs["C_MountJournal.GetMountFromSpell"] = {
     category = "general",
     subcategory = "c_mountjournal",
     funcPath = "C_MountJournal.GetMountFromSpell",
-    params = { { name = "spellID", type = "number", default = nil } },
+    params = { { name = "spellID", type = "SpellIdentifier", default = nil } },
     returns = { { name = "mountID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -232,6 +251,7 @@ APIDefs["C_MountJournal.GetMountIDs"] = {
     params = {  },
     returns = { { name = "mountIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.GetMountInfoByID"] = {
@@ -243,6 +263,7 @@ APIDefs["C_MountJournal.GetMountInfoByID"] = {
     params = { { name = "mountID", type = "number", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "spellID", type = "number", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "isActive", type = "bool", canBeSecret = false }, { name = "isUsable", type = "bool", canBeSecret = false }, { name = "sourceType", type = "number", canBeSecret = false }, { name = "isFavorite", type = "bool", canBeSecret = false }, { name = "isFactionSpecific", type = "bool", canBeSecret = false }, { name = "faction", type = "PvPFaction", canBeSecret = false }, { name = "shouldHideOnChar", type = "bool", canBeSecret = false }, { name = "isCollected", type = "bool", canBeSecret = false }, { name = "mountID", type = "number", canBeSecret = false }, { name = "isSteadyFlight", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -255,6 +276,7 @@ APIDefs["C_MountJournal.GetMountInfoExtraByID"] = {
     params = { { name = "mountID", type = "number", default = nil } },
     returns = { { name = "creatureDisplayInfoID", type = "number", canBeSecret = false }, { name = "description", type = "cstring", canBeSecret = false }, { name = "source", type = "cstring", canBeSecret = false }, { name = "isSelfMount", type = "bool", canBeSecret = false }, { name = "mountTypeID", type = "number", canBeSecret = false }, { name = "uiModelSceneID", type = "number", canBeSecret = false }, { name = "animID", type = "number", canBeSecret = false }, { name = "spellVisualKitID", type = "number", canBeSecret = false }, { name = "disablePlayerMountPreview", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -267,6 +289,7 @@ APIDefs["C_MountJournal.GetMountLink"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "mountCreatureDisplayInfoLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -279,6 +302,7 @@ APIDefs["C_MountJournal.GetMountUsabilityByID"] = {
     params = { { name = "mountID", type = "number", default = nil }, { name = "checkIndoors", type = "bool", default = nil } },
     returns = { { name = "isUsable", type = "bool", canBeSecret = false }, { name = "useError", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -291,6 +315,7 @@ APIDefs["C_MountJournal.GetNumDisplayedMounts"] = {
     params = {  },
     returns = { { name = "numMounts", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.GetNumMounts"] = {
@@ -302,6 +327,7 @@ APIDefs["C_MountJournal.GetNumMounts"] = {
     params = {  },
     returns = { { name = "numMounts", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.GetNumMountsNeedingFanfare"] = {
@@ -313,6 +339,19 @@ APIDefs["C_MountJournal.GetNumMountsNeedingFanfare"] = {
     params = {  },
     returns = { { name = "numMountsNeedingFanfare", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_MountJournal.HasDisplayableMount"] = {
+    key = "C_MountJournal.HasDisplayableMount",
+    name = "HasDisplayableMount",
+    category = "general",
+    subcategory = "c_mountjournal",
+    funcPath = "C_MountJournal.HasDisplayableMount",
+    params = {  },
+    returns = { { name = "hasMount", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_MountJournal.IsDragonridingUnlocked"] = {
@@ -324,6 +363,7 @@ APIDefs["C_MountJournal.IsDragonridingUnlocked"] = {
     params = {  },
     returns = { { name = "isUnlocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.IsItemMountEquipment"] = {
@@ -335,6 +375,7 @@ APIDefs["C_MountJournal.IsItemMountEquipment"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "isMountEquipment", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -347,6 +388,7 @@ APIDefs["C_MountJournal.IsMountEquipmentApplied"] = {
     params = {  },
     returns = { { name = "isApplied", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.IsSourceChecked"] = {
@@ -358,6 +400,7 @@ APIDefs["C_MountJournal.IsSourceChecked"] = {
     params = { { name = "filterIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -370,6 +413,7 @@ APIDefs["C_MountJournal.IsTypeChecked"] = {
     params = { { name = "filterIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -382,6 +426,7 @@ APIDefs["C_MountJournal.IsUsingDefaultFilters"] = {
     params = {  },
     returns = { { name = "isUsingDefaultFilters", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.IsValidSourceFilter"] = {
@@ -393,6 +438,7 @@ APIDefs["C_MountJournal.IsValidSourceFilter"] = {
     params = { { name = "filterIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -405,7 +451,20 @@ APIDefs["C_MountJournal.IsValidTypeFilter"] = {
     params = { { name = "filterIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_MountJournal.MountEquipmentAvailable"] = {
+    key = "C_MountJournal.MountEquipmentAvailable",
+    name = "MountEquipmentAvailable",
+    category = "general",
+    subcategory = "c_mountjournal",
+    funcPath = "C_MountJournal.MountEquipmentAvailable",
+    params = {  },
+    returns = { { name = "isMountEquipmentAvailable", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_MountJournal.NeedsFanfare"] = {
@@ -417,6 +476,7 @@ APIDefs["C_MountJournal.NeedsFanfare"] = {
     params = { { name = "mountID", type = "number", default = nil } },
     returns = { { name = "needsFanfare", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -429,6 +489,7 @@ APIDefs["C_MountJournal.Pickup"] = {
     params = { { name = "displayIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -441,6 +502,7 @@ APIDefs["C_MountJournal.PickupDynamicFlightMode"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.SetAllSourceFilters"] = {
@@ -452,6 +514,7 @@ APIDefs["C_MountJournal.SetAllSourceFilters"] = {
     params = { { name = "isChecked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -464,6 +527,7 @@ APIDefs["C_MountJournal.SetAllTypeFilters"] = {
     params = { { name = "isChecked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -476,6 +540,7 @@ APIDefs["C_MountJournal.SetCollectedFilterSetting"] = {
     params = { { name = "filterIndex", type = "luaIndex", default = nil }, { name = "isChecked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -488,6 +553,7 @@ APIDefs["C_MountJournal.SetDefaultFilters"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_MountJournal.SetIsFavorite"] = {
@@ -499,6 +565,7 @@ APIDefs["C_MountJournal.SetIsFavorite"] = {
     params = { { name = "mountIndex", type = "luaIndex", default = nil }, { name = "isFavorite", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -511,6 +578,7 @@ APIDefs["C_MountJournal.SetSearch"] = {
     params = { { name = "searchValue", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -523,6 +591,7 @@ APIDefs["C_MountJournal.SetSourceFilter"] = {
     params = { { name = "filterIndex", type = "luaIndex", default = nil }, { name = "isChecked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -535,6 +604,7 @@ APIDefs["C_MountJournal.SetTypeFilter"] = {
     params = { { name = "filterIndex", type = "luaIndex", default = nil }, { name = "isChecked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -547,6 +617,7 @@ APIDefs["C_MountJournal.SummonByID"] = {
     params = { { name = "mountID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -559,4 +630,5 @@ APIDefs["C_MountJournal.SwapDynamicFlightMode"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

@@ -11,6 +11,7 @@ APIDefs["C_WowSurvey.OpenSurvey"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_WowSurvey.TriggerSurveyServe"] = {
@@ -22,5 +23,6 @@ APIDefs["C_WowSurvey.TriggerSurveyServe"] = {
     params = { { name = "deliveryMoment", type = "SurveyDeliveryMoment", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

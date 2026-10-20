@@ -11,6 +11,7 @@ APIDefs["C_Traits.CanEditConfig"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "canEdit", type = "bool", canBeSecret = false }, { name = "errorMessage", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_Traits.CanPurchaseRank"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil }, { name = "nodeEntryID", type = "number", default = nil } },
     returns = { { name = "canPurchase", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_Traits.CanRefundRank"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "canRefund", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_Traits.CascadeRepurchaseRanks"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil }, { name = "entryID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_Traits.ClearCascadeRepurchaseHistory"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_Traits.CloseTraitSystemInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Traits.CommitConfig"] = {
@@ -82,6 +88,7 @@ APIDefs["C_Traits.CommitConfig"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +101,7 @@ APIDefs["C_Traits.ConfigHasStagedChanges"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "hasChanges", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -106,6 +114,7 @@ APIDefs["C_Traits.GenerateImportString"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "importString", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,6 +127,7 @@ APIDefs["C_Traits.GenerateInspectImportString"] = {
     params = { { name = "target", type = "cstring", default = nil } },
     returns = { { name = "importString", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -130,6 +140,7 @@ APIDefs["C_Traits.GetConditionInfo"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "condID", type = "number", default = nil } },
     returns = { { name = "condInfo", type = "TraitCondInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -142,6 +153,7 @@ APIDefs["C_Traits.GetConfigIDBySystemID"] = {
     params = { { name = "systemID", type = "number", default = nil } },
     returns = { { name = "configID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -154,6 +166,7 @@ APIDefs["C_Traits.GetConfigIDByTreeID"] = {
     params = { { name = "treeID", type = "number", default = nil } },
     returns = { { name = "configID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -166,6 +179,7 @@ APIDefs["C_Traits.GetConfigInfo"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "configInfo", type = "TraitConfigInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -178,6 +192,7 @@ APIDefs["C_Traits.GetConfigVariationID"] = {
     params = { { name = "systemID", type = "number", default = nil } },
     returns = { { name = "variationID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -190,6 +205,7 @@ APIDefs["C_Traits.GetConfigsByType"] = {
     params = { { name = "configType", type = "TraitConfigType", default = nil } },
     returns = { { name = "configIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -202,6 +218,7 @@ APIDefs["C_Traits.GetDefinitionInfo"] = {
     params = { { name = "definitionID", type = "number", default = nil } },
     returns = { { name = "definitionInfo", type = "TraitDefinitionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -214,6 +231,33 @@ APIDefs["C_Traits.GetEntryInfo"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "entryID", type = "number", default = nil } },
     returns = { { name = "entryInfo", type = "TraitEntryInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Traits.GetGroupCurrencyInfo"] = {
+    key = "C_Traits.GetGroupCurrencyInfo",
+    name = "GetGroupCurrencyInfo",
+    category = "general",
+    subcategory = "c_traits",
+    funcPath = "C_Traits.GetGroupCurrencyInfo",
+    params = { { name = "configID", type = "number", default = nil }, { name = "groupIDs", type = "table", default = nil } },
+    returns = { { name = "groupCurrencyInfos", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Traits.GetGroupDisplayInfoByTreeID"] = {
+    key = "C_Traits.GetGroupDisplayInfoByTreeID",
+    name = "GetGroupDisplayInfoByTreeID",
+    category = "general",
+    subcategory = "c_traits",
+    funcPath = "C_Traits.GetGroupDisplayInfoByTreeID",
+    params = { { name = "treeID", type = "number", default = nil } },
+    returns = { { name = "displayInfos", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -226,6 +270,7 @@ APIDefs["C_Traits.GetIncreasedTraitData"] = {
     params = { { name = "nodeID", type = "number", default = nil }, { name = "entryID", type = "number", default = nil } },
     returns = { { name = "itemName", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -238,6 +283,20 @@ APIDefs["C_Traits.GetLoadoutSerializationVersion"] = {
     params = {  },
     returns = { { name = "serializationVersion", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_Traits.GetMaxAvailableTraitCurrency"] = {
+    key = "C_Traits.GetMaxAvailableTraitCurrency",
+    name = "GetMaxAvailableTraitCurrency",
+    category = "general",
+    subcategory = "c_traits",
+    funcPath = "C_Traits.GetMaxAvailableTraitCurrency",
+    params = { { name = "traitCurrencyID", type = "number", default = nil }, { name = "limitBySourcedMax", type = "bool", default = nil } },
+    returns = { { name = "maxAvailable", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_Traits.GetNodeCost"] = {
@@ -249,6 +308,7 @@ APIDefs["C_Traits.GetNodeCost"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "costs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -261,6 +321,7 @@ APIDefs["C_Traits.GetNodeInfo"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "nodeInfo", type = "TraitNodeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -273,6 +334,7 @@ APIDefs["C_Traits.GetStagedChanges"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "nodeIDsWithPurchases", type = "table", canBeSecret = false }, { name = "nodeIDsWithRefunds", type = "table", canBeSecret = false }, { name = "nodeIDsWithSelectionSwaps", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -285,6 +347,7 @@ APIDefs["C_Traits.GetStagedChangesCost"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "costs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -297,6 +360,7 @@ APIDefs["C_Traits.GetSubTreeInfo"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "subTreeID", type = "number", default = nil } },
     returns = { { name = "subTreeInfo", type = "TraitSubTreeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -309,6 +373,20 @@ APIDefs["C_Traits.GetSystemIDByTreeID"] = {
     params = { { name = "treeID", type = "number", default = nil } },
     returns = { { name = "systemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Traits.GetTraitCurrencyForAchievement"] = {
+    key = "C_Traits.GetTraitCurrencyForAchievement",
+    name = "GetTraitCurrencyForAchievement",
+    category = "general",
+    subcategory = "c_traits",
+    funcPath = "C_Traits.GetTraitCurrencyForAchievement",
+    params = { { name = "traitCurrencyID", type = "number", default = nil }, { name = "achievementID", type = "number", default = nil } },
+    returns = { { name = "amount", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -321,6 +399,7 @@ APIDefs["C_Traits.GetTraitCurrencyInfo"] = {
     params = { { name = "traitCurrencyID", type = "number", default = nil } },
     returns = { { name = "flags", type = "number", canBeSecret = false }, { name = "type", type = "number", canBeSecret = false }, { name = "currencyTypesID", type = "number", canBeSecret = false }, { name = "icon", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -333,6 +412,7 @@ APIDefs["C_Traits.GetTraitDescription"] = {
     params = { { name = "entryID", type = "number", default = nil }, { name = "rank", type = "number", default = nil } },
     returns = { { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -345,6 +425,7 @@ APIDefs["C_Traits.GetTraitSystemFlags"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "flags", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -357,6 +438,7 @@ APIDefs["C_Traits.GetTraitSystemWidgetSetID"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "uiWidgetSetID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -369,6 +451,7 @@ APIDefs["C_Traits.GetTreeCurrencyInfo"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "treeID", type = "number", default = nil }, { name = "excludeStagedChanges", type = "bool", default = nil } },
     returns = { { name = "treeCurrencyInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -381,6 +464,7 @@ APIDefs["C_Traits.GetTreeHash"] = {
     params = { { name = "treeID", type = "number", default = nil } },
     returns = { { name = "result", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -393,6 +477,7 @@ APIDefs["C_Traits.GetTreeInfo"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "treeID", type = "number", default = nil } },
     returns = { { name = "treeInfo", type = "TraitTreeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -405,6 +490,7 @@ APIDefs["C_Traits.GetTreeNodes"] = {
     params = { { name = "treeID", type = "number", default = nil } },
     returns = { { name = "nodeIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -417,6 +503,7 @@ APIDefs["C_Traits.HasValidInspectData"] = {
     params = {  },
     returns = { { name = "hasValidInspectData", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Traits.IsReadyForCommit"] = {
@@ -428,6 +515,7 @@ APIDefs["C_Traits.IsReadyForCommit"] = {
     params = {  },
     returns = { { name = "isReadyForCommit", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Traits.PurchaseAllRanks"] = {
@@ -439,6 +527,7 @@ APIDefs["C_Traits.PurchaseAllRanks"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil }, { name = "ignoreCost", type = "bool", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -451,6 +540,7 @@ APIDefs["C_Traits.PurchaseRank"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -463,6 +553,7 @@ APIDefs["C_Traits.RefundAllRanks"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -475,6 +566,7 @@ APIDefs["C_Traits.RefundRank"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil }, { name = "clearEdges", type = "bool", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -487,6 +579,7 @@ APIDefs["C_Traits.ResetTree"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "treeID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -499,6 +592,7 @@ APIDefs["C_Traits.ResetTreeByCurrency"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "treeID", type = "number", default = nil }, { name = "traitCurrencyID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -511,6 +605,7 @@ APIDefs["C_Traits.RollbackConfig"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -523,6 +618,7 @@ APIDefs["C_Traits.SetSelection"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil }, { name = "nodeEntryID", type = "number", default = nil }, { name = "clearEdges", type = "bool", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -535,6 +631,7 @@ APIDefs["C_Traits.StageConfig"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -547,6 +644,7 @@ APIDefs["C_Traits.TalentTestUnlearnSpells"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Traits.TryPurchaseAllRanks"] = {
@@ -558,6 +656,7 @@ APIDefs["C_Traits.TryPurchaseAllRanks"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -570,6 +669,7 @@ APIDefs["C_Traits.TryPurchaseToNode"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -582,5 +682,6 @@ APIDefs["C_Traits.TryRefundToNode"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "nodeID", type = "number", default = nil }, { name = "entryID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

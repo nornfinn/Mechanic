@@ -11,6 +11,7 @@ APIDefs["C_PlayerInteractionManager.ClearInteraction"] = {
     params = { { name = "type", type = "PlayerInteractionType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_PlayerInteractionManager.ConfirmationInteraction"] = {
     params = { { name = "type", type = "PlayerInteractionType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_PlayerInteractionManager.InteractUnit"] = {
     params = { { name = "unit", type = "string", default = nil }, { name = "exactMatch", type = "bool", default = false }, { name = "looseTargeting", type = "bool", default = true } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_PlayerInteractionManager.IsInteractingWithNpcOfType"] = {
     params = { { name = "type", type = "PlayerInteractionType", default = nil } },
     returns = { { name = "interacting", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_PlayerInteractionManager.IsReplacingUnit"] = {
     params = {  },
     returns = { { name = "replacing", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInteractionManager.IsValidNPCInteraction"] = {
@@ -70,6 +75,7 @@ APIDefs["C_PlayerInteractionManager.IsValidNPCInteraction"] = {
     params = { { name = "type", type = "PlayerInteractionType", default = nil } },
     returns = { { name = "isValidInteraction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,4 +88,17 @@ APIDefs["C_PlayerInteractionManager.ReopenInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PlayerInteractionManager.ShardTransferConfirm"] = {
+    key = "C_PlayerInteractionManager.ShardTransferConfirm",
+    name = "ShardTransferConfirm",
+    category = "unit",
+    subcategory = "c_playerinteractionmanager",
+    funcPath = "C_PlayerInteractionManager.ShardTransferConfirm",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }

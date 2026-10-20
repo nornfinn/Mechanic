@@ -11,6 +11,7 @@ APIDefs["C_AddOnProfiler.AddMeasuredCallEvent"] = {
     params = { { name = "name", type = "stringView", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AddOnProfiler.AddPerformanceMessageShown"] = {
     params = { { name = "msg", type = "AddOnPerformanceMessage", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_AddOnProfiler.CheckForPerformanceMessage"] = {
     params = {  },
     returns = { { name = "msg", type = "AddOnPerformanceMessage", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOnProfiler.GetAddOnMetric"] = {
@@ -46,6 +49,7 @@ APIDefs["C_AddOnProfiler.GetAddOnMetric"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "metric", type = "AddOnProfilerMetric", default = nil } },
     returns = { { name = "result", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_AddOnProfiler.GetApplicationMetric"] = {
     params = { { name = "metric", type = "AddOnProfilerMetric", default = nil } },
     returns = { { name = "result", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_AddOnProfiler.GetOverallMetric"] = {
     params = { { name = "metric", type = "AddOnProfilerMetric", default = nil } },
     returns = { { name = "result", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_AddOnProfiler.GetTicksPerSecond"] = {
     params = {  },
     returns = { { name = "frequency", type = "BigInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOnProfiler.GetTopKAddOnsForMetric"] = {
@@ -93,6 +100,7 @@ APIDefs["C_AddOnProfiler.GetTopKAddOnsForMetric"] = {
     params = { { name = "metric", type = "AddOnProfilerMetric", default = nil }, { name = "k", type = "number", default = nil } },
     returns = { { name = "results", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -105,6 +113,7 @@ APIDefs["C_AddOnProfiler.IsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AddOnProfiler.MeasureCall"] = {
@@ -116,5 +125,6 @@ APIDefs["C_AddOnProfiler.MeasureCall"] = {
     params = { { name = "func", type = "LuaValueVariant", default = nil }, { name = "arguments", type = "LuaValueVariant", default = nil } },
     returns = { { name = "results", type = "AddOnProfilerCallResults", canBeSecret = false }, { name = "returns", type = "LuaValueVariant", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

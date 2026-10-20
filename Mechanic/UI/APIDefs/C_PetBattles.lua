@@ -11,6 +11,7 @@ APIDefs["C_PetBattles.GetBreedQuality"] = {
     params = { { name = "petOwner", type = "BattlePetOwner", default = nil }, { name = "slot", type = "number", default = nil } },
     returns = { { name = "quality", type = "BattlePetBreedQuality", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_PetBattles.GetIcon"] = {
     params = { { name = "petOwner", type = "BattlePetOwner", default = nil }, { name = "slot", type = "number", default = nil } },
     returns = { { name = "iconFileID", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_PetBattles.GetName"] = {
     params = { { name = "petOwner", type = "BattlePetOwner", default = nil }, { name = "slot", type = "number", default = nil } },
     returns = { { name = "customName", type = "string", canBeSecret = false }, { name = "speciesName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_PetBattles.IsPlayerNPC"] = {
     params = {  },
     returns = { { name = "isPlayerNPC", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PetBattles.IsWildBattle"] = {
@@ -58,4 +62,5 @@ APIDefs["C_PetBattles.IsWildBattle"] = {
     params = {  },
     returns = { { name = "isWildBattle", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

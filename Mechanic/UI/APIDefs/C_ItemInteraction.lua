@@ -11,6 +11,7 @@ APIDefs["C_ItemInteraction.ClearPendingItem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemInteraction.CloseUI"] = {
@@ -22,6 +23,7 @@ APIDefs["C_ItemInteraction.CloseUI"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemInteraction.GetChargeInfo"] = {
@@ -33,6 +35,7 @@ APIDefs["C_ItemInteraction.GetChargeInfo"] = {
     params = {  },
     returns = { { name = "chargeInfo", type = "ItemInteractionChargeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemInteraction.GetItemConversionCurrencyCost"] = {
@@ -44,6 +47,7 @@ APIDefs["C_ItemInteraction.GetItemConversionCurrencyCost"] = {
     params = { { name = "item", type = "ItemLocation", default = nil } },
     returns = { { name = "conversionCost", type = "ConversionCurrencyCost", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -56,6 +60,7 @@ APIDefs["C_ItemInteraction.GetItemInteractionInfo"] = {
     params = {  },
     returns = { { name = "info", type = "ItemInteractionFrameInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemInteraction.GetItemInteractionSpellId"] = {
@@ -67,6 +72,7 @@ APIDefs["C_ItemInteraction.GetItemInteractionSpellId"] = {
     params = {  },
     returns = { { name = "spellId", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemInteraction.InitializeFrame"] = {
@@ -78,6 +84,7 @@ APIDefs["C_ItemInteraction.InitializeFrame"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemInteraction.PerformItemInteraction"] = {
@@ -89,6 +96,7 @@ APIDefs["C_ItemInteraction.PerformItemInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemInteraction.Reset"] = {
@@ -100,6 +108,7 @@ APIDefs["C_ItemInteraction.Reset"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemInteraction.SetPendingItem"] = {
@@ -111,5 +120,6 @@ APIDefs["C_ItemInteraction.SetPendingItem"] = {
     params = { { name = "item", type = "ItemLocation", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

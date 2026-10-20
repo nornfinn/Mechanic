@@ -11,6 +11,7 @@ APIDefs["C_SeasonInfo.GetCurrentDisplaySeasonExpansion"] = {
     params = {  },
     returns = { { name = "expansionID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SeasonInfo.GetCurrentDisplaySeasonID"] = {
@@ -22,4 +23,17 @@ APIDefs["C_SeasonInfo.GetCurrentDisplaySeasonID"] = {
     params = {  },
     returns = { { name = "seasonID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_SeasonInfo.GetTimeUntilCurrentPVPSeasonEnd"] = {
+    key = "C_SeasonInfo.GetTimeUntilCurrentPVPSeasonEnd",
+    name = "GetTimeUntilCurrentPVPSeasonEnd",
+    category = "general",
+    subcategory = "c_seasoninfo",
+    funcPath = "C_SeasonInfo.GetTimeUntilCurrentPVPSeasonEnd",
+    params = {  },
+    returns = { { name = "timeInSeconds", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }

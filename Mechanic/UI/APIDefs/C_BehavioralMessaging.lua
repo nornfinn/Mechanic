@@ -11,5 +11,6 @@ APIDefs["C_BehavioralMessaging.SendNotificationReceipt"] = {
     params = { { name = "dbId", type = "NotificationDbId", default = nil }, { name = "openTimeSeconds", type = "number", default = nil }, { name = "readTimeSeconds", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

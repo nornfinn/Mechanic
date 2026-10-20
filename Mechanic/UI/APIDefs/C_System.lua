@@ -11,4 +11,5 @@ APIDefs["C_System.GetFrameStack"] = {
     params = {  },
     returns = { { name = "objects", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

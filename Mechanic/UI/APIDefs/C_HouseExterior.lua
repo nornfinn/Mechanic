@@ -11,6 +11,7 @@ APIDefs["C_HouseExterior.CancelActiveExteriorEditing"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseExterior.GetCoreFixtureOptionsInfo"] = {
@@ -22,6 +23,7 @@ APIDefs["C_HouseExterior.GetCoreFixtureOptionsInfo"] = {
     params = { { name = "coreFixtureType", type = "HousingFixtureType", default = nil } },
     returns = { { name = "coreFixtureOptionsInfo", type = "HousingCoreFixtureInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_HouseExterior.GetCurrentHouseExteriorSize"] = {
     params = {  },
     returns = { { name = "houseExteriorSize", type = "HousingFixtureSize", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseExterior.GetCurrentHouseExteriorType"] = {
@@ -45,6 +48,7 @@ APIDefs["C_HouseExterior.GetCurrentHouseExteriorType"] = {
     params = {  },
     returns = { { name = "houseExteriorTypeID", type = "number", canBeSecret = false }, { name = "houseExteriorTypeName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseExterior.GetHouseExteriorSizeOptions"] = {
@@ -56,6 +60,7 @@ APIDefs["C_HouseExterior.GetHouseExteriorSizeOptions"] = {
     params = {  },
     returns = { { name = "options", type = "HouseExteriorSizeOptionsInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseExterior.GetHouseExteriorTypeOptions"] = {
@@ -67,6 +72,7 @@ APIDefs["C_HouseExterior.GetHouseExteriorTypeOptions"] = {
     params = {  },
     returns = { { name = "options", type = "HouseExteriorTypeOptionsInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseExterior.GetSelectedFixturePointInfo"] = {
@@ -78,6 +84,7 @@ APIDefs["C_HouseExterior.GetSelectedFixturePointInfo"] = {
     params = {  },
     returns = { { name = "fixturePointInfo", type = "HousingFixturePointInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseExterior.HasHoveredFixture"] = {
@@ -89,6 +96,7 @@ APIDefs["C_HouseExterior.HasHoveredFixture"] = {
     params = {  },
     returns = { { name = "anyHoveredFixture", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseExterior.HasSelectedFixturePoint"] = {
@@ -100,6 +108,68 @@ APIDefs["C_HouseExterior.HasSelectedFixturePoint"] = {
     params = {  },
     returns = { { name = "anySelectedFixturePoint", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HouseExterior.IsAnyDecorAttachedToCoreFixture"] = {
+    key = "C_HouseExterior.IsAnyDecorAttachedToCoreFixture",
+    name = "IsAnyDecorAttachedToCoreFixture",
+    category = "general",
+    subcategory = "c_houseexterior",
+    funcPath = "C_HouseExterior.IsAnyDecorAttachedToCoreFixture",
+    params = { { name = "coreFixtureType", type = "HousingFixtureType", default = nil } },
+    returns = { { name = "anyAttachedDecor", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HouseExterior.IsAnyDecorAttachedToDoor"] = {
+    key = "C_HouseExterior.IsAnyDecorAttachedToDoor",
+    name = "IsAnyDecorAttachedToDoor",
+    category = "general",
+    subcategory = "c_houseexterior",
+    funcPath = "C_HouseExterior.IsAnyDecorAttachedToDoor",
+    params = {  },
+    returns = { { name = "anyAttachedDecor", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HouseExterior.IsAnyDecorAttachedToHouseExterior"] = {
+    key = "C_HouseExterior.IsAnyDecorAttachedToHouseExterior",
+    name = "IsAnyDecorAttachedToHouseExterior",
+    category = "general",
+    subcategory = "c_houseexterior",
+    funcPath = "C_HouseExterior.IsAnyDecorAttachedToHouseExterior",
+    params = {  },
+    returns = { { name = "anyAttachedDecor", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HouseExterior.IsAnyDecorAttachedToSelectedFixturePoint"] = {
+    key = "C_HouseExterior.IsAnyDecorAttachedToSelectedFixturePoint",
+    name = "IsAnyDecorAttachedToSelectedFixturePoint",
+    category = "general",
+    subcategory = "c_houseexterior",
+    funcPath = "C_HouseExterior.IsAnyDecorAttachedToSelectedFixturePoint",
+    params = {  },
+    returns = { { name = "anyAttachedDecor", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HouseExterior.IsExteriorDecorHidden"] = {
+    key = "C_HouseExterior.IsExteriorDecorHidden",
+    name = "IsExteriorDecorHidden",
+    category = "general",
+    subcategory = "c_houseexterior",
+    funcPath = "C_HouseExterior.IsExteriorDecorHidden",
+    params = {  },
+    returns = { { name = "decorHidden", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HouseExterior.RemoveFixtureFromSelectedPoint"] = {
@@ -108,9 +178,11 @@ APIDefs["C_HouseExterior.RemoveFixtureFromSelectedPoint"] = {
     category = "general",
     subcategory = "c_houseexterior",
     funcPath = "C_HouseExterior.RemoveFixtureFromSelectedPoint",
-    params = {  },
+    params = { { name = "attachedDecorAction", type = "HousingFixtureDecorAction", default = "Store" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_HouseExterior.SelectCoreFixtureOption"] = {
@@ -119,9 +191,10 @@ APIDefs["C_HouseExterior.SelectCoreFixtureOption"] = {
     category = "general",
     subcategory = "c_houseexterior",
     funcPath = "C_HouseExterior.SelectCoreFixtureOption",
-    params = { { name = "fixtureID", type = "number", default = nil } },
+    params = { { name = "fixtureID", type = "number", default = nil }, { name = "attachedDecorAction", type = "HousingFixtureDecorAction", default = "Store" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -131,9 +204,23 @@ APIDefs["C_HouseExterior.SelectFixtureOption"] = {
     category = "general",
     subcategory = "c_houseexterior",
     funcPath = "C_HouseExterior.SelectFixtureOption",
-    params = { { name = "fixtureID", type = "number", default = nil } },
+    params = { { name = "fixtureID", type = "number", default = nil }, { name = "attachedDecorAction", type = "HousingFixtureDecorAction", default = "Store" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HouseExterior.SetExteriorDecorHidden"] = {
+    key = "C_HouseExterior.SetExteriorDecorHidden",
+    name = "SetExteriorDecorHidden",
+    category = "general",
+    subcategory = "c_houseexterior",
+    funcPath = "C_HouseExterior.SetExteriorDecorHidden",
+    params = { { name = "decorHidden", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -143,9 +230,10 @@ APIDefs["C_HouseExterior.SetHouseExteriorSize"] = {
     category = "general",
     subcategory = "c_houseexterior",
     funcPath = "C_HouseExterior.SetHouseExteriorSize",
-    params = { { name = "size", type = "HousingFixtureSize", default = nil } },
+    params = { { name = "size", type = "HousingFixtureSize", default = nil }, { name = "attachedDecorAction", type = "HousingFixtureDecorAction", default = "Store" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -155,8 +243,9 @@ APIDefs["C_HouseExterior.SetHouseExteriorType"] = {
     category = "general",
     subcategory = "c_houseexterior",
     funcPath = "C_HouseExterior.SetHouseExteriorType",
-    params = { { name = "houseExteriorTypeID", type = "number", default = nil } },
+    params = { { name = "houseExteriorTypeID", type = "number", default = nil }, { name = "attachedDecorAction", type = "HousingFixtureDecorAction", default = "Store" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_Loot.GetLootRollDuration"] = {
     params = { { name = "rollID", type = "number", default = nil } },
     returns = { { name = "duration", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,4 +24,5 @@ APIDefs["C_Loot.IsLegacyLootModeEnabled"] = {
     params = {  },
     returns = { { name = "isLegacyLootModeEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

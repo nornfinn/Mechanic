@@ -11,6 +11,7 @@ APIDefs["C_AchievementInfo.AreGuildAchievementsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AchievementInfo.GetRewardItemID"] = {
@@ -22,6 +23,7 @@ APIDefs["C_AchievementInfo.GetRewardItemID"] = {
     params = { { name = "achievementID", type = "number", default = nil } },
     returns = { { name = "rewardItemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_AchievementInfo.GetSupercedingAchievements"] = {
     params = { { name = "achievementID", type = "number", default = nil } },
     returns = { { name = "supercedingAchievements", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_AchievementInfo.IsGuildAchievement"] = {
     params = { { name = "achievementId", type = "number", default = nil } },
     returns = { { name = "isGuild", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_AchievementInfo.IsValidAchievement"] = {
     params = { { name = "achievementId", type = "number", default = nil } },
     returns = { { name = "isValidAchievement", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,5 +75,6 @@ APIDefs["C_AchievementInfo.SetPortraitTexture"] = {
     params = { { name = "textureObject", type = "SimpleTexture", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

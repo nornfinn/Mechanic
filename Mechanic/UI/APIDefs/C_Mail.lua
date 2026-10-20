@@ -11,6 +11,7 @@ APIDefs["C_Mail.CanCheckInbox"] = {
     params = {  },
     returns = { { name = "canCheckInbox", type = "bool", canBeSecret = false }, { name = "secondsUntilAllowed", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Mail.GetCraftingOrderMailInfo"] = {
@@ -22,6 +23,7 @@ APIDefs["C_Mail.GetCraftingOrderMailInfo"] = {
     params = { { name = "inboxIndex", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "CraftingOrderMailInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_Mail.HasInboxMoney"] = {
     params = { { name = "inboxIndex", type = "luaIndex", default = nil } },
     returns = { { name = "inboxItemHasMoneyAttached", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_Mail.IsCommandPending"] = {
     params = {  },
     returns = { { name = "isCommandPending", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Mail.SetOpeningAll"] = {
@@ -57,5 +61,6 @@ APIDefs["C_Mail.SetOpeningAll"] = {
     params = { { name = "openingAll", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

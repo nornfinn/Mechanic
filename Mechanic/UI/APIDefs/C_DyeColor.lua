@@ -11,6 +11,7 @@ APIDefs["C_DyeColor.GetAllDyeColorCategories"] = {
     params = {  },
     returns = { { name = "dyeColorCategoryIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_DyeColor.GetAllDyeColors"] = {
@@ -22,6 +23,7 @@ APIDefs["C_DyeColor.GetAllDyeColors"] = {
     params = { { name = "ownedColorsOnly", type = "bool", default = false } },
     returns = { { name = "dyeColorIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,30 +36,7 @@ APIDefs["C_DyeColor.GetDyeColorCategoryInfo"] = {
     params = { { name = "dyeColorCategoryID", type = "number", default = nil } },
     returns = { { name = "dyeColorCategoryInfo", type = "DyeColorCategoryDisplayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
-}
-
-APIDefs["C_DyeColor.GetDyeColorForItem"] = {
-    key = "C_DyeColor.GetDyeColorForItem",
-    name = "GetDyeColorForItem",
-    category = "general",
-    subcategory = "c_dyecolor",
-    funcPath = "C_DyeColor.GetDyeColorForItem",
-    params = { { name = "itemLinkOrID", type = "ItemInfo", default = nil } },
-    returns = { { name = "dyeColorID", type = "number", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
-}
-
-APIDefs["C_DyeColor.GetDyeColorForItemLocation"] = {
-    key = "C_DyeColor.GetDyeColorForItemLocation",
-    name = "GetDyeColorForItemLocation",
-    category = "general",
-    subcategory = "c_dyecolor",
-    funcPath = "C_DyeColor.GetDyeColorForItemLocation",
-    params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
-    returns = { { name = "dyeColorID", type = "number", canBeSecret = false } },
-    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +49,33 @@ APIDefs["C_DyeColor.GetDyeColorInfo"] = {
     params = { { name = "dyeColorID", type = "number", default = nil } },
     returns = { { name = "dyeColorInfo", type = "DyeColorDisplayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_DyeColor.GetDyeColorsForItem"] = {
+    key = "C_DyeColor.GetDyeColorsForItem",
+    name = "GetDyeColorsForItem",
+    category = "general",
+    subcategory = "c_dyecolor",
+    funcPath = "C_DyeColor.GetDyeColorsForItem",
+    params = { { name = "itemLinkOrID", type = "ItemInfo", default = nil } },
+    returns = { { name = "dyeColorIDs", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_DyeColor.GetDyeColorsForItemLocation"] = {
+    key = "C_DyeColor.GetDyeColorsForItemLocation",
+    name = "GetDyeColorsForItemLocation",
+    category = "general",
+    subcategory = "c_dyecolor",
+    funcPath = "C_DyeColor.GetDyeColorsForItemLocation",
+    params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
+    returns = { { name = "dyeColorIDs", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_DyeColor.GetDyeColorsInCategory"] = {
     params = { { name = "dyeColorCategory", type = "number", default = nil }, { name = "ownedColorsOnly", type = "bool", default = false } },
     returns = { { name = "dyeColorIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,5 +101,6 @@ APIDefs["C_DyeColor.IsDyeColorOwned"] = {
     params = { { name = "dyeColorID", type = "number", default = nil } },
     returns = { { name = "isOwned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

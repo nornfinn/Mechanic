@@ -11,6 +11,7 @@ APIDefs["C_HousingCleanupMode.GetHoveredDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCleanupMode.IsHoveringDecor"] = {
@@ -22,6 +23,7 @@ APIDefs["C_HousingCleanupMode.IsHoveringDecor"] = {
     params = {  },
     returns = { { name = "isHoveringDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCleanupMode.RemoveSelectedDecor"] = {
@@ -33,4 +35,5 @@ APIDefs["C_HousingCleanupMode.RemoveSelectedDecor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

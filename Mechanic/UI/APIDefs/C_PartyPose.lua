@@ -11,6 +11,7 @@ APIDefs["C_PartyPose.ExtraAction"] = {
     params = { { name = "partyPoseID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_PartyPose.GetPartyPoseInfoByID"] = {
     params = { { name = "mapID", type = "number", default = nil } },
     returns = { { name = "info", type = "PartyPoseInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_PartyPose.GetPartyPoseInfoByMapID"] = {
     params = { { name = "mapID", type = "number", default = nil } },
     returns = { { name = "info", type = "PartyPoseInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,5 +50,6 @@ APIDefs["C_PartyPose.HasExtraAction"] = {
     params = { { name = "partyPoseID", type = "number", default = nil } },
     returns = { { name = "hasExtraAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

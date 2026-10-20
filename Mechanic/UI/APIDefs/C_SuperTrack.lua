@@ -11,6 +11,7 @@ APIDefs["C_SuperTrack.ClearAllSuperTracked"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.ClearSuperTrackedContent"] = {
@@ -22,6 +23,7 @@ APIDefs["C_SuperTrack.ClearSuperTrackedContent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.ClearSuperTrackedMapPin"] = {
@@ -33,6 +35,7 @@ APIDefs["C_SuperTrack.ClearSuperTrackedMapPin"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.GetHighestPrioritySuperTrackingType"] = {
@@ -44,18 +47,7 @@ APIDefs["C_SuperTrack.GetHighestPrioritySuperTrackingType"] = {
     params = {  },
     returns = { { name = "type", type = "SuperTrackingType", canBeSecret = false } },
     midnightImpact = "NORMAL",
-}
-
-APIDefs["C_SuperTrack.GetNextWaypointForMap"] = {
-    key = "C_SuperTrack.GetNextWaypointForMap",
-    name = "GetNextWaypointForMap",
-    category = "general",
-    subcategory = "c_supertrack",
-    funcPath = "C_SuperTrack.GetNextWaypointForMap",
-    params = { { name = "uiMapID", type = "number", default = nil } },
-    returns = { { name = "x", type = "number", canBeSecret = false }, { name = "y", type = "number", canBeSecret = false }, { name = "waypointDescription", type = "string", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.GetSuperTrackedContent"] = {
@@ -67,6 +59,7 @@ APIDefs["C_SuperTrack.GetSuperTrackedContent"] = {
     params = {  },
     returns = { { name = "trackableType", type = "ContentTrackingType", canBeSecret = false }, { name = "trackableID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.GetSuperTrackedItemName"] = {
@@ -78,6 +71,7 @@ APIDefs["C_SuperTrack.GetSuperTrackedItemName"] = {
     params = {  },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.GetSuperTrackedMapPin"] = {
@@ -89,6 +83,7 @@ APIDefs["C_SuperTrack.GetSuperTrackedMapPin"] = {
     params = {  },
     returns = { { name = "type", type = "SuperTrackingMapPinType", canBeSecret = false }, { name = "typeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.GetSuperTrackedQuestID"] = {
@@ -100,6 +95,7 @@ APIDefs["C_SuperTrack.GetSuperTrackedQuestID"] = {
     params = {  },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.GetSuperTrackedVignette"] = {
@@ -111,6 +107,7 @@ APIDefs["C_SuperTrack.GetSuperTrackedVignette"] = {
     params = {  },
     returns = { { name = "vignetteGUID", type = "WOWGUID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.IsSuperTrackingAnything"] = {
@@ -122,6 +119,7 @@ APIDefs["C_SuperTrack.IsSuperTrackingAnything"] = {
     params = {  },
     returns = { { name = "isSuperTracking", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.IsSuperTrackingContent"] = {
@@ -133,6 +131,7 @@ APIDefs["C_SuperTrack.IsSuperTrackingContent"] = {
     params = {  },
     returns = { { name = "isSuperTracking", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.IsSuperTrackingCorpse"] = {
@@ -144,6 +143,7 @@ APIDefs["C_SuperTrack.IsSuperTrackingCorpse"] = {
     params = {  },
     returns = { { name = "isSuperTracking", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.IsSuperTrackingMapPin"] = {
@@ -155,6 +155,7 @@ APIDefs["C_SuperTrack.IsSuperTrackingMapPin"] = {
     params = {  },
     returns = { { name = "isSuperTracking", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.IsSuperTrackingQuest"] = {
@@ -166,6 +167,7 @@ APIDefs["C_SuperTrack.IsSuperTrackingQuest"] = {
     params = {  },
     returns = { { name = "isSuperTracking", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.IsSuperTrackingUserWaypoint"] = {
@@ -177,6 +179,7 @@ APIDefs["C_SuperTrack.IsSuperTrackingUserWaypoint"] = {
     params = {  },
     returns = { { name = "isSuperTracking", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SuperTrack.SetSuperTrackedContent"] = {
@@ -188,6 +191,7 @@ APIDefs["C_SuperTrack.SetSuperTrackedContent"] = {
     params = { { name = "trackableType", type = "ContentTrackingType", default = nil }, { name = "trackableID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -200,6 +204,7 @@ APIDefs["C_SuperTrack.SetSuperTrackedMapPin"] = {
     params = { { name = "type", type = "SuperTrackingMapPinType", default = nil }, { name = "typeID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -212,6 +217,7 @@ APIDefs["C_SuperTrack.SetSuperTrackedQuestID"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -224,6 +230,7 @@ APIDefs["C_SuperTrack.SetSuperTrackedUserWaypoint"] = {
     params = { { name = "superTracked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -236,5 +243,6 @@ APIDefs["C_SuperTrack.SetSuperTrackedVignette"] = {
     params = { { name = "vignetteGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

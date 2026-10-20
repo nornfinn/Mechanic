@@ -11,6 +11,7 @@ APIDefs["C_GuildInfo.AreGuildEventsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.CanEditOfficerNote"] = {
@@ -22,6 +23,7 @@ APIDefs["C_GuildInfo.CanEditOfficerNote"] = {
     params = {  },
     returns = { { name = "canEditOfficerNote", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.CanSpeakInGuildChat"] = {
@@ -33,6 +35,7 @@ APIDefs["C_GuildInfo.CanSpeakInGuildChat"] = {
     params = {  },
     returns = { { name = "canSpeakInGuildChat", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.CanViewOfficerNote"] = {
@@ -44,6 +47,7 @@ APIDefs["C_GuildInfo.CanViewOfficerNote"] = {
     params = {  },
     returns = { { name = "canViewOfficerNote", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.Demote"] = {
@@ -55,6 +59,7 @@ APIDefs["C_GuildInfo.Demote"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -67,6 +72,7 @@ APIDefs["C_GuildInfo.Disband"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.GetGuildNewsInfo"] = {
@@ -78,6 +84,7 @@ APIDefs["C_GuildInfo.GetGuildNewsInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "newsInfo", type = "GuildNewsInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -90,6 +97,7 @@ APIDefs["C_GuildInfo.GetGuildRankOrder"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "rankOrder", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -102,7 +110,56 @@ APIDefs["C_GuildInfo.GetGuildTabardInfo"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" } },
     returns = { { name = "tabardInfo", type = "GuildTabardInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_GuildInfo.GetInfoText"] = {
+    key = "C_GuildInfo.GetInfoText",
+    name = "GetInfoText",
+    category = "social",
+    subcategory = "c_guildinfo",
+    funcPath = "C_GuildInfo.GetInfoText",
+    params = {  },
+    returns = { { name = "infoText", type = "string", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_GuildInfo.GetMOTD"] = {
+    key = "C_GuildInfo.GetMOTD",
+    name = "GetMOTD",
+    category = "social",
+    subcategory = "c_guildinfo",
+    funcPath = "C_GuildInfo.GetMOTD",
+    params = {  },
+    returns = { { name = "motd", type = "string", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_GuildInfo.GetPreferredPlaySettings"] = {
+    key = "C_GuildInfo.GetPreferredPlaySettings",
+    name = "GetPreferredPlaySettings",
+    category = "social",
+    subcategory = "c_guildinfo",
+    funcPath = "C_GuildInfo.GetPreferredPlaySettings",
+    params = {  },
+    returns = { { name = "loaded", type = "bool", canBeSecret = false }, { name = "preferredLocaleID", type = "number", canBeSecret = false }, { name = "preferredDatacenterLocalityID", type = "number", canBeSecret = false }, { name = "lastPreferredLocaleChangeDate", type = "time_t", canBeSecret = false }, { name = "lastPreferredDatacenterLocalityChangeDate", type = "time_t", canBeSecret = false }, { name = "changeCooldownDays", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
+APIDefs["C_GuildInfo.GetPreferredPlaySettingsFeatures"] = {
+    key = "C_GuildInfo.GetPreferredPlaySettingsFeatures",
+    name = "GetPreferredPlaySettingsFeatures",
+    category = "social",
+    subcategory = "c_guildinfo",
+    funcPath = "C_GuildInfo.GetPreferredPlaySettingsFeatures",
+    params = {  },
+    returns = { { name = "canChangeLocale", type = "bool", canBeSecret = false }, { name = "canChangeDatacenterLocality", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_GuildInfo.GuildControlGetRankFlags"] = {
@@ -114,6 +171,7 @@ APIDefs["C_GuildInfo.GuildControlGetRankFlags"] = {
     params = { { name = "rankOrder", type = "luaIndex", default = nil } },
     returns = { { name = "permissions", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -126,6 +184,7 @@ APIDefs["C_GuildInfo.GuildRoster"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.Invite"] = {
@@ -137,7 +196,20 @@ APIDefs["C_GuildInfo.Invite"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_GuildInfo.IsDiscordStreamSeparate"] = {
+    key = "C_GuildInfo.IsDiscordStreamSeparate",
+    name = "IsDiscordStreamSeparate",
+    category = "social",
+    subcategory = "c_guildinfo",
+    funcPath = "C_GuildInfo.IsDiscordStreamSeparate",
+    params = {  },
+    returns = { { name = "separateStream", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.IsEncounterGuildNewsEnabled"] = {
@@ -149,6 +221,7 @@ APIDefs["C_GuildInfo.IsEncounterGuildNewsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.IsGuildOfficer"] = {
@@ -160,6 +233,7 @@ APIDefs["C_GuildInfo.IsGuildOfficer"] = {
     params = {  },
     returns = { { name = "isOfficer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.IsGuildRankAssignmentAllowed"] = {
@@ -171,6 +245,7 @@ APIDefs["C_GuildInfo.IsGuildRankAssignmentAllowed"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil }, { name = "rankOrder", type = "luaIndex", default = nil } },
     returns = { { name = "isGuildRankAssignmentAllowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -183,6 +258,7 @@ APIDefs["C_GuildInfo.IsGuildReputationEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.Leave"] = {
@@ -194,6 +270,7 @@ APIDefs["C_GuildInfo.Leave"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.MemberExistsByName"] = {
@@ -205,6 +282,7 @@ APIDefs["C_GuildInfo.MemberExistsByName"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "exists", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -217,6 +295,7 @@ APIDefs["C_GuildInfo.Promote"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -229,6 +308,7 @@ APIDefs["C_GuildInfo.QueryGuildMemberRecipes"] = {
     params = { { name = "guildMemberGUID", type = "WOWGUID", default = nil }, { name = "skillLineID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -241,6 +321,7 @@ APIDefs["C_GuildInfo.QueryGuildMembersForRecipe"] = {
     params = { { name = "skillLineID", type = "number", default = nil }, { name = "recipeSpellID", type = "number", default = nil }, { name = "recipeLevel", type = "luaIndex", default = nil } },
     returns = { { name = "updatedRecipeSpellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -253,6 +334,7 @@ APIDefs["C_GuildInfo.RemoveFromGuild"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -265,6 +347,7 @@ APIDefs["C_GuildInfo.RequestGuildRename"] = {
     params = { { name = "desiredName", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -277,6 +360,19 @@ APIDefs["C_GuildInfo.RequestGuildRenameRefund"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_GuildInfo.RequestPreferredPlaySettings"] = {
+    key = "C_GuildInfo.RequestPreferredPlaySettings",
+    name = "RequestPreferredPlaySettings",
+    category = "social",
+    subcategory = "c_guildinfo",
+    funcPath = "C_GuildInfo.RequestPreferredPlaySettings",
+    params = {  },
+    returns = { { name = "startedSuccessfully", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_GuildInfo.RequestRenameNameCheck"] = {
@@ -288,6 +384,7 @@ APIDefs["C_GuildInfo.RequestRenameNameCheck"] = {
     params = { { name = "desiredName", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -300,6 +397,7 @@ APIDefs["C_GuildInfo.RequestRenameStatus"] = {
     params = {  },
     returns = { { name = "ableToRequest", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GuildInfo.SetGuildRankOrder"] = {
@@ -311,6 +409,20 @@ APIDefs["C_GuildInfo.SetGuildRankOrder"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil }, { name = "rankOrder", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_GuildInfo.SetInfoText"] = {
+    key = "C_GuildInfo.SetInfoText",
+    name = "SetInfoText",
+    category = "social",
+    subcategory = "c_guildinfo",
+    funcPath = "C_GuildInfo.SetInfoText",
+    params = { { name = "infoText", type = "cstring", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -323,6 +435,7 @@ APIDefs["C_GuildInfo.SetLeader"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -335,6 +448,7 @@ APIDefs["C_GuildInfo.SetMOTD"] = {
     params = { { name = "motd", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -347,6 +461,20 @@ APIDefs["C_GuildInfo.SetNote"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil }, { name = "note", type = "cstring", default = nil }, { name = "isPublic", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_GuildInfo.SetPreferredPlaySettings"] = {
+    key = "C_GuildInfo.SetPreferredPlaySettings",
+    name = "SetPreferredPlaySettings",
+    category = "social",
+    subcategory = "c_guildinfo",
+    funcPath = "C_GuildInfo.SetPreferredPlaySettings",
+    params = { { name = "preferredLocaleID", type = "number", default = 0 }, { name = "preferredDatacenterLocalityID", type = "number", default = 0 } },
+    returns = { { name = "startedSuccessfully", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -359,5 +487,6 @@ APIDefs["C_GuildInfo.Uninvite"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

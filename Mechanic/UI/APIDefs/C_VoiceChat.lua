@@ -11,6 +11,7 @@ APIDefs["C_VoiceChat.ActivateChannel"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_VoiceChat.ActivateChannelTranscription"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_VoiceChat.BeginLocalCapture"] = {
     params = { { name = "listenToLocalUser", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_VoiceChat.CanAccessSettings"] = {
     params = {  },
     returns = { { name = "canAccess", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.CanPlayerUseVoiceChat"] = {
@@ -58,6 +62,7 @@ APIDefs["C_VoiceChat.CanPlayerUseVoiceChat"] = {
     params = {  },
     returns = { { name = "canUseVoiceChat", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.CreateChannel"] = {
@@ -69,6 +74,7 @@ APIDefs["C_VoiceChat.CreateChannel"] = {
     params = { { name = "channelDisplayName", type = "cstring", default = nil } },
     returns = { { name = "status", type = "VoiceChatStatusCode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_VoiceChat.DeactivateChannel"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -93,6 +100,7 @@ APIDefs["C_VoiceChat.DeactivateChannelTranscription"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -105,6 +113,7 @@ APIDefs["C_VoiceChat.EndLocalCapture"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetActiveChannelID"] = {
@@ -116,6 +125,7 @@ APIDefs["C_VoiceChat.GetActiveChannelID"] = {
     params = {  },
     returns = { { name = "channelID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetActiveChannelType"] = {
@@ -127,6 +137,19 @@ APIDefs["C_VoiceChat.GetActiveChannelType"] = {
     params = {  },
     returns = { { name = "channelType", type = "ChatChannelType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_VoiceChat.GetActiveVoiceProviderID"] = {
+    key = "C_VoiceChat.GetActiveVoiceProviderID",
+    name = "GetActiveVoiceProviderID",
+    category = "social",
+    subcategory = "c_voicechat",
+    funcPath = "C_VoiceChat.GetActiveVoiceProviderID",
+    params = {  },
+    returns = { { name = "activeVoiceProviderID", type = "VoiceProviderID", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_VoiceChat.GetAvailableInputDevices"] = {
@@ -138,6 +161,7 @@ APIDefs["C_VoiceChat.GetAvailableInputDevices"] = {
     params = {  },
     returns = { { name = "inputDevices", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetAvailableOutputDevices"] = {
@@ -149,42 +173,46 @@ APIDefs["C_VoiceChat.GetAvailableOutputDevices"] = {
     params = {  },
     returns = { { name = "outputDevices", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetChannel"] = {
     key = "C_VoiceChat.GetChannel",
     name = "GetChannel",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.GetChannel",
     params = { { name = "channelID", type = "number", default = nil } },
     returns = { { name = "channel", type = "VoiceChatChannel", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.GetChannelForChannelType"] = {
     key = "C_VoiceChat.GetChannelForChannelType",
     name = "GetChannelForChannelType",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.GetChannelForChannelType",
     params = { { name = "channelType", type = "ChatChannelType", default = nil } },
     returns = { { name = "channel", type = "VoiceChatChannel", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.GetChannelForCommunityStream"] = {
     key = "C_VoiceChat.GetChannelForCommunityStream",
     name = "GetChannelForCommunityStream",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.GetChannelForCommunityStream",
     params = { { name = "clubId", type = "ClubId", default = nil }, { name = "streamId", type = "ClubStreamId", default = nil } },
     returns = { { name = "channel", type = "VoiceChatChannel", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.GetCommunicationMode"] = {
@@ -196,6 +224,7 @@ APIDefs["C_VoiceChat.GetCommunicationMode"] = {
     params = {  },
     returns = { { name = "communicationMode", type = "CommunicationMode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode"] = {
@@ -207,6 +236,7 @@ APIDefs["C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode"] = {
     params = {  },
     returns = { { name = "statusCode", type = "VoiceChatStatusCode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetInputVolume"] = {
@@ -218,6 +248,7 @@ APIDefs["C_VoiceChat.GetInputVolume"] = {
     params = {  },
     returns = { { name = "volume", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetJoinClubVoiceChannelError"] = {
@@ -229,6 +260,7 @@ APIDefs["C_VoiceChat.GetJoinClubVoiceChannelError"] = {
     params = { { name = "clubId", type = "ClubId", default = nil } },
     returns = { { name = "errorReason", type = "VoiceChannelErrorReason", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -241,6 +273,7 @@ APIDefs["C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo"] = {
     params = {  },
     returns = { { name = "memberInfo", type = "VoiceChatMember", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetLocalPlayerMemberID"] = {
@@ -252,6 +285,7 @@ APIDefs["C_VoiceChat.GetLocalPlayerMemberID"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = { { name = "memberID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -264,54 +298,59 @@ APIDefs["C_VoiceChat.GetMasterVolumeScale"] = {
     params = {  },
     returns = { { name = "scale", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetMemberGUID"] = {
     key = "C_VoiceChat.GetMemberGUID",
     name = "GetMemberGUID",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.GetMemberGUID",
     params = { { name = "memberID", type = "number", default = nil }, { name = "channelID", type = "number", default = nil } },
     returns = { { name = "memberGUID", type = "WOWGUID", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.GetMemberID"] = {
     key = "C_VoiceChat.GetMemberID",
     name = "GetMemberID",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.GetMemberID",
     params = { { name = "channelID", type = "number", default = nil }, { name = "memberGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "memberID", type = "number", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.GetMemberInfo"] = {
     key = "C_VoiceChat.GetMemberInfo",
     name = "GetMemberInfo",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.GetMemberInfo",
     params = { { name = "memberID", type = "number", default = nil }, { name = "channelID", type = "number", default = nil } },
     returns = { { name = "memberInfo", type = "VoiceChatMember", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.GetMemberName"] = {
     key = "C_VoiceChat.GetMemberName",
     name = "GetMemberName",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.GetMemberName",
     params = { { name = "memberID", type = "number", default = nil }, { name = "channelID", type = "number", default = nil } },
     returns = { { name = "memberName", type = "string", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.GetMemberVolume"] = {
@@ -323,6 +362,7 @@ APIDefs["C_VoiceChat.GetMemberVolume"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "volume", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -335,6 +375,7 @@ APIDefs["C_VoiceChat.GetOutputVolume"] = {
     params = {  },
     returns = { { name = "volume", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetPTTButtonPressedState"] = {
@@ -346,6 +387,7 @@ APIDefs["C_VoiceChat.GetPTTButtonPressedState"] = {
     params = {  },
     returns = { { name = "isPressed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetProcesses"] = {
@@ -357,6 +399,7 @@ APIDefs["C_VoiceChat.GetProcesses"] = {
     params = {  },
     returns = { { name = "processes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetPushToTalkBinding"] = {
@@ -368,6 +411,7 @@ APIDefs["C_VoiceChat.GetPushToTalkBinding"] = {
     params = {  },
     returns = { { name = "keys", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetRemoteTtsVoices"] = {
@@ -379,6 +423,7 @@ APIDefs["C_VoiceChat.GetRemoteTtsVoices"] = {
     params = {  },
     returns = { { name = "ttsVoices", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetTtsVoices"] = {
@@ -390,6 +435,7 @@ APIDefs["C_VoiceChat.GetTtsVoices"] = {
     params = {  },
     returns = { { name = "ttsVoices", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.GetVADSensitivity"] = {
@@ -401,6 +447,7 @@ APIDefs["C_VoiceChat.GetVADSensitivity"] = {
     params = {  },
     returns = { { name = "sensitivity", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsChannelJoinPending"] = {
@@ -412,6 +459,7 @@ APIDefs["C_VoiceChat.IsChannelJoinPending"] = {
     params = { { name = "channelType", type = "ChatChannelType", default = nil }, { name = "clubId", type = "ClubId", default = nil }, { name = "streamId", type = "ClubStreamId", default = nil } },
     returns = { { name = "isPending", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -424,6 +472,7 @@ APIDefs["C_VoiceChat.IsDeafened"] = {
     params = {  },
     returns = { { name = "isDeafened", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsEnabled"] = {
@@ -435,6 +484,7 @@ APIDefs["C_VoiceChat.IsEnabled"] = {
     params = {  },
     returns = { { name = "isEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsLoggedIn"] = {
@@ -446,6 +496,7 @@ APIDefs["C_VoiceChat.IsLoggedIn"] = {
     params = {  },
     returns = { { name = "isLoggedIn", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsMemberLocalPlayer"] = {
@@ -457,6 +508,7 @@ APIDefs["C_VoiceChat.IsMemberLocalPlayer"] = {
     params = { { name = "memberID", type = "number", default = nil }, { name = "channelID", type = "number", default = nil } },
     returns = { { name = "isLocalPlayer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -469,31 +521,34 @@ APIDefs["C_VoiceChat.IsMemberMuted"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "mutedForMe", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_VoiceChat.IsMemberMutedForAll"] = {
     key = "C_VoiceChat.IsMemberMutedForAll",
     name = "IsMemberMutedForAll",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.IsMemberMutedForAll",
     params = { { name = "memberID", type = "number", default = nil }, { name = "channelID", type = "number", default = nil } },
     returns = { { name = "mutedForAll", type = "bool", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.IsMemberSilenced"] = {
     key = "C_VoiceChat.IsMemberSilenced",
     name = "IsMemberSilenced",
-    category = "social",
+    category = "combat_midnight",
     subcategory = "c_voicechat",
     funcPath = "C_VoiceChat.IsMemberSilenced",
     params = { { name = "memberID", type = "number", default = nil }, { name = "channelID", type = "number", default = nil } },
     returns = { { name = "silenced", type = "bool", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_VoiceChat.IsMuted"] = {
@@ -505,6 +560,7 @@ APIDefs["C_VoiceChat.IsMuted"] = {
     params = {  },
     returns = { { name = "isMuted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsParentalDisabled"] = {
@@ -516,6 +572,7 @@ APIDefs["C_VoiceChat.IsParentalDisabled"] = {
     params = {  },
     returns = { { name = "isParentalDisabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsParentalMuted"] = {
@@ -527,6 +584,7 @@ APIDefs["C_VoiceChat.IsParentalMuted"] = {
     params = {  },
     returns = { { name = "isParentalMuted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsPlayerUsingVoice"] = {
@@ -538,6 +596,7 @@ APIDefs["C_VoiceChat.IsPlayerUsingVoice"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "isUsingVoice", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -550,6 +609,7 @@ APIDefs["C_VoiceChat.IsSilenced"] = {
     params = {  },
     returns = { { name = "isSilenced", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsSpeakForMeActive"] = {
@@ -561,6 +621,7 @@ APIDefs["C_VoiceChat.IsSpeakForMeActive"] = {
     params = {  },
     returns = { { name = "isActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsSpeakForMeAllowed"] = {
@@ -572,6 +633,7 @@ APIDefs["C_VoiceChat.IsSpeakForMeAllowed"] = {
     params = {  },
     returns = { { name = "isAllowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsTranscribing"] = {
@@ -583,6 +645,7 @@ APIDefs["C_VoiceChat.IsTranscribing"] = {
     params = {  },
     returns = { { name = "isTranscribing", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsTranscriptionAllowed"] = {
@@ -594,6 +657,7 @@ APIDefs["C_VoiceChat.IsTranscriptionAllowed"] = {
     params = {  },
     returns = { { name = "isAllowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.IsVoiceChatConnected"] = {
@@ -605,6 +669,7 @@ APIDefs["C_VoiceChat.IsVoiceChatConnected"] = {
     params = {  },
     returns = { { name = "connected", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.LeaveChannel"] = {
@@ -616,6 +681,7 @@ APIDefs["C_VoiceChat.LeaveChannel"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -628,6 +694,7 @@ APIDefs["C_VoiceChat.Login"] = {
     params = {  },
     returns = { { name = "status", type = "VoiceChatStatusCode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.Logout"] = {
@@ -639,6 +706,7 @@ APIDefs["C_VoiceChat.Logout"] = {
     params = {  },
     returns = { { name = "status", type = "VoiceChatStatusCode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.MarkChannelsDiscovered"] = {
@@ -650,6 +718,7 @@ APIDefs["C_VoiceChat.MarkChannelsDiscovered"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel"] = {
@@ -661,6 +730,7 @@ APIDefs["C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel"] = {
     params = { { name = "clubId", type = "ClubId", default = nil }, { name = "streamId", type = "ClubStreamId", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -673,6 +743,32 @@ APIDefs["C_VoiceChat.RequestJoinChannelByChannelType"] = {
     params = { { name = "channelType", type = "ChatChannelType", default = nil }, { name = "autoActivate", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_VoiceChat.RestoreActiveVoiceProvider"] = {
+    key = "C_VoiceChat.RestoreActiveVoiceProvider",
+    name = "RestoreActiveVoiceProvider",
+    category = "social",
+    subcategory = "c_voicechat",
+    funcPath = "C_VoiceChat.RestoreActiveVoiceProvider",
+    params = {  },
+    returns = { { name = "changed", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
+APIDefs["C_VoiceChat.SetActiveVoiceProvider"] = {
+    key = "C_VoiceChat.SetActiveVoiceProvider",
+    name = "SetActiveVoiceProvider",
+    category = "social",
+    subcategory = "c_voicechat",
+    funcPath = "C_VoiceChat.SetActiveVoiceProvider",
+    params = { { name = "voiceProviderID", type = "VoiceProviderID", default = nil } },
+    returns = { { name = "success", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -685,6 +781,7 @@ APIDefs["C_VoiceChat.SetCommunicationMode"] = {
     params = { { name = "communicationMode", type = "CommunicationMode", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -697,6 +794,7 @@ APIDefs["C_VoiceChat.SetDeafened"] = {
     params = { { name = "isDeafened", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -709,6 +807,7 @@ APIDefs["C_VoiceChat.SetInputDevice"] = {
     params = { { name = "deviceID", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -721,6 +820,7 @@ APIDefs["C_VoiceChat.SetInputVolume"] = {
     params = { { name = "volume", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -733,6 +833,7 @@ APIDefs["C_VoiceChat.SetMasterVolumeScale"] = {
     params = { { name = "scale", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -745,6 +846,7 @@ APIDefs["C_VoiceChat.SetMemberMuted"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil }, { name = "muted", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -757,6 +859,7 @@ APIDefs["C_VoiceChat.SetMemberVolume"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil }, { name = "volume", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -769,6 +872,7 @@ APIDefs["C_VoiceChat.SetMuted"] = {
     params = { { name = "isMuted", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -781,6 +885,7 @@ APIDefs["C_VoiceChat.SetOutputDevice"] = {
     params = { { name = "deviceID", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -793,6 +898,7 @@ APIDefs["C_VoiceChat.SetOutputVolume"] = {
     params = { { name = "volume", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -805,6 +911,7 @@ APIDefs["C_VoiceChat.SetPortraitTexture"] = {
     params = { { name = "textureObject", type = "SimpleTexture", default = nil }, { name = "memberID", type = "number", default = nil }, { name = "channelID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -817,6 +924,7 @@ APIDefs["C_VoiceChat.SetPushToTalkBinding"] = {
     params = { { name = "keys", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -829,6 +937,7 @@ APIDefs["C_VoiceChat.SetVADSensitivity"] = {
     params = { { name = "sensitivity", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -841,6 +950,7 @@ APIDefs["C_VoiceChat.ShouldDiscoverChannels"] = {
     params = {  },
     returns = { { name = "shouldDiscoverChannels", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.SpeakRemoteTextSample"] = {
@@ -852,6 +962,7 @@ APIDefs["C_VoiceChat.SpeakRemoteTextSample"] = {
     params = { { name = "text", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -864,6 +975,7 @@ APIDefs["C_VoiceChat.SpeakText"] = {
     params = { { name = "voiceID", type = "number", default = nil }, { name = "text", type = "cstring", default = nil }, { name = "rate", type = "number", default = nil }, { name = "volume", type = "number", default = nil }, { name = "overlap", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -876,6 +988,7 @@ APIDefs["C_VoiceChat.StopSpeakingText"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.ToggleDeafened"] = {
@@ -887,6 +1000,7 @@ APIDefs["C_VoiceChat.ToggleDeafened"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_VoiceChat.ToggleMemberMuted"] = {
@@ -898,6 +1012,7 @@ APIDefs["C_VoiceChat.ToggleMemberMuted"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -910,4 +1025,5 @@ APIDefs["C_VoiceChat.ToggleMuted"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

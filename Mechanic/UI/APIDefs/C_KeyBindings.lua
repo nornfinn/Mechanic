@@ -11,6 +11,7 @@ APIDefs["C_KeyBindings.ActivateBindingContext"] = {
     params = { { name = "newContext", type = "BindingContext", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_KeyBindings.DeactivateBindingContext"] = {
     params = { { name = "context", type = "BindingContext", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_KeyBindings.GetBindingByKey"] = {
     params = { { name = "action", type = "cstring", default = nil }, { name = "context", type = "BindingContext", default = nil } },
     returns = { { name = "binding", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_KeyBindings.GetBindingContextForAction"] = {
     params = { { name = "action", type = "cstring", default = nil } },
     returns = { { name = "context", type = "BindingContext", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_KeyBindings.GetBindingIndex"] = {
     params = { { name = "action", type = "cstring", default = nil } },
     returns = { { name = "bindingIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_KeyBindings.GetCustomBindingType"] = {
     params = { { name = "bindingIndex", type = "luaIndex", default = nil } },
     returns = { { name = "customBindingType", type = "CustomBindingType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_KeyBindings.GetSearchTagsForAction"] = {
     params = { { name = "action", type = "cstring", default = nil } },
     returns = { { name = "searchTags", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,6 +102,7 @@ APIDefs["C_KeyBindings.GetTurnStrafeStyle"] = {
     params = {  },
     returns = { { name = "style", type = "TurnStrafeStyle", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_KeyBindings.IsBindingContextActive"] = {
@@ -106,6 +114,7 @@ APIDefs["C_KeyBindings.IsBindingContextActive"] = {
     params = { { name = "context", type = "BindingContext", default = nil } },
     returns = { { name = "isActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,6 +127,7 @@ APIDefs["C_KeyBindings.SetTurnStrafeStyle"] = {
     params = { { name = "style", type = "TurnStrafeStyle", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -130,4 +140,5 @@ APIDefs["C_KeyBindings.UpdateTurnStrafeBindingsForCharacter"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

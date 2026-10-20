@@ -11,6 +11,7 @@ APIDefs["C_PetJournal.ClearHoveredBattlePet"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PetJournal.ClearSearchFilter"] = {
@@ -22,6 +23,7 @@ APIDefs["C_PetJournal.ClearSearchFilter"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PetJournal.DismissSummonedPet"] = {
@@ -33,6 +35,7 @@ APIDefs["C_PetJournal.DismissSummonedPet"] = {
     params = { { name = "petID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,6 +48,7 @@ APIDefs["C_PetJournal.GetDisplayIDByIndex"] = {
     params = { { name = "speciesID", type = "number", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "displayID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_PetJournal.GetDisplayProbabilityByIndex"] = {
     params = { { name = "speciesID", type = "number", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "displayProbability", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_PetJournal.GetNonBattlePetLinkByIndex"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_PetJournal.GetNumDisplays"] = {
     params = { { name = "speciesID", type = "number", default = nil } },
     returns = { { name = "numDisplays", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -93,6 +100,7 @@ APIDefs["C_PetJournal.GetNumPetsInJournal"] = {
     params = { { name = "creatureID", type = "number", default = nil } },
     returns = { { name = "maxAllowed", type = "number", canBeSecret = false }, { name = "numPets", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -105,6 +113,7 @@ APIDefs["C_PetJournal.GetOwnedPetIDs"] = {
     params = {  },
     returns = { { name = "ownedPetIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PetJournal.GetPetAbilityInfo"] = {
@@ -116,6 +125,7 @@ APIDefs["C_PetJournal.GetPetAbilityInfo"] = {
     params = { { name = "abilityID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "petType", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -128,6 +138,7 @@ APIDefs["C_PetJournal.GetPetAbilityListTable"] = {
     params = { { name = "speciesID", type = "number", default = nil } },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -140,6 +151,20 @@ APIDefs["C_PetJournal.GetPetInfoTableByPetID"] = {
     params = { { name = "petID", type = "WOWGUID", default = nil } },
     returns = { { name = "info", type = "PetJournalPetInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PetJournal.GetPetInfoTableBySpeciesID"] = {
+    key = "C_PetJournal.GetPetInfoTableBySpeciesID",
+    name = "GetPetInfoTableBySpeciesID",
+    category = "general",
+    subcategory = "c_petjournal",
+    funcPath = "C_PetJournal.GetPetInfoTableBySpeciesID",
+    params = { { name = "speciesID", type = "number", default = nil } },
+    returns = { { name = "petInfo", type = "PetJournalPetInfo", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -152,6 +177,7 @@ APIDefs["C_PetJournal.GetPetLoadOutInfo"] = {
     params = { { name = "slot", type = "luaIndex", default = nil } },
     returns = { { name = "petID", type = "WOWGUID", canBeSecret = false }, { name = "ability1ID", type = "number", canBeSecret = false }, { name = "ability2ID", type = "number", canBeSecret = false }, { name = "ability3ID", type = "number", canBeSecret = false }, { name = "locked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -164,6 +190,7 @@ APIDefs["C_PetJournal.GetPetSummonInfo"] = {
     params = { { name = "battlePetGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "isSummonable", type = "bool", canBeSecret = false }, { name = "error", type = "PetJournalError", canBeSecret = false }, { name = "errorText", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -176,6 +203,7 @@ APIDefs["C_PetJournal.GetSearchFilter"] = {
     params = {  },
     returns = { { name = "filterText", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PetJournal.HasFavoritePets"] = {
@@ -187,6 +215,7 @@ APIDefs["C_PetJournal.HasFavoritePets"] = {
     params = {  },
     returns = { { name = "hasFavorites", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PetJournal.IsCurrentlySummoned"] = {
@@ -198,6 +227,7 @@ APIDefs["C_PetJournal.IsCurrentlySummoned"] = {
     params = { { name = "petID", type = "WOWGUID", default = nil } },
     returns = { { name = "isSummoned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -210,6 +240,7 @@ APIDefs["C_PetJournal.IsUsingDefaultFilters"] = {
     params = {  },
     returns = { { name = "isUsingDefaultFilters", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PetJournal.PetIsSummonable"] = {
@@ -221,6 +252,7 @@ APIDefs["C_PetJournal.PetIsSummonable"] = {
     params = { { name = "battlePetGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "isSummonable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -233,6 +265,7 @@ APIDefs["C_PetJournal.PetUsesRandomDisplay"] = {
     params = { { name = "speciesID", type = "number", default = nil } },
     returns = { { name = "usesRandomDisplay", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -245,6 +278,7 @@ APIDefs["C_PetJournal.SetDefaultFilters"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PetJournal.SetHoveredBattlePet"] = {
@@ -256,6 +290,7 @@ APIDefs["C_PetJournal.SetHoveredBattlePet"] = {
     params = { { name = "battlePetGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -268,6 +303,7 @@ APIDefs["C_PetJournal.SetSearchFilter"] = {
     params = { { name = "filterText", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -280,5 +316,6 @@ APIDefs["C_PetJournal.SpellTargetBattlePet"] = {
     params = { { name = "battlePetGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -2,6 +2,19 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_EncounterJournal.GetBaseDifficultyID"] = {
+    key = "C_EncounterJournal.GetBaseDifficultyID",
+    name = "GetBaseDifficultyID",
+    category = "general",
+    subcategory = "c_encounterjournal",
+    funcPath = "C_EncounterJournal.GetBaseDifficultyID",
+    params = { { name = "difficultyID", type = "number", default = nil } },
+    returns = { { name = "baseDifficultyID", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
 APIDefs["C_EncounterJournal.GetDungeonEntrancesForMap"] = {
     key = "C_EncounterJournal.GetDungeonEntrancesForMap",
     name = "GetDungeonEntrancesForMap",
@@ -11,6 +24,7 @@ APIDefs["C_EncounterJournal.GetDungeonEntrancesForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "dungeonEntrances", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +37,7 @@ APIDefs["C_EncounterJournal.GetEncounterJournalLink"] = {
     params = { { name = "linkType", type = "JournalLinkTypes", default = nil }, { name = "ID", type = "number", default = nil }, { name = "displayText", type = "string", default = nil }, { name = "difficultyID", type = "number", default = nil } },
     returns = { { name = "link", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +50,7 @@ APIDefs["C_EncounterJournal.GetEncountersOnMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "encounters", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +63,7 @@ APIDefs["C_EncounterJournal.GetInstanceForGameMap"] = {
     params = { { name = "mapID", type = "number", default = nil } },
     returns = { { name = "journalInstanceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +76,7 @@ APIDefs["C_EncounterJournal.GetLootInfo"] = {
     params = { { name = "id", type = "number", default = nil } },
     returns = { { name = "itemInfo", type = "EncounterJournalItemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +89,7 @@ APIDefs["C_EncounterJournal.GetLootInfoByIndex"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "encounterIndex", type = "luaIndex", default = nil } },
     returns = { { name = "itemInfo", type = "EncounterJournalItemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +102,7 @@ APIDefs["C_EncounterJournal.GetSectionIconFlags"] = {
     params = { { name = "sectionID", type = "number", default = nil } },
     returns = { { name = "iconFlags", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,6 +115,7 @@ APIDefs["C_EncounterJournal.GetSectionInfo"] = {
     params = { { name = "sectionID", type = "number", default = nil } },
     returns = { { name = "info", type = "EncounterJournalSectionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -107,6 +128,7 @@ APIDefs["C_EncounterJournal.GetSlotFilter"] = {
     params = {  },
     returns = { { name = "filter", type = "ItemSlotFilterType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterJournal.InitalizeSelectedTier"] = {
@@ -118,6 +140,20 @@ APIDefs["C_EncounterJournal.InitalizeSelectedTier"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_EncounterJournal.InstanceHasDifficultyID"] = {
+    key = "C_EncounterJournal.InstanceHasDifficultyID",
+    name = "InstanceHasDifficultyID",
+    category = "general",
+    subcategory = "c_encounterjournal",
+    funcPath = "C_EncounterJournal.InstanceHasDifficultyID",
+    params = { { name = "difficultyID", type = "number", default = nil } },
+    returns = { { name = "hasDifficultyID", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_EncounterJournal.InstanceHasLoot"] = {
@@ -129,6 +165,7 @@ APIDefs["C_EncounterJournal.InstanceHasLoot"] = {
     params = { { name = "instanceID", type = "number", default = nil } },
     returns = { { name = "hasLoot", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -141,6 +178,7 @@ APIDefs["C_EncounterJournal.IsEncounterComplete"] = {
     params = { { name = "journalEncounterID", type = "number", default = nil } },
     returns = { { name = "isEncounterComplete", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -153,6 +191,7 @@ APIDefs["C_EncounterJournal.OnClose"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterJournal.OnOpen"] = {
@@ -164,6 +203,7 @@ APIDefs["C_EncounterJournal.OnOpen"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterJournal.ResetSlotFilter"] = {
@@ -175,6 +215,7 @@ APIDefs["C_EncounterJournal.ResetSlotFilter"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterJournal.SetPreviewMythicPlusLevel"] = {
@@ -186,6 +227,7 @@ APIDefs["C_EncounterJournal.SetPreviewMythicPlusLevel"] = {
     params = { { name = "level", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -198,6 +240,7 @@ APIDefs["C_EncounterJournal.SetPreviewPvpTier"] = {
     params = { { name = "tier", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -210,6 +253,7 @@ APIDefs["C_EncounterJournal.SetSlotFilter"] = {
     params = { { name = "filterSlot", type = "ItemSlotFilterType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -222,6 +266,7 @@ APIDefs["C_EncounterJournal.SetTab"] = {
     params = { { name = "tabIdx", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -234,4 +279,5 @@ APIDefs["C_EncounterJournal.StartArathiRPE"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

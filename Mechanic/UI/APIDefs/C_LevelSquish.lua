@@ -11,6 +11,7 @@ APIDefs["C_LevelSquish.ConvertFollowerLevel"] = {
     params = { { name = "level", type = "number", default = nil }, { name = "maxFollowerLevel", type = "number", default = nil } },
     returns = { { name = "squishedLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,5 +24,6 @@ APIDefs["C_LevelSquish.ConvertPlayerLevel"] = {
     params = { { name = "level", type = "number", default = nil } },
     returns = { { name = "squishedLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

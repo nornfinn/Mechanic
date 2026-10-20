@@ -11,5 +11,6 @@ APIDefs["C_LoreText.RequestLoreTextForCampaignID"] = {
     params = { { name = "campaignID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

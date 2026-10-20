@@ -11,6 +11,7 @@ APIDefs["C_EquipmentSet.AssignSpecToEquipmentSet"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil }, { name = "specIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_EquipmentSet.CanUseEquipmentSets"] = {
     params = {  },
     returns = { { name = "canUseEquipmentSets", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EquipmentSet.ClearIgnoredSlotsForSave"] = {
@@ -34,6 +36,7 @@ APIDefs["C_EquipmentSet.ClearIgnoredSlotsForSave"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EquipmentSet.CreateEquipmentSet"] = {
@@ -45,6 +48,7 @@ APIDefs["C_EquipmentSet.CreateEquipmentSet"] = {
     params = { { name = "equipmentSetName", type = "cstring", default = nil }, { name = "icon", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_EquipmentSet.DeleteEquipmentSet"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_EquipmentSet.EquipmentSetContainsLockedItems"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = { { name = "hasLockedItems", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_EquipmentSet.GetEquipmentSetAssignedSpec"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = { { name = "specIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -93,6 +100,7 @@ APIDefs["C_EquipmentSet.GetEquipmentSetForSpec"] = {
     params = { { name = "specIndex", type = "luaIndex", default = nil } },
     returns = { { name = "equipmentSetID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -105,6 +113,7 @@ APIDefs["C_EquipmentSet.GetEquipmentSetID"] = {
     params = { { name = "equipmentSetName", type = "cstring", default = nil } },
     returns = { { name = "equipmentSetID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -117,6 +126,7 @@ APIDefs["C_EquipmentSet.GetEquipmentSetIDs"] = {
     params = {  },
     returns = { { name = "equipmentSetIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EquipmentSet.GetEquipmentSetInfo"] = {
@@ -128,6 +138,7 @@ APIDefs["C_EquipmentSet.GetEquipmentSetInfo"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "iconFileID", type = "number", canBeSecret = false }, { name = "setID", type = "number", canBeSecret = false }, { name = "isEquipped", type = "bool", canBeSecret = false }, { name = "numItems", type = "number", canBeSecret = false }, { name = "numEquipped", type = "number", canBeSecret = false }, { name = "numInInventory", type = "number", canBeSecret = false }, { name = "numLost", type = "number", canBeSecret = false }, { name = "numIgnored", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -140,6 +151,7 @@ APIDefs["C_EquipmentSet.GetIgnoredSlots"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = { { name = "slotIgnored", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -152,6 +164,7 @@ APIDefs["C_EquipmentSet.GetItemIDs"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = { { name = "itemIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -164,6 +177,7 @@ APIDefs["C_EquipmentSet.GetItemLocations"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = { { name = "locations", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -176,6 +190,7 @@ APIDefs["C_EquipmentSet.GetNumEquipmentSets"] = {
     params = {  },
     returns = { { name = "numEquipmentSets", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EquipmentSet.IgnoreSlotForSave"] = {
@@ -187,6 +202,7 @@ APIDefs["C_EquipmentSet.IgnoreSlotForSave"] = {
     params = { { name = "slot", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -199,6 +215,7 @@ APIDefs["C_EquipmentSet.IsSlotIgnoredForSave"] = {
     params = { { name = "slot", type = "luaIndex", default = nil } },
     returns = { { name = "isSlotIgnored", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -211,6 +228,7 @@ APIDefs["C_EquipmentSet.ModifyEquipmentSet"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil }, { name = "newName", type = "cstring", default = nil }, { name = "newIcon", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -223,6 +241,7 @@ APIDefs["C_EquipmentSet.PickupEquipmentSet"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -235,6 +254,7 @@ APIDefs["C_EquipmentSet.SaveEquipmentSet"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil }, { name = "icon", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -247,6 +267,7 @@ APIDefs["C_EquipmentSet.UnassignEquipmentSetSpec"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -259,6 +280,7 @@ APIDefs["C_EquipmentSet.UnignoreSlotForSave"] = {
     params = { { name = "slot", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -271,5 +293,6 @@ APIDefs["C_EquipmentSet.UseEquipmentSet"] = {
     params = { { name = "equipmentSetID", type = "number", default = nil } },
     returns = { { name = "setWasEquipped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

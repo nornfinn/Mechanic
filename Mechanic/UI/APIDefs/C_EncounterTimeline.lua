@@ -9,8 +9,9 @@ APIDefs["C_EncounterTimeline.AddEditModeEvents"] = {
     subcategory = "c_encountertimeline",
     funcPath = "C_EncounterTimeline.AddEditModeEvents",
     params = {  },
-    returns = { { name = "loopTimerDuration", type = "DurationSeconds", canBeSecret = false } },
+    returns = { { name = "loopTimerDuration", type = "Seconds", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.AddScriptEvent"] = {
@@ -22,6 +23,7 @@ APIDefs["C_EncounterTimeline.AddScriptEvent"] = {
     params = { { name = "eventInfo", type = "EncounterTimelineScriptEventRequest", default = nil } },
     returns = { { name = "eventID", type = "EncounterTimelineEventID", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -35,6 +37,7 @@ APIDefs["C_EncounterTimeline.CancelAllScriptEvents"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.CancelEditModeEvents"] = {
@@ -46,6 +49,7 @@ APIDefs["C_EncounterTimeline.CancelEditModeEvents"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.CancelScriptEvent"] = {
@@ -57,6 +61,7 @@ APIDefs["C_EncounterTimeline.CancelScriptEvent"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
     returns = {  },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -70,6 +75,7 @@ APIDefs["C_EncounterTimeline.FinishScriptEvent"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
     returns = {  },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -81,8 +87,22 @@ APIDefs["C_EncounterTimeline.GetCurrentTime"] = {
     subcategory = "c_encountertimeline",
     funcPath = "C_EncounterTimeline.GetCurrentTime",
     params = {  },
-    returns = { { name = "currentTime", type = "DurationSeconds", canBeSecret = false } },
+    returns = { { name = "currentTime", type = "Seconds", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_EncounterTimeline.GetEventColor"] = {
+    key = "C_EncounterTimeline.GetEventColor",
+    name = "GetEventColor",
+    category = "combat_midnight",
+    subcategory = "c_encountertimeline",
+    funcPath = "C_EncounterTimeline.GetEventColor",
+    params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil }, { name = "overrideTrigger", type = "EncounterEventColorTrigger", default = nil } },
+    returns = { { name = "color", type = "colorRGBA", canBeSecret = false } },
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed, SecretWhenEncounterEvent",
 }
 
 APIDefs["C_EncounterTimeline.GetEventCountBySource"] = {
@@ -94,7 +114,20 @@ APIDefs["C_EncounterTimeline.GetEventCountBySource"] = {
     params = { { name = "source", type = "EncounterTimelineEventSource", default = nil } },
     returns = { { name = "count", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_EncounterTimeline.GetEventHighlightTime"] = {
+    key = "C_EncounterTimeline.GetEventHighlightTime",
+    name = "GetEventHighlightTime",
+    category = "general",
+    subcategory = "c_encountertimeline",
+    funcPath = "C_EncounterTimeline.GetEventHighlightTime",
+    params = {  },
+    returns = { { name = "highlightTime", type = "Seconds", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.GetEventInfo"] = {
@@ -106,7 +139,8 @@ APIDefs["C_EncounterTimeline.GetEventInfo"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
     returns = { { name = "info", type = "EncounterTimelineEventInfo", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretBasedOnTimelineEventSource, SecretArguments=NotAllowed",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed, SecretWhenEncounterEvent",
 }
 
 APIDefs["C_EncounterTimeline.GetEventList"] = {
@@ -118,6 +152,7 @@ APIDefs["C_EncounterTimeline.GetEventList"] = {
     params = {  },
     returns = { { name = "events", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.GetEventState"] = {
@@ -129,6 +164,7 @@ APIDefs["C_EncounterTimeline.GetEventState"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
     returns = { { name = "state", type = "EncounterTimelineEventState", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -140,8 +176,9 @@ APIDefs["C_EncounterTimeline.GetEventTimeElapsed"] = {
     subcategory = "c_encountertimeline",
     funcPath = "C_EncounterTimeline.GetEventTimeElapsed",
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
-    returns = { { name = "timeElapsed", type = "DurationSeconds", canBeSecret = false } },
+    returns = { { name = "timeElapsed", type = "Seconds", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -153,8 +190,23 @@ APIDefs["C_EncounterTimeline.GetEventTimeRemaining"] = {
     subcategory = "c_encountertimeline",
     funcPath = "C_EncounterTimeline.GetEventTimeRemaining",
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
-    returns = { { name = "timeRemaining", type = "DurationSeconds", canBeSecret = false } },
+    returns = { { name = "timeRemaining", type = "Seconds", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
+    protected = true,
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed",
+}
+
+APIDefs["C_EncounterTimeline.GetEventTimer"] = {
+    key = "C_EncounterTimeline.GetEventTimer",
+    name = "GetEventTimer",
+    category = "combat_midnight",
+    subcategory = "c_encountertimeline",
+    funcPath = "C_EncounterTimeline.GetEventTimer",
+    params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
+    returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
+    midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -168,6 +220,21 @@ APIDefs["C_EncounterTimeline.GetEventTrack"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
     returns = { { name = "track", type = "EncounterTimelineTrack", canBeSecret = false }, { name = "trackSortIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
+    protected = true,
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed",
+}
+
+APIDefs["C_EncounterTimeline.GetSortedEventList"] = {
+    key = "C_EncounterTimeline.GetSortedEventList",
+    name = "GetSortedEventList",
+    category = "combat_midnight",
+    subcategory = "c_encountertimeline",
+    funcPath = "C_EncounterTimeline.GetSortedEventList",
+    params = { { name = "maxEventCount", type = "number", default = nil }, { name = "maxEventDuration", type = "Seconds", default = nil }, { name = "excludeTerminalStates", type = "bool", default = true }, { name = "excludeHiddenEvents", type = "bool", default = true } },
+    returns = { { name = "events", type = "table", canBeSecret = false } },
+    midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -181,6 +248,7 @@ APIDefs["C_EncounterTimeline.GetTrackInfo"] = {
     params = { { name = "track", type = "EncounterTimelineTrack", default = nil } },
     returns = { { name = "trackInfo", type = "EncounterTimelineTrackInfo", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -194,6 +262,47 @@ APIDefs["C_EncounterTimeline.GetTrackList"] = {
     params = {  },
     returns = { { name = "tracks", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_EncounterTimeline.GetTrackMaxEventDuration"] = {
+    key = "C_EncounterTimeline.GetTrackMaxEventDuration",
+    name = "GetTrackMaxEventDuration",
+    category = "combat_midnight",
+    subcategory = "c_encountertimeline",
+    funcPath = "C_EncounterTimeline.GetTrackMaxEventDuration",
+    params = { { name = "track", type = "EncounterTimelineTrack", default = nil } },
+    returns = { { name = "maxEventDuration", type = "Seconds", canBeSecret = false } },
+    midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
+    protected = true,
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed",
+}
+
+APIDefs["C_EncounterTimeline.GetTrackType"] = {
+    key = "C_EncounterTimeline.GetTrackType",
+    name = "GetTrackType",
+    category = "combat_midnight",
+    subcategory = "c_encountertimeline",
+    funcPath = "C_EncounterTimeline.GetTrackType",
+    params = { { name = "track", type = "EncounterTimelineTrack", default = nil } },
+    returns = { { name = "trackType", type = "EncounterTimelineTrackType", canBeSecret = false } },
+    midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
+    protected = true,
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed",
+}
+
+APIDefs["C_EncounterTimeline.GetViewType"] = {
+    key = "C_EncounterTimeline.GetViewType",
+    name = "GetViewType",
+    category = "general",
+    subcategory = "c_encountertimeline",
+    funcPath = "C_EncounterTimeline.GetViewType",
+    params = {  },
+    returns = { { name = "viewType", type = "EncounterTimelineViewType", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.HasActiveEvents"] = {
@@ -205,6 +314,7 @@ APIDefs["C_EncounterTimeline.HasActiveEvents"] = {
     params = {  },
     returns = { { name = "hasActiveEvents", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.HasAnyEvents"] = {
@@ -216,6 +326,7 @@ APIDefs["C_EncounterTimeline.HasAnyEvents"] = {
     params = {  },
     returns = { { name = "hasAnyEvents", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.HasPausedEvents"] = {
@@ -227,6 +338,7 @@ APIDefs["C_EncounterTimeline.HasPausedEvents"] = {
     params = {  },
     returns = { { name = "hasPausedEvents", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.HasVisibleEvents"] = {
@@ -238,6 +350,7 @@ APIDefs["C_EncounterTimeline.HasVisibleEvents"] = {
     params = {  },
     returns = { { name = "hasVisibleEvents", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.IsEventBlocked"] = {
@@ -249,6 +362,7 @@ APIDefs["C_EncounterTimeline.IsEventBlocked"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
     returns = { { name = "blocked", type = "bool", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -262,6 +376,7 @@ APIDefs["C_EncounterTimeline.IsFeatureAvailable"] = {
     params = {  },
     returns = { { name = "isAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.IsFeatureEnabled"] = {
@@ -273,6 +388,7 @@ APIDefs["C_EncounterTimeline.IsFeatureEnabled"] = {
     params = {  },
     returns = { { name = "isAvailableAndEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EncounterTimeline.PauseScriptEvent"] = {
@@ -284,6 +400,7 @@ APIDefs["C_EncounterTimeline.PauseScriptEvent"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
     returns = {  },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -297,6 +414,7 @@ APIDefs["C_EncounterTimeline.ResumeScriptEvent"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil } },
     returns = {  },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -310,5 +428,20 @@ APIDefs["C_EncounterTimeline.SetEventIconTextures"] = {
     params = { { name = "eventID", type = "EncounterTimelineEventID", default = nil }, { name = "includeIcons", type = "EncounterEventIconmask", default = nil }, { name = "textures", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_EncounterTimeline.SetViewType"] = {
+    key = "C_EncounterTimeline.SetViewType",
+    name = "SetViewType",
+    category = "combat_midnight",
+    subcategory = "c_encountertimeline",
+    funcPath = "C_EncounterTimeline.SetViewType",
+    params = { { name = "viewType", type = "EncounterTimelineViewType", default = nil } },
+    returns = {  },
+    midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
+    protected = true,
+    midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }

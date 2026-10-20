@@ -11,5 +11,6 @@ APIDefs["C_FrameManager.GetFrameVisibilityState"] = {
     params = { { name = "frameType", type = "UIFrameType", default = nil } },
     returns = { { name = "shouldShow", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

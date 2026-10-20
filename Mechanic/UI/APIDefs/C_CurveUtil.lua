@@ -11,6 +11,7 @@ APIDefs["C_CurveUtil.CreateColorCurve"] = {
     params = {  },
     returns = { { name = "curve", type = "LuaColorCurveObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurveUtil.CreateCurve"] = {
@@ -22,6 +23,33 @@ APIDefs["C_CurveUtil.CreateCurve"] = {
     params = {  },
     returns = { { name = "curve", type = "LuaCurveObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_CurveUtil.EvaluateColorFromBoolean"] = {
+    key = "C_CurveUtil.EvaluateColorFromBoolean",
+    name = "EvaluateColorFromBoolean",
+    category = "general",
+    subcategory = "c_curveutil",
+    funcPath = "C_CurveUtil.EvaluateColorFromBoolean",
+    params = { { name = "boolean", type = "bool", default = nil }, { name = "valueIfTrue", type = "colorRGBA", default = nil }, { name = "valueIfFalse", type = "colorRGBA", default = nil } },
+    returns = { { name = "value", type = "colorRGBA", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
+}
+
+APIDefs["C_CurveUtil.EvaluateColorValueFromBoolean"] = {
+    key = "C_CurveUtil.EvaluateColorValueFromBoolean",
+    name = "EvaluateColorValueFromBoolean",
+    category = "general",
+    subcategory = "c_curveutil",
+    funcPath = "C_CurveUtil.EvaluateColorValueFromBoolean",
+    params = { { name = "boolean", type = "bool", default = nil }, { name = "valueIfTrue", type = "SingleColorValue", default = nil }, { name = "valueIfFalse", type = "SingleColorValue", default = nil } },
+    returns = { { name = "value", type = "SingleColorValue", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
 APIDefs["C_CurveUtil.EvaluateGameCurve"] = {
@@ -33,5 +61,6 @@ APIDefs["C_CurveUtil.EvaluateGameCurve"] = {
     params = { { name = "curveID", type = "number", default = nil }, { name = "x", type = "number", default = nil } },
     returns = { { name = "y", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

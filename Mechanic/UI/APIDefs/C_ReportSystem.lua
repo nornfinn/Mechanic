@@ -11,6 +11,7 @@ APIDefs["C_ReportSystem.CanReportPlayer"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "canReport", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ReportSystem.CanReportPlayerForLanguage"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "canReport", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_ReportSystem.GetMajorCategoriesForReportType"] = {
     params = { { name = "reportType", type = "ReportType", default = nil } },
     returns = { { name = "majorCategories", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_ReportSystem.GetMajorCategoryString"] = {
     params = { { name = "majorCategory", type = "ReportMajorCategory", default = nil } },
     returns = { { name = "majorCategoryString", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory"] = {
     params = { { name = "reportType", type = "ReportType", default = nil }, { name = "majorCategory", type = "ReportMajorCategory", default = nil } },
     returns = { { name = "minorCategories", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_ReportSystem.GetMinorCategoryString"] = {
     params = { { name = "minorCategory", type = "ReportMinorCategory", default = nil } },
     returns = { { name = "minorCategoryString", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_ReportSystem.ReportServerLag"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ReportSystem.ReportStuckInCombat"] = {
@@ -94,6 +101,7 @@ APIDefs["C_ReportSystem.ReportStuckInCombat"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ReportSystem.RequiresScreenshotForReportType"] = {
@@ -105,6 +113,7 @@ APIDefs["C_ReportSystem.RequiresScreenshotForReportType"] = {
     params = { { name = "reportType", type = "ReportType", default = nil }, { name = "majorCategory", type = "ReportMajorCategory", default = nil } },
     returns = { { name = "requiresScreenshot", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -117,6 +126,7 @@ APIDefs["C_ReportSystem.SendReport"] = {
     params = { { name = "reportInfo", type = "ReportInfo", default = nil }, { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -129,6 +139,7 @@ APIDefs["C_ReportSystem.SetScreenshotPreviewTexture"] = {
     params = { { name = "textureObject", type = "SimpleTexture", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -141,4 +152,5 @@ APIDefs["C_ReportSystem.TakeReportScreenshot"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

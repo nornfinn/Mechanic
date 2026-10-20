@@ -8,8 +8,9 @@ APIDefs["C_ClassColor.GetClassColor"] = {
     category = "general",
     subcategory = "c_classcolor",
     funcPath = "C_ClassColor.GetClassColor",
-    params = { { name = "className", type = "string", default = nil } },
+    params = { { name = "className", type = "string", default = nil }, { name = "tintColor", type = "colorRGB", default = nil } },
     returns = { { name = "classColor", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }

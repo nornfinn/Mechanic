@@ -11,6 +11,7 @@ APIDefs["C_HousingExpertMode.CancelActiveEditing"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.CommitDecorMovement"] = {
@@ -22,6 +23,7 @@ APIDefs["C_HousingExpertMode.CommitDecorMovement"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.CommitHouseExteriorPosition"] = {
@@ -33,6 +35,7 @@ APIDefs["C_HousingExpertMode.CommitHouseExteriorPosition"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.GetHoveredDecorInfo"] = {
@@ -44,6 +47,7 @@ APIDefs["C_HousingExpertMode.GetHoveredDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.GetPrecisionSubmode"] = {
@@ -55,6 +59,7 @@ APIDefs["C_HousingExpertMode.GetPrecisionSubmode"] = {
     params = {  },
     returns = { { name = "activeSubMode", type = "HousingPrecisionSubmode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.GetPrecisionSubmodeRestriction"] = {
@@ -66,6 +71,7 @@ APIDefs["C_HousingExpertMode.GetPrecisionSubmodeRestriction"] = {
     params = { { name = "subMode", type = "HousingPrecisionSubmode", default = nil } },
     returns = { { name = "restriction", type = "HousingExpertSubmodeRestriction", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -78,6 +84,7 @@ APIDefs["C_HousingExpertMode.GetSelectedDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.IsDecorSelected"] = {
@@ -89,6 +96,7 @@ APIDefs["C_HousingExpertMode.IsDecorSelected"] = {
     params = {  },
     returns = { { name = "hasSelectedDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.IsGridVisible"] = {
@@ -100,6 +108,7 @@ APIDefs["C_HousingExpertMode.IsGridVisible"] = {
     params = {  },
     returns = { { name = "gridVisible", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.IsHouseExteriorHovered"] = {
@@ -111,6 +120,7 @@ APIDefs["C_HousingExpertMode.IsHouseExteriorHovered"] = {
     params = {  },
     returns = { { name = "isHouseExteriorHovered", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.IsHouseExteriorSelected"] = {
@@ -122,6 +132,7 @@ APIDefs["C_HousingExpertMode.IsHouseExteriorSelected"] = {
     params = {  },
     returns = { { name = "isHouseExteriorSelected", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.IsHoveringDecor"] = {
@@ -133,6 +144,7 @@ APIDefs["C_HousingExpertMode.IsHoveringDecor"] = {
     params = {  },
     returns = { { name = "isHoveringDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.RemoveSelectedDecor"] = {
@@ -144,6 +156,7 @@ APIDefs["C_HousingExpertMode.RemoveSelectedDecor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.ResetPrecisionChanges"] = {
@@ -155,6 +168,7 @@ APIDefs["C_HousingExpertMode.ResetPrecisionChanges"] = {
     params = { { name = "activeSubmodeOnly", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -167,6 +181,7 @@ APIDefs["C_HousingExpertMode.SelectNextRotationAxis"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingExpertMode.SetGridVisible"] = {
@@ -178,6 +193,7 @@ APIDefs["C_HousingExpertMode.SetGridVisible"] = {
     params = { { name = "gridVisible", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -190,6 +206,7 @@ APIDefs["C_HousingExpertMode.SetPrecisionIncrementingActive"] = {
     params = { { name = "incrementType", type = "HousingIncrementType", default = nil }, { name = "active", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -202,5 +219,6 @@ APIDefs["C_HousingExpertMode.SetPrecisionSubmode"] = {
     params = { { name = "subMode", type = "HousingPrecisionSubmode", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

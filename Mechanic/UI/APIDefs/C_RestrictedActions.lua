@@ -11,6 +11,7 @@ APIDefs["C_RestrictedActions.CheckAllowProtectedFunctions"] = {
     params = { { name = "object", type = "FrameScriptObject", default = nil }, { name = "silent", type = "bool", default = false } },
     returns = { { name = "protectedFunctionsAllowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_RestrictedActions.GetAddOnRestrictionState"] = {
     params = { { name = "type", type = "AddOnRestrictionType", default = nil } },
     returns = { { name = "state", type = "AddOnRestrictionState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_RestrictedActions.InCombatLockdown"] = {
     params = {  },
     returns = { { name = "inCombatLockdown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RestrictedActions.IsAddOnRestrictionActive"] = {
@@ -46,5 +49,6 @@ APIDefs["C_RestrictedActions.IsAddOnRestrictionActive"] = {
     params = { { name = "type", type = "AddOnRestrictionType", default = nil } },
     returns = { { name = "active", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

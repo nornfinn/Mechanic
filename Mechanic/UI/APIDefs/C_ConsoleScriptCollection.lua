@@ -11,6 +11,7 @@ APIDefs["C_ConsoleScriptCollection.GetCollectionDataByID"] = {
     params = { { name = "collectionID", type = "number", default = nil } },
     returns = { { name = "data", type = "ConsoleScriptCollectionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ConsoleScriptCollection.GetCollectionDataByTag"] = {
     params = { { name = "collectionTag", type = "string", default = nil } },
     returns = { { name = "data", type = "ConsoleScriptCollectionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_ConsoleScriptCollection.GetElements"] = {
     params = { { name = "collectionID", type = "number", default = nil } },
     returns = { { name = "elementIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,5 +50,6 @@ APIDefs["C_ConsoleScriptCollection.GetScriptData"] = {
     params = { { name = "consoleScriptID", type = "number", default = nil } },
     returns = { { name = "data", type = "ConsoleScriptData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

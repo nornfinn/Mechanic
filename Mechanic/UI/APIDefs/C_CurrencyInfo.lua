@@ -11,6 +11,7 @@ APIDefs["C_CurrencyInfo.CanTransferCurrency"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "canTransferCurrency", type = "bool", canBeSecret = false }, { name = "failureReason", type = "AccountCurrencyTransferResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData"] = {
     params = {  },
     returns = { { name = "doesCurrentFilterRequireAccountCurrencyData", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.DoesWarModeBonusApply"] = {
@@ -34,6 +36,7 @@ APIDefs["C_CurrencyInfo.DoesWarModeBonusApply"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "warModeApplies", type = "bool", canBeSecret = false }, { name = "limitOncePerTooltip", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_CurrencyInfo.ExpandCurrencyList"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "expand", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_CurrencyInfo.FetchCurrencyDataFromAccountCharacters"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "accountCurrencyData", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_CurrencyInfo.FetchCurrencyTransferTransactions"] = {
     params = {  },
     returns = { { name = "currencyTransferTransactions", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.GetAzeriteCurrencyID"] = {
@@ -81,6 +87,7 @@ APIDefs["C_CurrencyInfo.GetAzeriteCurrencyID"] = {
     params = {  },
     returns = { { name = "azeriteCurrencyID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.GetBackpackCurrencyInfo"] = {
@@ -92,6 +99,7 @@ APIDefs["C_CurrencyInfo.GetBackpackCurrencyInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "BackpackCurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_CurrencyInfo.GetBasicCurrencyInfo"] = {
     params = { { name = "currencyType", type = "number", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = { { name = "info", type = "CurrencyDisplayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -116,6 +125,7 @@ APIDefs["C_CurrencyInfo.GetCoinIcon"] = {
     params = { { name = "amount", type = "WOWMONEY", default = nil } },
     returns = { { name = "result", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -128,6 +138,7 @@ APIDefs["C_CurrencyInfo.GetCoinText"] = {
     params = { { name = "amount", type = "WOWMONEY", default = nil }, { name = "separator", type = "cstring", default = ", " } },
     returns = { { name = "result", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -140,6 +151,7 @@ APIDefs["C_CurrencyInfo.GetCoinTextureString"] = {
     params = { { name = "amount", type = "WOWMONEY", default = nil }, { name = "fontHeight", type = "number", default = 14 } },
     returns = { { name = "result", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -152,6 +164,7 @@ APIDefs["C_CurrencyInfo.GetCostToTransferCurrency"] = {
     params = { { name = "currencyID", type = "number", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = { { name = "totalQuantityConsumed", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -164,6 +177,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyContainerInfo"] = {
     params = { { name = "currencyType", type = "number", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = { { name = "info", type = "CurrencyDisplayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -176,6 +190,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyDescription"] = {
     params = { { name = "type", type = "number", default = nil } },
     returns = { { name = "description", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -188,6 +203,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyFilter"] = {
     params = {  },
     returns = { { name = "filterType", type = "CurrencyFilterType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.GetCurrencyIDFromLink"] = {
@@ -199,6 +215,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyIDFromLink"] = {
     params = { { name = "currencyLink", type = "cstring", default = nil } },
     returns = { { name = "currencyID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -211,6 +228,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyInfo"] = {
     params = { { name = "type", type = "number", default = nil } },
     returns = { { name = "info", type = "CurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -223,6 +241,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyInfoFromLink"] = {
     params = { { name = "link", type = "string", default = nil } },
     returns = { { name = "info", type = "CurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -235,6 +254,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyLink"] = {
     params = { { name = "type", type = "number", default = nil }, { name = "amount", type = "number", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -247,6 +267,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyListInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "CurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -259,6 +280,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyListLink"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -271,6 +293,7 @@ APIDefs["C_CurrencyInfo.GetCurrencyListSize"] = {
     params = {  },
     returns = { { name = "currencyListSize", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.GetDragonIslesSuppliesCurrencyID"] = {
@@ -282,6 +305,7 @@ APIDefs["C_CurrencyInfo.GetDragonIslesSuppliesCurrencyID"] = {
     params = {  },
     returns = { { name = "dragonIslesSuppliesCurrencyID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.GetFactionGrantedByCurrency"] = {
@@ -293,6 +317,7 @@ APIDefs["C_CurrencyInfo.GetFactionGrantedByCurrency"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "factionID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -305,6 +330,7 @@ APIDefs["C_CurrencyInfo.GetMaxTransferableAmountFromQuantity"] = {
     params = { { name = "currencyID", type = "number", default = nil }, { name = "requestedQuantity", type = "number", default = nil } },
     returns = { { name = "maxTransferableAmount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -317,6 +343,7 @@ APIDefs["C_CurrencyInfo.GetPlayerCurrencyCategoryInfo"] = {
     params = { { name = "categoryID", type = "number", default = nil }, { name = "includeAccountWide", type = "bool", default = true } },
     returns = { { name = "info", type = "PlayerCurrencyCategoryInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -329,6 +356,7 @@ APIDefs["C_CurrencyInfo.GetWarResourcesCurrencyID"] = {
     params = {  },
     returns = { { name = "warResourceCurrencyID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.IsAccountCharacterCurrencyDataReady"] = {
@@ -340,6 +368,7 @@ APIDefs["C_CurrencyInfo.IsAccountCharacterCurrencyDataReady"] = {
     params = {  },
     returns = { { name = "isReady", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.IsAccountTransferableCurrency"] = {
@@ -351,6 +380,7 @@ APIDefs["C_CurrencyInfo.IsAccountTransferableCurrency"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "isAccountTransferableCurrency", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -363,6 +393,7 @@ APIDefs["C_CurrencyInfo.IsAccountWideCurrency"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "isAccountWideCurrency", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -375,6 +406,7 @@ APIDefs["C_CurrencyInfo.IsCurrencyContainer"] = {
     params = { { name = "currencyID", type = "number", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = { { name = "isCurrencyContainer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -387,6 +419,7 @@ APIDefs["C_CurrencyInfo.IsCurrencyTransferInProgress"] = {
     params = {  },
     returns = { { name = "currencyTransferInProgress", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.IsCurrencyTransferTransactionDataReady"] = {
@@ -398,6 +431,7 @@ APIDefs["C_CurrencyInfo.IsCurrencyTransferTransactionDataReady"] = {
     params = {  },
     returns = { { name = "isReady", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.PickupCurrency"] = {
@@ -409,6 +443,7 @@ APIDefs["C_CurrencyInfo.PickupCurrency"] = {
     params = { { name = "type", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -421,6 +456,7 @@ APIDefs["C_CurrencyInfo.PlayerHasMaxQuantity"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "hasMaxQuantity", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -433,6 +469,7 @@ APIDefs["C_CurrencyInfo.PlayerHasMaxWeeklyQuantity"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "hasMaxWeeklyQuantity", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -445,6 +482,7 @@ APIDefs["C_CurrencyInfo.RequestCurrencyDataForAccountCharacters"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CurrencyInfo.RequestCurrencyFromAccountCharacter"] = {
@@ -456,6 +494,7 @@ APIDefs["C_CurrencyInfo.RequestCurrencyFromAccountCharacter"] = {
     params = { { name = "sourceCharacterGUID", type = "WOWGUID", default = nil }, { name = "currencyID", type = "number", default = nil }, { name = "quantity", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -468,6 +507,7 @@ APIDefs["C_CurrencyInfo.SetCurrencyBackpack"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "backpack", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -480,6 +520,7 @@ APIDefs["C_CurrencyInfo.SetCurrencyBackpackByID"] = {
     params = { { name = "currencyType", type = "number", default = nil }, { name = "backpack", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -492,6 +533,7 @@ APIDefs["C_CurrencyInfo.SetCurrencyFilter"] = {
     params = { { name = "filterType", type = "CurrencyFilterType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -504,5 +546,6 @@ APIDefs["C_CurrencyInfo.SetCurrencyUnused"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "unused", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

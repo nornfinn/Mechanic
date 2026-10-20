@@ -11,6 +11,7 @@ APIDefs["C_ChromieTime.CloseUI"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChromieTime.GetChromieTimeExpansionOption"] = {
@@ -22,6 +23,7 @@ APIDefs["C_ChromieTime.GetChromieTimeExpansionOption"] = {
     params = { { name = "expansionRecID", type = "number", default = nil } },
     returns = { { name = "info", type = "ChromieTimeExpansionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_ChromieTime.GetChromieTimeExpansionOptions"] = {
     params = {  },
     returns = { { name = "expansionOptions", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChromieTime.SelectChromieTimeOption"] = {
@@ -45,5 +48,6 @@ APIDefs["C_ChromieTime.SelectChromieTimeOption"] = {
     params = { { name = "chromieTimeExpansionInfoId", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

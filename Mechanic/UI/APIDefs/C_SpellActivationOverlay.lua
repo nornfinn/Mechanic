@@ -11,5 +11,6 @@ APIDefs["C_SpellActivationOverlay.IsSpellOverlayed"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "isSpellOverlayed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

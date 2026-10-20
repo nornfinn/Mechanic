@@ -11,6 +11,7 @@ APIDefs["C_IslandsQueue.CloseIslandsQueueScreen"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_IslandsQueue.GetIslandDifficultyInfo"] = {
@@ -22,6 +23,7 @@ APIDefs["C_IslandsQueue.GetIslandDifficultyInfo"] = {
     params = {  },
     returns = { { name = "islandDifficultyInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_IslandsQueue.GetIslandsMaxGroupSize"] = {
@@ -33,6 +35,7 @@ APIDefs["C_IslandsQueue.GetIslandsMaxGroupSize"] = {
     params = {  },
     returns = { { name = "maxGroupSize", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_IslandsQueue.GetIslandsWeeklyQuestID"] = {
@@ -44,6 +47,7 @@ APIDefs["C_IslandsQueue.GetIslandsWeeklyQuestID"] = {
     params = {  },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_IslandsQueue.QueueForIsland"] = {
@@ -55,6 +59,7 @@ APIDefs["C_IslandsQueue.QueueForIsland"] = {
     params = { { name = "difficultyID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -67,5 +72,6 @@ APIDefs["C_IslandsQueue.RequestPreloadRewardData"] = {
     params = { { name = "questId", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

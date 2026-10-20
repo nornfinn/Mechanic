@@ -28,7 +28,6 @@ These describe implementation, not proof of every live WoW or platform configura
 | Remediate Python modernization debt incrementally | Keep the focused correctness baseline while reviewing broader rule groups |
 | Validate platform-specific integrations | macOS path discovery and an AppleScript reload helper exist but are untested on a Mac; direct tool download is not implemented. See the [macOS plan](macos-support.plan.md) |
 | Complete the deprecated-API database | `addon.deprecations` ships a small seed database and reports `DEPRECATION_DB_LIMITED`; regenerate it from `wow-ui-source` with `python -m mechanic.deprecations_builder` |
-| Cover Retail 12.1.0 API data | Generated API definitions come from 12.0.1.64914; regenerate with `api.refresh` once a 12.1 source tree is available |
 
 The [original quality review](../docs/quality-review-2026-09-05.md) contains the supporting findings and notes which have since been addressed.
 

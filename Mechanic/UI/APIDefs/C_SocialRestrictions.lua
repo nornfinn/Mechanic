@@ -2,6 +2,18 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_SocialRestrictions.AcknowledgeAgeVerificationRestriction"] = {
+    key = "C_SocialRestrictions.AcknowledgeAgeVerificationRestriction",
+    name = "AcknowledgeAgeVerificationRestriction",
+    category = "general",
+    subcategory = "c_socialrestrictions",
+    funcPath = "C_SocialRestrictions.AcknowledgeAgeVerificationRestriction",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
 APIDefs["C_SocialRestrictions.AcknowledgeRegionalChatDisabled"] = {
     key = "C_SocialRestrictions.AcknowledgeRegionalChatDisabled",
     name = "AcknowledgeRegionalChatDisabled",
@@ -11,6 +23,7 @@ APIDefs["C_SocialRestrictions.AcknowledgeRegionalChatDisabled"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialRestrictions.CanReceiveChat"] = {
@@ -22,6 +35,7 @@ APIDefs["C_SocialRestrictions.CanReceiveChat"] = {
     params = {  },
     returns = { { name = "canReceiveChat", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialRestrictions.CanSendChat"] = {
@@ -33,6 +47,31 @@ APIDefs["C_SocialRestrictions.CanSendChat"] = {
     params = {  },
     returns = { { name = "canSendChat", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_SocialRestrictions.IsAgeVerificationRestricted"] = {
+    key = "C_SocialRestrictions.IsAgeVerificationRestricted",
+    name = "IsAgeVerificationRestricted",
+    category = "general",
+    subcategory = "c_socialrestrictions",
+    funcPath = "C_SocialRestrictions.IsAgeVerificationRestricted",
+    params = {  },
+    returns = { { name = "restricted", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_SocialRestrictions.IsAgeVerificationRestrictedMinor"] = {
+    key = "C_SocialRestrictions.IsAgeVerificationRestrictedMinor",
+    name = "IsAgeVerificationRestrictedMinor",
+    category = "general",
+    subcategory = "c_socialrestrictions",
+    funcPath = "C_SocialRestrictions.IsAgeVerificationRestrictedMinor",
+    params = {  },
+    returns = { { name = "isMinor", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialRestrictions.IsChatDisabled"] = {
@@ -44,6 +83,19 @@ APIDefs["C_SocialRestrictions.IsChatDisabled"] = {
     params = {  },
     returns = { { name = "disabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_SocialRestrictions.IsFriendsDisabled"] = {
+    key = "C_SocialRestrictions.IsFriendsDisabled",
+    name = "IsFriendsDisabled",
+    category = "general",
+    subcategory = "c_socialrestrictions",
+    funcPath = "C_SocialRestrictions.IsFriendsDisabled",
+    params = {  },
+    returns = { { name = "disabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialRestrictions.IsMuted"] = {
@@ -55,6 +107,7 @@ APIDefs["C_SocialRestrictions.IsMuted"] = {
     params = {  },
     returns = { { name = "isMuted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialRestrictions.IsSilenced"] = {
@@ -66,6 +119,7 @@ APIDefs["C_SocialRestrictions.IsSilenced"] = {
     params = {  },
     returns = { { name = "isSilenced", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialRestrictions.IsSquelched"] = {
@@ -77,6 +131,7 @@ APIDefs["C_SocialRestrictions.IsSquelched"] = {
     params = {  },
     returns = { { name = "isSquelched", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialRestrictions.SetChatDisabled"] = {
@@ -88,5 +143,6 @@ APIDefs["C_SocialRestrictions.SetChatDisabled"] = {
     params = { { name = "disabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

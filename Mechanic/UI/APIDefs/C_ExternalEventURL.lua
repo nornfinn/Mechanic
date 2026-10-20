@@ -2,6 +2,18 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_ExternalEventURL.CanShow"] = {
+    key = "C_ExternalEventURL.CanShow",
+    name = "CanShow",
+    category = "general",
+    subcategory = "c_externaleventurl",
+    funcPath = "C_ExternalEventURL.CanShow",
+    params = {  },
+    returns = { { name = "canShow", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
 APIDefs["C_ExternalEventURL.HasURL"] = {
     key = "C_ExternalEventURL.HasURL",
     name = "HasURL",
@@ -11,6 +23,7 @@ APIDefs["C_ExternalEventURL.HasURL"] = {
     params = {  },
     returns = { { name = "hasURL", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ExternalEventURL.IsNew"] = {
@@ -22,6 +35,7 @@ APIDefs["C_ExternalEventURL.IsNew"] = {
     params = {  },
     returns = { { name = "isNew", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ExternalEventURL.LaunchURL"] = {
@@ -33,4 +47,5 @@ APIDefs["C_ExternalEventURL.LaunchURL"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

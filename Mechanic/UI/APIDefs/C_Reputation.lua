@@ -11,6 +11,7 @@ APIDefs["C_Reputation.AreLegacyReputationsShown"] = {
     params = {  },
     returns = { { name = "areLegacyReputationsShown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.CollapseAllFactionHeaders"] = {
@@ -22,6 +23,7 @@ APIDefs["C_Reputation.CollapseAllFactionHeaders"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.CollapseFactionHeader"] = {
@@ -33,6 +35,7 @@ APIDefs["C_Reputation.CollapseFactionHeader"] = {
     params = { { name = "factionSortIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,6 +48,7 @@ APIDefs["C_Reputation.ExpandAllFactionHeaders"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.ExpandFactionHeader"] = {
@@ -56,6 +60,7 @@ APIDefs["C_Reputation.ExpandFactionHeader"] = {
     params = { { name = "factionSortIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -68,6 +73,7 @@ APIDefs["C_Reputation.GetFactionDataByID"] = {
     params = { { name = "factionID", type = "number", default = nil } },
     returns = { { name = "factionData", type = "FactionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -80,6 +86,7 @@ APIDefs["C_Reputation.GetFactionDataByIndex"] = {
     params = { { name = "factionSortIndex", type = "luaIndex", default = nil } },
     returns = { { name = "factionData", type = "FactionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -92,6 +99,7 @@ APIDefs["C_Reputation.GetFactionParagonInfo"] = {
     params = { { name = "factionID", type = "number", default = nil } },
     returns = { { name = "currentValue", type = "number", canBeSecret = false }, { name = "threshold", type = "number", canBeSecret = false }, { name = "rewardQuestID", type = "number", canBeSecret = false }, { name = "hasRewardPending", type = "bool", canBeSecret = false }, { name = "tooLowLevelForParagon", type = "bool", canBeSecret = false }, { name = "paragonStorageLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_Reputation.GetGuildFactionData"] = {
     params = {  },
     returns = { { name = "guildFactionData", type = "FactionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.GetGuildRepExpirationTime"] = {
@@ -115,6 +124,7 @@ APIDefs["C_Reputation.GetGuildRepExpirationTime"] = {
     params = {  },
     returns = { { name = "expirationTime", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.GetNumFactions"] = {
@@ -126,6 +136,7 @@ APIDefs["C_Reputation.GetNumFactions"] = {
     params = {  },
     returns = { { name = "numFactions", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.GetReputationSortType"] = {
@@ -137,6 +148,7 @@ APIDefs["C_Reputation.GetReputationSortType"] = {
     params = {  },
     returns = { { name = "sortType", type = "ReputationSortType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.GetSelectedFaction"] = {
@@ -148,6 +160,7 @@ APIDefs["C_Reputation.GetSelectedFaction"] = {
     params = {  },
     returns = { { name = "selectedFactionSortIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.GetWatchedFactionData"] = {
@@ -159,6 +172,7 @@ APIDefs["C_Reputation.GetWatchedFactionData"] = {
     params = {  },
     returns = { { name = "watchedFactionData", type = "FactionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Reputation.IsAccountWideReputation"] = {
@@ -170,6 +184,7 @@ APIDefs["C_Reputation.IsAccountWideReputation"] = {
     params = { { name = "factionID", type = "number", default = nil } },
     returns = { { name = "isAccountWide", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -182,6 +197,7 @@ APIDefs["C_Reputation.IsFactionActive"] = {
     params = { { name = "factionSortIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -194,6 +210,7 @@ APIDefs["C_Reputation.IsFactionParagon"] = {
     params = { { name = "factionID", type = "number", default = nil } },
     returns = { { name = "factionIsParagon", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -206,6 +223,7 @@ APIDefs["C_Reputation.IsFactionParagonForCurrentPlayer"] = {
     params = { { name = "factionID", type = "number", default = nil } },
     returns = { { name = "currentPlayerHasParagon", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -218,6 +236,7 @@ APIDefs["C_Reputation.IsMajorFaction"] = {
     params = { { name = "factionID", type = "number", default = nil } },
     returns = { { name = "isMajorFaction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -230,6 +249,7 @@ APIDefs["C_Reputation.RequestFactionParagonPreloadRewardData"] = {
     params = { { name = "factionID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -242,6 +262,7 @@ APIDefs["C_Reputation.SetFactionActive"] = {
     params = { { name = "factionSortIndex", type = "luaIndex", default = nil }, { name = "setActive", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -254,6 +275,7 @@ APIDefs["C_Reputation.SetLegacyReputationsShown"] = {
     params = { { name = "showLegacyReputations", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -266,6 +288,7 @@ APIDefs["C_Reputation.SetReputationSortType"] = {
     params = { { name = "sortType", type = "ReputationSortType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -278,6 +301,7 @@ APIDefs["C_Reputation.SetSelectedFaction"] = {
     params = { { name = "factionSortIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -290,6 +314,7 @@ APIDefs["C_Reputation.SetWatchedFactionByID"] = {
     params = { { name = "factionID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -302,6 +327,7 @@ APIDefs["C_Reputation.SetWatchedFactionByIndex"] = {
     params = { { name = "factionSortIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -314,5 +340,6 @@ APIDefs["C_Reputation.ToggleFactionAtWar"] = {
     params = { { name = "factionSortIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -2,6 +2,18 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_PaperDollInfo.AmmoNeeded"] = {
+    key = "C_PaperDollInfo.AmmoNeeded",
+    name = "AmmoNeeded",
+    category = "general",
+    subcategory = "c_paperdollinfo",
+    funcPath = "C_PaperDollInfo.AmmoNeeded",
+    params = {  },
+    returns = { { name = "ammoNeeded", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
 APIDefs["C_PaperDollInfo.CanAutoEquipCursorItem"] = {
     key = "C_PaperDollInfo.CanAutoEquipCursorItem",
     name = "CanAutoEquipCursorItem",
@@ -11,6 +23,7 @@ APIDefs["C_PaperDollInfo.CanAutoEquipCursorItem"] = {
     params = {  },
     returns = { { name = "canAutoEquip", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PaperDollInfo.CanCursorCanGoInSlot"] = {
@@ -22,6 +35,33 @@ APIDefs["C_PaperDollInfo.CanCursorCanGoInSlot"] = {
     params = { { name = "slotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "canOccupySlot", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PaperDollInfo.CancelTemporaryEnchantment"] = {
+    key = "C_PaperDollInfo.CancelTemporaryEnchantment",
+    name = "CancelTemporaryEnchantment",
+    category = "general",
+    subcategory = "c_paperdollinfo",
+    funcPath = "C_PaperDollInfo.CancelTemporaryEnchantment",
+    params = { { name = "slot", type = "LuaInventorySlot", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PaperDollInfo.CursorCanGoInSlot"] = {
+    key = "C_PaperDollInfo.CursorCanGoInSlot",
+    name = "CursorCanGoInSlot",
+    category = "general",
+    subcategory = "c_paperdollinfo",
+    funcPath = "C_PaperDollInfo.CursorCanGoInSlot",
+    params = { { name = "slotIndex", type = "luaIndex", default = nil } },
+    returns = { { name = "canOccupySlot", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +74,7 @@ APIDefs["C_PaperDollInfo.GetArmorEffectiveness"] = {
     params = { { name = "armor", type = "number", default = nil }, { name = "attackerLevel", type = "number", default = nil } },
     returns = { { name = "effectiveness", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +87,7 @@ APIDefs["C_PaperDollInfo.GetArmorEffectivenessAgainstTarget"] = {
     params = { { name = "armor", type = "number", default = nil } },
     returns = { { name = "effectiveness", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +100,7 @@ APIDefs["C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" }, { name = "equipmentSlotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "azeritePowerIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +113,7 @@ APIDefs["C_PaperDollInfo.GetInspectGuildInfo"] = {
     params = { { name = "unitString", type = "string", default = nil } },
     returns = { { name = "achievementPoints", type = "number", canBeSecret = false }, { name = "numMembers", type = "number", canBeSecret = false }, { name = "guildName", type = "string", canBeSecret = false }, { name = "realmName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +126,7 @@ APIDefs["C_PaperDollInfo.GetInspectItemLevel"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" } },
     returns = { { name = "equippedItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +139,7 @@ APIDefs["C_PaperDollInfo.GetInspectRatedBGBlitzData"] = {
     params = {  },
     returns = { { name = "ratedBGBlitzData", type = "InspectPVPData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PaperDollInfo.GetInspectRatedBGData"] = {
@@ -105,6 +151,7 @@ APIDefs["C_PaperDollInfo.GetInspectRatedBGData"] = {
     params = {  },
     returns = { { name = "ratedBGData", type = "InspectRatedBGData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PaperDollInfo.GetInspectRatedSoloShuffleData"] = {
@@ -116,6 +163,33 @@ APIDefs["C_PaperDollInfo.GetInspectRatedSoloShuffleData"] = {
     params = {  },
     returns = { { name = "ratedSoloShuffleData", type = "InspectPVPData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PaperDollInfo.GetInventorySlotInfo"] = {
+    key = "C_PaperDollInfo.GetInventorySlotInfo",
+    name = "GetInventorySlotInfo",
+    category = "general",
+    subcategory = "c_paperdollinfo",
+    funcPath = "C_PaperDollInfo.GetInventorySlotInfo",
+    params = { { name = "slotName", type = "cstring", default = nil } },
+    returns = { { name = "invSlot", type = "number", canBeSecret = false }, { name = "slotTexture", type = "fileID", canBeSecret = false }, { name = "checkRelic", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PaperDollInfo.GetInventorySlotInfoForInvSlot"] = {
+    key = "C_PaperDollInfo.GetInventorySlotInfoForInvSlot",
+    name = "GetInventorySlotInfoForInvSlot",
+    category = "general",
+    subcategory = "c_paperdollinfo",
+    funcPath = "C_PaperDollInfo.GetInventorySlotInfoForInvSlot",
+    params = { { name = "invSlotValue", type = "number", default = nil } },
+    returns = { { name = "invSlot", type = "number", canBeSecret = false }, { name = "slotTexture", type = "fileID", canBeSecret = false }, { name = "checkRelic", type = "bool", canBeSecret = false }, { name = "slotName", type = "cstring", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_PaperDollInfo.GetMinItemLevel"] = {
@@ -127,6 +201,7 @@ APIDefs["C_PaperDollInfo.GetMinItemLevel"] = {
     params = {  },
     returns = { { name = "minItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PaperDollInfo.GetStaggerPercentage"] = {
@@ -138,6 +213,20 @@ APIDefs["C_PaperDollInfo.GetStaggerPercentage"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" } },
     returns = { { name = "stagger", type = "number", canBeSecret = false }, { name = "staggerAgainstTarget", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PaperDollInfo.GetTemporaryEnchantmentInfo"] = {
+    key = "C_PaperDollInfo.GetTemporaryEnchantmentInfo",
+    name = "GetTemporaryEnchantmentInfo",
+    category = "general",
+    subcategory = "c_paperdollinfo",
+    funcPath = "C_PaperDollInfo.GetTemporaryEnchantmentInfo",
+    params = { { name = "slot", type = "LuaInventorySlot", default = nil } },
+    returns = { { name = "enchantInfo", type = "TemporaryItemEnchantInfo", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -150,6 +239,7 @@ APIDefs["C_PaperDollInfo.IsInventorySlotEnabled"] = {
     params = { { name = "slotName", type = "stringView", default = nil } },
     returns = { { name = "isEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -162,6 +252,7 @@ APIDefs["C_PaperDollInfo.IsRangedSlotShown"] = {
     params = {  },
     returns = { { name = "isShown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PaperDollInfo.OffhandHasShield"] = {
@@ -173,6 +264,7 @@ APIDefs["C_PaperDollInfo.OffhandHasShield"] = {
     params = {  },
     returns = { { name = "offhandHasShield", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PaperDollInfo.OffhandHasWeapon"] = {
@@ -184,4 +276,5 @@ APIDefs["C_PaperDollInfo.OffhandHasWeapon"] = {
     params = {  },
     returns = { { name = "offhandHasWeapon", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

@@ -11,6 +11,7 @@ APIDefs["C_AreaPoiInfo.GetAreaPOIForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "areaPoiIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AreaPoiInfo.GetAreaPOIInfo"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "areaPoiID", type = "number", default = nil } },
     returns = { { name = "poiInfo", type = "AreaPOIInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_AreaPoiInfo.GetAreaPOISecondsLeft"] = {
     params = { { name = "areaPoiID", type = "number", default = nil } },
     returns = { { name = "secondsLeft", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_AreaPoiInfo.GetDelvesForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "areaPoiIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_AreaPoiInfo.GetDragonridingRacesForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "areaPoiIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_AreaPoiInfo.GetEventsForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "areaPoiIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_AreaPoiInfo.GetQuestHubsForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "areaPoiIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,5 +102,6 @@ APIDefs["C_AreaPoiInfo.IsAreaPOITimed"] = {
     params = { { name = "areaPoiID", type = "number", default = nil } },
     returns = { { name = "isTimed", type = "bool", canBeSecret = false }, { name = "hideTimerInTooltip", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

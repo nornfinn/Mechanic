@@ -11,6 +11,7 @@ APIDefs["C_AzeriteEmpoweredItem.CanSelectPower"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil }, { name = "powerID", type = "number", default = nil } },
     returns = { { name = "canSelect", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_AzeriteEmpoweredItem.GetAllTierInfo"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil } },
     returns = { { name = "tierInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_AzeriteEmpoweredItem.GetAllTierInfoByItemID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "classID", type = "number", default = nil } },
     returns = { { name = "tierInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_AzeriteEmpoweredItem.GetAzeriteEmpoweredItemRespecCost"] = {
     params = {  },
     returns = { { name = "cost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEmpoweredItem.GetPowerInfo"] = {
@@ -70,6 +75,7 @@ APIDefs["C_AzeriteEmpoweredItem.GetPowerInfo"] = {
     params = { { name = "powerID", type = "number", default = nil } },
     returns = { { name = "powerInfo", type = "AzeriteEmpoweredItemPowerInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_AzeriteEmpoweredItem.GetPowerText"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil }, { name = "powerID", type = "number", default = nil }, { name = "level", type = "AzeritePowerLevel", default = nil } },
     returns = { { name = "powerText", type = "AzeriteEmpoweredItemPowerText", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +101,7 @@ APIDefs["C_AzeriteEmpoweredItem.GetSpecsForPower"] = {
     params = { { name = "powerID", type = "number", default = nil } },
     returns = { { name = "specInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -106,6 +114,7 @@ APIDefs["C_AzeriteEmpoweredItem.HasAnyUnselectedPowers"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil } },
     returns = { { name = "hasAnyUnselectedPowers", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,6 +127,7 @@ APIDefs["C_AzeriteEmpoweredItem.HasBeenViewed"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil } },
     returns = { { name = "hasBeenViewed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -130,6 +140,7 @@ APIDefs["C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "isAzeriteEmpoweredItem", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -142,6 +153,7 @@ APIDefs["C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isAzeriteEmpoweredItem", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -154,6 +166,7 @@ APIDefs["C_AzeriteEmpoweredItem.IsAzeritePreviewSourceDisplayable"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "classID", type = "number", default = nil } },
     returns = { { name = "isAzeritePreviewSourceDisplayable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -166,6 +179,7 @@ APIDefs["C_AzeriteEmpoweredItem.IsHeartOfAzerothEquipped"] = {
     params = {  },
     returns = { { name = "isHeartOfAzerothEquipped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_AzeriteEmpoweredItem.IsPowerAvailableForSpec"] = {
@@ -177,6 +191,7 @@ APIDefs["C_AzeriteEmpoweredItem.IsPowerAvailableForSpec"] = {
     params = { { name = "powerID", type = "number", default = nil }, { name = "specID", type = "number", default = nil } },
     returns = { { name = "isPowerAvailableForSpec", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -189,6 +204,7 @@ APIDefs["C_AzeriteEmpoweredItem.IsPowerSelected"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil }, { name = "powerID", type = "number", default = nil } },
     returns = { { name = "isSelected", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -201,6 +217,7 @@ APIDefs["C_AzeriteEmpoweredItem.SelectPower"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil }, { name = "powerID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -213,5 +230,6 @@ APIDefs["C_AzeriteEmpoweredItem.SetHasBeenViewed"] = {
     params = { { name = "azeriteEmpoweredItemLocation", type = "AzeriteEmpoweredItemLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

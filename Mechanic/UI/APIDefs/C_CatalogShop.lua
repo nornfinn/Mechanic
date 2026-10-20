@@ -11,6 +11,20 @@ APIDefs["C_CatalogShop.BulkPurchaseProducts"] = {
     params = { { name = "productIDs", type = "table", default = nil } },
     returns = { { name = "canPurchaseProducts", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_CatalogShop.BulkRefundDecors"] = {
+    key = "C_CatalogShop.BulkRefundDecors",
+    name = "BulkRefundDecors",
+    category = "general",
+    subcategory = "c_catalogshop",
+    funcPath = "C_CatalogShop.BulkRefundDecors",
+    params = { { name = "decorGUIDs", type = "table", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +37,7 @@ APIDefs["C_CatalogShop.CloseCatalogShopInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.ConfirmHousingPurchase"] = {
@@ -34,6 +49,20 @@ APIDefs["C_CatalogShop.ConfirmHousingPurchase"] = {
     params = { { name = "productIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_CatalogShop.FindBestCurrencyProductForNeededAmount"] = {
+    key = "C_CatalogShop.FindBestCurrencyProductForNeededAmount",
+    name = "FindBestCurrencyProductForNeededAmount",
+    category = "general",
+    subcategory = "c_catalogshop",
+    funcPath = "C_CatalogShop.FindBestCurrencyProductForNeededAmount",
+    params = { { name = "vcCurrencyCode", type = "string", default = nil }, { name = "amountNeeded", type = "number", default = nil } },
+    returns = { { name = "vcProductID", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +75,7 @@ APIDefs["C_CatalogShop.GetAvailableCategoryIDs"] = {
     params = {  },
     returns = { { name = "categoryIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.GetAvailableTransmogRaceInfos"] = {
@@ -57,6 +87,7 @@ APIDefs["C_CatalogShop.GetAvailableTransmogRaceInfos"] = {
     params = {  },
     returns = { { name = "raceIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.GetCatalogShopProductDisplayInfo"] = {
@@ -68,6 +99,7 @@ APIDefs["C_CatalogShop.GetCatalogShopProductDisplayInfo"] = {
     params = { { name = "catalogShopProductID", type = "number", default = nil } },
     returns = { { name = "item", type = "CatalogShopProductDisplayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -80,6 +112,7 @@ APIDefs["C_CatalogShop.GetCategoryInfo"] = {
     params = { { name = "categoryID", type = "number", default = nil } },
     returns = { { name = "categoryInfo", type = "CatalogShopCategoryInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -92,6 +125,7 @@ APIDefs["C_CatalogShop.GetCategorySectionInfo"] = {
     params = { { name = "categoryID", type = "number", default = nil }, { name = "sectionID", type = "number", default = nil } },
     returns = { { name = "sectionInfo", type = "CatalogShopSectionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +138,7 @@ APIDefs["C_CatalogShop.GetFailureInfo"] = {
     params = {  },
     returns = { { name = "errorResultEnum", type = "StoreError", canBeSecret = false }, { name = "errorResultRaw", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.GetFirstCategoryByProductID"] = {
@@ -115,6 +150,7 @@ APIDefs["C_CatalogShop.GetFirstCategoryByProductID"] = {
     params = { { name = "productID", type = "number", default = nil } },
     returns = { { name = "categoryInfo", type = "CatalogShopCategoryInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -127,6 +163,7 @@ APIDefs["C_CatalogShop.GetNewProducts"] = {
     params = {  },
     returns = { { name = "newProducts", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.GetProductAvailabilityTimeRemainingSecs"] = {
@@ -138,6 +175,7 @@ APIDefs["C_CatalogShop.GetProductAvailabilityTimeRemainingSecs"] = {
     params = { { name = "catalogShopProductID", type = "number", default = nil } },
     returns = { { name = "timeRemainingSecs", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -150,6 +188,7 @@ APIDefs["C_CatalogShop.GetProductIDsForBundle"] = {
     params = { { name = "bundleProductID", type = "number", default = nil } },
     returns = { { name = "childIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -162,6 +201,7 @@ APIDefs["C_CatalogShop.GetProductIDsForCategory"] = {
     params = { { name = "categoryID", type = "number", default = nil } },
     returns = { { name = "productIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -174,6 +214,7 @@ APIDefs["C_CatalogShop.GetProductIDsForCategorySection"] = {
     params = { { name = "categoryID", type = "number", default = nil }, { name = "sectionID", type = "number", default = nil } },
     returns = { { name = "productIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -186,6 +227,7 @@ APIDefs["C_CatalogShop.GetProductInfo"] = {
     params = { { name = "productID", type = "number", default = nil } },
     returns = { { name = "productInfo", type = "CatalogShopProductInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -198,6 +240,7 @@ APIDefs["C_CatalogShop.GetProductSortOrder"] = {
     params = { { name = "categoryID", type = "number", default = nil }, { name = "sectionID", type = "number", default = nil }, { name = "productID", type = "number", default = nil } },
     returns = { { name = "sortOrder", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -207,9 +250,10 @@ APIDefs["C_CatalogShop.GetRefundableDecors"] = {
     category = "general",
     subcategory = "c_catalogshop",
     funcPath = "C_CatalogShop.GetRefundableDecors",
-    params = { { name = "productIDOpt", type = "number", default = nil } },
-    returns = { { name = "refundableDecorInfos", type = "table", canBeSecret = false } },
+    params = { { name = "productIdFilterOpt", type = "number", default = nil } },
+    returns = { { name = "refundableDecorInfos", type = "table", canBeSecret = false }, { name = "minTimeRemainingSeconds", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -222,6 +266,7 @@ APIDefs["C_CatalogShop.GetSectionIDsForCategory"] = {
     params = { { name = "categoryID", type = "number", default = nil } },
     returns = { { name = "sectionIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -234,7 +279,20 @@ APIDefs["C_CatalogShop.GetSpellVisualInfoForMount"] = {
     params = { { name = "spellVisualID", type = "number", default = nil } },
     returns = { { name = "spellVisualInfo", type = "CatalogShopSpellVisualInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_CatalogShop.GetVCProductInfos"] = {
+    key = "C_CatalogShop.GetVCProductInfos",
+    name = "GetVCProductInfos",
+    category = "general",
+    subcategory = "c_catalogshop",
+    funcPath = "C_CatalogShop.GetVCProductInfos",
+    params = {  },
+    returns = { { name = "vcProductInfos", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.GetVirtualCurrencyBalance"] = {
@@ -246,6 +304,7 @@ APIDefs["C_CatalogShop.GetVirtualCurrencyBalance"] = {
     params = { { name = "currencyCode", type = "string", default = nil } },
     returns = { { name = "balance", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -258,6 +317,20 @@ APIDefs["C_CatalogShop.HasNewProducts"] = {
     params = {  },
     returns = { { name = "hasNewProducts", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_CatalogShop.IsProductIncludedInAnyBundle"] = {
+    key = "C_CatalogShop.IsProductIncludedInAnyBundle",
+    name = "IsProductIncludedInAnyBundle",
+    category = "general",
+    subcategory = "c_catalogshop",
+    funcPath = "C_CatalogShop.IsProductIncludedInAnyBundle",
+    params = { { name = "productID", type = "number", default = nil } },
+    returns = { { name = "isIncludedInAnyBundle", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_CatalogShop.IsShop2Enabled"] = {
@@ -269,6 +342,7 @@ APIDefs["C_CatalogShop.IsShop2Enabled"] = {
     params = {  },
     returns = { { name = "value", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.OnLegalDisclaimerClicked"] = {
@@ -280,7 +354,20 @@ APIDefs["C_CatalogShop.OnLegalDisclaimerClicked"] = {
     params = { { name = "catalogShopProductID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_CatalogShop.OnLegalPersonalizedOptOutClicked"] = {
+    key = "C_CatalogShop.OnLegalPersonalizedOptOutClicked",
+    name = "OnLegalPersonalizedOptOutClicked",
+    category = "general",
+    subcategory = "c_catalogshop",
+    funcPath = "C_CatalogShop.OnLegalPersonalizedOptOutClicked",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.OpenCatalogShopInteractionFromHouse"] = {
@@ -292,6 +379,7 @@ APIDefs["C_CatalogShop.OpenCatalogShopInteractionFromHouse"] = {
     params = {  },
     returns = { { name = "shoppingSessionUUIDStr", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.OpenCatalogShopInteractionFromShop"] = {
@@ -303,6 +391,7 @@ APIDefs["C_CatalogShop.OpenCatalogShopInteractionFromShop"] = {
     params = {  },
     returns = { { name = "shoppingSessionUUIDStr", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.ProductDisplayedTelemetry"] = {
@@ -314,6 +403,7 @@ APIDefs["C_CatalogShop.ProductDisplayedTelemetry"] = {
     params = { { name = "categoryId", type = "number", default = nil }, { name = "sectionId", type = "number", default = nil }, { name = "catalogShopProductID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -326,6 +416,7 @@ APIDefs["C_CatalogShop.ProductSelectedTelemetry"] = {
     params = { { name = "categoryId", type = "number", default = nil }, { name = "sectionId", type = "number", default = nil }, { name = "catalogShopProductID", type = "number", default = nil }, { name = "wasCodeSelection", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -338,6 +429,7 @@ APIDefs["C_CatalogShop.PurchaseProduct"] = {
     params = { { name = "productID", type = "number", default = nil } },
     returns = { { name = "canPurchase", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -350,6 +442,7 @@ APIDefs["C_CatalogShop.RefreshRefundableDecors"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.RefreshVirtualCurrencyBalance"] = {
@@ -361,7 +454,20 @@ APIDefs["C_CatalogShop.RefreshVirtualCurrencyBalance"] = {
     params = { { name = "currencyCode", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_CatalogShop.ShouldShowHousingWarning"] = {
+    key = "C_CatalogShop.ShouldShowHousingWarning",
+    name = "ShouldShowHousingWarning",
+    category = "general",
+    subcategory = "c_catalogshop",
+    funcPath = "C_CatalogShop.ShouldShowHousingWarning",
+    params = {  },
+    returns = { { name = "shouldShowHousingWarning", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CatalogShop.StartHousingVCPurchaseConfirmation"] = {
@@ -373,5 +479,6 @@ APIDefs["C_CatalogShop.StartHousingVCPurchaseConfirmation"] = {
     params = { { name = "productID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

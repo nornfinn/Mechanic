@@ -11,6 +11,7 @@ APIDefs["C_TransmogSets.ClearLatestSource"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.ClearNewSource"] = {
@@ -22,6 +23,7 @@ APIDefs["C_TransmogSets.ClearNewSource"] = {
     params = { { name = "sourceID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_TransmogSets.ClearSetNewSourcesForSlot"] = {
     params = { { name = "transmogSetID", type = "number", default = nil }, { name = "slot", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_TransmogSets.GetAllSets"] = {
     params = {  },
     returns = { { name = "sets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetAllSourceIDs"] = {
@@ -57,6 +61,7 @@ APIDefs["C_TransmogSets.GetAllSourceIDs"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "sources", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_TransmogSets.GetAvailableSets"] = {
     params = {  },
     returns = { { name = "sets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetBaseSetID"] = {
@@ -80,6 +86,7 @@ APIDefs["C_TransmogSets.GetBaseSetID"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "baseTransmogSetID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -92,6 +99,7 @@ APIDefs["C_TransmogSets.GetBaseSets"] = {
     params = {  },
     returns = { { name = "sets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetBaseSetsFilter"] = {
@@ -103,6 +111,7 @@ APIDefs["C_TransmogSets.GetBaseSetsFilter"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "isChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -115,6 +124,7 @@ APIDefs["C_TransmogSets.GetCameraIDs"] = {
     params = {  },
     returns = { { name = "detailsCameraID", type = "number", canBeSecret = false }, { name = "vendorCameraID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetFilteredBaseSetsCounts"] = {
@@ -126,6 +136,7 @@ APIDefs["C_TransmogSets.GetFilteredBaseSetsCounts"] = {
     params = {  },
     returns = { { name = "numCollected", type = "number", canBeSecret = false }, { name = "numTotal", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetFullBaseSetsCounts"] = {
@@ -137,6 +148,7 @@ APIDefs["C_TransmogSets.GetFullBaseSetsCounts"] = {
     params = {  },
     returns = { { name = "numCollected", type = "number", canBeSecret = false }, { name = "numTotal", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetIsFavorite"] = {
@@ -148,6 +160,7 @@ APIDefs["C_TransmogSets.GetIsFavorite"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "isFavorite", type = "bool", canBeSecret = false }, { name = "isGroupFavorite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -160,6 +173,7 @@ APIDefs["C_TransmogSets.GetLatestSource"] = {
     params = {  },
     returns = { { name = "sourceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetSetInfo"] = {
@@ -171,6 +185,7 @@ APIDefs["C_TransmogSets.GetSetInfo"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "set", type = "TransmogSetInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -183,6 +198,7 @@ APIDefs["C_TransmogSets.GetSetNewSources"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "sourceIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -195,6 +211,7 @@ APIDefs["C_TransmogSets.GetSetPrimaryAppearances"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "apppearances", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -207,6 +224,7 @@ APIDefs["C_TransmogSets.GetSetsContainingSourceID"] = {
     params = { { name = "sourceID", type = "number", default = nil } },
     returns = { { name = "setIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -219,6 +237,7 @@ APIDefs["C_TransmogSets.GetSetsFilter"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "isChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -231,6 +250,7 @@ APIDefs["C_TransmogSets.GetSourceIDsForSlot"] = {
     params = { { name = "transmogSetID", type = "number", default = nil }, { name = "slot", type = "luaIndex", default = nil } },
     returns = { { name = "sources", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -243,6 +263,7 @@ APIDefs["C_TransmogSets.GetSourcesForSlot"] = {
     params = { { name = "transmogSetID", type = "number", default = nil }, { name = "slot", type = "luaIndex", default = nil } },
     returns = { { name = "sources", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -255,6 +276,7 @@ APIDefs["C_TransmogSets.GetTransmogSetsClassFilter"] = {
     params = {  },
     returns = { { name = "classID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetUsableSets"] = {
@@ -266,6 +288,7 @@ APIDefs["C_TransmogSets.GetUsableSets"] = {
     params = {  },
     returns = { { name = "sets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetValidBaseSetsCountsForCharacter"] = {
@@ -277,6 +300,7 @@ APIDefs["C_TransmogSets.GetValidBaseSetsCountsForCharacter"] = {
     params = {  },
     returns = { { name = "numCollected", type = "number", canBeSecret = false }, { name = "numTotal", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.GetValidClassForSet"] = {
@@ -288,6 +312,7 @@ APIDefs["C_TransmogSets.GetValidClassForSet"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "classID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -300,7 +325,32 @@ APIDefs["C_TransmogSets.GetVariantSets"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "sets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogSets.HasAnyValidSets"] = {
+    key = "C_TransmogSets.HasAnyValidSets",
+    name = "HasAnyValidSets",
+    category = "general",
+    subcategory = "c_transmogsets",
+    funcPath = "C_TransmogSets.HasAnyValidSets",
+    params = {  },
+    returns = { { name = "hasAnyValidSets", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
+APIDefs["C_TransmogSets.HasAvailableSets"] = {
+    key = "C_TransmogSets.HasAvailableSets",
+    name = "HasAvailableSets",
+    category = "general",
+    subcategory = "c_transmogsets",
+    funcPath = "C_TransmogSets.HasAvailableSets",
+    params = {  },
+    returns = { { name = "hasAvailableSets", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.HasUsableSets"] = {
@@ -312,6 +362,7 @@ APIDefs["C_TransmogSets.HasUsableSets"] = {
     params = {  },
     returns = { { name = "hasUsableSets", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.IsBaseSetCollected"] = {
@@ -323,6 +374,7 @@ APIDefs["C_TransmogSets.IsBaseSetCollected"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "isCollected", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -335,6 +387,7 @@ APIDefs["C_TransmogSets.IsNewSource"] = {
     params = { { name = "sourceID", type = "number", default = nil } },
     returns = { { name = "isNew", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -347,6 +400,7 @@ APIDefs["C_TransmogSets.IsSetVisible"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "isVisible", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -359,6 +413,7 @@ APIDefs["C_TransmogSets.IsUsingDefaultBaseSetsFilters"] = {
     params = {  },
     returns = { { name = "isUsingDefaultBaseSetsFilters", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.IsUsingDefaultSetsFilters"] = {
@@ -370,6 +425,7 @@ APIDefs["C_TransmogSets.IsUsingDefaultSetsFilters"] = {
     params = {  },
     returns = { { name = "isUsingDefaultSetsFilters", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.SetBaseSetsFilter"] = {
@@ -381,6 +437,7 @@ APIDefs["C_TransmogSets.SetBaseSetsFilter"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "isChecked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -393,6 +450,7 @@ APIDefs["C_TransmogSets.SetDefaultBaseSetsFilters"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.SetDefaultSetsFilters"] = {
@@ -404,6 +462,7 @@ APIDefs["C_TransmogSets.SetDefaultSetsFilters"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogSets.SetHasNewSources"] = {
@@ -415,6 +474,7 @@ APIDefs["C_TransmogSets.SetHasNewSources"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = { { name = "hasNewSources", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -427,6 +487,7 @@ APIDefs["C_TransmogSets.SetHasNewSourcesForSlot"] = {
     params = { { name = "transmogSetID", type = "number", default = nil }, { name = "slot", type = "luaIndex", default = nil } },
     returns = { { name = "hasNewSources", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -439,6 +500,7 @@ APIDefs["C_TransmogSets.SetIsFavorite"] = {
     params = { { name = "transmogSetID", type = "number", default = nil }, { name = "isFavorite", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -451,6 +513,7 @@ APIDefs["C_TransmogSets.SetSetsFilter"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "isChecked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -463,5 +526,6 @@ APIDefs["C_TransmogSets.SetTransmogSetsClassFilter"] = {
     params = { { name = "classID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_ItemUpgrade.CanUpgradeItem"] = {
     params = { { name = "baseItem", type = "ItemLocation", default = nil } },
     returns = { { name = "isValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ItemUpgrade.ClearItemUpgrade"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemUpgrade.CloseItemUpgrade"] = {
@@ -34,6 +36,7 @@ APIDefs["C_ItemUpgrade.CloseItemUpgrade"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemUpgrade.GetHighWatermarkForItem"] = {
@@ -45,6 +48,7 @@ APIDefs["C_ItemUpgrade.GetHighWatermarkForItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "characterHighWatermark", type = "number", canBeSecret = false }, { name = "accountHighWatermark", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_ItemUpgrade.GetHighWatermarkForSlot"] = {
     params = { { name = "itemRedundancySlot", type = "number", default = nil } },
     returns = { { name = "characterHighWatermark", type = "number", canBeSecret = false }, { name = "accountHighWatermark", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_ItemUpgrade.GetHighWatermarkSlotForItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemRedundancySlot", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_ItemUpgrade.GetItemHyperlink"] = {
     params = {  },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemUpgrade.GetItemUpgradeCurrentLevel"] = {
@@ -92,6 +99,7 @@ APIDefs["C_ItemUpgrade.GetItemUpgradeCurrentLevel"] = {
     params = {  },
     returns = { { name = "itemLevel", type = "number", canBeSecret = false }, { name = "isPvpItemLevel", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemUpgrade.GetItemUpgradeEffect"] = {
@@ -103,6 +111,7 @@ APIDefs["C_ItemUpgrade.GetItemUpgradeEffect"] = {
     params = { { name = "effectIndex", type = "number", default = nil }, { name = "numUpgradeLevels", type = "number", default = nil } },
     returns = { { name = "outBaseEffect", type = "string", canBeSecret = false }, { name = "outUpgradedEffect", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -115,6 +124,7 @@ APIDefs["C_ItemUpgrade.GetItemUpgradeItemInfo"] = {
     params = {  },
     returns = { { name = "itemInfo", type = "ItemUpgradeItemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues"] = {
@@ -126,6 +136,7 @@ APIDefs["C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues"] = {
     params = { { name = "numUpgradeLevels", type = "number", default = nil } },
     returns = { { name = "currentPvPItemLevel", type = "number", canBeSecret = false }, { name = "upgradedPvPItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -138,6 +149,7 @@ APIDefs["C_ItemUpgrade.GetNumItemUpgradeEffects"] = {
     params = {  },
     returns = { { name = "numItemUpgradeEffects", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemUpgrade.IsItemBound"] = {
@@ -149,6 +161,7 @@ APIDefs["C_ItemUpgrade.IsItemBound"] = {
     params = {  },
     returns = { { name = "isBound", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemUpgrade.SetItemUpgradeFromCursorItem"] = {
@@ -160,6 +173,7 @@ APIDefs["C_ItemUpgrade.SetItemUpgradeFromCursorItem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemUpgrade.SetItemUpgradeFromLocation"] = {
@@ -171,6 +185,7 @@ APIDefs["C_ItemUpgrade.SetItemUpgradeFromLocation"] = {
     params = { { name = "itemToSet", type = "ItemLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -183,5 +198,6 @@ APIDefs["C_ItemUpgrade.UpgradeItem"] = {
     params = { { name = "numUpgrades", type = "number", default = 1 } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

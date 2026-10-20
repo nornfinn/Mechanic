@@ -14,6 +14,9 @@
     <Script file="C_ArtifactUI.lua"/>
     <Script file="C_AssistedCombat.lua"/>
     <Script file="C_AuctionHouse.lua"/>
+    <Script file="C_AuraContainerUtil.lua"/>
+    <Script file="C_AutoComplete.lua"/>
+    <Script file="C_AutoLoot.lua"/>
     <Script file="C_AzeriteEmpoweredItem.lua"/>
     <Script file="C_AzeriteEssence.lua"/>
     <Script file="C_AzeriteItem.lua"/>
@@ -21,6 +24,8 @@
     <Script file="C_BarberShop.lua"/>
     <Script file="C_BattleNet.lua"/>
     <Script file="C_BehavioralMessaging.lua"/>
+    <Script file="C_BlizzCon2026.lua"/>
+    <Script file="C_Browser.lua"/>
     <Script file="C_CVar.lua"/>
     <Script file="C_Calendar.lua"/>
     <Script file="C_CampaignInfo.lua"/>
@@ -33,6 +38,7 @@
     <Script file="C_ClassColor.lua"/>
     <Script file="C_ClassTalents.lua"/>
     <Script file="C_ClickBindings.lua"/>
+    <Script file="C_ClientScene.lua"/>
     <Script file="C_Club.lua"/>
     <Script file="C_ClubFinder.lua"/>
     <Script file="C_ColorOverrides.lua"/>
@@ -60,10 +66,12 @@
     <Script file="C_DeathInfo.lua"/>
     <Script file="C_DeathRecap.lua"/>
     <Script file="C_DelvesUI.lua"/>
+    <Script file="C_Discord.lua"/>
     <Script file="C_DurationUtil.lua"/>
     <Script file="C_DyeColor.lua"/>
     <Script file="C_EditMode.lua"/>
     <Script file="C_EncodingUtil.lua"/>
+    <Script file="C_EncounterEvents.lua"/>
     <Script file="C_EncounterJournal.lua"/>
     <Script file="C_EncounterTimeline.lua"/>
     <Script file="C_EncounterWarnings.lua"/>
@@ -74,11 +82,13 @@
     <Script file="C_EventUtils.lua"/>
     <Script file="C_ExpansionTrial.lua"/>
     <Script file="C_ExternalEventURL.lua"/>
+    <Script file="C_Flyout.lua"/>
     <Script file="C_FogOfWar.lua"/>
     <Script file="C_FrameManager.lua"/>
     <Script file="C_FriendList.lua"/>
     <Script file="C_GamePad.lua"/>
     <Script file="C_GameRules.lua"/>
+    <Script file="C_GamepadTargeting.lua"/>
     <Script file="C_Garrison.lua"/>
     <Script file="C_GenericWidgetDisplay.lua"/>
     <Script file="C_Glue.lua"/>
@@ -90,18 +100,22 @@
     <Script file="C_HouseExterior.lua"/>
     <Script file="C_Housing.lua"/>
     <Script file="C_HousingBasicMode.lua"/>
+    <Script file="C_HousingBlueprint.lua"/>
     <Script file="C_HousingCatalog.lua"/>
     <Script file="C_HousingCleanupMode.lua"/>
     <Script file="C_HousingCustomizeMode.lua"/>
     <Script file="C_HousingDecor.lua"/>
     <Script file="C_HousingExpertMode.lua"/>
+    <Script file="C_HousingInspectMode.lua"/>
     <Script file="C_HousingLayout.lua"/>
     <Script file="C_HousingNeighborhood.lua"/>
     <Script file="C_ImmersiveInteraction.lua"/>
     <Script file="C_IncomingSummon.lua"/>
+    <Script file="C_InputInterfaceStyle.lua"/>
     <Script file="C_InstanceEncounter.lua"/>
     <Script file="C_InstanceLeaver.lua"/>
     <Script file="C_InterfaceFileManifest.lua"/>
+    <Script file="C_Intl.lua"/>
     <Script file="C_InvasionInfo.lua"/>
     <Script file="C_IslandsQueue.lua"/>
     <Script file="C_Item.lua"/>
@@ -111,6 +125,7 @@
     <Script file="C_KeyBindings.lua"/>
     <Script file="C_LFGInfo.lua"/>
     <Script file="C_LFGList.lua"/>
+    <Script file="C_LFGListRoles.lua"/>
     <Script file="C_LegendaryCrafting.lua"/>
     <Script file="C_LevelLink.lua"/>
     <Script file="C_LevelSquish.lua"/>
@@ -118,6 +133,7 @@
     <Script file="C_LobbyMatchmakerInfo.lua"/>
     <Script file="C_Log.lua"/>
     <Script file="C_Loot.lua"/>
+    <Script file="C_LootFrame.lua"/>
     <Script file="C_LootHistory.lua"/>
     <Script file="C_LootJournal.lua"/>
     <Script file="C_LoreText.lua"/>
@@ -133,7 +149,9 @@
     <Script file="C_ModifiedInstance.lua"/>
     <Script file="C_MountJournal.lua"/>
     <Script file="C_MythicPlus.lua"/>
+    <Script file="C_NamePlate.lua"/>
     <Script file="C_NamePlateManager.lua"/>
+    <Script file="C_NameUtil.lua"/>
     <Script file="C_Navigation.lua"/>
     <Script file="C_NeighborhoodInitiative.lua"/>
     <Script file="C_NewItems.lua"/>
@@ -145,6 +163,7 @@
     <Script file="C_PetBattles.lua"/>
     <Script file="C_PetInfo.lua"/>
     <Script file="C_PetJournal.lua"/>
+    <Script file="C_PhotoSharing.lua"/>
     <Script file="C_Ping.lua"/>
     <Script file="C_PlayerChoice.lua"/>
     <Script file="C_PlayerInfo.lua"/>
@@ -167,14 +186,17 @@
     <Script file="C_Reputation.lua"/>
     <Script file="C_ResearchInfo.lua"/>
     <Script file="C_RestrictedActions.lua"/>
+    <Script file="C_Roleset.lua"/>
     <Script file="C_ScenarioInfo.lua"/>
     <Script file="C_ScrappingMachineUI.lua"/>
     <Script file="C_ScriptedAnimations.lua"/>
     <Script file="C_SeasonInfo.lua"/>
     <Script file="C_Secrets.lua"/>
     <Script file="C_SettingsUtil.lua"/>
+    <Script file="C_SkillInfo.lua"/>
     <Script file="C_SocialQueue.lua"/>
     <Script file="C_SocialRestrictions.lua"/>
+    <Script file="C_SocialUI.lua"/>
     <Script file="C_Soulbinds.lua"/>
     <Script file="C_Sound.lua"/>
     <Script file="C_SpecializationInfo.lua"/>
@@ -188,6 +210,7 @@
     <Script file="C_StringUtil.lua"/>
     <Script file="C_SummonInfo.lua"/>
     <Script file="C_SuperTrack.lua"/>
+    <Script file="C_SwingTimer.lua"/>
     <Script file="C_System.lua"/>
     <Script file="C_SystemVisibilityManager.lua"/>
     <Script file="C_TTSSettings.lua"/>
@@ -201,6 +224,7 @@
     <Script file="C_ToyBoxInfo.lua"/>
     <Script file="C_TradeInfo.lua"/>
     <Script file="C_TradeSkillUI.lua"/>
+    <Script file="C_Trainer.lua"/>
     <Script file="C_Traits.lua"/>
     <Script file="C_Transmog.lua"/>
     <Script file="C_TransmogCollection.lua"/>
@@ -209,6 +233,7 @@
     <Script file="C_Tutorial.lua"/>
     <Script file="C_UI.lua"/>
     <Script file="C_UIColor.lua"/>
+    <Script file="C_UIFileAsset.lua"/>
     <Script file="C_UIWidgetManager.lua"/>
     <Script file="C_UnitAuras.lua"/>
     <Script file="C_UserFeedback.lua"/>
@@ -216,6 +241,7 @@
     <Script file="C_VignetteInfo.lua"/>
     <Script file="C_VoiceChat.lua"/>
     <Script file="C_WarbandScene.lua"/>
+    <Script file="C_Weather.lua"/>
     <Script file="C_WeeklyRewards.lua"/>
     <Script file="C_WorldLootObject.lua"/>
     <Script file="C_WowSurvey.lua"/>
@@ -223,5 +249,7 @@
     <Script file="C_XMLUtil.lua"/>
     <Script file="C_ZoneAbility.lua"/>
     <Script file="Global.lua"/>
+    <Script file="math.lua"/>
+    <Script file="string.lua"/>
     <Script file="table.lua"/>
 </Ui>

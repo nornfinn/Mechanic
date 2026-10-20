@@ -11,6 +11,7 @@ APIDefs["C_HeirloomInfo.AreAllCollectionFiltersChecked"] = {
     params = {  },
     returns = { { name = "areAllCollectionFiltersChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HeirloomInfo.AreAllSourceFiltersChecked"] = {
@@ -22,6 +23,19 @@ APIDefs["C_HeirloomInfo.AreAllSourceFiltersChecked"] = {
     params = {  },
     returns = { { name = "areAllSourceFiltersChecked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HeirloomInfo.HeirloomsAvailable"] = {
+    key = "C_HeirloomInfo.HeirloomsAvailable",
+    name = "HeirloomsAvailable",
+    category = "general",
+    subcategory = "c_heirloominfo",
+    funcPath = "C_HeirloomInfo.HeirloomsAvailable",
+    params = {  },
+    returns = { { name = "areHeirloomsAvailable", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_HeirloomInfo.IsHeirloomSourceValid"] = {
@@ -33,6 +47,7 @@ APIDefs["C_HeirloomInfo.IsHeirloomSourceValid"] = {
     params = { { name = "source", type = "luaIndex", default = nil } },
     returns = { { name = "isHeirloomSourceValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,6 +60,7 @@ APIDefs["C_HeirloomInfo.IsUsingDefaultFilters"] = {
     params = {  },
     returns = { { name = "isUsingDefaultFilters", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HeirloomInfo.SetAllCollectionFilters"] = {
@@ -56,6 +72,7 @@ APIDefs["C_HeirloomInfo.SetAllCollectionFilters"] = {
     params = { { name = "checked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -68,6 +85,7 @@ APIDefs["C_HeirloomInfo.SetAllSourceFilters"] = {
     params = { { name = "checked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -80,4 +98,5 @@ APIDefs["C_HeirloomInfo.SetDefaultFilters"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

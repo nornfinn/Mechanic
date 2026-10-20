@@ -11,6 +11,7 @@ APIDefs["C_CovenantCallings.AreCallingsUnlocked"] = {
     params = {  },
     returns = { { name = "unlocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantCallings.RequestCallings"] = {
@@ -22,4 +23,5 @@ APIDefs["C_CovenantCallings.RequestCallings"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

@@ -11,6 +11,7 @@ APIDefs["C_Soulbinds.ActivateSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_Soulbinds.CanActivateSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false }, { name = "errorDescription", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_Soulbinds.CanModifySoulbind"] = {
     params = {  },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Soulbinds.CanResetConduitsInSoulbind"] = {
@@ -46,6 +49,7 @@ APIDefs["C_Soulbinds.CanResetConduitsInSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false }, { name = "errorDescription", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_Soulbinds.CanSwitchActiveSoulbindTreeBranch"] = {
     params = {  },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Soulbinds.CloseUI"] = {
@@ -69,6 +74,7 @@ APIDefs["C_Soulbinds.CloseUI"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Soulbinds.CommitPendingConduitsInSoulbind"] = {
@@ -80,6 +86,7 @@ APIDefs["C_Soulbinds.CommitPendingConduitsInSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -92,6 +99,7 @@ APIDefs["C_Soulbinds.FindNodeIDActuallyInstalled"] = {
     params = { { name = "soulbindID", type = "number", default = nil }, { name = "conduitID", type = "number", default = nil } },
     returns = { { name = "nodeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_Soulbinds.FindNodeIDAppearingInstalled"] = {
     params = { { name = "soulbindID", type = "number", default = nil }, { name = "conduitID", type = "number", default = nil } },
     returns = { { name = "nodeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -116,6 +125,7 @@ APIDefs["C_Soulbinds.FindNodeIDPendingInstall"] = {
     params = { { name = "soulbindID", type = "number", default = nil }, { name = "conduitID", type = "number", default = nil } },
     returns = { { name = "nodeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -128,6 +138,7 @@ APIDefs["C_Soulbinds.FindNodeIDPendingUninstall"] = {
     params = { { name = "soulbindID", type = "number", default = nil }, { name = "conduitID", type = "number", default = nil } },
     returns = { { name = "nodeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -140,6 +151,7 @@ APIDefs["C_Soulbinds.GetActiveSoulbindID"] = {
     params = {  },
     returns = { { name = "soulbindID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Soulbinds.GetConduitCollection"] = {
@@ -151,6 +163,7 @@ APIDefs["C_Soulbinds.GetConduitCollection"] = {
     params = { { name = "conduitType", type = "SoulbindConduitType", default = nil } },
     returns = { { name = "collectionData", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -163,6 +176,7 @@ APIDefs["C_Soulbinds.GetConduitCollectionCount"] = {
     params = {  },
     returns = { { name = "count", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Soulbinds.GetConduitCollectionData"] = {
@@ -174,6 +188,7 @@ APIDefs["C_Soulbinds.GetConduitCollectionData"] = {
     params = { { name = "conduitID", type = "number", default = nil } },
     returns = { { name = "collectionData", type = "ConduitCollectionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -186,6 +201,7 @@ APIDefs["C_Soulbinds.GetConduitCollectionDataAtCursor"] = {
     params = {  },
     returns = { { name = "collectionData", type = "ConduitCollectionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Soulbinds.GetConduitCollectionDataByVirtualID"] = {
@@ -197,6 +213,7 @@ APIDefs["C_Soulbinds.GetConduitCollectionDataByVirtualID"] = {
     params = { { name = "virtualID", type = "number", default = nil } },
     returns = { { name = "collectionData", type = "ConduitCollectionData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -209,6 +226,7 @@ APIDefs["C_Soulbinds.GetConduitDisplayed"] = {
     params = { { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "conduitID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -221,6 +239,7 @@ APIDefs["C_Soulbinds.GetConduitHyperlink"] = {
     params = { { name = "conduitID", type = "number", default = nil }, { name = "rank", type = "number", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -233,6 +252,7 @@ APIDefs["C_Soulbinds.GetConduitIDPendingInstall"] = {
     params = { { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "conduitID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -245,6 +265,7 @@ APIDefs["C_Soulbinds.GetConduitQuality"] = {
     params = { { name = "conduitID", type = "number", default = nil }, { name = "rank", type = "number", default = nil } },
     returns = { { name = "quality", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -257,6 +278,7 @@ APIDefs["C_Soulbinds.GetConduitRank"] = {
     params = { { name = "conduitID", type = "number", default = nil } },
     returns = { { name = "conduitRank", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -269,6 +291,7 @@ APIDefs["C_Soulbinds.GetConduitSpellID"] = {
     params = { { name = "conduitID", type = "number", default = nil }, { name = "conduitRank", type = "number", default = nil } },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -281,6 +304,7 @@ APIDefs["C_Soulbinds.GetInstalledConduitID"] = {
     params = { { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "conduitID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -293,6 +317,7 @@ APIDefs["C_Soulbinds.GetNode"] = {
     params = { { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "node", type = "SoulbindNode", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -305,6 +330,7 @@ APIDefs["C_Soulbinds.GetSoulbindData"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = { { name = "data", type = "SoulbindData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -317,6 +343,7 @@ APIDefs["C_Soulbinds.GetSpecsAssignedToSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = { { name = "specIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -329,6 +356,7 @@ APIDefs["C_Soulbinds.GetTree"] = {
     params = { { name = "treeID", type = "number", default = nil } },
     returns = { { name = "tree", type = "SoulbindTree", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -341,6 +369,7 @@ APIDefs["C_Soulbinds.HasAnyInstalledConduitInSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -353,6 +382,7 @@ APIDefs["C_Soulbinds.HasAnyPendingConduits"] = {
     params = {  },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Soulbinds.HasPendingConduitsInSoulbind"] = {
@@ -364,6 +394,7 @@ APIDefs["C_Soulbinds.HasPendingConduitsInSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -376,6 +407,7 @@ APIDefs["C_Soulbinds.IsConduitInstalled"] = {
     params = { { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -388,6 +420,7 @@ APIDefs["C_Soulbinds.IsConduitInstalledInSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil }, { name = "conduitID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -400,6 +433,7 @@ APIDefs["C_Soulbinds.IsItemConduitByItemInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -412,6 +446,7 @@ APIDefs["C_Soulbinds.IsNodePendingModify"] = {
     params = { { name = "nodeID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -424,6 +459,7 @@ APIDefs["C_Soulbinds.IsUnselectedConduitPendingInSoulbind"] = {
     params = { { name = "soulbindID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -436,6 +472,7 @@ APIDefs["C_Soulbinds.ModifyNode"] = {
     params = { { name = "nodeID", type = "number", default = nil }, { name = "conduitID", type = "number", default = nil }, { name = "type", type = "SoulbindConduitTransactionType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -448,6 +485,7 @@ APIDefs["C_Soulbinds.SelectNode"] = {
     params = { { name = "nodeID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -460,5 +498,6 @@ APIDefs["C_Soulbinds.UnmodifyNode"] = {
     params = { { name = "nodeID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

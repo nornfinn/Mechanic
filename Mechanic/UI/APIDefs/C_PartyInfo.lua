@@ -11,6 +11,7 @@ APIDefs["C_PartyInfo.AllowedToDoPartyConversion"] = {
     params = { { name = "toRaid", type = "bool", default = nil } },
     returns = { { name = "allowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_PartyInfo.CanFormCrossFactionParties"] = {
     params = {  },
     returns = { { name = "canFormCrossFactionParties", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.CanInvite"] = {
@@ -34,6 +36,7 @@ APIDefs["C_PartyInfo.CanInvite"] = {
     params = {  },
     returns = { { name = "allowedToInvite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.CanStartInstanceAbandonVote"] = {
@@ -45,6 +48,7 @@ APIDefs["C_PartyInfo.CanStartInstanceAbandonVote"] = {
     params = {  },
     returns = { { name = "canStart", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.ChallengeModeRestrictionsActive"] = {
@@ -56,6 +60,7 @@ APIDefs["C_PartyInfo.ChallengeModeRestrictionsActive"] = {
     params = {  },
     returns = { { name = "restrictionsActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.ConfirmConvertToRaid"] = {
@@ -67,6 +72,7 @@ APIDefs["C_PartyInfo.ConfirmConvertToRaid"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.ConfirmInviteTravelPass"] = {
@@ -78,6 +84,7 @@ APIDefs["C_PartyInfo.ConfirmInviteTravelPass"] = {
     params = { { name = "targetName", type = "cstring", default = nil }, { name = "targetGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -90,6 +97,7 @@ APIDefs["C_PartyInfo.ConfirmInviteUnit"] = {
     params = { { name = "targetName", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -102,6 +110,20 @@ APIDefs["C_PartyInfo.ConfirmLeaveParty"] = {
     params = { { name = "category", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PartyInfo.ConfirmReadyCheck"] = {
+    key = "C_PartyInfo.ConfirmReadyCheck",
+    name = "ConfirmReadyCheck",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.ConfirmReadyCheck",
+    params = { { name = "isReady", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -114,6 +136,7 @@ APIDefs["C_PartyInfo.ConfirmRequestInviteFromUnit"] = {
     params = { { name = "targetName", type = "cstring", default = nil }, { name = "tank", type = "bool", default = nil }, { name = "healer", type = "bool", default = nil }, { name = "dps", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -126,6 +149,7 @@ APIDefs["C_PartyInfo.ConvertToParty"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.ConvertToRaid"] = {
@@ -137,6 +161,7 @@ APIDefs["C_PartyInfo.ConvertToRaid"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.DelveTeleportOut"] = {
@@ -148,6 +173,20 @@ APIDefs["C_PartyInfo.DelveTeleportOut"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PartyInfo.DemoteAssistant"] = {
+    key = "C_PartyInfo.DemoteAssistant",
+    name = "DemoteAssistant",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.DemoteAssistant",
+    params = { { name = "name", type = "cstring", default = nil }, { name = "exactNameMatch", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_PartyInfo.DoCountdown"] = {
@@ -159,7 +198,20 @@ APIDefs["C_PartyInfo.DoCountdown"] = {
     params = { { name = "seconds", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PartyInfo.DoReadyCheck"] = {
+    key = "C_PartyInfo.DoReadyCheck",
+    name = "DoReadyCheck",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.DoReadyCheck",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetActiveCategories"] = {
@@ -171,6 +223,7 @@ APIDefs["C_PartyInfo.GetActiveCategories"] = {
     params = {  },
     returns = { { name = "categories", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetAvailableLootMethods"] = {
@@ -182,6 +235,7 @@ APIDefs["C_PartyInfo.GetAvailableLootMethods"] = {
     params = {  },
     returns = { { name = "methods", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetInstanceAbandonShutdownTime"] = {
@@ -193,6 +247,7 @@ APIDefs["C_PartyInfo.GetInstanceAbandonShutdownTime"] = {
     params = {  },
     returns = { { name = "durationSeconds", type = "number", canBeSecret = false }, { name = "timeLeftSeconds", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetInstanceAbandonVoteCooldownTime"] = {
@@ -204,6 +259,7 @@ APIDefs["C_PartyInfo.GetInstanceAbandonVoteCooldownTime"] = {
     params = {  },
     returns = { { name = "durationSeconds", type = "number", canBeSecret = false }, { name = "timeLeftSeconds", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetInstanceAbandonVoteRequirements"] = {
@@ -215,6 +271,7 @@ APIDefs["C_PartyInfo.GetInstanceAbandonVoteRequirements"] = {
     params = {  },
     returns = { { name = "votesRequired", type = "number", canBeSecret = false }, { name = "keystoneOwnerVoteWeight", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetInstanceAbandonVoteResponse"] = {
@@ -226,6 +283,7 @@ APIDefs["C_PartyInfo.GetInstanceAbandonVoteResponse"] = {
     params = {  },
     returns = { { name = "response", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetInstanceAbandonVoteTime"] = {
@@ -237,6 +295,7 @@ APIDefs["C_PartyInfo.GetInstanceAbandonVoteTime"] = {
     params = {  },
     returns = { { name = "durationSeconds", type = "number", canBeSecret = false }, { name = "timeLeftSeconds", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetInviteConfirmationInvalidQueues"] = {
@@ -248,6 +307,7 @@ APIDefs["C_PartyInfo.GetInviteConfirmationInvalidQueues"] = {
     params = { { name = "inviteGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "invalidQueues", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -260,6 +320,7 @@ APIDefs["C_PartyInfo.GetInviteReferralInfo"] = {
     params = { { name = "inviteGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "outReferredByGuid", type = "WOWGUID", canBeSecret = false }, { name = "outReferredByName", type = "cstring", canBeSecret = false }, { name = "outRelationType", type = "PartyRequestJoinRelation", canBeSecret = false }, { name = "outIsQuickJoin", type = "bool", canBeSecret = false }, { name = "outClubId", type = "ClubId", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -272,6 +333,19 @@ APIDefs["C_PartyInfo.GetLootMethod"] = {
     params = {  },
     returns = { { name = "method", type = "LootMethod", canBeSecret = false }, { name = "masterLootPartyID", type = "number", canBeSecret = false }, { name = "masterLooterRaidID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PartyInfo.GetLootMethodStyle"] = {
+    key = "C_PartyInfo.GetLootMethodStyle",
+    name = "GetLootMethodStyle",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.GetLootMethodStyle",
+    params = {  },
+    returns = { { name = "methodStyle", type = "LootMethodStyles", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetMinItemLevel"] = {
@@ -283,6 +357,7 @@ APIDefs["C_PartyInfo.GetMinItemLevel"] = {
     params = { { name = "avgItemLevelCategory", type = "AvgItemLevelCategories", default = nil } },
     returns = { { name = "minItemLevel", type = "number", canBeSecret = false }, { name = "playerNameWithLowestItemLevel", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -295,6 +370,7 @@ APIDefs["C_PartyInfo.GetMinLevel"] = {
     params = { { name = "category", type = "luaIndex", default = nil } },
     returns = { { name = "minLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -307,6 +383,7 @@ APIDefs["C_PartyInfo.GetNumInstanceAbandonGroupVoteResponses"] = {
     params = {  },
     returns = { { name = "count", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.GetRestrictPings"] = {
@@ -318,6 +395,7 @@ APIDefs["C_PartyInfo.GetRestrictPings"] = {
     params = {  },
     returns = { { name = "restrictTo", type = "RestrictPingsTo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.InviteUnit"] = {
@@ -329,6 +407,7 @@ APIDefs["C_PartyInfo.InviteUnit"] = {
     params = { { name = "targetName", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -341,6 +420,7 @@ APIDefs["C_PartyInfo.IsChallengeModeActive"] = {
     params = {  },
     returns = { { name = "active", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.IsChallengeModeKeystoneOwner"] = {
@@ -352,6 +432,7 @@ APIDefs["C_PartyInfo.IsChallengeModeKeystoneOwner"] = {
     params = {  },
     returns = { { name = "isKeystoneOwner", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.IsCrossFactionParty"] = {
@@ -363,6 +444,7 @@ APIDefs["C_PartyInfo.IsCrossFactionParty"] = {
     params = { { name = "category", type = "luaIndex", default = nil } },
     returns = { { name = "isCrossFactionParty", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -375,6 +457,7 @@ APIDefs["C_PartyInfo.IsDelveComplete"] = {
     params = {  },
     returns = { { name = "isDelveComplete", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.IsDelveInProgress"] = {
@@ -386,6 +469,33 @@ APIDefs["C_PartyInfo.IsDelveInProgress"] = {
     params = {  },
     returns = { { name = "isDelveComplete", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PartyInfo.IsGUIDInGroup"] = {
+    key = "C_PartyInfo.IsGUIDInGroup",
+    name = "IsGUIDInGroup",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.IsGUIDInGroup",
+    params = { { name = "guid", type = "WOWGUID", default = nil }, { name = "category", type = "luaIndex", default = nil } },
+    returns = { { name = "isInGroup", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PartyInfo.IsLootMethodAvailable"] = {
+    key = "C_PartyInfo.IsLootMethodAvailable",
+    name = "IsLootMethodAvailable",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.IsLootMethodAvailable",
+    params = { { name = "method", type = "LootMethod", default = nil } },
+    returns = { { name = "available", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_PartyInfo.IsPartyFull"] = {
@@ -397,6 +507,7 @@ APIDefs["C_PartyInfo.IsPartyFull"] = {
     params = { { name = "category", type = "luaIndex", default = nil } },
     returns = { { name = "isFull", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -409,6 +520,7 @@ APIDefs["C_PartyInfo.IsPartyInJailersTower"] = {
     params = {  },
     returns = { { name = "isPartyInJailersTower", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PartyInfo.IsPartyWalkIn"] = {
@@ -420,6 +532,31 @@ APIDefs["C_PartyInfo.IsPartyWalkIn"] = {
     params = {  },
     returns = { { name = "isPartyWalkIn", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PartyInfo.IsRaidListEnabled"] = {
+    key = "C_PartyInfo.IsRaidListEnabled",
+    name = "IsRaidListEnabled",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.IsRaidListEnabled",
+    params = {  },
+    returns = { { name = "isRaidListEnabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
+APIDefs["C_PartyInfo.IsRaidListSupported"] = {
+    key = "C_PartyInfo.IsRaidListSupported",
+    name = "IsRaidListSupported",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.IsRaidListSupported",
+    params = {  },
+    returns = { { name = "isRaidListSupported", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_PartyInfo.LeaveParty"] = {
@@ -431,6 +568,33 @@ APIDefs["C_PartyInfo.LeaveParty"] = {
     params = { { name = "category", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PartyInfo.PromoteToAssistant"] = {
+    key = "C_PartyInfo.PromoteToAssistant",
+    name = "PromoteToAssistant",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.PromoteToAssistant",
+    params = { { name = "name", type = "cstring", default = nil }, { name = "exactNameMatch", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PartyInfo.PromoteToLeader"] = {
+    key = "C_PartyInfo.PromoteToLeader",
+    name = "PromoteToLeader",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.PromoteToLeader",
+    params = { { name = "name", type = "cstring", default = nil }, { name = "exactNameMatch", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -443,6 +607,20 @@ APIDefs["C_PartyInfo.RequestInviteFromUnit"] = {
     params = { { name = "targetName", type = "cstring", default = nil }, { name = "tank", type = "bool", default = nil }, { name = "healer", type = "bool", default = nil }, { name = "dps", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PartyInfo.SetEveryoneIsAssistant"] = {
+    key = "C_PartyInfo.SetEveryoneIsAssistant",
+    name = "SetEveryoneIsAssistant",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.SetEveryoneIsAssistant",
+    params = { { name = "isAssistant", type = "bool", default = nil } },
+    returns = { { name = "updated", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -455,6 +633,7 @@ APIDefs["C_PartyInfo.SetInstanceAbandonVoteResponse"] = {
     params = { { name = "response", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -467,6 +646,7 @@ APIDefs["C_PartyInfo.SetLootMethod"] = {
     params = { { name = "method", type = "LootMethod", default = nil }, { name = "lootMaster", type = "string", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -479,6 +659,7 @@ APIDefs["C_PartyInfo.SetRestrictPings"] = {
     params = { { name = "restrictTo", type = "RestrictPingsTo", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -491,4 +672,18 @@ APIDefs["C_PartyInfo.StartInstanceAbandonVote"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PartyInfo.UninviteUnit"] = {
+    key = "C_PartyInfo.UninviteUnit",
+    name = "UninviteUnit",
+    category = "unit",
+    subcategory = "c_partyinfo",
+    funcPath = "C_PartyInfo.UninviteUnit",
+    params = { { name = "name", type = "cstring", default = nil }, { name = "reason", type = "cstring", default = nil }, { name = "exactNameMatch", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

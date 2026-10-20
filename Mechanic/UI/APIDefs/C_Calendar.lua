@@ -11,6 +11,7 @@ APIDefs["C_Calendar.AddEvent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.AreNamesReady"] = {
@@ -22,6 +23,7 @@ APIDefs["C_Calendar.AreNamesReady"] = {
     params = {  },
     returns = { { name = "ready", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.CanAddEvent"] = {
@@ -33,6 +35,7 @@ APIDefs["C_Calendar.CanAddEvent"] = {
     params = {  },
     returns = { { name = "canAddEvent", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.CanSendInvite"] = {
@@ -44,6 +47,7 @@ APIDefs["C_Calendar.CanSendInvite"] = {
     params = {  },
     returns = { { name = "canSendInvite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.CloseEvent"] = {
@@ -55,6 +59,7 @@ APIDefs["C_Calendar.CloseEvent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuEventCanComplain"] = {
@@ -66,6 +71,7 @@ APIDefs["C_Calendar.ContextMenuEventCanComplain"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "eventIndex", type = "luaIndex", default = nil } },
     returns = { { name = "canComplain", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -78,6 +84,7 @@ APIDefs["C_Calendar.ContextMenuEventCanEdit"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "eventIndex", type = "luaIndex", default = nil } },
     returns = { { name = "canEdit", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -90,6 +97,7 @@ APIDefs["C_Calendar.ContextMenuEventCanRemove"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "eventIndex", type = "luaIndex", default = nil } },
     returns = { { name = "canRemove", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -102,6 +110,7 @@ APIDefs["C_Calendar.ContextMenuEventClipboard"] = {
     params = {  },
     returns = { { name = "exists", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuEventCopy"] = {
@@ -113,6 +122,7 @@ APIDefs["C_Calendar.ContextMenuEventCopy"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuEventGetCalendarType"] = {
@@ -124,6 +134,7 @@ APIDefs["C_Calendar.ContextMenuEventGetCalendarType"] = {
     params = {  },
     returns = { { name = "calendarType", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuEventPaste"] = {
@@ -135,6 +146,7 @@ APIDefs["C_Calendar.ContextMenuEventPaste"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -147,6 +159,7 @@ APIDefs["C_Calendar.ContextMenuEventRemove"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuEventSignUp"] = {
@@ -158,6 +171,7 @@ APIDefs["C_Calendar.ContextMenuEventSignUp"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuGetEventIndex"] = {
@@ -169,6 +183,7 @@ APIDefs["C_Calendar.ContextMenuGetEventIndex"] = {
     params = {  },
     returns = { { name = "info", type = "CalendarEventIndexInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuInviteAvailable"] = {
@@ -180,6 +195,7 @@ APIDefs["C_Calendar.ContextMenuInviteAvailable"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuInviteDecline"] = {
@@ -191,6 +207,7 @@ APIDefs["C_Calendar.ContextMenuInviteDecline"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuInviteRemove"] = {
@@ -202,6 +219,7 @@ APIDefs["C_Calendar.ContextMenuInviteRemove"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuInviteTentative"] = {
@@ -213,6 +231,7 @@ APIDefs["C_Calendar.ContextMenuInviteTentative"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.ContextMenuSelectEvent"] = {
@@ -224,6 +243,7 @@ APIDefs["C_Calendar.ContextMenuSelectEvent"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "eventIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -236,6 +256,7 @@ APIDefs["C_Calendar.CreateCommunitySignUpEvent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.CreateGuildAnnouncementEvent"] = {
@@ -247,6 +268,7 @@ APIDefs["C_Calendar.CreateGuildAnnouncementEvent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.CreateGuildSignUpEvent"] = {
@@ -258,6 +280,7 @@ APIDefs["C_Calendar.CreateGuildSignUpEvent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.CreatePlayerEvent"] = {
@@ -269,6 +292,7 @@ APIDefs["C_Calendar.CreatePlayerEvent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventAvailable"] = {
@@ -280,6 +304,7 @@ APIDefs["C_Calendar.EventAvailable"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventCanEdit"] = {
@@ -291,6 +316,7 @@ APIDefs["C_Calendar.EventCanEdit"] = {
     params = {  },
     returns = { { name = "canEdit", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventClearAutoApprove"] = {
@@ -302,6 +328,7 @@ APIDefs["C_Calendar.EventClearAutoApprove"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventClearLocked"] = {
@@ -313,6 +340,7 @@ APIDefs["C_Calendar.EventClearLocked"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventClearModerator"] = {
@@ -324,6 +352,7 @@ APIDefs["C_Calendar.EventClearModerator"] = {
     params = { { name = "inviteIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -336,6 +365,7 @@ APIDefs["C_Calendar.EventDecline"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventGetCalendarType"] = {
@@ -347,6 +377,7 @@ APIDefs["C_Calendar.EventGetCalendarType"] = {
     params = {  },
     returns = { { name = "calendarType", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventGetClubId"] = {
@@ -358,30 +389,33 @@ APIDefs["C_Calendar.EventGetClubId"] = {
     params = {  },
     returns = { { name = "info", type = "ClubId", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventGetInvite"] = {
     key = "C_Calendar.EventGetInvite",
     name = "EventGetInvite",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_calendar",
     funcPath = "C_Calendar.EventGetInvite",
     params = { { name = "eventIndex", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "CalendarEventInviteInfo", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_Calendar.EventGetInviteResponseTime"] = {
     key = "C_Calendar.EventGetInviteResponseTime",
     name = "EventGetInviteResponseTime",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_calendar",
     funcPath = "C_Calendar.EventGetInviteResponseTime",
     params = { { name = "eventIndex", type = "luaIndex", default = nil } },
     returns = { { name = "time", type = "CalendarTime", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_Calendar.EventGetInviteSortCriterion"] = {
@@ -393,6 +427,7 @@ APIDefs["C_Calendar.EventGetInviteSortCriterion"] = {
     params = {  },
     returns = { { name = "criterion", type = "string", canBeSecret = false }, { name = "reverse", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventGetSelectedInvite"] = {
@@ -404,6 +439,7 @@ APIDefs["C_Calendar.EventGetSelectedInvite"] = {
     params = {  },
     returns = { { name = "inviteIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventGetStatusOptions"] = {
@@ -415,6 +451,7 @@ APIDefs["C_Calendar.EventGetStatusOptions"] = {
     params = { { name = "eventIndex", type = "luaIndex", default = nil } },
     returns = { { name = "options", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -427,6 +464,7 @@ APIDefs["C_Calendar.EventGetTextures"] = {
     params = { { name = "eventType", type = "CalendarEventType", default = nil } },
     returns = { { name = "textures", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -439,6 +477,7 @@ APIDefs["C_Calendar.EventGetTypes"] = {
     params = {  },
     returns = { { name = "types", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventGetTypesDisplayOrdered"] = {
@@ -450,6 +489,7 @@ APIDefs["C_Calendar.EventGetTypesDisplayOrdered"] = {
     params = {  },
     returns = { { name = "infos", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventHasPendingInvite"] = {
@@ -461,6 +501,7 @@ APIDefs["C_Calendar.EventHasPendingInvite"] = {
     params = {  },
     returns = { { name = "hasPendingInvite", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventHaveSettingsChanged"] = {
@@ -472,6 +513,7 @@ APIDefs["C_Calendar.EventHaveSettingsChanged"] = {
     params = {  },
     returns = { { name = "haveSettingsChanged", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventInvite"] = {
@@ -483,6 +525,7 @@ APIDefs["C_Calendar.EventInvite"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -495,6 +538,7 @@ APIDefs["C_Calendar.EventRemoveInvite"] = {
     params = { { name = "inviteIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -507,6 +551,7 @@ APIDefs["C_Calendar.EventRemoveInviteByGuid"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -519,6 +564,7 @@ APIDefs["C_Calendar.EventSelectInvite"] = {
     params = { { name = "inviteIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -531,6 +577,7 @@ APIDefs["C_Calendar.EventSetAutoApprove"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventSetClubId"] = {
@@ -542,6 +589,7 @@ APIDefs["C_Calendar.EventSetClubId"] = {
     params = { { name = "clubId", type = "ClubId", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -554,6 +602,7 @@ APIDefs["C_Calendar.EventSetDate"] = {
     params = { { name = "month", type = "luaIndex", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "year", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -566,6 +615,7 @@ APIDefs["C_Calendar.EventSetDescription"] = {
     params = { { name = "description", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -578,6 +628,7 @@ APIDefs["C_Calendar.EventSetInviteStatus"] = {
     params = { { name = "eventIndex", type = "luaIndex", default = nil }, { name = "status", type = "CalendarStatus", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -590,6 +641,7 @@ APIDefs["C_Calendar.EventSetLocked"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventSetModerator"] = {
@@ -601,6 +653,7 @@ APIDefs["C_Calendar.EventSetModerator"] = {
     params = { { name = "inviteIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -613,6 +666,7 @@ APIDefs["C_Calendar.EventSetTextureID"] = {
     params = { { name = "textureIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -625,6 +679,7 @@ APIDefs["C_Calendar.EventSetTime"] = {
     params = { { name = "hour", type = "number", default = nil }, { name = "minute", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -637,6 +692,7 @@ APIDefs["C_Calendar.EventSetTitle"] = {
     params = { { name = "title", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -649,6 +705,7 @@ APIDefs["C_Calendar.EventSetType"] = {
     params = { { name = "typeIndex", type = "CalendarEventType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -661,6 +718,7 @@ APIDefs["C_Calendar.EventSignUp"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.EventSortInvites"] = {
@@ -672,6 +730,7 @@ APIDefs["C_Calendar.EventSortInvites"] = {
     params = { { name = "criterion", type = "cstring", default = nil }, { name = "reverse", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -684,30 +743,33 @@ APIDefs["C_Calendar.EventTentative"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetClubCalendarEvents"] = {
     key = "C_Calendar.GetClubCalendarEvents",
     name = "GetClubCalendarEvents",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_calendar",
     funcPath = "C_Calendar.GetClubCalendarEvents",
     params = { { name = "clubId", type = "ClubId", default = nil }, { name = "startTime", type = "CalendarTime", default = nil }, { name = "endTime", type = "CalendarTime", default = nil } },
     returns = { { name = "events", type = "table", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_Calendar.GetDayEvent"] = {
     key = "C_Calendar.GetDayEvent",
     name = "GetDayEvent",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_calendar",
     funcPath = "C_Calendar.GetDayEvent",
     params = { { name = "monthOffset", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "event", type = "CalendarDayEvent", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_Calendar.GetDefaultGuildFilter"] = {
@@ -719,6 +781,7 @@ APIDefs["C_Calendar.GetDefaultGuildFilter"] = {
     params = {  },
     returns = { { name = "info", type = "CalendarGuildFilterInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetEventIndex"] = {
@@ -730,6 +793,7 @@ APIDefs["C_Calendar.GetEventIndex"] = {
     params = {  },
     returns = { { name = "info", type = "CalendarEventIndexInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetEventIndexInfo"] = {
@@ -741,6 +805,7 @@ APIDefs["C_Calendar.GetEventIndexInfo"] = {
     params = { { name = "eventID", type = "CalendarEventID", default = nil }, { name = "monthOffset", type = "number", default = nil }, { name = "monthDay", type = "number", default = nil } },
     returns = { { name = "eventIndexInfo", type = "CalendarEventIndexInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -753,6 +818,7 @@ APIDefs["C_Calendar.GetEventInfo"] = {
     params = {  },
     returns = { { name = "info", type = "CalendarEventInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetFirstPendingInvite"] = {
@@ -764,6 +830,7 @@ APIDefs["C_Calendar.GetFirstPendingInvite"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil } },
     returns = { { name = "firstPendingInvite", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -776,6 +843,7 @@ APIDefs["C_Calendar.GetGuildEventInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "CalendarGuildEventInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -788,6 +856,7 @@ APIDefs["C_Calendar.GetGuildEventSelectionInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "CalendarEventIndexInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -800,6 +869,7 @@ APIDefs["C_Calendar.GetHolidayInfo"] = {
     params = { { name = "monthOffset", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "event", type = "CalendarHolidayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -812,6 +882,7 @@ APIDefs["C_Calendar.GetMaxCreateDate"] = {
     params = {  },
     returns = { { name = "maxCreateDate", type = "CalendarTime", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetMinDate"] = {
@@ -823,6 +894,7 @@ APIDefs["C_Calendar.GetMinDate"] = {
     params = {  },
     returns = { { name = "minDate", type = "CalendarTime", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetMonthInfo"] = {
@@ -834,6 +906,7 @@ APIDefs["C_Calendar.GetMonthInfo"] = {
     params = { { name = "offsetMonths", type = "number", default = 0 } },
     returns = { { name = "monthInfo", type = "CalendarMonthInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -846,6 +919,7 @@ APIDefs["C_Calendar.GetNextClubId"] = {
     params = {  },
     returns = { { name = "clubId", type = "ClubId", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetNumDayEvents"] = {
@@ -857,6 +931,7 @@ APIDefs["C_Calendar.GetNumDayEvents"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil } },
     returns = { { name = "numDayEvents", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -869,6 +944,7 @@ APIDefs["C_Calendar.GetNumGuildEvents"] = {
     params = {  },
     returns = { { name = "numGuildEvents", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetNumInvites"] = {
@@ -880,6 +956,7 @@ APIDefs["C_Calendar.GetNumInvites"] = {
     params = {  },
     returns = { { name = "num", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetNumPendingInvites"] = {
@@ -891,6 +968,7 @@ APIDefs["C_Calendar.GetNumPendingInvites"] = {
     params = {  },
     returns = { { name = "num", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.GetRaidInfo"] = {
@@ -902,6 +980,7 @@ APIDefs["C_Calendar.GetRaidInfo"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "eventIndex", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "CalendarRaidInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -914,6 +993,7 @@ APIDefs["C_Calendar.IsActionPending"] = {
     params = {  },
     returns = { { name = "actionPending", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.IsEventOpen"] = {
@@ -925,6 +1005,7 @@ APIDefs["C_Calendar.IsEventOpen"] = {
     params = {  },
     returns = { { name = "isOpen", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.MassInviteCommunity"] = {
@@ -936,6 +1017,7 @@ APIDefs["C_Calendar.MassInviteCommunity"] = {
     params = { { name = "clubId", type = "ClubId", default = nil }, { name = "minLevel", type = "number", default = nil }, { name = "maxLevel", type = "number", default = nil }, { name = "maxRankOrder", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -948,6 +1030,7 @@ APIDefs["C_Calendar.MassInviteGuild"] = {
     params = { { name = "minLevel", type = "number", default = nil }, { name = "maxLevel", type = "number", default = nil }, { name = "maxRankOrder", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -960,6 +1043,7 @@ APIDefs["C_Calendar.OpenCalendar"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.OpenEvent"] = {
@@ -971,6 +1055,7 @@ APIDefs["C_Calendar.OpenEvent"] = {
     params = { { name = "offsetMonths", type = "number", default = nil }, { name = "monthDay", type = "luaIndex", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -983,6 +1068,7 @@ APIDefs["C_Calendar.RemoveEvent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Calendar.SetAbsMonth"] = {
@@ -994,6 +1080,7 @@ APIDefs["C_Calendar.SetAbsMonth"] = {
     params = { { name = "month", type = "luaIndex", default = nil }, { name = "year", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1006,6 +1093,7 @@ APIDefs["C_Calendar.SetMonth"] = {
     params = { { name = "offsetMonths", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1018,6 +1106,7 @@ APIDefs["C_Calendar.SetNextClubId"] = {
     params = { { name = "clubId", type = "ClubId", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1030,4 +1119,5 @@ APIDefs["C_Calendar.UpdateEvent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

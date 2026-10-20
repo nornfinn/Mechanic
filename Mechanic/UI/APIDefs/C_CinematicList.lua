@@ -11,4 +11,5 @@ APIDefs["C_CinematicList.GetUICinematicList"] = {
     params = {  },
     returns = { { name = "cinematics", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

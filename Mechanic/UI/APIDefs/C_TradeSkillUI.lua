@@ -11,6 +11,20 @@ APIDefs["C_TradeSkillUI.CanStoreEnchantInItem"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "canStore", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TradeSkillUI.CanTradeSkillShowCraftingUI"] = {
+    key = "C_TradeSkillUI.CanTradeSkillShowCraftingUI",
+    name = "CanTradeSkillShowCraftingUI",
+    category = "profession",
+    subcategory = "c_tradeskillui",
+    funcPath = "C_TradeSkillUI.CanTradeSkillShowCraftingUI",
+    params = { { name = "tradeSkillSpellID", type = "number", default = nil } },
+    returns = { { name = "canShow", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +37,7 @@ APIDefs["C_TradeSkillUI.CancelProfessionRespec"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.CheckRespecNPC"] = {
@@ -34,6 +49,7 @@ APIDefs["C_TradeSkillUI.CheckRespecNPC"] = {
     params = {  },
     returns = { { name = "canInteract", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.CloseTradeSkill"] = {
@@ -45,6 +61,7 @@ APIDefs["C_TradeSkillUI.CloseTradeSkill"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.ConfirmProfessionRespec"] = {
@@ -56,6 +73,7 @@ APIDefs["C_TradeSkillUI.ConfirmProfessionRespec"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.CraftEnchant"] = {
@@ -67,6 +85,7 @@ APIDefs["C_TradeSkillUI.CraftEnchant"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil }, { name = "numCasts", type = "number", default = 1 }, { name = "craftingReagents", type = "table", default = nil }, { name = "itemTarget", type = "ItemLocation", default = nil }, { name = "applyConcentration", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -79,6 +98,7 @@ APIDefs["C_TradeSkillUI.CraftRecipe"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil }, { name = "numCasts", type = "number", default = 1 }, { name = "craftingReagents", type = "table", default = nil }, { name = "recipeLevel", type = "luaIndex", default = nil }, { name = "orderID", type = "BigUInteger", default = nil }, { name = "applyConcentration", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -91,6 +111,7 @@ APIDefs["C_TradeSkillUI.CraftSalvage"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil }, { name = "numCasts", type = "number", default = 1 }, { name = "itemTarget", type = "ItemLocation", default = nil }, { name = "craftingReagents", type = "table", default = nil }, { name = "applyConcentration", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -103,6 +124,7 @@ APIDefs["C_TradeSkillUI.DoesRecraftingRecipeAcceptItem"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil }, { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -115,6 +137,7 @@ APIDefs["C_TradeSkillUI.GetAllProfessionTradeSkillLines"] = {
     params = {  },
     returns = { { name = "skillLineID", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetBaseProfessionInfo"] = {
@@ -126,6 +149,7 @@ APIDefs["C_TradeSkillUI.GetBaseProfessionInfo"] = {
     params = {  },
     returns = { { name = "info", type = "ProfessionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetChildProfessionInfo"] = {
@@ -137,6 +161,7 @@ APIDefs["C_TradeSkillUI.GetChildProfessionInfo"] = {
     params = {  },
     returns = { { name = "info", type = "ProfessionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetChildProfessionInfos"] = {
@@ -148,6 +173,7 @@ APIDefs["C_TradeSkillUI.GetChildProfessionInfos"] = {
     params = {  },
     returns = { { name = "infos", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetConcentrationCurrencyID"] = {
@@ -159,6 +185,7 @@ APIDefs["C_TradeSkillUI.GetConcentrationCurrencyID"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "currencyType", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -171,6 +198,7 @@ APIDefs["C_TradeSkillUI.GetCraftableCount"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil }, { name = "recipeLevel", type = "luaIndex", default = nil } },
     returns = { { name = "numAvailable", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -183,6 +211,7 @@ APIDefs["C_TradeSkillUI.GetCraftingOperationInfo"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "craftingReagents", type = "table", default = nil }, { name = "allocationItemGUID", type = "WOWGUID", default = nil }, { name = "applyConcentration", type = "bool", default = nil } },
     returns = { { name = "info", type = "CraftingOperationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -195,6 +224,7 @@ APIDefs["C_TradeSkillUI.GetCraftingOperationInfoForOrder"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "craftingReagents", type = "table", default = nil }, { name = "orderID", type = "BigUInteger", default = nil }, { name = "applyConcentration", type = "bool", default = nil } },
     returns = { { name = "info", type = "CraftingOperationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -207,6 +237,7 @@ APIDefs["C_TradeSkillUI.GetCraftingReagentBonusText"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil }, { name = "craftingReagentIndex", type = "luaIndex", default = nil }, { name = "craftingReagents", type = "table", default = nil }, { name = "allocationItemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "bonusText", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -219,6 +250,7 @@ APIDefs["C_TradeSkillUI.GetCraftingTargetItems"] = {
     params = { { name = "itemIDs", type = "table", default = nil } },
     returns = { { name = "items", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -231,6 +263,7 @@ APIDefs["C_TradeSkillUI.GetDependentReagents"] = {
     params = { { name = "reagent", type = "CraftingReagent", default = nil } },
     returns = { { name = "reagents", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -243,6 +276,7 @@ APIDefs["C_TradeSkillUI.GetEnchantItems"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "craftingReagents", type = "table", default = nil } },
     returns = { { name = "items", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -255,6 +289,7 @@ APIDefs["C_TradeSkillUI.GetFactionSpecificOutputItem"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil } },
     returns = { { name = "itemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -267,6 +302,7 @@ APIDefs["C_TradeSkillUI.GetGatheringOperationInfo"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "info", type = "GatheringOperationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -279,6 +315,7 @@ APIDefs["C_TradeSkillUI.GetHideUnownedFlags"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "cannotModifyHideUnowned", type = "bool", canBeSecret = false }, { name = "alwaysShowUnowned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -291,6 +328,7 @@ APIDefs["C_TradeSkillUI.GetItemCraftedQualityByItemInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "quality", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -303,6 +341,7 @@ APIDefs["C_TradeSkillUI.GetItemCraftedQualityInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "info", type = "CraftingQualityInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -315,6 +354,7 @@ APIDefs["C_TradeSkillUI.GetItemReagentQualityByItemInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "quality", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -327,6 +367,7 @@ APIDefs["C_TradeSkillUI.GetItemReagentQualityInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "info", type = "CraftingQualityInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -339,6 +380,7 @@ APIDefs["C_TradeSkillUI.GetItemSlotModifications"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "slotMods", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -351,6 +393,7 @@ APIDefs["C_TradeSkillUI.GetItemSlotModificationsForOrder"] = {
     params = { { name = "orderID", type = "BigUInteger", default = nil } },
     returns = { { name = "slotMods", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -363,6 +406,7 @@ APIDefs["C_TradeSkillUI.GetOriginalCraftRecipeID"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "recipeID", type = "number", canBeSecret = false }, { name = "skillLineAbilityID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -375,6 +419,7 @@ APIDefs["C_TradeSkillUI.GetProfessionByInventorySlot"] = {
     params = { { name = "slot", type = "luaIndex", default = nil } },
     returns = { { name = "profession", type = "Profession", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -387,6 +432,7 @@ APIDefs["C_TradeSkillUI.GetProfessionChildSkillLineID"] = {
     params = {  },
     returns = { { name = "skillLineID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetProfessionForCursorItem"] = {
@@ -398,6 +444,7 @@ APIDefs["C_TradeSkillUI.GetProfessionForCursorItem"] = {
     params = {  },
     returns = { { name = "profession", type = "Profession", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetProfessionInfoByRecipeID"] = {
@@ -409,6 +456,7 @@ APIDefs["C_TradeSkillUI.GetProfessionInfoByRecipeID"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "info", type = "ProfessionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -421,6 +469,7 @@ APIDefs["C_TradeSkillUI.GetProfessionInfoBySkillLineID"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "info", type = "ProfessionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -433,6 +482,7 @@ APIDefs["C_TradeSkillUI.GetProfessionInventorySlots"] = {
     params = {  },
     returns = { { name = "invSlots", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetProfessionNameForSkillLineAbility"] = {
@@ -444,6 +494,7 @@ APIDefs["C_TradeSkillUI.GetProfessionNameForSkillLineAbility"] = {
     params = { { name = "skillLineAbilityID", type = "number", default = nil } },
     returns = { { name = "professionNmae", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -456,6 +507,7 @@ APIDefs["C_TradeSkillUI.GetProfessionSkillLineID"] = {
     params = { { name = "profession", type = "Profession", default = nil } },
     returns = { { name = "skillLineID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -468,6 +520,7 @@ APIDefs["C_TradeSkillUI.GetProfessionSlots"] = {
     params = { { name = "profession", type = "Profession", default = nil } },
     returns = { { name = "slots", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -480,6 +533,7 @@ APIDefs["C_TradeSkillUI.GetProfessionSpells"] = {
     params = { { name = "professionID", type = "number", default = nil }, { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "knownSpells", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -492,6 +546,7 @@ APIDefs["C_TradeSkillUI.GetQualitiesForRecipe"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "qualityIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -504,6 +559,7 @@ APIDefs["C_TradeSkillUI.GetReagentDifficultyText"] = {
     params = { { name = "craftingReagentIndex", type = "luaIndex", default = nil }, { name = "craftingReagents", type = "table", default = nil } },
     returns = { { name = "bonusText", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -516,6 +572,7 @@ APIDefs["C_TradeSkillUI.GetReagentSlotStatus"] = {
     params = { { name = "mcrSlotID", type = "number", default = nil }, { name = "recipeSpellID", type = "number", default = nil }, { name = "skillLineAbilityID", type = "number", default = nil } },
     returns = { { name = "locked", type = "bool", canBeSecret = false }, { name = "lockedReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -528,6 +585,7 @@ APIDefs["C_TradeSkillUI.GetRecipeDescription"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "craftingReagents", type = "table", default = nil }, { name = "allocationItemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -540,6 +598,7 @@ APIDefs["C_TradeSkillUI.GetRecipeInfo"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil }, { name = "recipeLevel", type = "luaIndex", default = nil } },
     returns = { { name = "recipeInfo", type = "TradeSkillRecipeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -552,6 +611,7 @@ APIDefs["C_TradeSkillUI.GetRecipeInfoForSkillLineAbility"] = {
     params = { { name = "skillLineAbilityID", type = "number", default = nil }, { name = "recipeLevel", type = "luaIndex", default = nil } },
     returns = { { name = "recipeInfo", type = "TradeSkillRecipeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -564,6 +624,7 @@ APIDefs["C_TradeSkillUI.GetRecipeItemQualityInfo"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "quality", type = "number", default = nil } },
     returns = { { name = "info", type = "CraftingQualityInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -576,6 +637,7 @@ APIDefs["C_TradeSkillUI.GetRecipeOutputItemData"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil }, { name = "reagents", type = "table", default = nil }, { name = "allocationItemGUID", type = "WOWGUID", default = nil }, { name = "overrideQualityID", type = "number", default = nil }, { name = "recraftOrderID", type = "BigUInteger", default = nil } },
     returns = { { name = "outputInfo", type = "CraftingRecipeOutputInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -588,6 +650,7 @@ APIDefs["C_TradeSkillUI.GetRecipeQualityItemIDs"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil } },
     returns = { { name = "qualityItemIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -600,6 +663,7 @@ APIDefs["C_TradeSkillUI.GetRecipeQualityReagentLink"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "dataSlotIndex", type = "luaIndex", default = nil }, { name = "qualityIndex", type = "luaIndex", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -612,6 +676,7 @@ APIDefs["C_TradeSkillUI.GetRecipeRequirements"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "requirements", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -624,6 +689,7 @@ APIDefs["C_TradeSkillUI.GetRecipeSchematic"] = {
     params = { { name = "recipeSpellID", type = "number", default = nil }, { name = "isRecraft", type = "bool", default = nil }, { name = "recipeLevel", type = "luaIndex", default = nil } },
     returns = { { name = "schematic", type = "CraftingRecipeSchematic", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -636,6 +702,7 @@ APIDefs["C_TradeSkillUI.GetRecipesTracked"] = {
     params = { { name = "isRecraft", type = "bool", default = nil } },
     returns = { { name = "recipeIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -648,6 +715,7 @@ APIDefs["C_TradeSkillUI.GetRecraftItems"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "items", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -660,6 +728,7 @@ APIDefs["C_TradeSkillUI.GetRecraftRemovalWarnings"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil }, { name = "replacedReagents", type = "table", default = nil } },
     returns = { { name = "warnings", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -672,6 +741,7 @@ APIDefs["C_TradeSkillUI.GetRemainingRecasts"] = {
     params = {  },
     returns = { { name = "remaining", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetSalvagableItemIDs"] = {
@@ -683,6 +753,7 @@ APIDefs["C_TradeSkillUI.GetSalvagableItemIDs"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "itemIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -695,6 +766,7 @@ APIDefs["C_TradeSkillUI.GetShowLearned"] = {
     params = {  },
     returns = { { name = "flag", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetShowUnlearned"] = {
@@ -706,6 +778,7 @@ APIDefs["C_TradeSkillUI.GetShowUnlearned"] = {
     params = {  },
     returns = { { name = "flag", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetSkillLineForGear"] = {
@@ -717,6 +790,7 @@ APIDefs["C_TradeSkillUI.GetSkillLineForGear"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "skillLineID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -729,6 +803,7 @@ APIDefs["C_TradeSkillUI.GetSourceTypeFilter"] = {
     params = {  },
     returns = { { name = "sourceTypeFilter", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.GetTradeSkillDisplayName"] = {
@@ -740,6 +815,7 @@ APIDefs["C_TradeSkillUI.GetTradeSkillDisplayName"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "professionDisplayName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -752,6 +828,7 @@ APIDefs["C_TradeSkillUI.HasFavoriteOrderRecipes"] = {
     params = {  },
     returns = { { name = "hasFavorites", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.IsEnchantTargetValid"] = {
@@ -763,6 +840,7 @@ APIDefs["C_TradeSkillUI.IsEnchantTargetValid"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "itemGUID", type = "WOWGUID", default = nil }, { name = "craftingReagents", type = "table", default = nil } },
     returns = { { name = "valid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -775,6 +853,7 @@ APIDefs["C_TradeSkillUI.IsGuildTradeSkillsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.IsNPCCrafting"] = {
@@ -786,6 +865,7 @@ APIDefs["C_TradeSkillUI.IsNPCCrafting"] = {
     params = {  },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.IsNearProfessionSpellFocus"] = {
@@ -797,6 +877,7 @@ APIDefs["C_TradeSkillUI.IsNearProfessionSpellFocus"] = {
     params = { { name = "profession", type = "Profession", default = nil } },
     returns = { { name = "nearFocus", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -809,6 +890,7 @@ APIDefs["C_TradeSkillUI.IsOriginalCraftRecipeLearned"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "learned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -821,6 +903,7 @@ APIDefs["C_TradeSkillUI.IsRecipeFirstCraft"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -833,6 +916,7 @@ APIDefs["C_TradeSkillUI.IsRecipeInBaseSkillLine"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -845,6 +929,7 @@ APIDefs["C_TradeSkillUI.IsRecipeInSkillLine"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -857,6 +942,7 @@ APIDefs["C_TradeSkillUI.IsRecipeProfessionLearned"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = { { name = "recipeProfessionLearned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -869,6 +955,7 @@ APIDefs["C_TradeSkillUI.IsRecipeTracked"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "isRecraft", type = "bool", default = nil } },
     returns = { { name = "tracked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -881,6 +968,7 @@ APIDefs["C_TradeSkillUI.IsRecraftItemEquipped"] = {
     params = { { name = "recraftItemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "isEquipped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -893,6 +981,7 @@ APIDefs["C_TradeSkillUI.IsRecraftReagentValid"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil }, { name = "reagent", type = "CraftingReagent", default = nil } },
     returns = { { name = "valid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -905,6 +994,7 @@ APIDefs["C_TradeSkillUI.IsRuneforging"] = {
     params = {  },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TradeSkillUI.OpenRecipe"] = {
@@ -916,6 +1006,7 @@ APIDefs["C_TradeSkillUI.OpenRecipe"] = {
     params = { { name = "recipeID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -928,6 +1019,7 @@ APIDefs["C_TradeSkillUI.OpenTradeSkill"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "opened", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -940,6 +1032,7 @@ APIDefs["C_TradeSkillUI.RecraftLimitCategoryValid"] = {
     params = { { name = "reagent", type = "CraftingReagent", default = nil } },
     returns = { { name = "recraftValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -952,6 +1045,7 @@ APIDefs["C_TradeSkillUI.RecraftRecipe"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil }, { name = "craftingReagents", type = "table", default = nil }, { name = "removedModifications", type = "table", default = nil }, { name = "applyConcentration", type = "bool", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -964,6 +1058,7 @@ APIDefs["C_TradeSkillUI.RecraftRecipeForOrder"] = {
     params = { { name = "orderID", type = "BigUInteger", default = nil }, { name = "itemGUID", type = "WOWGUID", default = nil }, { name = "craftingReagents", type = "table", default = nil }, { name = "removedModifications", type = "table", default = nil }, { name = "applyConcentration", type = "bool", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -976,6 +1071,7 @@ APIDefs["C_TradeSkillUI.SetOnlyShowAvailableForOrders"] = {
     params = { { name = "flag", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -988,6 +1084,7 @@ APIDefs["C_TradeSkillUI.SetProfessionChildSkillLineID"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1000,6 +1097,7 @@ APIDefs["C_TradeSkillUI.SetRecipeTracked"] = {
     params = { { name = "recipeID", type = "number", default = nil }, { name = "tracked", type = "bool", default = nil }, { name = "isRecraft", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1012,6 +1110,7 @@ APIDefs["C_TradeSkillUI.SetShowLearned"] = {
     params = { { name = "flag", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1024,6 +1123,7 @@ APIDefs["C_TradeSkillUI.SetShowUnlearned"] = {
     params = { { name = "flag", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1036,5 +1136,6 @@ APIDefs["C_TradeSkillUI.SetSourceTypeFilter"] = {
     params = { { name = "sourceTypeFilter", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

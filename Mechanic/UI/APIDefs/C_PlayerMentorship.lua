@@ -11,6 +11,7 @@ APIDefs["C_PlayerMentorship.GetMentorLevelRequirement"] = {
     params = {  },
     returns = { { name = "level", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerMentorship.GetMentorRequirements"] = {
@@ -22,6 +23,7 @@ APIDefs["C_PlayerMentorship.GetMentorRequirements"] = {
     params = {  },
     returns = { { name = "achievementIDs", type = "table", canBeSecret = false }, { name = "optionalAchievementIDs", type = "table", canBeSecret = false }, { name = "optionalCompleteAtLeastCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerMentorship.GetMentorshipStatus"] = {
@@ -33,6 +35,7 @@ APIDefs["C_PlayerMentorship.GetMentorshipStatus"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "status", type = "PlayerMentorshipStatus", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,6 +48,7 @@ APIDefs["C_PlayerMentorship.IsActivePlayerConsideredNewcomer"] = {
     params = {  },
     returns = { { name = "isConsideredNewcomer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerMentorship.IsMentorRestricted"] = {
@@ -56,4 +60,5 @@ APIDefs["C_PlayerMentorship.IsMentorRestricted"] = {
     params = {  },
     returns = { { name = "isRestricted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

@@ -11,7 +11,20 @@ APIDefs["C_ToyBoxInfo.ClearFanfare"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_ToyBoxInfo.HasAnyToy"] = {
+    key = "C_ToyBoxInfo.HasAnyToy",
+    name = "HasAnyToy",
+    category = "general",
+    subcategory = "c_toyboxinfo",
+    funcPath = "C_ToyBoxInfo.HasAnyToy",
+    params = {  },
+    returns = { { name = "hasToy", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_ToyBoxInfo.IsToySourceValid"] = {
@@ -23,6 +36,7 @@ APIDefs["C_ToyBoxInfo.IsToySourceValid"] = {
     params = { { name = "source", type = "luaIndex", default = nil } },
     returns = { { name = "isToySourceValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +49,7 @@ APIDefs["C_ToyBoxInfo.IsUsingDefaultFilters"] = {
     params = {  },
     returns = { { name = "isUsingDefaultFilters", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ToyBoxInfo.NeedsFanfare"] = {
@@ -46,6 +61,7 @@ APIDefs["C_ToyBoxInfo.NeedsFanfare"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "needsFanfare", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,4 +74,5 @@ APIDefs["C_ToyBoxInfo.SetDefaultFilters"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

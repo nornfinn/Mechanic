@@ -11,6 +11,7 @@ APIDefs["C_Item.ActionBindsItem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Item.BindEnchant"] = {
@@ -22,6 +23,7 @@ APIDefs["C_Item.BindEnchant"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Item.CanBeRefunded"] = {
@@ -33,6 +35,7 @@ APIDefs["C_Item.CanBeRefunded"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "canBeRefunded", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -45,6 +48,7 @@ APIDefs["C_Item.CanItemTransmogAppearance"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "canTransmog", type = "bool", canBeSecret = false }, { name = "errorCode", type = "TransmogOutfitSlotError", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_Item.CanScrapItem"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "canBeScrapped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_Item.CanViewItemPowers"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "isItemViewable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,20 @@ APIDefs["C_Item.ConfirmBindOnUse"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_Item.ConfirmDeleteItem"] = {
+    key = "C_Item.ConfirmDeleteItem",
+    name = "ConfirmDeleteItem",
+    category = "item",
+    subcategory = "c_item",
+    funcPath = "C_Item.ConfirmDeleteItem",
+    params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_Item.ConfirmNoRefundOnUse"] = {
@@ -92,6 +112,7 @@ APIDefs["C_Item.ConfirmNoRefundOnUse"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Item.ConfirmOnUse"] = {
@@ -103,6 +124,20 @@ APIDefs["C_Item.ConfirmOnUse"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_Item.DeleteItem"] = {
+    key = "C_Item.DeleteItem",
+    name = "DeleteItem",
+    category = "item",
+    subcategory = "c_item",
+    funcPath = "C_Item.DeleteItem",
+    params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_Item.DoesItemContainSpec"] = {
@@ -114,6 +149,7 @@ APIDefs["C_Item.DoesItemContainSpec"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "classID", type = "number", default = nil }, { name = "specID", type = "number", default = 0 } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -126,6 +162,7 @@ APIDefs["C_Item.DoesItemExist"] = {
     params = { { name = "emptiableItemLocation", type = "EmptiableItemLocation", default = nil } },
     returns = { { name = "itemExists", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -138,6 +175,7 @@ APIDefs["C_Item.DoesItemExistByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemExists", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -150,6 +188,20 @@ APIDefs["C_Item.DoesItemMatchBonusTreeReplacement"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "matchesBonusTree", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Item.DoesItemMatchSpellItemCondition"] = {
+    key = "C_Item.DoesItemMatchSpellItemCondition",
+    name = "DoesItemMatchSpellItemCondition",
+    category = "item",
+    subcategory = "c_item",
+    funcPath = "C_Item.DoesItemMatchSpellItemCondition",
+    params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
+    returns = { { name = "matches", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -162,6 +214,7 @@ APIDefs["C_Item.DoesItemMatchTargetEnchantingSpell"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "matchesTargetEnchantingSpell", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -174,6 +227,7 @@ APIDefs["C_Item.DoesItemMatchTrackJump"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "matchesTrackJump", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -186,6 +240,7 @@ APIDefs["C_Item.DropItemOnUnit"] = {
     params = { { name = "unitGUID", type = "UnitToken", default = "player" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -198,6 +253,7 @@ APIDefs["C_Item.EndBoundTradeable"] = {
     params = { { name = "type", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -210,6 +266,7 @@ APIDefs["C_Item.EndRefund"] = {
     params = { { name = "type", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -222,6 +279,7 @@ APIDefs["C_Item.EquipItemByName"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "dstSlot", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -234,6 +292,7 @@ APIDefs["C_Item.GetAppliedItemTransmogInfo"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "info", type = "ItemTransmogInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -246,6 +305,7 @@ APIDefs["C_Item.GetBaseItemTransmogInfo"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "info", type = "ItemTransmogInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -258,6 +318,7 @@ APIDefs["C_Item.GetCurrentItemLevel"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "currentItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -270,6 +331,7 @@ APIDefs["C_Item.GetCurrentItemTransmogInfo"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "info", type = "ItemTransmogInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -282,6 +344,7 @@ APIDefs["C_Item.GetDelvePreviewItemLink"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "context", type = "ItemCreationContext", default = nil } },
     returns = { { name = "itemLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -294,6 +357,7 @@ APIDefs["C_Item.GetDelvePreviewItemQuality"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "context", type = "ItemCreationContext", default = nil } },
     returns = { { name = "itemQuality", type = "ItemQuality", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -306,6 +370,7 @@ APIDefs["C_Item.GetDetailedItemLevelInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "actualItemLevel", type = "number", canBeSecret = false }, { name = "previewLevel", type = "bool", canBeSecret = false }, { name = "sparseItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -318,6 +383,7 @@ APIDefs["C_Item.GetFirstTriggeredSpellForItem"] = {
     params = { { name = "itemID", type = "number", default = nil }, { name = "itemQuality", type = "number", default = nil } },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -330,6 +396,7 @@ APIDefs["C_Item.GetItemChildInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "slotID", type = "luaIndex", default = nil } },
     returns = { { name = "result", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -342,6 +409,7 @@ APIDefs["C_Item.GetItemClassInfo"] = {
     params = { { name = "itemClassID", type = "number", default = nil } },
     returns = { { name = "result", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -354,6 +422,7 @@ APIDefs["C_Item.GetItemConversionOutputIcon"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "icon", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -366,6 +435,7 @@ APIDefs["C_Item.GetItemCooldown"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "startTimeSeconds", type = "number", canBeSecret = false }, { name = "durationSeconds", type = "number", canBeSecret = false }, { name = "enableCooldownTimer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -378,6 +448,7 @@ APIDefs["C_Item.GetItemCount"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "includeBank", type = "bool", default = false }, { name = "includeUses", type = "bool", default = false }, { name = "includeReagentBank", type = "bool", default = false }, { name = "includeAccountBank", type = "bool", default = false } },
     returns = { { name = "count", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -390,6 +461,7 @@ APIDefs["C_Item.GetItemCreationContext"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemID", type = "number", canBeSecret = false }, { name = "creationContext", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -402,6 +474,7 @@ APIDefs["C_Item.GetItemFamily"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -414,6 +487,7 @@ APIDefs["C_Item.GetItemGUID"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "itemGUID", type = "WOWGUID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -426,6 +500,7 @@ APIDefs["C_Item.GetItemGem"] = {
     params = { { name = "hyperlink", type = "cstring", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "gemName", type = "string", canBeSecret = false }, { name = "gemLink", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -438,6 +513,7 @@ APIDefs["C_Item.GetItemGemID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "gemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -450,6 +526,7 @@ APIDefs["C_Item.GetItemID"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "itemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -462,6 +539,7 @@ APIDefs["C_Item.GetItemIDByGUID"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "itemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -474,6 +552,7 @@ APIDefs["C_Item.GetItemIDForItemInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -486,6 +565,7 @@ APIDefs["C_Item.GetItemIcon"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "icon", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -498,6 +578,7 @@ APIDefs["C_Item.GetItemIconByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "icon", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -510,6 +591,7 @@ APIDefs["C_Item.GetItemInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemName", type = "cstring", canBeSecret = false }, { name = "itemLink", type = "cstring", canBeSecret = false }, { name = "itemQuality", type = "ItemQuality", canBeSecret = false }, { name = "itemLevel", type = "number", canBeSecret = false }, { name = "itemMinLevel", type = "number", canBeSecret = false }, { name = "itemType", type = "cstring", canBeSecret = false }, { name = "itemSubType", type = "cstring", canBeSecret = false }, { name = "itemStackCount", type = "number", canBeSecret = false }, { name = "itemEquipLoc", type = "cstring", canBeSecret = false }, { name = "itemTexture", type = "fileID", canBeSecret = false }, { name = "sellPrice", type = "number", canBeSecret = false }, { name = "classID", type = "number", canBeSecret = false }, { name = "subclassID", type = "number", canBeSecret = false }, { name = "bindType", type = "number", canBeSecret = false }, { name = "expansionID", type = "number", canBeSecret = false }, { name = "setID", type = "number", canBeSecret = false }, { name = "isCraftingReagent", type = "bool", canBeSecret = false }, { name = "itemDescription", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -522,6 +604,7 @@ APIDefs["C_Item.GetItemInfoInstant"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemID", type = "number", canBeSecret = false }, { name = "itemType", type = "cstring", canBeSecret = false }, { name = "itemSubType", type = "cstring", canBeSecret = false }, { name = "itemEquipLoc", type = "cstring", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "classID", type = "number", canBeSecret = false }, { name = "subClassID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -534,6 +617,7 @@ APIDefs["C_Item.GetItemInventorySlotInfo"] = {
     params = { { name = "inventorySlot", type = "InventoryType", default = nil } },
     returns = { { name = "result", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -546,6 +630,7 @@ APIDefs["C_Item.GetItemInventorySlotKey"] = {
     params = { { name = "inventorySlot", type = "InventoryType", default = nil } },
     returns = { { name = "result", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -558,6 +643,7 @@ APIDefs["C_Item.GetItemInventoryType"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "inventoryType", type = "InventoryType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -570,6 +656,7 @@ APIDefs["C_Item.GetItemInventoryTypeByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "inventoryType", type = "InventoryType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -582,6 +669,7 @@ APIDefs["C_Item.GetItemLearnTransmogSet"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "setID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -594,6 +682,7 @@ APIDefs["C_Item.GetItemLink"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "itemLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -606,6 +695,7 @@ APIDefs["C_Item.GetItemLinkByGUID"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "itemLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -618,6 +708,7 @@ APIDefs["C_Item.GetItemLocation"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "itemLocation", type = "ItemLocation", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -630,6 +721,7 @@ APIDefs["C_Item.GetItemMaxStackSize"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "stackSize", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -642,6 +734,7 @@ APIDefs["C_Item.GetItemMaxStackSizeByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "stackSize", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -654,6 +747,7 @@ APIDefs["C_Item.GetItemName"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "itemName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -666,6 +760,7 @@ APIDefs["C_Item.GetItemNameByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -678,6 +773,7 @@ APIDefs["C_Item.GetItemNumAddedSockets"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "socketCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -690,6 +786,7 @@ APIDefs["C_Item.GetItemNumSockets"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "socketCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -702,6 +799,7 @@ APIDefs["C_Item.GetItemQuality"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "itemQuality", type = "ItemQuality", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -714,6 +812,7 @@ APIDefs["C_Item.GetItemQualityByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemQuality", type = "ItemQuality", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -726,6 +825,7 @@ APIDefs["C_Item.GetItemQualityColor"] = {
     params = { { name = "quality", type = "ItemQuality", default = nil } },
     returns = { { name = "colorRGBR", type = "number", canBeSecret = false }, { name = "colorRGBG", type = "number", canBeSecret = false }, { name = "colorRGBB", type = "number", canBeSecret = false }, { name = "qualityString", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -738,6 +838,7 @@ APIDefs["C_Item.GetItemSetInfo"] = {
     params = { { name = "setID", type = "number", default = nil } },
     returns = { { name = "result", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -750,6 +851,7 @@ APIDefs["C_Item.GetItemSpecInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "specTable", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -762,6 +864,7 @@ APIDefs["C_Item.GetItemSpell"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "spellName", type = "cstring", canBeSecret = false }, { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -774,6 +877,7 @@ APIDefs["C_Item.GetItemStatDelta"] = {
     params = { { name = "itemLink1", type = "cstring", default = nil }, { name = "itemLink2", type = "cstring", default = nil } },
     returns = { { name = "statTable", type = "LuaValueVariant", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -786,6 +890,7 @@ APIDefs["C_Item.GetItemStats"] = {
     params = { { name = "itemLink", type = "cstring", default = nil } },
     returns = { { name = "statTable", type = "LuaValueVariant", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -798,6 +903,7 @@ APIDefs["C_Item.GetItemSubClassInfo"] = {
     params = { { name = "itemClassID", type = "number", default = nil }, { name = "itemSubClassID", type = "number", default = nil } },
     returns = { { name = "subClassName", type = "cstring", canBeSecret = false }, { name = "subClassUsesInvType", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -810,6 +916,7 @@ APIDefs["C_Item.GetItemUniqueness"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "limitCategory", type = "number", canBeSecret = false }, { name = "limitMax", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -822,6 +929,7 @@ APIDefs["C_Item.GetItemUniquenessByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isUnique", type = "bool", canBeSecret = false }, { name = "limitCategoryName", type = "cstring", canBeSecret = false }, { name = "limitCategoryCount", type = "number", canBeSecret = false }, { name = "limitCategoryID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -834,6 +942,7 @@ APIDefs["C_Item.GetItemUpgradeInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "itemUpgradeInfo", type = "ItemUpgradeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -846,6 +955,7 @@ APIDefs["C_Item.GetLimitedCurrencyItemInfo"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "quantity", type = "number", canBeSecret = false }, { name = "maxQuantity", type = "number", canBeSecret = false }, { name = "totalEarned", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -858,6 +968,7 @@ APIDefs["C_Item.GetSetBonusesForSpecializationByItemID"] = {
     params = { { name = "specID", type = "number", default = nil }, { name = "itemID", type = "number", default = nil } },
     returns = { { name = "itemSetSpellIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -870,6 +981,20 @@ APIDefs["C_Item.GetStackCount"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "stackCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Item.GetWeaponEnchantInfo"] = {
+    key = "C_Item.GetWeaponEnchantInfo",
+    name = "GetWeaponEnchantInfo",
+    category = "item",
+    subcategory = "c_item",
+    funcPath = "C_Item.GetWeaponEnchantInfo",
+    params = { { name = "weaponSlot", type = "WeaponSlot", default = nil } },
+    returns = { { name = "enchants", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -882,6 +1007,7 @@ APIDefs["C_Item.IsAnimaItemByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isAnimaItem", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -894,6 +1020,7 @@ APIDefs["C_Item.IsArtifactPowerItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -906,6 +1033,7 @@ APIDefs["C_Item.IsBound"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "isBound", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -918,6 +1046,7 @@ APIDefs["C_Item.IsBoundToAccountUntilEquip"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "isBoundToAccountUntilEquip", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -930,6 +1059,7 @@ APIDefs["C_Item.IsConsumableItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -942,6 +1072,7 @@ APIDefs["C_Item.IsCorruptedItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -954,6 +1085,7 @@ APIDefs["C_Item.IsCosmeticItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -966,6 +1098,7 @@ APIDefs["C_Item.IsCurioItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -978,6 +1111,7 @@ APIDefs["C_Item.IsCurrentItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -990,6 +1124,7 @@ APIDefs["C_Item.IsDecorItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1002,6 +1137,7 @@ APIDefs["C_Item.IsDressableItemByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isDressableItem", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1014,6 +1150,7 @@ APIDefs["C_Item.IsEquippableItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1026,6 +1163,7 @@ APIDefs["C_Item.IsEquippedItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1038,6 +1176,7 @@ APIDefs["C_Item.IsEquippedItemType"] = {
     params = { { name = "type", type = "cstring", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1050,6 +1189,7 @@ APIDefs["C_Item.IsHarmfulItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1062,6 +1202,7 @@ APIDefs["C_Item.IsHelpfulItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1074,6 +1215,7 @@ APIDefs["C_Item.IsItemBindToAccount"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isItemBindToAccount", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1086,6 +1228,7 @@ APIDefs["C_Item.IsItemBindToAccountUntilEquip"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isItemBindToAccountUntilEquip", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1098,6 +1241,7 @@ APIDefs["C_Item.IsItemConduit"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "isConduit", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1110,6 +1254,7 @@ APIDefs["C_Item.IsItemConvertibleAndValidForPlayer"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "isItemConvertibleAndValidForPlayer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1122,6 +1267,7 @@ APIDefs["C_Item.IsItemCorrupted"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "isCorrupted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1134,6 +1280,7 @@ APIDefs["C_Item.IsItemCorruptionRelated"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "isCorruptionRelated", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1146,6 +1293,7 @@ APIDefs["C_Item.IsItemCorruptionResistant"] = {
     params = { { name = "itemLoc", type = "ItemLocation", default = nil } },
     returns = { { name = "isCorruptionResistant", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1158,6 +1306,7 @@ APIDefs["C_Item.IsItemDataCached"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "isCached", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1170,6 +1319,7 @@ APIDefs["C_Item.IsItemDataCachedByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isCached", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1182,6 +1332,7 @@ APIDefs["C_Item.IsItemGUIDInInventory"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "valid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1194,6 +1345,7 @@ APIDefs["C_Item.IsItemInRange"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "targetToken", type = "cstring", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1206,6 +1358,7 @@ APIDefs["C_Item.IsItemKeystoneByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isKeystone", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1218,6 +1371,7 @@ APIDefs["C_Item.IsItemSpecificToPlayerClass"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "isItemSpecificToPlayerClass", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1230,6 +1384,7 @@ APIDefs["C_Item.IsLocked"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "isLocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1242,6 +1397,7 @@ APIDefs["C_Item.IsRelicItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1254,6 +1410,7 @@ APIDefs["C_Item.IsUsableItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "usable", type = "bool", canBeSecret = false }, { name = "noMana", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1266,6 +1423,7 @@ APIDefs["C_Item.ItemHasRange"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1278,6 +1436,7 @@ APIDefs["C_Item.LockItem"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1290,6 +1449,7 @@ APIDefs["C_Item.LockItemByGUID"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1302,6 +1462,7 @@ APIDefs["C_Item.PickupItem"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1314,6 +1475,7 @@ APIDefs["C_Item.ReplaceEnchant"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Item.ReplaceTradeEnchant"] = {
@@ -1325,6 +1487,7 @@ APIDefs["C_Item.ReplaceTradeEnchant"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Item.ReplaceTradeskillEnchant"] = {
@@ -1336,6 +1499,7 @@ APIDefs["C_Item.ReplaceTradeskillEnchant"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Item.RequestLoadItemData"] = {
@@ -1347,6 +1511,7 @@ APIDefs["C_Item.RequestLoadItemData"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1359,6 +1524,7 @@ APIDefs["C_Item.RequestLoadItemDataByID"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1371,6 +1537,7 @@ APIDefs["C_Item.UnlockItem"] = {
     params = { { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1383,6 +1550,7 @@ APIDefs["C_Item.UnlockItemByGUID"] = {
     params = { { name = "itemGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1395,5 +1563,6 @@ APIDefs["C_Item.UseItemByName"] = {
     params = { { name = "itemInfo", type = "ItemInfo", default = nil }, { name = "target", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

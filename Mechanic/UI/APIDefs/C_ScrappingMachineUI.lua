@@ -11,6 +11,7 @@ APIDefs["C_ScrappingMachineUI.CloseScrappingMachine"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ScrappingMachineUI.DropPendingScrapItemFromCursor"] = {
@@ -22,6 +23,7 @@ APIDefs["C_ScrappingMachineUI.DropPendingScrapItemFromCursor"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = { { name = "itemLoc", type = "ItemLocation", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_ScrappingMachineUI.GetScrapSpellID"] = {
     params = {  },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ScrappingMachineUI.GetScrappingMachineName"] = {
@@ -57,6 +61,7 @@ APIDefs["C_ScrappingMachineUI.GetScrappingMachineName"] = {
     params = {  },
     returns = { { name = "name", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ScrappingMachineUI.HasScrappableItems"] = {
@@ -68,6 +73,7 @@ APIDefs["C_ScrappingMachineUI.HasScrappableItems"] = {
     params = {  },
     returns = { { name = "hasScrappableItems", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ScrappingMachineUI.RemoveAllScrapItems"] = {
@@ -79,6 +85,7 @@ APIDefs["C_ScrappingMachineUI.RemoveAllScrapItems"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ScrappingMachineUI.RemoveCurrentScrappingItem"] = {
@@ -90,6 +97,7 @@ APIDefs["C_ScrappingMachineUI.RemoveCurrentScrappingItem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ScrappingMachineUI.RemoveItemToScrap"] = {
@@ -101,6 +109,7 @@ APIDefs["C_ScrappingMachineUI.RemoveItemToScrap"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -113,6 +122,7 @@ APIDefs["C_ScrappingMachineUI.ScrapItems"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ScrappingMachineUI.ValidateScrappingList"] = {
@@ -124,4 +134,5 @@ APIDefs["C_ScrappingMachineUI.ValidateScrappingList"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

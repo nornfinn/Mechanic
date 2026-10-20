@@ -11,7 +11,32 @@ APIDefs["C_NeighborhoodInitiative.AddTrackedInitiativeTask"] = {
     params = { { name = "initiativeTaskID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_NeighborhoodInitiative.GetActiveNeighborhood"] = {
+    key = "C_NeighborhoodInitiative.GetActiveNeighborhood",
+    name = "GetActiveNeighborhood",
+    category = "general",
+    subcategory = "c_neighborhoodinitiative",
+    funcPath = "C_NeighborhoodInitiative.GetActiveNeighborhood",
+    params = {  },
+    returns = { { name = "neighborhoodGUID", type = "WOWGUID", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_NeighborhoodInitiative.GetAvailableHouseXP"] = {
+    key = "C_NeighborhoodInitiative.GetAvailableHouseXP",
+    name = "GetAvailableHouseXP",
+    category = "general",
+    subcategory = "c_neighborhoodinitiative",
+    funcPath = "C_NeighborhoodInitiative.GetAvailableHouseXP",
+    params = {  },
+    returns = { { name = "availabeXP", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.GetInitiativeActivityLogInfo"] = {
@@ -23,6 +48,7 @@ APIDefs["C_NeighborhoodInitiative.GetInitiativeActivityLogInfo"] = {
     params = {  },
     returns = { { name = "info", type = "InitiativeActivityLogInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.GetInitiativeTaskChatLink"] = {
@@ -34,6 +60,7 @@ APIDefs["C_NeighborhoodInitiative.GetInitiativeTaskChatLink"] = {
     params = { { name = "initiativeTaskID", type = "number", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +73,20 @@ APIDefs["C_NeighborhoodInitiative.GetInitiativeTaskInfo"] = {
     params = { { name = "initiativeTaskID", type = "number", default = nil } },
     returns = { { name = "info", type = "InitiativeTaskInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_NeighborhoodInitiative.GetInitiativeTaskRewardScaling"] = {
+    key = "C_NeighborhoodInitiative.GetInitiativeTaskRewardScaling",
+    name = "GetInitiativeTaskRewardScaling",
+    category = "general",
+    subcategory = "c_neighborhoodinitiative",
+    funcPath = "C_NeighborhoodInitiative.GetInitiativeTaskRewardScaling",
+    params = { { name = "taskID", type = "number", default = nil }, { name = "numItems", type = "number", default = nil } },
+    returns = { { name = "scaledAmount", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +99,7 @@ APIDefs["C_NeighborhoodInitiative.GetNeighborhoodInitiativeInfo"] = {
     params = {  },
     returns = { { name = "info", type = "NeighborhoodInitiativeInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.GetRequiredLevel"] = {
@@ -69,6 +111,7 @@ APIDefs["C_NeighborhoodInitiative.GetRequiredLevel"] = {
     params = {  },
     returns = { { name = "reqLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.GetTrackedInitiativeTasks"] = {
@@ -80,6 +123,7 @@ APIDefs["C_NeighborhoodInitiative.GetTrackedInitiativeTasks"] = {
     params = {  },
     returns = { { name = "trackedInitiativeTasks", type = "InitiativeTasksTracked", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.IsInitiativeEnabled"] = {
@@ -91,6 +135,7 @@ APIDefs["C_NeighborhoodInitiative.IsInitiativeEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.IsPlayerInNeighborhoodGroup"] = {
@@ -102,6 +147,7 @@ APIDefs["C_NeighborhoodInitiative.IsPlayerInNeighborhoodGroup"] = {
     params = {  },
     returns = { { name = "inValidGroup", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.IsViewingActiveNeighborhood"] = {
@@ -113,6 +159,19 @@ APIDefs["C_NeighborhoodInitiative.IsViewingActiveNeighborhood"] = {
     params = {  },
     returns = { { name = "isViewingActiveNeighborhood", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_NeighborhoodInitiative.PlayerHasInitiativeAccess"] = {
+    key = "C_NeighborhoodInitiative.PlayerHasInitiativeAccess",
+    name = "PlayerHasInitiativeAccess",
+    category = "general",
+    subcategory = "c_neighborhoodinitiative",
+    funcPath = "C_NeighborhoodInitiative.PlayerHasInitiativeAccess",
+    params = {  },
+    returns = { { name = "success", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.PlayerMeetsRequiredLevel"] = {
@@ -124,6 +183,7 @@ APIDefs["C_NeighborhoodInitiative.PlayerMeetsRequiredLevel"] = {
     params = {  },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.RemoveTrackedInitiativeTask"] = {
@@ -135,6 +195,7 @@ APIDefs["C_NeighborhoodInitiative.RemoveTrackedInitiativeTask"] = {
     params = { { name = "initiativeTaskID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -147,6 +208,7 @@ APIDefs["C_NeighborhoodInitiative.RequestInitiativeActivityLog"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.RequestNeighborhoodInitiativeInfo"] = {
@@ -158,6 +220,7 @@ APIDefs["C_NeighborhoodInitiative.RequestNeighborhoodInitiativeInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NeighborhoodInitiative.SetActiveNeighborhood"] = {
@@ -169,6 +232,7 @@ APIDefs["C_NeighborhoodInitiative.SetActiveNeighborhood"] = {
     params = { { name = "neighborhoodGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -181,5 +245,6 @@ APIDefs["C_NeighborhoodInitiative.SetViewingNeighborhood"] = {
     params = { { name = "neighborhoodGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

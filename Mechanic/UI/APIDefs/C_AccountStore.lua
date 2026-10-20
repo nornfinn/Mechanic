@@ -11,6 +11,7 @@ APIDefs["C_AccountStore.BeginPurchase"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "purchaseStarted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AccountStore.GetCategories"] = {
     params = { { name = "storeFrontID", type = "number", default = nil } },
     returns = { { name = "categories", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_AccountStore.GetCategoryInfo"] = {
     params = { { name = "categoryID", type = "number", default = nil } },
     returns = { { name = "info", type = "AccountStoreCategoryInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_AccountStore.GetCategoryItems"] = {
     params = { { name = "categoryID", type = "number", default = nil } },
     returns = { { name = "itemIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_AccountStore.GetCurrencyAvailable"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "amount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_AccountStore.GetCurrencyIDForStore"] = {
     params = { { name = "storeFrontID", type = "number", default = nil } },
     returns = { { name = "currencyID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_AccountStore.GetCurrencyInfo"] = {
     params = { { name = "currencyID", type = "number", default = nil } },
     returns = { { name = "info", type = "AccountStoreCurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,6 +102,7 @@ APIDefs["C_AccountStore.GetItemInfo"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "info", type = "AccountStoreItemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -107,6 +115,7 @@ APIDefs["C_AccountStore.GetStoreFrontState"] = {
     params = { { name = "storeFrontID", type = "number", default = nil } },
     returns = { { name = "state", type = "AccountStoreState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -119,6 +128,7 @@ APIDefs["C_AccountStore.RefundItem"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "refundStarted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -131,5 +141,6 @@ APIDefs["C_AccountStore.RequestStoreFrontInfoUpdate"] = {
     params = { { name = "storeFrontID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_Glue.IsFirstLoadThisSession"] = {
     params = {  },
     returns = { { name = "IsFirstLoadThisSession", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Glue.IsOnGlueScreen"] = {
@@ -22,4 +23,5 @@ APIDefs["C_Glue.IsOnGlueScreen"] = {
     params = {  },
     returns = { { name = "isOnGlueScreen", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

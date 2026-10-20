@@ -11,6 +11,20 @@ APIDefs["C_TransmogOutfitInfo.AddNewOutfit"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "icon", type = "fileID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.CanPlayerTransmogSlot"] = {
+    key = "C_TransmogOutfitInfo.CanPlayerTransmogSlot",
+    name = "CanPlayerTransmogSlot",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.CanPlayerTransmogSlot",
+    params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
+    returns = { { name = "valid", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +37,20 @@ APIDefs["C_TransmogOutfitInfo.ChangeDisplayedOutfit"] = {
     params = { { name = "outfitID", type = "number", default = nil }, { name = "trigger", type = "TransmogSituationTrigger", default = nil }, { name = "toggleLock", type = "bool", default = nil }, { name = "allowRemoveOutfit", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.ChangeToOutfit"] = {
+    key = "C_TransmogOutfitInfo.ChangeToOutfit",
+    name = "ChangeToOutfit",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.ChangeToOutfit",
+    params = { { name = "playerFacingOutfitIndex", type = "number", default = nil }, { name = "allowRemoveOutfit", type = "bool", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +63,7 @@ APIDefs["C_TransmogOutfitInfo.ChangeViewedOutfit"] = {
     params = { { name = "outfitID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +76,7 @@ APIDefs["C_TransmogOutfitInfo.ClearAllPendingSituations"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.ClearAllPendingTransmogs"] = {
@@ -58,6 +88,7 @@ APIDefs["C_TransmogOutfitInfo.ClearAllPendingTransmogs"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.ClearDisplayedOutfit"] = {
@@ -69,7 +100,20 @@ APIDefs["C_TransmogOutfitInfo.ClearDisplayedOutfit"] = {
     params = { { name = "trigger", type = "TransmogSituationTrigger", default = nil }, { name = "toggleLock", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.ClearOutfit"] = {
+    key = "C_TransmogOutfitInfo.ClearOutfit",
+    name = "ClearOutfit",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.ClearOutfit",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.CommitAndApplyAllPending"] = {
@@ -78,9 +122,11 @@ APIDefs["C_TransmogOutfitInfo.CommitAndApplyAllPending"] = {
     category = "general",
     subcategory = "c_transmogoutfitinfo",
     funcPath = "C_TransmogOutfitInfo.CommitAndApplyAllPending",
-    params = {  },
+    params = { { name = "useAvailableDiscount", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_TransmogOutfitInfo.CommitOutfitInfo"] = {
@@ -92,6 +138,7 @@ APIDefs["C_TransmogOutfitInfo.CommitOutfitInfo"] = {
     params = { { name = "outfitID", type = "number", default = nil }, { name = "name", type = "cstring", default = nil }, { name = "icon", type = "fileID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +151,7 @@ APIDefs["C_TransmogOutfitInfo.CommitPendingSituations"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetActiveOutfitID"] = {
@@ -115,6 +163,7 @@ APIDefs["C_TransmogOutfitInfo.GetActiveOutfitID"] = {
     params = {  },
     returns = { { name = "outfitID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetAllSlotLocationInfo"] = {
@@ -126,6 +175,20 @@ APIDefs["C_TransmogOutfitInfo.GetAllSlotLocationInfo"] = {
     params = {  },
     returns = { { name = "appearanceSlotInfo", type = "table", canBeSecret = false }, { name = "illusionSlotInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_TransmogOutfitInfo.GetAllTransmogOutfitOptionSheatheCategoryInfo"] = {
+    key = "C_TransmogOutfitInfo.GetAllTransmogOutfitOptionSheatheCategoryInfo",
+    name = "GetAllTransmogOutfitOptionSheatheCategoryInfo",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.GetAllTransmogOutfitOptionSheatheCategoryInfo",
+    params = { { name = "imaID", type = "number", default = nil } },
+    returns = { { name = "categoryInfo", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_TransmogOutfitInfo.GetCollectionInfoForSlotAndOption"] = {
@@ -137,6 +200,7 @@ APIDefs["C_TransmogOutfitInfo.GetCollectionInfoForSlotAndOption"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil }, { name = "weaponOption", type = "TransmogOutfitSlotOption", default = nil }, { name = "collectionType", type = "TransmogCollectionType", default = nil } },
     returns = { { name = "collectionInfo", type = "TransmogOutfitWeaponCollectionInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -149,6 +213,7 @@ APIDefs["C_TransmogOutfitInfo.GetCurrentlyViewedOutfitID"] = {
     params = {  },
     returns = { { name = "outfitID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetEquippedSlotOptionFromTransmogSlot"] = {
@@ -160,6 +225,7 @@ APIDefs["C_TransmogOutfitInfo.GetEquippedSlotOptionFromTransmogSlot"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "weaponOption", type = "TransmogOutfitSlotOption", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -172,6 +238,20 @@ APIDefs["C_TransmogOutfitInfo.GetIllusionDefaultIMAIDForCollectionType"] = {
     params = { { name = "collectionType", type = "TransmogCollectionType", default = nil } },
     returns = { { name = "imaID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.GetItemModifiedAppearanceEffectiveCategory"] = {
+    key = "C_TransmogOutfitInfo.GetItemModifiedAppearanceEffectiveCategory",
+    name = "GetItemModifiedAppearanceEffectiveCategory",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.GetItemModifiedAppearanceEffectiveCategory",
+    params = { { name = "imaID", type = "number", default = nil } },
+    returns = { { name = "categoryID", type = "TransmogCollectionType", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -184,6 +264,7 @@ APIDefs["C_TransmogOutfitInfo.GetLinkedSlotInfo"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "linkedSlotInfo", type = "TransmogOutfitLinkedSlotInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -196,6 +277,7 @@ APIDefs["C_TransmogOutfitInfo.GetMaxNumberOfTotalOutfitsForSource"] = {
     params = { { name = "source", type = "TransmogOutfitEntrySource", default = nil } },
     returns = { { name = "maxOutfitCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -208,6 +290,7 @@ APIDefs["C_TransmogOutfitInfo.GetMaxNumberOfUsableOutfits"] = {
     params = {  },
     returns = { { name = "maxOutfitCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetNextOutfitCost"] = {
@@ -219,6 +302,7 @@ APIDefs["C_TransmogOutfitInfo.GetNextOutfitCost"] = {
     params = {  },
     returns = { { name = "outfitCost", type = "BigUInteger", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetNumberOfOutfitsUnlockedForSource"] = {
@@ -230,6 +314,20 @@ APIDefs["C_TransmogOutfitInfo.GetNumberOfOutfitsUnlockedForSource"] = {
     params = { { name = "source", type = "TransmogOutfitEntrySource", default = nil } },
     returns = { { name = "unlockedOutfitCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.GetOptionsForSlot"] = {
+    key = "C_TransmogOutfitInfo.GetOptionsForSlot",
+    name = "GetOptionsForSlot",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.GetOptionsForSlot",
+    params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
+    returns = { { name = "options", type = "table", canBeSecret = false }, { name = "artifactOptions", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -240,8 +338,35 @@ APIDefs["C_TransmogOutfitInfo.GetOutfitInfo"] = {
     subcategory = "c_transmogoutfitinfo",
     funcPath = "C_TransmogOutfitInfo.GetOutfitInfo",
     params = { { name = "outfitID", type = "number", default = nil } },
-    returns = { { name = "outfitsInfo", type = "TransmogOutfitEntryInfo", canBeSecret = false } },
+    returns = { { name = "outfitInfo", type = "TransmogOutfitEntryInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.GetOutfitInfoByName"] = {
+    key = "C_TransmogOutfitInfo.GetOutfitInfoByName",
+    name = "GetOutfitInfoByName",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.GetOutfitInfoByName",
+    params = { { name = "name", type = "cstring", default = nil } },
+    returns = { { name = "outfitInfo", type = "TransmogOutfitEntryInfo", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.GetOutfitInfoByPlayerFacingIndex"] = {
+    key = "C_TransmogOutfitInfo.GetOutfitInfoByPlayerFacingIndex",
+    name = "GetOutfitInfoByPlayerFacingIndex",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.GetOutfitInfoByPlayerFacingIndex",
+    params = { { name = "playerFacingOutfitIndex", type = "number", default = nil } },
+    returns = { { name = "outfitInfo", type = "TransmogOutfitEntryInfo", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -254,6 +379,7 @@ APIDefs["C_TransmogOutfitInfo.GetOutfitSituation"] = {
     params = { { name = "option", type = "TransmogSituationOption", default = nil } },
     returns = { { name = "value", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -266,6 +392,7 @@ APIDefs["C_TransmogOutfitInfo.GetOutfitSituationsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetOutfitsInfo"] = {
@@ -277,6 +404,7 @@ APIDefs["C_TransmogOutfitInfo.GetOutfitsInfo"] = {
     params = {  },
     returns = { { name = "outfitsInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetPendingTransmogCost"] = {
@@ -286,8 +414,9 @@ APIDefs["C_TransmogOutfitInfo.GetPendingTransmogCost"] = {
     subcategory = "c_transmogoutfitinfo",
     funcPath = "C_TransmogOutfitInfo.GetPendingTransmogCost",
     params = {  },
-    returns = { { name = "cost", type = "BigUInteger", canBeSecret = false } },
+    returns = { { name = "cost", type = "BigUInteger", canBeSecret = false }, { name = "modifierFlags", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetSecondarySlotState"] = {
@@ -299,6 +428,7 @@ APIDefs["C_TransmogOutfitInfo.GetSecondarySlotState"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "state", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -311,6 +441,7 @@ APIDefs["C_TransmogOutfitInfo.GetSetSourcesForSlot"] = {
     params = { { name = "transmogSetID", type = "number", default = nil }, { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "sources", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -323,6 +454,7 @@ APIDefs["C_TransmogOutfitInfo.GetSlotGroupInfo"] = {
     params = {  },
     returns = { { name = "slotGroups", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetSourceIDsForSlot"] = {
@@ -334,6 +466,7 @@ APIDefs["C_TransmogOutfitInfo.GetSourceIDsForSlot"] = {
     params = { { name = "transmogSetID", type = "number", default = nil }, { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "sources", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -346,6 +479,7 @@ APIDefs["C_TransmogOutfitInfo.GetTransmogOutfitSlotForInventoryType"] = {
     params = { { name = "inventoryType", type = "luaIndex", default = nil } },
     returns = { { name = "slot", type = "TransmogOutfitSlot", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -358,6 +492,7 @@ APIDefs["C_TransmogOutfitInfo.GetTransmogOutfitSlotFromInventorySlot"] = {
     params = { { name = "inventorySlot", type = "InventorySlots", default = nil } },
     returns = { { name = "slot", type = "TransmogOutfitSlot", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -370,6 +505,7 @@ APIDefs["C_TransmogOutfitInfo.GetUISituationCategoriesAndOptions"] = {
     params = {  },
     returns = { { name = "categoryData", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.GetUnassignedAtlasForSlot"] = {
@@ -381,6 +517,7 @@ APIDefs["C_TransmogOutfitInfo.GetUnassignedAtlasForSlot"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "atlas", type = "textureAtlas", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -393,6 +530,7 @@ APIDefs["C_TransmogOutfitInfo.GetUnassignedDisplayAtlasForSlot"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "atlas", type = "textureAtlas", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -405,6 +543,7 @@ APIDefs["C_TransmogOutfitInfo.GetViewedOutfitSlotInfo"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil }, { name = "type", type = "TransmogType", default = nil }, { name = "option", type = "TransmogOutfitSlotOption", default = nil } },
     returns = { { name = "slotInfo", type = "ViewedTransmogOutfitSlotInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -417,6 +556,7 @@ APIDefs["C_TransmogOutfitInfo.GetWeaponOptionsForSlot"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "weaponOptions", type = "table", canBeSecret = false }, { name = "artifactOptions", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -429,6 +569,7 @@ APIDefs["C_TransmogOutfitInfo.HasPendingOutfitSituations"] = {
     params = {  },
     returns = { { name = "hasPending", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.HasPendingOutfitTransmogs"] = {
@@ -440,6 +581,19 @@ APIDefs["C_TransmogOutfitInfo.HasPendingOutfitTransmogs"] = {
     params = {  },
     returns = { { name = "hasPending", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_TransmogOutfitInfo.InTransmogEvent"] = {
+    key = "C_TransmogOutfitInfo.InTransmogEvent",
+    name = "InTransmogEvent",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.InTransmogEvent",
+    params = {  },
+    returns = { { name = "inTransmogEvent", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.IsEquippedGearOutfitDisplayed"] = {
@@ -451,6 +605,7 @@ APIDefs["C_TransmogOutfitInfo.IsEquippedGearOutfitDisplayed"] = {
     params = {  },
     returns = { { name = "isDisplayed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.IsEquippedGearOutfitLocked"] = {
@@ -462,6 +617,7 @@ APIDefs["C_TransmogOutfitInfo.IsEquippedGearOutfitLocked"] = {
     params = {  },
     returns = { { name = "isLocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.IsLockedOutfit"] = {
@@ -473,6 +629,7 @@ APIDefs["C_TransmogOutfitInfo.IsLockedOutfit"] = {
     params = { { name = "outfitID", type = "number", default = nil } },
     returns = { { name = "isLocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -485,7 +642,32 @@ APIDefs["C_TransmogOutfitInfo.IsSlotWeaponSlot"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "isWeaponSlot", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.IsTransmogEnabled"] = {
+    key = "C_TransmogOutfitInfo.IsTransmogEnabled",
+    name = "IsTransmogEnabled",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.IsTransmogEnabled",
+    params = {  },
+    returns = { { name = "enabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_TransmogOutfitInfo.IsUsableDiscountAvailable"] = {
+    key = "C_TransmogOutfitInfo.IsUsableDiscountAvailable",
+    name = "IsUsableDiscountAvailable",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.IsUsableDiscountAvailable",
+    params = {  },
+    returns = { { name = "isAvailable", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.IsValidTransmogOutfitName"] = {
@@ -497,6 +679,7 @@ APIDefs["C_TransmogOutfitInfo.IsValidTransmogOutfitName"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "isApproved", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -509,6 +692,7 @@ APIDefs["C_TransmogOutfitInfo.PickupOutfit"] = {
     params = { { name = "outfitID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -521,6 +705,7 @@ APIDefs["C_TransmogOutfitInfo.ResetOutfitSituations"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.RevertPendingTransmog"] = {
@@ -532,6 +717,7 @@ APIDefs["C_TransmogOutfitInfo.RevertPendingTransmog"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil }, { name = "type", type = "TransmogType", default = nil }, { name = "option", type = "TransmogOutfitSlotOption", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -544,6 +730,7 @@ APIDefs["C_TransmogOutfitInfo.SetOutfitSituationsEnabled"] = {
     params = { { name = "enabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -556,6 +743,20 @@ APIDefs["C_TransmogOutfitInfo.SetOutfitToCustomSet"] = {
     params = { { name = "transmogCustomSetID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.SetOutfitToOutfit"] = {
+    key = "C_TransmogOutfitInfo.SetOutfitToOutfit",
+    name = "SetOutfitToOutfit",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.SetOutfitToOutfit",
+    params = { { name = "outfitID", type = "number", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -568,6 +769,7 @@ APIDefs["C_TransmogOutfitInfo.SetOutfitToSet"] = {
     params = { { name = "transmogSetID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -580,6 +782,20 @@ APIDefs["C_TransmogOutfitInfo.SetPendingTransmog"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil }, { name = "type", type = "TransmogType", default = nil }, { name = "option", type = "TransmogOutfitSlotOption", default = nil }, { name = "transmogID", type = "number", default = nil }, { name = "displayType", type = "TransmogOutfitDisplayType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.SetPendingTransmogSheatheCategory"] = {
+    key = "C_TransmogOutfitInfo.SetPendingTransmogSheatheCategory",
+    name = "SetPendingTransmogSheatheCategory",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.SetPendingTransmogSheatheCategory",
+    params = { { name = "slot", type = "TransmogOutfitSlot", default = nil }, { name = "option", type = "TransmogOutfitSlotOption", default = nil }, { name = "category", type = "TransmogOutfitSlotOptionSheatheCategory", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -592,6 +808,20 @@ APIDefs["C_TransmogOutfitInfo.SetSecondarySlotState"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil }, { name = "state", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.SetViewedOptionForSlot"] = {
+    key = "C_TransmogOutfitInfo.SetViewedOptionForSlot",
+    name = "SetViewedOptionForSlot",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.SetViewedOptionForSlot",
+    params = { { name = "slot", type = "TransmogOutfitSlot", default = nil }, { name = "option", type = "TransmogOutfitSlotOption", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -604,6 +834,7 @@ APIDefs["C_TransmogOutfitInfo.SetViewedWeaponOptionForSlot"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil }, { name = "weaponOption", type = "TransmogOutfitSlotOption", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -616,7 +847,20 @@ APIDefs["C_TransmogOutfitInfo.SlotHasSecondary"] = {
     params = { { name = "slot", type = "TransmogOutfitSlot", default = nil } },
     returns = { { name = "hasSecondary", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_TransmogOutfitInfo.TransmogEventActive"] = {
+    key = "C_TransmogOutfitInfo.TransmogEventActive",
+    name = "TransmogEventActive",
+    category = "general",
+    subcategory = "c_transmogoutfitinfo",
+    funcPath = "C_TransmogOutfitInfo.TransmogEventActive",
+    params = {  },
+    returns = { { name = "transmogEventActive", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TransmogOutfitInfo.UpdatePendingSituation"] = {
@@ -628,5 +872,6 @@ APIDefs["C_TransmogOutfitInfo.UpdatePendingSituation"] = {
     params = { { name = "option", type = "TransmogSituationOption", default = nil }, { name = "value", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_RaidLocks.GetRedirectedDifficultyID"] = {
     params = { { name = "mapID", type = "number", default = nil }, { name = "difficultyID", type = "number", default = nil } },
     returns = { { name = "redirectedDifficultyID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_RaidLocks.IsEncounterComplete"] = {
     params = { { name = "mapID", type = "number", default = nil }, { name = "encounterID", type = "number", default = nil }, { name = "difficultyID", type = "number", default = nil } },
     returns = { { name = "encounterIsComplete", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,4 +37,17 @@ APIDefs["C_RaidLocks.IsRaidLockExtendFeatureEnabled"] = {
     params = {  },
     returns = { { name = "raidLockExtendFeatureEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_RaidLocks.IsRaidLockExtendFeatureSupported"] = {
+    key = "C_RaidLocks.IsRaidLockExtendFeatureSupported",
+    name = "IsRaidLockExtendFeatureSupported",
+    category = "unit",
+    subcategory = "c_raidlocks",
+    funcPath = "C_RaidLocks.IsRaidLockExtendFeatureSupported",
+    params = {  },
+    returns = { { name = "raidLockExtendFeatureSupported", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }

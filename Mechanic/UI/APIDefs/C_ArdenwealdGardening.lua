@@ -11,6 +11,7 @@ APIDefs["C_ArdenwealdGardening.GetGardenData"] = {
     params = {  },
     returns = { { name = "data", type = "ArdenwealdGardenData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ArdenwealdGardening.IsGardenAccessible"] = {
@@ -22,4 +23,5 @@ APIDefs["C_ArdenwealdGardening.IsGardenAccessible"] = {
     params = {  },
     returns = { { name = "accessible", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

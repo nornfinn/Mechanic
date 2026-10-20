@@ -2,6 +2,31 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_Spell.CancelAutoRepeatSpell"] = {
+    key = "C_Spell.CancelAutoRepeatSpell",
+    name = "CancelAutoRepeatSpell",
+    category = "spell",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.CancelAutoRepeatSpell",
+    params = {  },
+    returns = { { name = "wasCancelled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+}
+
+APIDefs["C_Spell.CancelItemTempEnchantment"] = {
+    key = "C_Spell.CancelItemTempEnchantment",
+    name = "CancelItemTempEnchantment",
+    category = "spell",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.CancelItemTempEnchantment",
+    params = { { name = "weaponSlot", type = "WeaponSlot", default = nil }, { name = "enchantmentType", type = "ItemEnchantType", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
 APIDefs["C_Spell.CancelSpellByID"] = {
     key = "C_Spell.CancelSpellByID",
     name = "CancelSpellByID",
@@ -11,6 +36,7 @@ APIDefs["C_Spell.CancelSpellByID"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +49,7 @@ APIDefs["C_Spell.DoesSpellExist"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "spellExists", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +62,7 @@ APIDefs["C_Spell.EnableSpellRangeCheck"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "enable", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +75,7 @@ APIDefs["C_Spell.GetAuraStatChanges"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "healthChange", type = "number", canBeSecret = false }, { name = "powerTypeChanges", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +88,7 @@ APIDefs["C_Spell.GetBaseSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "spec", type = "number", default = 0 } },
     returns = { { name = "baseSpellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -71,6 +101,20 @@ APIDefs["C_Spell.GetDeadlyDebuffInfo"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "deadlyDebuffInfo", type = "DeadlyDebuffInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
+}
+
+APIDefs["C_Spell.GetItemCooldown"] = {
+    key = "C_Spell.GetItemCooldown",
+    name = "GetItemCooldown",
+    category = "spell",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.GetItemCooldown",
+    params = { { name = "itemID", type = "number", default = nil } },
+    returns = { { name = "spellCooldownInfo", type = "SpellCooldownInfo", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -83,19 +127,21 @@ APIDefs["C_Spell.GetItemModifiedAppearancesApplied"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "itemModifiedAppearanceIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
-APIDefs["C_Spell.GetMawPowerBorderAtlasBySpellID"] = {
-    key = "C_Spell.GetMawPowerBorderAtlasBySpellID",
-    name = "GetMawPowerBorderAtlasBySpellID",
-    category = "spell",
+APIDefs["C_Spell.GetLastCategoryCooldownSource"] = {
+    key = "C_Spell.GetLastCategoryCooldownSource",
+    name = "GetLastCategoryCooldownSource",
+    category = "combat_midnight",
     subcategory = "c_spell",
-    funcPath = "C_Spell.GetMawPowerBorderAtlasBySpellID",
-    params = { { name = "spellID", type = "number", default = nil } },
-    returns = { { name = "rarityBorderAtlas", type = "textureAtlas", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
+    funcPath = "C_Spell.GetLastCategoryCooldownSource",
+    params = { { name = "spellCategory", type = "number", default = nil } },
+    returns = { { name = "spellID", type = "number", canBeSecret = false }, { name = "itemID", type = "number", canBeSecret = false } },
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_Spell.GetMawPowerLinkBySpellID"] = {
@@ -104,9 +150,23 @@ APIDefs["C_Spell.GetMawPowerLinkBySpellID"] = {
     category = "spell",
     subcategory = "c_spell",
     funcPath = "C_Spell.GetMawPowerLinkBySpellID",
-    params = { { name = "spellID", type = "number", default = nil } },
+    params = { { name = "spellID", type = "SpellIdentifier", default = nil } },
     returns = { { name = "link", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
+}
+
+APIDefs["C_Spell.GetMawPowerRarityInfoBySpellID"] = {
+    key = "C_Spell.GetMawPowerRarityInfoBySpellID",
+    name = "GetMawPowerRarityInfoBySpellID",
+    category = "spell",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.GetMawPowerRarityInfoBySpellID",
+    params = { { name = "spellID", type = "SpellIdentifier", default = nil } },
+    returns = { { name = "rarityID", type = "number", canBeSecret = false }, { name = "rarityBorderAtlas", type = "textureAtlas", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -119,6 +179,7 @@ APIDefs["C_Spell.GetOverrideSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "spec", type = "number", default = 0 }, { name = "onlyKnown", type = "bool", default = true }, { name = "ignoreOverrideSpellID", type = "number", default = 0 } },
     returns = { { name = "overrideSpellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -131,6 +192,7 @@ APIDefs["C_Spell.GetSchoolString"] = {
     params = { { name = "schoolMask", type = "number", default = nil } },
     returns = { { name = "result", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -143,6 +205,7 @@ APIDefs["C_Spell.GetSpellAutoCast"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "autoCastAllowed", type = "bool", canBeSecret = false }, { name = "autoCastEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -155,7 +218,8 @@ APIDefs["C_Spell.GetSpellCastCount"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "castCount", type = "number", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellCooldownRestricted, SecretArguments=AllowedWhenTainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_Spell.GetSpellChargeDuration"] = {
@@ -167,6 +231,7 @@ APIDefs["C_Spell.GetSpellChargeDuration"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -179,7 +244,8 @@ APIDefs["C_Spell.GetSpellCharges"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "chargeInfo", type = "SpellChargeInfo", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellCooldownRestricted, SecretArguments=AllowedWhenTainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_Spell.GetSpellCooldown"] = {
@@ -191,7 +257,8 @@ APIDefs["C_Spell.GetSpellCooldown"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "spellCooldownInfo", type = "SpellCooldownInfo", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellCooldownRestricted, SecretArguments=AllowedWhenTainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_Spell.GetSpellCooldownDuration"] = {
@@ -200,34 +267,11 @@ APIDefs["C_Spell.GetSpellCooldownDuration"] = {
     category = "spell",
     subcategory = "c_spell",
     funcPath = "C_Spell.GetSpellCooldownDuration",
-    params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
+    params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "ignoreGCD", type = "bool", default = false } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
-}
-
-APIDefs["C_Spell.GetSpellCooldownRemaining"] = {
-    key = "C_Spell.GetSpellCooldownRemaining",
-    name = "GetSpellCooldownRemaining",
-    category = "combat_midnight",
-    subcategory = "c_spell",
-    funcPath = "C_Spell.GetSpellCooldownRemaining",
-    params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
-    returns = { { name = "remainingSeconds", type = "number", canBeSecret = false } },
-    midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellCooldownRestricted, SecretArguments=AllowedWhenTainted",
-}
-
-APIDefs["C_Spell.GetSpellCooldownRemainingPercent"] = {
-    key = "C_Spell.GetSpellCooldownRemainingPercent",
-    name = "GetSpellCooldownRemainingPercent",
-    category = "combat_midnight",
-    subcategory = "c_spell",
-    funcPath = "C_Spell.GetSpellCooldownRemainingPercent",
-    params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "curve", type = "LuaCurveObjectBase", default = nil } },
-    returns = { { name = "result", type = "LuaCurveEvaluatedResult", canBeSecret = false } },
-    midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellCooldownRestricted, SecretWhenCurveSecret, SecretArguments=AllowedWhenTainted",
 }
 
 APIDefs["C_Spell.GetSpellDescription"] = {
@@ -239,6 +283,20 @@ APIDefs["C_Spell.GetSpellDescription"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
+}
+
+APIDefs["C_Spell.GetSpellDescriptionForItemLocation"] = {
+    key = "C_Spell.GetSpellDescriptionForItemLocation",
+    name = "GetSpellDescriptionForItemLocation",
+    category = "spell",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.GetSpellDescriptionForItemLocation",
+    params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "itemLocation", type = "ItemLocation", default = nil } },
+    returns = { { name = "description", type = "string", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -251,7 +309,8 @@ APIDefs["C_Spell.GetSpellDisplayCount"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "maxDisplayCount", type = "number", default = 9999 }, { name = "replacementString", type = "cstring", default = "*" } },
     returns = { { name = "displayCount", type = "string", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellCooldownRestricted, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_Spell.GetSpellIDForSpellIdentifier"] = {
@@ -263,6 +322,7 @@ APIDefs["C_Spell.GetSpellIDForSpellIdentifier"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -275,6 +335,7 @@ APIDefs["C_Spell.GetSpellInfo"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "spellInfo", type = "SpellInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -287,6 +348,7 @@ APIDefs["C_Spell.GetSpellLevelLearned"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "levelLearned", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -299,19 +361,8 @@ APIDefs["C_Spell.GetSpellLink"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "glyphID", type = "number", default = nil } },
     returns = { { name = "spellLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
-}
-
-APIDefs["C_Spell.GetSpellLossOfControlCooldown"] = {
-    key = "C_Spell.GetSpellLossOfControlCooldown",
-    name = "GetSpellLossOfControlCooldown",
-    category = "combat_midnight",
-    subcategory = "c_spell",
-    funcPath = "C_Spell.GetSpellLossOfControlCooldown",
-    params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
-    returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false } },
-    midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellCooldownRestricted, SecretArguments=AllowedWhenTainted",
 }
 
 APIDefs["C_Spell.GetSpellLossOfControlCooldownDuration"] = {
@@ -323,7 +374,21 @@ APIDefs["C_Spell.GetSpellLossOfControlCooldownDuration"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
+}
+
+APIDefs["C_Spell.GetSpellLossOfControlCooldownInfo"] = {
+    key = "C_Spell.GetSpellLossOfControlCooldownInfo",
+    name = "GetSpellLossOfControlCooldownInfo",
+    category = "combat_midnight",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.GetSpellLossOfControlCooldownInfo",
+    params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
+    returns = { { name = "lossOfControlInfo", type = "SpellLossOfControlInfo", canBeSecret = false } },
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_Spell.GetSpellMaxCumulativeAuraApplications"] = {
@@ -332,10 +397,11 @@ APIDefs["C_Spell.GetSpellMaxCumulativeAuraApplications"] = {
     category = "combat_midnight",
     subcategory = "c_spell",
     funcPath = "C_Spell.GetSpellMaxCumulativeAuraApplications",
-    params = { { name = "spellID", type = "number", default = nil } },
+    params = { { name = "spellID", type = "SpellIdentifier", default = nil } },
     returns = { { name = "cumulativeAura", type = "number", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenSpellAuraRestricted, SecretArguments=AllowedWhenTainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted, SecretWhenUnitAuraRestricted",
 }
 
 APIDefs["C_Spell.GetSpellName"] = {
@@ -345,8 +411,9 @@ APIDefs["C_Spell.GetSpellName"] = {
     subcategory = "c_spell",
     funcPath = "C_Spell.GetSpellName",
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
-    returns = { { name = "name", type = "string", canBeSecret = false } },
+    returns = { { name = "name", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -359,6 +426,7 @@ APIDefs["C_Spell.GetSpellPowerCost"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "powerCosts", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -371,6 +439,7 @@ APIDefs["C_Spell.GetSpellQueueWindow"] = {
     params = {  },
     returns = { { name = "result", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Spell.GetSpellSkillLineAbilityRank"] = {
@@ -382,6 +451,7 @@ APIDefs["C_Spell.GetSpellSkillLineAbilityRank"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "rank", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -394,6 +464,7 @@ APIDefs["C_Spell.GetSpellSubtext"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "subtext", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -404,8 +475,9 @@ APIDefs["C_Spell.GetSpellTexture"] = {
     subcategory = "c_spell",
     funcPath = "C_Spell.GetSpellTexture",
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
-    returns = { { name = "iconID", type = "fileID", canBeSecret = false }, { name = "originalIconID", type = "fileID", canBeSecret = false } },
+    returns = { { name = "iconID", type = "fileID", canBeSecret = false }, { name = "originalIconID", type = "fileID", canBeSecret = false }, { name = "conditionalIconID", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -418,7 +490,20 @@ APIDefs["C_Spell.GetSpellTradeSkillLink"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "spellLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
+}
+
+APIDefs["C_Spell.GetTargetSpellID"] = {
+    key = "C_Spell.GetTargetSpellID",
+    name = "GetTargetSpellID",
+    category = "spell",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.GetTargetSpellID",
+    params = {  },
+    returns = { { name = "spellID", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_Spell.GetVisibilityInfo"] = {
@@ -430,7 +515,21 @@ APIDefs["C_Spell.GetVisibilityInfo"] = {
     params = { { name = "spellID", type = "number", default = nil }, { name = "visibilityType", type = "SpellAuraVisibilityType", default = nil } },
     returns = { { name = "hasCustom", type = "bool", canBeSecret = false }, { name = "alwaysShowMine", type = "bool", canBeSecret = false }, { name = "showForMySpec", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Spell.IsActiveSpell"] = {
+    key = "C_Spell.IsActiveSpell",
+    name = "IsActiveSpell",
+    category = "combat_midnight",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.IsActiveSpell",
+    params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "targetUnit", type = "UnitToken", default = "player" } },
+    returns = { { name = "isActiveSpell", type = "bool", canBeSecret = false } },
+    midnightImpact = "CONDITIONAL",
+    games = { "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted, SecretWhenUnitAuraRestricted, SecretWhenUnitIdentityRestricted",
 }
 
 APIDefs["C_Spell.IsAutoAttackSpell"] = {
@@ -442,6 +541,7 @@ APIDefs["C_Spell.IsAutoAttackSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isAutoAttack", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -454,6 +554,7 @@ APIDefs["C_Spell.IsAutoRepeatSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isAutoRepeat", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -466,6 +567,7 @@ APIDefs["C_Spell.IsClassTalentSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isAutoRepeat", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -478,6 +580,7 @@ APIDefs["C_Spell.IsConsumableSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "consumable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -490,6 +593,7 @@ APIDefs["C_Spell.IsCurrentSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isCurrentSpell", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -502,6 +606,7 @@ APIDefs["C_Spell.IsExternalDefensive"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "isExternalDefensive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -514,6 +619,7 @@ APIDefs["C_Spell.IsPressHoldReleaseSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isPressHoldRelease", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -526,6 +632,7 @@ APIDefs["C_Spell.IsPriorityAura"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "isHighPriority", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -538,6 +645,7 @@ APIDefs["C_Spell.IsPvPTalentSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isAutoRepeat", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -550,6 +658,7 @@ APIDefs["C_Spell.IsRangedAutoAttackSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isRangedAutoAttack", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -562,6 +671,7 @@ APIDefs["C_Spell.IsSelfBuff"] = {
     params = { { name = "spellID", type = "number", default = nil } },
     returns = { { name = "hasSelfEffectsOnly", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -574,6 +684,7 @@ APIDefs["C_Spell.IsSpellCrowdControl"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isCrowdControl", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -586,6 +697,7 @@ APIDefs["C_Spell.IsSpellDataCached"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isCached", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -598,6 +710,7 @@ APIDefs["C_Spell.IsSpellDisabled"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "disabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -610,6 +723,7 @@ APIDefs["C_Spell.IsSpellHarmful"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isHarmful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -622,6 +736,7 @@ APIDefs["C_Spell.IsSpellHelpful"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isHelpful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -634,6 +749,7 @@ APIDefs["C_Spell.IsSpellImportant"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isImportant", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -646,6 +762,7 @@ APIDefs["C_Spell.IsSpellInRange"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "targetUnit", type = "UnitToken", default = "player" } },
     returns = { { name = "inRange", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -658,6 +775,7 @@ APIDefs["C_Spell.IsSpellPassive"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isPassive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -670,6 +788,7 @@ APIDefs["C_Spell.IsSpellUsable"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isUsable", type = "bool", canBeSecret = false }, { name = "insufficientPower", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -682,7 +801,20 @@ APIDefs["C_Spell.PickupSpell"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Spell.PlaceTargetingSpellAtCursor"] = {
+    key = "C_Spell.PlaceTargetingSpellAtCursor",
+    name = "PlaceTargetingSpellAtCursor",
+    category = "spell",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.PlaceTargetingSpellAtCursor",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_Spell.RequestLoadSpellData"] = {
@@ -694,6 +826,7 @@ APIDefs["C_Spell.RequestLoadSpellData"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -706,6 +839,7 @@ APIDefs["C_Spell.SetSpellAutoCastEnabled"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil }, { name = "enabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -718,7 +852,20 @@ APIDefs["C_Spell.SpellHasRange"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = { { name = "hasRange", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
+}
+
+APIDefs["C_Spell.TargetSpellChecksItemCondition"] = {
+    key = "C_Spell.TargetSpellChecksItemCondition",
+    name = "TargetSpellChecksItemCondition",
+    category = "spell",
+    subcategory = "c_spell",
+    funcPath = "C_Spell.TargetSpellChecksItemCondition",
+    params = {  },
+    returns = { { name = "result", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Spell.TargetSpellIsEnchanting"] = {
@@ -730,6 +877,7 @@ APIDefs["C_Spell.TargetSpellIsEnchanting"] = {
     params = {  },
     returns = { { name = "isEnchanting", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Spell.TargetSpellJumpsUpgradeTrack"] = {
@@ -741,6 +889,7 @@ APIDefs["C_Spell.TargetSpellJumpsUpgradeTrack"] = {
     params = {  },
     returns = { { name = "jumpsUpgradeTrack", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Spell.TargetSpellReplacesBonusTree"] = {
@@ -752,6 +901,7 @@ APIDefs["C_Spell.TargetSpellReplacesBonusTree"] = {
     params = {  },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Spell.ToggleSpellAutoCast"] = {
@@ -763,5 +913,6 @@ APIDefs["C_Spell.ToggleSpellAutoCast"] = {
     params = { { name = "spellIdentifier", type = "SpellIdentifier", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

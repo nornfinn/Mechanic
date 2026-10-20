@@ -11,6 +11,7 @@ APIDefs["C_AccountInfo.GetIDFromBattleNetAccountGUID"] = {
     params = { { name = "battleNetAccountGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "battleNetAccountID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_AccountInfo.IsGUIDBattleNetAccountType"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "isBNet", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,5 +37,6 @@ APIDefs["C_AccountInfo.IsGUIDRelatedToLocalAccount"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "isLocalUser", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

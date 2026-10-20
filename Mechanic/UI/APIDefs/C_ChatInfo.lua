@@ -2,6 +2,18 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_ChatInfo.AreOutgoingAddonChatMessagesRestricted"] = {
+    key = "C_ChatInfo.AreOutgoingAddonChatMessagesRestricted",
+    name = "AreOutgoingAddonChatMessagesRestricted",
+    category = "social",
+    subcategory = "c_chatinfo",
+    funcPath = "C_ChatInfo.AreOutgoingAddonChatMessagesRestricted",
+    params = {  },
+    returns = { { name = "isRestricted", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
 APIDefs["C_ChatInfo.CanPlayerSpeakLanguage"] = {
     key = "C_ChatInfo.CanPlayerSpeakLanguage",
     name = "CanPlayerSpeakLanguage",
@@ -11,6 +23,7 @@ APIDefs["C_ChatInfo.CanPlayerSpeakLanguage"] = {
     params = { { name = "languageId", type = "number", default = nil } },
     returns = { { name = "canSpeakLanguage", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +36,7 @@ APIDefs["C_ChatInfo.CancelEmote"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.DropCautionaryChatMessage"] = {
@@ -34,6 +48,7 @@ APIDefs["C_ChatInfo.DropCautionaryChatMessage"] = {
     params = { { name = "confirmNumber", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +61,7 @@ APIDefs["C_ChatInfo.GetChannelInfoFromIdentifier"] = {
     params = { { name = "channelIdentifier", type = "cstring", default = nil } },
     returns = { { name = "info", type = "ChatChannelInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +74,7 @@ APIDefs["C_ChatInfo.GetChannelRosterInfo"] = {
     params = { { name = "channelIndex", type = "luaIndex", default = nil }, { name = "rosterIndex", type = "luaIndex", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "owner", type = "bool", canBeSecret = false }, { name = "moderator", type = "bool", canBeSecret = false }, { name = "guid", type = "WOWGUID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +87,7 @@ APIDefs["C_ChatInfo.GetChannelRuleset"] = {
     params = { { name = "channelIndex", type = "luaIndex", default = nil } },
     returns = { { name = "ruleset", type = "ChatChannelRuleset", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +100,7 @@ APIDefs["C_ChatInfo.GetChannelRulesetForChannelID"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = { { name = "ruleset", type = "ChatChannelRuleset", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +113,7 @@ APIDefs["C_ChatInfo.GetChannelShortcut"] = {
     params = { { name = "channelIndex", type = "luaIndex", default = nil } },
     returns = { { name = "shortcut", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -106,6 +126,7 @@ APIDefs["C_ChatInfo.GetChannelShortcutForChannelID"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = { { name = "shortcut", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,7 +139,8 @@ APIDefs["C_ChatInfo.GetChatLineSenderGUID"] = {
     params = { { name = "chatLine", type = "number", default = nil } },
     returns = { { name = "guid", type = "WOWGUID", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretInChatMessagingLockdown, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_ChatInfo.GetChatLineSenderName"] = {
@@ -130,7 +152,8 @@ APIDefs["C_ChatInfo.GetChatLineSenderName"] = {
     params = { { name = "chatLine", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretInChatMessagingLockdown, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_ChatInfo.GetChatLineText"] = {
@@ -142,7 +165,8 @@ APIDefs["C_ChatInfo.GetChatLineText"] = {
     params = { { name = "chatLine", type = "number", default = nil } },
     returns = { { name = "text", type = "string", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretInChatMessagingLockdown, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInChatMessagingLockdown",
 }
 
 APIDefs["C_ChatInfo.GetChatTypeName"] = {
@@ -154,6 +178,7 @@ APIDefs["C_ChatInfo.GetChatTypeName"] = {
     params = { { name = "typeID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -166,6 +191,7 @@ APIDefs["C_ChatInfo.GetClubStreamIDs"] = {
     params = { { name = "clubID", type = "ClubId", default = nil } },
     returns = { { name = "ids", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -178,6 +204,7 @@ APIDefs["C_ChatInfo.GetColorForChatType"] = {
     params = { { name = "chatType", type = "cstring", default = nil } },
     returns = { { name = "color", type = "colorRGB", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -190,6 +217,7 @@ APIDefs["C_ChatInfo.GetGeneralChannelID"] = {
     params = {  },
     returns = { { name = "channelID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.GetGeneralChannelLocalID"] = {
@@ -201,6 +229,7 @@ APIDefs["C_ChatInfo.GetGeneralChannelLocalID"] = {
     params = {  },
     returns = { { name = "localID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.GetMentorChannelID"] = {
@@ -212,6 +241,7 @@ APIDefs["C_ChatInfo.GetMentorChannelID"] = {
     params = {  },
     returns = { { name = "channelID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.GetNumActiveChannels"] = {
@@ -223,6 +253,7 @@ APIDefs["C_ChatInfo.GetNumActiveChannels"] = {
     params = {  },
     returns = { { name = "numChannels", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.GetNumReservedChatWindows"] = {
@@ -234,6 +265,7 @@ APIDefs["C_ChatInfo.GetNumReservedChatWindows"] = {
     params = {  },
     returns = { { name = "numReserved", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.GetRegisteredAddonMessagePrefixes"] = {
@@ -245,6 +277,7 @@ APIDefs["C_ChatInfo.GetRegisteredAddonMessagePrefixes"] = {
     params = {  },
     returns = { { name = "registeredPrefixes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.InChatMessagingLockdown"] = {
@@ -254,8 +287,9 @@ APIDefs["C_ChatInfo.InChatMessagingLockdown"] = {
     subcategory = "c_chatinfo",
     funcPath = "C_ChatInfo.InChatMessagingLockdown",
     params = {  },
-    returns = { { name = "isRestricted", type = "bool", canBeSecret = false }, { name = "lockdownReason", type = "ChatMessagingLockdownReason", canBeSecret = false } },
+    returns = { { name = "isRestricted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.IsAddonMessagePrefixRegistered"] = {
@@ -267,6 +301,7 @@ APIDefs["C_ChatInfo.IsAddonMessagePrefixRegistered"] = {
     params = { { name = "prefix", type = "cstring", default = nil } },
     returns = { { name = "isRegistered", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -279,6 +314,7 @@ APIDefs["C_ChatInfo.IsChannelRegional"] = {
     params = { { name = "channelIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isRegional", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -291,6 +327,7 @@ APIDefs["C_ChatInfo.IsChannelRegionalForChannelID"] = {
     params = { { name = "channelID", type = "number", default = nil } },
     returns = { { name = "isRegional", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -303,6 +340,7 @@ APIDefs["C_ChatInfo.IsChatLineCensored"] = {
     params = { { name = "chatLine", type = "number", default = nil } },
     returns = { { name = "isCensored", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -315,6 +353,7 @@ APIDefs["C_ChatInfo.IsLoggingChat"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.IsLoggingCombat"] = {
@@ -326,6 +365,7 @@ APIDefs["C_ChatInfo.IsLoggingCombat"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false }, { name = "advanced", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.IsPartyChannelType"] = {
@@ -337,6 +377,7 @@ APIDefs["C_ChatInfo.IsPartyChannelType"] = {
     params = { { name = "channelType", type = "ChatChannelType", default = nil } },
     returns = { { name = "isPartyChannelType", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -349,6 +390,7 @@ APIDefs["C_ChatInfo.IsRegionalServiceAvailable"] = {
     params = {  },
     returns = { { name = "available", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.IsTimerunningPlayer"] = {
@@ -360,6 +402,7 @@ APIDefs["C_ChatInfo.IsTimerunningPlayer"] = {
     params = { { name = "playerGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "isTimerunning", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -372,6 +415,7 @@ APIDefs["C_ChatInfo.IsValidChatLine"] = {
     params = { { name = "chatLine", type = "number", default = nil } },
     returns = { { name = "isValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -384,6 +428,7 @@ APIDefs["C_ChatInfo.IsValidCombatFilterName"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "isApproved", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -396,6 +441,7 @@ APIDefs["C_ChatInfo.PerformEmote"] = {
     params = { { name = "emoteName", type = "cstring", default = nil }, { name = "targetName", type = "cstring", default = nil }, { name = "suppressMoveError", type = "bool", default = false } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -408,6 +454,7 @@ APIDefs["C_ChatInfo.RegisterAddonMessagePrefix"] = {
     params = { { name = "prefix", type = "cstring", default = nil } },
     returns = { { name = "result", type = "RegisterAddonMessagePrefixResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -420,6 +467,7 @@ APIDefs["C_ChatInfo.ReplaceIconAndGroupExpressions"] = {
     params = { { name = "input", type = "string", default = nil }, { name = "noIconReplacement", type = "bool", default = nil }, { name = "noGroupReplacement", type = "bool", default = nil } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -432,6 +480,7 @@ APIDefs["C_ChatInfo.RequestCanLocalWhisperTarget"] = {
     params = { { name = "whisperTarget", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -444,6 +493,7 @@ APIDefs["C_ChatInfo.ResetDefaultZoneChannels"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ChatInfo.SendAddonMessage"] = {
@@ -455,6 +505,7 @@ APIDefs["C_ChatInfo.SendAddonMessage"] = {
     params = { { name = "prefix", type = "cstring", default = nil }, { name = "message", type = "cstring", default = nil }, { name = "chatType", type = "cstring", default = nil }, { name = "target", type = "cstring", default = nil } },
     returns = { { name = "result", type = "SendAddonMessageResult", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -468,6 +519,7 @@ APIDefs["C_ChatInfo.SendAddonMessageLogged"] = {
     params = { { name = "prefix", type = "cstring", default = nil }, { name = "message", type = "cstring", default = nil }, { name = "chatType", type = "cstring", default = nil }, { name = "target", type = "cstring", default = nil } },
     returns = { { name = "result", type = "SendAddonMessageResult", canBeSecret = false } },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -481,6 +533,7 @@ APIDefs["C_ChatInfo.SendCautionaryChatMessage"] = {
     params = { { name = "confirmNumber", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -493,6 +546,7 @@ APIDefs["C_ChatInfo.SendChatMessage"] = {
     params = { { name = "message", type = "cstring", default = nil }, { name = "chatType", type = "SendChatMessageType", default = nil }, { name = "languageID", type = "number", default = nil }, { name = "target", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -505,6 +559,7 @@ APIDefs["C_ChatInfo.SwapChatChannelsByChannelIndex"] = {
     params = { { name = "firstChannelIndex", type = "luaIndex", default = nil }, { name = "secondChannelIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -517,5 +572,6 @@ APIDefs["C_ChatInfo.UncensorChatLine"] = {
     params = { { name = "chatLine", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_ContributionCollector.Close"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ContributionCollector.Contribute"] = {
@@ -22,6 +23,7 @@ APIDefs["C_ContributionCollector.Contribute"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_ContributionCollector.GetActive"] = {
     params = {  },
     returns = { { name = "contributionID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ContributionCollector.GetAtlases"] = {
@@ -45,6 +48,7 @@ APIDefs["C_ContributionCollector.GetAtlases"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "atlasName", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_ContributionCollector.GetBuffs"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -69,6 +74,7 @@ APIDefs["C_ContributionCollector.GetContributionAppearance"] = {
     params = { { name = "contributionID", type = "number", default = nil }, { name = "contributionState", type = "ContributionState", default = nil } },
     returns = { { name = "appearance", type = "ContributionAppearance", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -81,6 +87,7 @@ APIDefs["C_ContributionCollector.GetContributionCollectorsForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "contributionCollectors", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -93,6 +100,7 @@ APIDefs["C_ContributionCollector.GetContributionResult"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "result", type = "ContributionResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -105,6 +113,7 @@ APIDefs["C_ContributionCollector.GetDescription"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "description", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -117,6 +126,7 @@ APIDefs["C_ContributionCollector.GetManagedContributionsForCreatureID"] = {
     params = { { name = "creatureID", type = "number", default = nil } },
     returns = { { name = "contributionID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -129,6 +139,7 @@ APIDefs["C_ContributionCollector.GetName"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -141,6 +152,7 @@ APIDefs["C_ContributionCollector.GetOrderIndex"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "orderIndex", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -153,6 +165,7 @@ APIDefs["C_ContributionCollector.GetRequiredContributionCurrency"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "currencyID", type = "number", canBeSecret = false }, { name = "currencyAmount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -165,6 +178,7 @@ APIDefs["C_ContributionCollector.GetRequiredContributionItem"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "itemID", type = "number", canBeSecret = false }, { name = "itemCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -177,6 +191,7 @@ APIDefs["C_ContributionCollector.GetRewardQuestID"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -189,6 +204,7 @@ APIDefs["C_ContributionCollector.GetState"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "contributionState", type = "ContributionState", canBeSecret = false }, { name = "contributionPercentageComplete", type = "number", canBeSecret = false }, { name = "timeOfNextStateChange", type = "time_t", canBeSecret = false }, { name = "startTime", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -201,6 +217,7 @@ APIDefs["C_ContributionCollector.HasPendingContribution"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "hasPending", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -213,5 +230,6 @@ APIDefs["C_ContributionCollector.IsAwaitingRewardQuestData"] = {
     params = { { name = "contributionID", type = "number", default = nil } },
     returns = { { name = "awaitingData", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

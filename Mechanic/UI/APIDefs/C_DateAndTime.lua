@@ -11,6 +11,7 @@ APIDefs["C_DateAndTime.AdjustTimeByDays"] = {
     params = { { name = "date", type = "CalendarTime", default = nil }, { name = "days", type = "number", default = nil } },
     returns = { { name = "newDate", type = "CalendarTime", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_DateAndTime.AdjustTimeByMinutes"] = {
     params = { { name = "date", type = "CalendarTime", default = nil }, { name = "minutes", type = "number", default = nil } },
     returns = { { name = "newDate", type = "CalendarTime", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_DateAndTime.AdjustTimeByMonths"] = {
     params = { { name = "date", type = "CalendarTime", default = nil }, { name = "months", type = "number", default = nil } },
     returns = { { name = "newDate", type = "CalendarTime", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_DateAndTime.CompareCalendarTime"] = {
     params = { { name = "lhsCalendarTime", type = "CalendarTime", default = nil }, { name = "rhsCalendarTime", type = "CalendarTime", default = nil } },
     returns = { { name = "comparison", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_DateAndTime.GetCalendarTimeFromEpoch"] = {
     params = { { name = "epoch", type = "BigUInteger", default = nil } },
     returns = { { name = "date", type = "CalendarTime", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_DateAndTime.GetCurrentCalendarTime"] = {
     params = {  },
     returns = { { name = "date", type = "CalendarTime", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_DateAndTime.GetSecondsUntilDailyReset"] = {
@@ -82,6 +88,7 @@ APIDefs["C_DateAndTime.GetSecondsUntilDailyReset"] = {
     params = {  },
     returns = { { name = "seconds", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_DateAndTime.GetSecondsUntilWeeklyReset"] = {
@@ -93,6 +100,7 @@ APIDefs["C_DateAndTime.GetSecondsUntilWeeklyReset"] = {
     params = {  },
     returns = { { name = "seconds", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_DateAndTime.GetServerTimeLocal"] = {
@@ -104,6 +112,7 @@ APIDefs["C_DateAndTime.GetServerTimeLocal"] = {
     params = {  },
     returns = { { name = "serverTimeLocal", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_DateAndTime.GetWeeklyResetStartTime"] = {
@@ -115,4 +124,17 @@ APIDefs["C_DateAndTime.GetWeeklyResetStartTime"] = {
     params = {  },
     returns = { { name = "seconds", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_DateAndTime.IsDayTime"] = {
+    key = "C_DateAndTime.IsDayTime",
+    name = "IsDayTime",
+    category = "general",
+    subcategory = "c_dateandtime",
+    funcPath = "C_DateAndTime.IsDayTime",
+    params = {  },
+    returns = { { name = "isDayTime", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }

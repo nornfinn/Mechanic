@@ -11,6 +11,7 @@ APIDefs["C_HousingBasicMode.CancelActiveEditing"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.CommitDecorMovement"] = {
@@ -22,6 +23,7 @@ APIDefs["C_HousingBasicMode.CommitDecorMovement"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.CommitHouseExteriorPosition"] = {
@@ -33,6 +35,7 @@ APIDefs["C_HousingBasicMode.CommitHouseExteriorPosition"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.FinishPlacingNewDecor"] = {
@@ -44,6 +47,7 @@ APIDefs["C_HousingBasicMode.FinishPlacingNewDecor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.GetHoveredDecorInfo"] = {
@@ -55,6 +59,7 @@ APIDefs["C_HousingBasicMode.GetHoveredDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.GetSelectedDecorInfo"] = {
@@ -66,6 +71,7 @@ APIDefs["C_HousingBasicMode.GetSelectedDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.IsDecorSelected"] = {
@@ -77,6 +83,7 @@ APIDefs["C_HousingBasicMode.IsDecorSelected"] = {
     params = {  },
     returns = { { name = "hasSelectedDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.IsFreePlaceEnabled"] = {
@@ -88,6 +95,7 @@ APIDefs["C_HousingBasicMode.IsFreePlaceEnabled"] = {
     params = {  },
     returns = { { name = "freePlaceEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.IsGridSnapEnabled"] = {
@@ -99,6 +107,7 @@ APIDefs["C_HousingBasicMode.IsGridSnapEnabled"] = {
     params = {  },
     returns = { { name = "isGridSnapEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.IsGridVisible"] = {
@@ -110,6 +119,7 @@ APIDefs["C_HousingBasicMode.IsGridVisible"] = {
     params = {  },
     returns = { { name = "gridVisible", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.IsHouseExteriorHovered"] = {
@@ -121,6 +131,7 @@ APIDefs["C_HousingBasicMode.IsHouseExteriorHovered"] = {
     params = {  },
     returns = { { name = "isHouseExteriorHovered", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.IsHouseExteriorSelected"] = {
@@ -132,6 +143,7 @@ APIDefs["C_HousingBasicMode.IsHouseExteriorSelected"] = {
     params = {  },
     returns = { { name = "isHouseExteriorSelected", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.IsHoveringDecor"] = {
@@ -143,6 +155,7 @@ APIDefs["C_HousingBasicMode.IsHoveringDecor"] = {
     params = {  },
     returns = { { name = "isHoveringDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.IsPlacingNewDecor"] = {
@@ -154,6 +167,7 @@ APIDefs["C_HousingBasicMode.IsPlacingNewDecor"] = {
     params = {  },
     returns = { { name = "hasPendingDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.RemoveSelectedDecor"] = {
@@ -165,6 +179,7 @@ APIDefs["C_HousingBasicMode.RemoveSelectedDecor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingBasicMode.RotateDecor"] = {
@@ -176,6 +191,7 @@ APIDefs["C_HousingBasicMode.RotateDecor"] = {
     params = { { name = "rotDegrees", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -188,6 +204,7 @@ APIDefs["C_HousingBasicMode.RotateHouseExterior"] = {
     params = { { name = "rotDegrees", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -200,6 +217,7 @@ APIDefs["C_HousingBasicMode.SetFreePlaceEnabled"] = {
     params = { { name = "freePlaceEnabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -212,6 +230,7 @@ APIDefs["C_HousingBasicMode.SetGridSnapEnabled"] = {
     params = { { name = "isGridSnapEnabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -224,6 +243,7 @@ APIDefs["C_HousingBasicMode.SetGridVisible"] = {
     params = { { name = "gridVisible", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -233,9 +253,10 @@ APIDefs["C_HousingBasicMode.StartPlacingNewDecor"] = {
     category = "general",
     subcategory = "c_housingbasicmode",
     funcPath = "C_HousingBasicMode.StartPlacingNewDecor",
-    params = { { name = "catalogEntryID", type = "HousingCatalogEntryID", default = nil } },
+    params = { { name = "catalogEntryVariantID", type = "HousingCatalogEntryVariantID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -248,5 +269,6 @@ APIDefs["C_HousingBasicMode.StartPlacingPreviewDecor"] = {
     params = { { name = "decorRecordID", type = "number", default = nil }, { name = "bundleCatalogShopProductID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

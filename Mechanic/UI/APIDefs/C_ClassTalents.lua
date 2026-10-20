@@ -11,6 +11,7 @@ APIDefs["C_ClassTalents.CanChangeTalents"] = {
     params = {  },
     returns = { { name = "canChange", type = "bool", canBeSecret = false }, { name = "canAdd", type = "bool", canBeSecret = false }, { name = "changeError", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.CanCreateNewConfig"] = {
@@ -22,6 +23,7 @@ APIDefs["C_ClassTalents.CanCreateNewConfig"] = {
     params = {  },
     returns = { { name = "canCreate", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.CanEditTalents"] = {
@@ -33,6 +35,7 @@ APIDefs["C_ClassTalents.CanEditTalents"] = {
     params = {  },
     returns = { { name = "canEdit", type = "bool", canBeSecret = false }, { name = "changeError", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.CommitConfig"] = {
@@ -44,6 +47,7 @@ APIDefs["C_ClassTalents.CommitConfig"] = {
     params = { { name = "savedConfigID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -56,6 +60,7 @@ APIDefs["C_ClassTalents.DeleteConfig"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -68,6 +73,7 @@ APIDefs["C_ClassTalents.GetActiveConfigID"] = {
     params = {  },
     returns = { { name = "activeConfigID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.GetActiveHeroTalentSpec"] = {
@@ -79,6 +85,7 @@ APIDefs["C_ClassTalents.GetActiveHeroTalentSpec"] = {
     params = {  },
     returns = { { name = "heroSpecID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.GetConfigIDsBySpecID"] = {
@@ -90,6 +97,7 @@ APIDefs["C_ClassTalents.GetConfigIDsBySpecID"] = {
     params = { { name = "specID", type = "number", default = nil } },
     returns = { { name = "configIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -102,6 +110,7 @@ APIDefs["C_ClassTalents.GetHasStarterBuild"] = {
     params = {  },
     returns = { { name = "hasStarterBuild", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.GetHeroTalentSpecsForClassSpec"] = {
@@ -113,6 +122,7 @@ APIDefs["C_ClassTalents.GetHeroTalentSpecsForClassSpec"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "classSpecID", type = "number", default = nil } },
     returns = { { name = "subTreeIDs", type = "table", canBeSecret = false }, { name = "requiredPlayerLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -125,6 +135,7 @@ APIDefs["C_ClassTalents.GetLastSelectedSavedConfigID"] = {
     params = { { name = "specID", type = "number", default = nil } },
     returns = { { name = "configID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -137,6 +148,7 @@ APIDefs["C_ClassTalents.GetNextStarterBuildPurchase"] = {
     params = {  },
     returns = { { name = "nodeID", type = "number", canBeSecret = false }, { name = "entryID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.GetStarterBuildActive"] = {
@@ -148,6 +160,7 @@ APIDefs["C_ClassTalents.GetStarterBuildActive"] = {
     params = {  },
     returns = { { name = "isActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.GetTraitTreeForSpec"] = {
@@ -159,6 +172,7 @@ APIDefs["C_ClassTalents.GetTraitTreeForSpec"] = {
     params = { { name = "specID", type = "number", default = nil } },
     returns = { { name = "treeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -171,6 +185,7 @@ APIDefs["C_ClassTalents.HasUnspentHeroTalentPoints"] = {
     params = {  },
     returns = { { name = "hasUnspentPoints", type = "bool", canBeSecret = false }, { name = "numHeroPoints", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.HasUnspentTalentPoints"] = {
@@ -182,6 +197,7 @@ APIDefs["C_ClassTalents.HasUnspentTalentPoints"] = {
     params = {  },
     returns = { { name = "hasUnspentPoints", type = "bool", canBeSecret = false }, { name = "numClassPoints", type = "number", canBeSecret = false }, { name = "numSpecPoints", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClassTalents.ImportLoadout"] = {
@@ -193,6 +209,7 @@ APIDefs["C_ClassTalents.ImportLoadout"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "entries", type = "table", default = nil }, { name = "name", type = "string", default = nil }, { name = "importString", type = "string", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false }, { name = "importError", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -205,6 +222,7 @@ APIDefs["C_ClassTalents.InitializeViewLoadout"] = {
     params = { { name = "specID", type = "number", default = nil }, { name = "level", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -217,6 +235,7 @@ APIDefs["C_ClassTalents.IsConfigPopulated"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "isPopulated", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -229,6 +248,7 @@ APIDefs["C_ClassTalents.LoadConfig"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "autoApply", type = "bool", default = nil } },
     returns = { { name = "result", type = "LoadConfigResult", canBeSecret = false }, { name = "changeError", type = "string", canBeSecret = false }, { name = "newLearnedNodeIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -241,6 +261,7 @@ APIDefs["C_ClassTalents.RenameConfig"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "name", type = "string", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -253,6 +274,7 @@ APIDefs["C_ClassTalents.RequestNewConfig"] = {
     params = { { name = "name", type = "string", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -265,6 +287,7 @@ APIDefs["C_ClassTalents.SaveConfig"] = {
     params = { { name = "configID", type = "number", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -277,6 +300,7 @@ APIDefs["C_ClassTalents.SetStarterBuildActive"] = {
     params = { { name = "active", type = "bool", default = nil } },
     returns = { { name = "result", type = "LoadConfigResult", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -289,6 +313,59 @@ APIDefs["C_ClassTalents.SetUsesSharedActionBars"] = {
     params = { { name = "configID", type = "number", default = nil }, { name = "usesShared", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_ClassTalents.SwitchToLoadoutByIndex"] = {
+    key = "C_ClassTalents.SwitchToLoadoutByIndex",
+    name = "SwitchToLoadoutByIndex",
+    category = "spell",
+    subcategory = "c_classtalents",
+    funcPath = "C_ClassTalents.SwitchToLoadoutByIndex",
+    params = { { name = "loadoutIndex", type = "number", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_ClassTalents.SwitchToLoadoutByName"] = {
+    key = "C_ClassTalents.SwitchToLoadoutByName",
+    name = "SwitchToLoadoutByName",
+    category = "spell",
+    subcategory = "c_classtalents",
+    funcPath = "C_ClassTalents.SwitchToLoadoutByName",
+    params = { { name = "loadoutName", type = "cstring", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_ClassTalents.SwitchToSpecializationByIndex"] = {
+    key = "C_ClassTalents.SwitchToSpecializationByIndex",
+    name = "SwitchToSpecializationByIndex",
+    category = "spell",
+    subcategory = "c_classtalents",
+    funcPath = "C_ClassTalents.SwitchToSpecializationByIndex",
+    params = { { name = "specIndex", type = "number", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_ClassTalents.SwitchToSpecializationByName"] = {
+    key = "C_ClassTalents.SwitchToSpecializationByName",
+    name = "SwitchToSpecializationByName",
+    category = "spell",
+    subcategory = "c_classtalents",
+    funcPath = "C_ClassTalents.SwitchToSpecializationByName",
+    params = { { name = "specName", type = "cstring", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -301,6 +378,7 @@ APIDefs["C_ClassTalents.UpdateLastSelectedSavedConfigID"] = {
     params = { { name = "specID", type = "number", default = nil }, { name = "configID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -313,5 +391,6 @@ APIDefs["C_ClassTalents.ViewLoadout"] = {
     params = { { name = "entries", type = "table", default = nil }, { name = "importString", type = "string", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

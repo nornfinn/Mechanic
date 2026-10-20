@@ -11,6 +11,7 @@ APIDefs["C_LegendaryCrafting.CloseRuneforgeInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LegendaryCrafting.CraftRuneforgeLegendary"] = {
@@ -22,6 +23,7 @@ APIDefs["C_LegendaryCrafting.CraftRuneforgeLegendary"] = {
     params = { { name = "description", type = "RuneforgeLegendaryCraftDescription", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgeItemPreviewInfo"] = {
     params = { { name = "baseItem", type = "ItemLocation", default = nil }, { name = "runeforgePowerID", type = "number", default = nil }, { name = "modifiers", type = "table", default = nil } },
     returns = { { name = "info", type = "RuneforgeItemPreviewInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgeLegendaryComponentInfo"] = {
     params = { { name = "runeforgeLegendary", type = "ItemLocation", default = nil } },
     returns = { { name = "componentInfo", type = "RuneforgeLegendaryComponentInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgeLegendaryCost"] = {
     params = { { name = "baseItem", type = "ItemLocation", default = nil } },
     returns = { { name = "cost", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgeLegendaryCraftSpellID"] = {
     params = {  },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies"] = {
@@ -81,6 +87,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies"] = {
     params = {  },
     returns = { { name = "currencies", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost"] = {
@@ -92,6 +99,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost"] = {
     params = { { name = "runeforgeLegendary", type = "ItemLocation", default = nil }, { name = "upgradeItem", type = "ItemLocation", default = nil } },
     returns = { { name = "cost", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgeModifierInfo"] = {
     params = { { name = "baseItem", type = "ItemLocation", default = nil }, { name = "powerID", type = "number", default = nil }, { name = "addedModifierIndex", type = "luaIndex", default = nil }, { name = "modifiers", type = "table", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "description", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -116,6 +125,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgeModifiers"] = {
     params = {  },
     returns = { { name = "modifiedReagentItemIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_LegendaryCrafting.GetRuneforgePowerInfo"] = {
@@ -127,6 +137,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgePowerInfo"] = {
     params = { { name = "runeforgePowerID", type = "number", default = nil } },
     returns = { { name = "power", type = "RuneforgePower", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -139,6 +150,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgePowerSlots"] = {
     params = { { name = "runeforgePowerID", type = "number", default = nil } },
     returns = { { name = "slotNames", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -151,6 +163,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgePowers"] = {
     params = { { name = "baseItem", type = "ItemLocation", default = nil }, { name = "filter", type = "RuneforgePowerFilter", default = nil } },
     returns = { { name = "primaryRuneforgePowerIDs", type = "table", canBeSecret = false }, { name = "otherRuneforgePowerIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -163,6 +176,7 @@ APIDefs["C_LegendaryCrafting.GetRuneforgePowersByClassSpecAndCovenant"] = {
     params = { { name = "classID", type = "number", default = nil }, { name = "specID", type = "number", default = nil }, { name = "covenantID", type = "number", default = nil }, { name = "filter", type = "RuneforgePowerFilter", default = nil } },
     returns = { { name = "runeforgePowerIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -175,6 +189,7 @@ APIDefs["C_LegendaryCrafting.IsRuneforgeLegendary"] = {
     params = { { name = "item", type = "ItemLocation", default = nil } },
     returns = { { name = "isRuneforgeLegendary", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -187,6 +202,7 @@ APIDefs["C_LegendaryCrafting.IsRuneforgeLegendaryMaxLevel"] = {
     params = { { name = "runeforgeLegendary", type = "ItemLocation", default = nil } },
     returns = { { name = "isMaxLevel", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -199,6 +215,7 @@ APIDefs["C_LegendaryCrafting.IsUpgradeItemValidForRuneforgeLegendary"] = {
     params = { { name = "runeforgeLegendary", type = "ItemLocation", default = nil }, { name = "upgradeItem", type = "ItemLocation", default = nil } },
     returns = { { name = "isValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -211,6 +228,7 @@ APIDefs["C_LegendaryCrafting.IsValidRuneforgeBaseItem"] = {
     params = { { name = "baseItem", type = "ItemLocation", default = nil } },
     returns = { { name = "isValid", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -223,6 +241,7 @@ APIDefs["C_LegendaryCrafting.MakeRuneforgeCraftDescription"] = {
     params = { { name = "baseItem", type = "ItemLocation", default = nil }, { name = "runeforgePowerID", type = "number", default = nil }, { name = "modifiers", type = "table", default = nil } },
     returns = { { name = "description", type = "RuneforgeLegendaryCraftDescription", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -235,5 +254,6 @@ APIDefs["C_LegendaryCrafting.UpgradeRuneforgeLegendary"] = {
     params = { { name = "runeforgeLegendary", type = "ItemLocation", default = nil }, { name = "upgradeItem", type = "ItemLocation", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

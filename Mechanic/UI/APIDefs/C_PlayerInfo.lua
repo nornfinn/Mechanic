@@ -11,6 +11,7 @@ APIDefs["C_PlayerInfo.CanPlayerEnterChromieTime"] = {
     params = {  },
     returns = { { name = "canEnter", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.CanPlayerUseAreaLoot"] = {
@@ -22,6 +23,7 @@ APIDefs["C_PlayerInfo.CanPlayerUseAreaLoot"] = {
     params = {  },
     returns = { { name = "canUseAreaLoot", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.CanPlayerUseMountEquipment"] = {
@@ -33,6 +35,7 @@ APIDefs["C_PlayerInfo.CanPlayerUseMountEquipment"] = {
     params = {  },
     returns = { { name = "canUseMountEquipment", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.CanUseItem"] = {
@@ -44,6 +47,7 @@ APIDefs["C_PlayerInfo.CanUseItem"] = {
     params = { { name = "itemID", type = "number", default = nil } },
     returns = { { name = "isUseable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -56,6 +60,7 @@ APIDefs["C_PlayerInfo.GUIDIsPlayer"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "isPlayer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -68,6 +73,7 @@ APIDefs["C_PlayerInfo.GetAlternateFormInfo"] = {
     params = {  },
     returns = { { name = "hasAlternateForm", type = "bool", canBeSecret = false }, { name = "inAlternateForm", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.GetClass"] = {
@@ -79,6 +85,7 @@ APIDefs["C_PlayerInfo.GetClass"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "className", type = "cstring", canBeSecret = false }, { name = "classFilename", type = "cstring", canBeSecret = false }, { name = "classID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -91,6 +98,7 @@ APIDefs["C_PlayerInfo.GetContentDifficultyCreatureForPlayer"] = {
     params = { { name = "unitToken", type = "UnitToken", default = "player" } },
     returns = { { name = "difficulty", type = "RelativeContentDifficulty", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -103,6 +111,7 @@ APIDefs["C_PlayerInfo.GetContentDifficultyQuestForPlayer"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "difficulty", type = "RelativeContentDifficulty", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -115,6 +124,7 @@ APIDefs["C_PlayerInfo.GetDisplayID"] = {
     params = {  },
     returns = { { name = "displayID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.GetGlidingInfo"] = {
@@ -126,6 +136,7 @@ APIDefs["C_PlayerInfo.GetGlidingInfo"] = {
     params = {  },
     returns = { { name = "isGliding", type = "bool", canBeSecret = false }, { name = "canGlide", type = "bool", canBeSecret = false }, { name = "forwardSpeed", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.GetInstancesUnlockedAtLevel"] = {
@@ -137,6 +148,7 @@ APIDefs["C_PlayerInfo.GetInstancesUnlockedAtLevel"] = {
     params = { { name = "level", type = "number", default = nil }, { name = "isRaid", type = "bool", default = nil } },
     returns = { { name = "dungeonID", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -149,6 +161,7 @@ APIDefs["C_PlayerInfo.GetName"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -161,6 +174,7 @@ APIDefs["C_PlayerInfo.GetNativeDisplayID"] = {
     params = {  },
     returns = { { name = "nativeDisplayID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.GetPetStableCreatureDisplayInfoID"] = {
@@ -172,6 +186,7 @@ APIDefs["C_PlayerInfo.GetPetStableCreatureDisplayInfoID"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = { { name = "creatureDisplayInfoID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -184,6 +199,7 @@ APIDefs["C_PlayerInfo.GetPlayerCharacterData"] = {
     params = {  },
     returns = { { name = "characterData", type = "PlayerInfoCharacterData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.GetPlayerMythicPlusRatingSummary"] = {
@@ -195,6 +211,7 @@ APIDefs["C_PlayerInfo.GetPlayerMythicPlusRatingSummary"] = {
     params = { { name = "playerToken", type = "UnitToken", default = "player" } },
     returns = { { name = "ratingSummary", type = "MythicPlusRatingSummary", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -207,6 +224,7 @@ APIDefs["C_PlayerInfo.GetRace"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "raceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -219,6 +237,7 @@ APIDefs["C_PlayerInfo.GetSex"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "sex", type = "UnitSex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -231,6 +250,7 @@ APIDefs["C_PlayerInfo.HasAccountInventoryLock"] = {
     params = {  },
     returns = { { name = "hasAccountInventoryLock", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.HasVisibleInvSlot"] = {
@@ -242,6 +262,7 @@ APIDefs["C_PlayerInfo.HasVisibleInvSlot"] = {
     params = { { name = "slot", type = "luaIndex", default = nil } },
     returns = { { name = "isVisible", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -254,6 +275,7 @@ APIDefs["C_PlayerInfo.IsAccountBankEnabled"] = {
     params = {  },
     returns = { { name = "isAccountBankEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsCharacterBankEnabled"] = {
@@ -265,6 +287,7 @@ APIDefs["C_PlayerInfo.IsCharacterBankEnabled"] = {
     params = {  },
     returns = { { name = "isCharacterBankEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsConnected"] = {
@@ -276,6 +299,7 @@ APIDefs["C_PlayerInfo.IsConnected"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "isConnected", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -288,6 +312,20 @@ APIDefs["C_PlayerInfo.IsDisplayRaceNative"] = {
     params = {  },
     returns = { { name = "isDisplayRaceNative", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer"] = {
+    key = "C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer",
+    name = "IsExpansionLandingPageUnlockedForPlayer",
+    category = "unit",
+    subcategory = "c_playerinfo",
+    funcPath = "C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer",
+    params = { { name = "expansionID", type = "number", default = nil } },
+    returns = { { name = "isUnlocked", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_PlayerInfo.IsMirrorImage"] = {
@@ -299,6 +337,7 @@ APIDefs["C_PlayerInfo.IsMirrorImage"] = {
     params = {  },
     returns = { { name = "isMirrorImage", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsPlayerEligibleForNPE"] = {
@@ -310,6 +349,7 @@ APIDefs["C_PlayerInfo.IsPlayerEligibleForNPE"] = {
     params = {  },
     returns = { { name = "isEligible", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsPlayerEligibleForNPEv2"] = {
@@ -321,6 +361,7 @@ APIDefs["C_PlayerInfo.IsPlayerEligibleForNPEv2"] = {
     params = {  },
     returns = { { name = "isEligible", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsPlayerInChromieTime"] = {
@@ -332,6 +373,7 @@ APIDefs["C_PlayerInfo.IsPlayerInChromieTime"] = {
     params = {  },
     returns = { { name = "inChromieTime", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsPlayerInRPE"] = {
@@ -343,6 +385,7 @@ APIDefs["C_PlayerInfo.IsPlayerInRPE"] = {
     params = {  },
     returns = { { name = "isInRPE", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsPlayerInTimerunningHeroicWorldTier"] = {
@@ -354,6 +397,7 @@ APIDefs["C_PlayerInfo.IsPlayerInTimerunningHeroicWorldTier"] = {
     params = {  },
     returns = { { name = "inTimerunningHeroicWorldTier", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsPlayerNPERestricted"] = {
@@ -365,6 +409,7 @@ APIDefs["C_PlayerInfo.IsPlayerNPERestricted"] = {
     params = {  },
     returns = { { name = "isRestricted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsReturningCharacter"] = {
@@ -376,6 +421,7 @@ APIDefs["C_PlayerInfo.IsReturningCharacter"] = {
     params = {  },
     returns = { { name = "isReturning", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsSelfFoundActive"] = {
@@ -387,6 +433,7 @@ APIDefs["C_PlayerInfo.IsSelfFoundActive"] = {
     params = {  },
     returns = { { name = "active", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsTradingPostAvailable"] = {
@@ -398,6 +445,7 @@ APIDefs["C_PlayerInfo.IsTradingPostAvailable"] = {
     params = {  },
     returns = { { name = "isAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsTravelersLogAvailable"] = {
@@ -409,6 +457,7 @@ APIDefs["C_PlayerInfo.IsTravelersLogAvailable"] = {
     params = {  },
     returns = { { name = "isAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerInfo.IsTutorialsTabAvailable"] = {
@@ -420,6 +469,19 @@ APIDefs["C_PlayerInfo.IsTutorialsTabAvailable"] = {
     params = {  },
     returns = { { name = "isAvailable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PlayerInfo.ShouldDisplaySurname"] = {
+    key = "C_PlayerInfo.ShouldDisplaySurname",
+    name = "ShouldDisplaySurname",
+    category = "unit",
+    subcategory = "c_playerinfo",
+    funcPath = "C_PlayerInfo.ShouldDisplaySurname",
+    params = {  },
+    returns = { { name = "display", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_PlayerInfo.UnitIsSameServer"] = {
@@ -431,5 +493,6 @@ APIDefs["C_PlayerInfo.UnitIsSameServer"] = {
     params = { { name = "playerLocation", type = "PlayerLocation", default = nil } },
     returns = { { name = "unitIsSameServer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

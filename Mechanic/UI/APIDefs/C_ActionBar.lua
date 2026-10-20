@@ -11,6 +11,7 @@ APIDefs["C_ActionBar.EnableActionRangeCheck"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil }, { name = "enable", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ActionBar.FindAssistedCombatActionButtons"] = {
     params = {  },
     returns = { { name = "slots", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.FindFlyoutActionButtons"] = {
@@ -34,6 +36,7 @@ APIDefs["C_ActionBar.FindFlyoutActionButtons"] = {
     params = { { name = "flyoutID", type = "number", default = nil } },
     returns = { { name = "slots", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_ActionBar.FindPetActionButtons"] = {
     params = { { name = "petActionID", type = "number", default = nil } },
     returns = { { name = "slots", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -55,9 +59,10 @@ APIDefs["C_ActionBar.FindSpellActionButtons"] = {
     category = "spell",
     subcategory = "c_actionbar",
     funcPath = "C_ActionBar.FindSpellActionButtons",
-    params = { { name = "spellID", type = "number", default = nil } },
+    params = { { name = "spellID", type = "SpellIdentifier", default = nil } },
     returns = { { name = "slots", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -67,9 +72,10 @@ APIDefs["C_ActionBar.ForceUpdateAction"] = {
     category = "spell",
     subcategory = "c_actionbar",
     funcPath = "C_ActionBar.ForceUpdateAction",
-    params = { { name = "slotID", type = "luaIndex", default = nil } },
+    params = { { name = "slotID", type = "luaIndex", default = nil }, { name = "suppressEvents", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_ActionBar.GetActionAutocast"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "autocastAllowed", type = "bool", canBeSecret = false }, { name = "autocastEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +101,7 @@ APIDefs["C_ActionBar.GetActionBarPage"] = {
     params = {  },
     returns = { { name = "currentPage", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.GetActionChargeDuration"] = {
@@ -105,6 +113,7 @@ APIDefs["C_ActionBar.GetActionChargeDuration"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -115,9 +124,10 @@ APIDefs["C_ActionBar.GetActionCharges"] = {
     subcategory = "c_actionbar",
     funcPath = "C_ActionBar.GetActionCharges",
     params = { { name = "actionID", type = "luaIndex", default = nil } },
-    returns = { { name = "chargeInfo", type = "ActionBarChargeInfo", canBeSecret = false } },
+    returns = { { name = "chargeInfo", type = "SpellChargeInfo", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenActionCooldownRestricted, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_ActionBar.GetActionCooldown"] = {
@@ -127,9 +137,10 @@ APIDefs["C_ActionBar.GetActionCooldown"] = {
     subcategory = "c_actionbar",
     funcPath = "C_ActionBar.GetActionCooldown",
     params = { { name = "actionID", type = "luaIndex", default = nil } },
-    returns = { { name = "cooldownInfo", type = "ActionBarCooldownInfo", canBeSecret = false } },
+    returns = { { name = "cooldownInfo", type = "SpellCooldownInfo", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenActionCooldownRestricted, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_ActionBar.GetActionCooldownDuration"] = {
@@ -138,34 +149,11 @@ APIDefs["C_ActionBar.GetActionCooldownDuration"] = {
     category = "spell",
     subcategory = "c_actionbar",
     funcPath = "C_ActionBar.GetActionCooldownDuration",
-    params = { { name = "actionID", type = "luaIndex", default = nil } },
+    params = { { name = "actionID", type = "luaIndex", default = nil }, { name = "ignoreGCD", type = "bool", default = false } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
-}
-
-APIDefs["C_ActionBar.GetActionCooldownRemaining"] = {
-    key = "C_ActionBar.GetActionCooldownRemaining",
-    name = "GetActionCooldownRemaining",
-    category = "combat_midnight",
-    subcategory = "c_actionbar",
-    funcPath = "C_ActionBar.GetActionCooldownRemaining",
-    params = { { name = "actionID", type = "luaIndex", default = nil } },
-    returns = { { name = "remainingSeconds", type = "number", canBeSecret = false } },
-    midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenActionCooldownRestricted, SecretArguments=AllowedWhenUntainted",
-}
-
-APIDefs["C_ActionBar.GetActionCooldownRemainingPercent"] = {
-    key = "C_ActionBar.GetActionCooldownRemainingPercent",
-    name = "GetActionCooldownRemainingPercent",
-    category = "combat_midnight",
-    subcategory = "c_actionbar",
-    funcPath = "C_ActionBar.GetActionCooldownRemainingPercent",
-    params = { { name = "actionID", type = "luaIndex", default = nil }, { name = "curve", type = "LuaCurveObjectBase", default = nil } },
-    returns = { { name = "result", type = "LuaCurveEvaluatedResult", canBeSecret = false } },
-    midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenActionCooldownRestricted, SecretWhenCurveSecret, SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_ActionBar.GetActionDisplayCount"] = {
@@ -177,19 +165,8 @@ APIDefs["C_ActionBar.GetActionDisplayCount"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil }, { name = "maxDisplayCount", type = "number", default = 9999 }, { name = "replacementString", type = "cstring", default = "*" } },
     returns = { { name = "displayCount", type = "string", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenActionCooldownRestricted, SecretArguments=AllowedWhenUntainted",
-}
-
-APIDefs["C_ActionBar.GetActionLossOfControlCooldown"] = {
-    key = "C_ActionBar.GetActionLossOfControlCooldown",
-    name = "GetActionLossOfControlCooldown",
-    category = "combat_midnight",
-    subcategory = "c_actionbar",
-    funcPath = "C_ActionBar.GetActionLossOfControlCooldown",
-    params = { { name = "actionID", type = "luaIndex", default = nil } },
-    returns = { { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false } },
-    midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenActionCooldownRestricted, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_ActionBar.GetActionLossOfControlCooldownDuration"] = {
@@ -201,7 +178,21 @@ APIDefs["C_ActionBar.GetActionLossOfControlCooldownDuration"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_ActionBar.GetActionLossOfControlCooldownInfo"] = {
+    key = "C_ActionBar.GetActionLossOfControlCooldownInfo",
+    name = "GetActionLossOfControlCooldownInfo",
+    category = "combat_midnight",
+    subcategory = "c_actionbar",
+    funcPath = "C_ActionBar.GetActionLossOfControlCooldownInfo",
+    params = { { name = "actionID", type = "luaIndex", default = nil } },
+    returns = { { name = "lossOfControlInfo", type = "SpellLossOfControlInfo", canBeSecret = false } },
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_ActionBar.GetActionText"] = {
@@ -213,6 +204,7 @@ APIDefs["C_ActionBar.GetActionText"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "text", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -225,6 +217,7 @@ APIDefs["C_ActionBar.GetActionTexture"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "textureFileID", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -237,7 +230,8 @@ APIDefs["C_ActionBar.GetActionUseCount"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "count", type = "number", canBeSecret = false } },
     midnightImpact = "CONDITIONAL",
-    midnightNote = "Secret behavior: SecretWhenActionCooldownRestricted, SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenCooldownsRestricted",
 }
 
 APIDefs["C_ActionBar.GetBonusBarIndex"] = {
@@ -249,6 +243,7 @@ APIDefs["C_ActionBar.GetBonusBarIndex"] = {
     params = {  },
     returns = { { name = "bonusBarIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.GetBonusBarIndexForSlot"] = {
@@ -260,6 +255,7 @@ APIDefs["C_ActionBar.GetBonusBarIndexForSlot"] = {
     params = { { name = "slotID", type = "luaIndex", default = nil } },
     returns = { { name = "bonusBarIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -272,6 +268,7 @@ APIDefs["C_ActionBar.GetBonusBarOffset"] = {
     params = {  },
     returns = { { name = "bonusBarOffset", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.GetExtraBarIndex"] = {
@@ -283,6 +280,7 @@ APIDefs["C_ActionBar.GetExtraBarIndex"] = {
     params = {  },
     returns = { { name = "extraBarIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.GetItemActionOnEquipSpellID"] = {
@@ -294,6 +292,7 @@ APIDefs["C_ActionBar.GetItemActionOnEquipSpellID"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "onEquipSpellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -306,6 +305,7 @@ APIDefs["C_ActionBar.GetMultiCastBarIndex"] = {
     params = {  },
     returns = { { name = "multiCastBarIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.GetOverrideBarIndex"] = {
@@ -317,6 +317,7 @@ APIDefs["C_ActionBar.GetOverrideBarIndex"] = {
     params = {  },
     returns = { { name = "overrideBarIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.GetOverrideBarSkin"] = {
@@ -328,6 +329,7 @@ APIDefs["C_ActionBar.GetOverrideBarSkin"] = {
     params = {  },
     returns = { { name = "textureFileID", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.GetPetActionPetBarIndices"] = {
@@ -339,6 +341,7 @@ APIDefs["C_ActionBar.GetPetActionPetBarIndices"] = {
     params = { { name = "petActionID", type = "number", default = nil } },
     returns = { { name = "slots", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -351,6 +354,7 @@ APIDefs["C_ActionBar.GetProfessionQuality"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "quality", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -363,6 +367,7 @@ APIDefs["C_ActionBar.GetProfessionQualityInfo"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "CraftingQualityInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -375,6 +380,7 @@ APIDefs["C_ActionBar.GetSpell"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "spellID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -387,6 +393,7 @@ APIDefs["C_ActionBar.GetTempShapeshiftBarIndex"] = {
     params = {  },
     returns = { { name = "tempShapeshiftBarIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.GetVehicleBarIndex"] = {
@@ -398,6 +405,7 @@ APIDefs["C_ActionBar.GetVehicleBarIndex"] = {
     params = {  },
     returns = { { name = "vehicleBarIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.HasAction"] = {
@@ -409,6 +417,7 @@ APIDefs["C_ActionBar.HasAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "hasAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -421,6 +430,7 @@ APIDefs["C_ActionBar.HasAssistedCombatActionButtons"] = {
     params = {  },
     returns = { { name = "hasButtons", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.HasBonusActionBar"] = {
@@ -432,6 +442,7 @@ APIDefs["C_ActionBar.HasBonusActionBar"] = {
     params = {  },
     returns = { { name = "hasBonusActionBar", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.HasExtraActionBar"] = {
@@ -443,6 +454,7 @@ APIDefs["C_ActionBar.HasExtraActionBar"] = {
     params = {  },
     returns = { { name = "hasExtraActionBar", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.HasFlyoutActionButtons"] = {
@@ -454,6 +466,7 @@ APIDefs["C_ActionBar.HasFlyoutActionButtons"] = {
     params = { { name = "flyoutID", type = "number", default = nil } },
     returns = { { name = "hasFlyoutActionButtons", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -466,6 +479,7 @@ APIDefs["C_ActionBar.HasOverrideActionBar"] = {
     params = {  },
     returns = { { name = "hasOverrideActionBar", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.HasPetActionButtons"] = {
@@ -477,6 +491,7 @@ APIDefs["C_ActionBar.HasPetActionButtons"] = {
     params = { { name = "petActionID", type = "number", default = nil } },
     returns = { { name = "hasPetActionButtons", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -489,6 +504,7 @@ APIDefs["C_ActionBar.HasPetActionPetBarIndices"] = {
     params = { { name = "petActionID", type = "number", default = nil } },
     returns = { { name = "hasPetActionPetBarIndices", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -501,6 +517,7 @@ APIDefs["C_ActionBar.HasRangeRequirements"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "hasRangeRequirements", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -510,9 +527,10 @@ APIDefs["C_ActionBar.HasSpellActionButtons"] = {
     category = "spell",
     subcategory = "c_actionbar",
     funcPath = "C_ActionBar.HasSpellActionButtons",
-    params = { { name = "spellID", type = "number", default = nil } },
+    params = { { name = "spellID", type = "SpellIdentifier", default = nil } },
     returns = { { name = "hasSpellActionButtons", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -525,6 +543,7 @@ APIDefs["C_ActionBar.HasTempShapeshiftActionBar"] = {
     params = {  },
     returns = { { name = "hasTempShapeshiftActionBar", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.HasVehicleActionBar"] = {
@@ -536,6 +555,7 @@ APIDefs["C_ActionBar.HasVehicleActionBar"] = {
     params = {  },
     returns = { { name = "hasVehicleActionBar", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.IsActionInRange"] = {
@@ -547,6 +567,7 @@ APIDefs["C_ActionBar.IsActionInRange"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil }, { name = "target", type = "UnitToken", default = "player" } },
     returns = { { name = "isInRange", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -559,6 +580,7 @@ APIDefs["C_ActionBar.IsAssistedCombatAction"] = {
     params = { { name = "slotID", type = "luaIndex", default = nil } },
     returns = { { name = "isAssistedCombatAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -571,6 +593,7 @@ APIDefs["C_ActionBar.IsAttackAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isAttackAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -583,6 +606,7 @@ APIDefs["C_ActionBar.IsAutoCastPetAction"] = {
     params = { { name = "slotID", type = "luaIndex", default = nil } },
     returns = { { name = "isAutoCastPetAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -595,6 +619,7 @@ APIDefs["C_ActionBar.IsAutoRepeatAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isAutoRepeatAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -607,6 +632,7 @@ APIDefs["C_ActionBar.IsConsumableAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isConsumableAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -619,6 +645,7 @@ APIDefs["C_ActionBar.IsCurrentAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isCurrentAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -631,6 +658,7 @@ APIDefs["C_ActionBar.IsEnabledAutoCastPetAction"] = {
     params = { { name = "slotID", type = "luaIndex", default = nil } },
     returns = { { name = "isEnabledAutoCastPetAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -643,6 +671,7 @@ APIDefs["C_ActionBar.IsEquippedAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isEquippedAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -655,6 +684,7 @@ APIDefs["C_ActionBar.IsEquippedGearOutfitAction"] = {
     params = { { name = "slotID", type = "luaIndex", default = nil } },
     returns = { { name = "isEquippedGearOutfitAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -667,6 +697,7 @@ APIDefs["C_ActionBar.IsHarmfulAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil }, { name = "useNeutral", type = "bool", default = nil } },
     returns = { { name = "isHarmful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -679,6 +710,7 @@ APIDefs["C_ActionBar.IsHelpfulAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil }, { name = "useNeutral", type = "bool", default = nil } },
     returns = { { name = "isHelpful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -691,6 +723,7 @@ APIDefs["C_ActionBar.IsInterruptAction"] = {
     params = { { name = "slotID", type = "luaIndex", default = nil } },
     returns = { { name = "isInterruptAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -703,6 +736,20 @@ APIDefs["C_ActionBar.IsItemAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isItemAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_ActionBar.IsMacroActionWithShowTooltip"] = {
+    key = "C_ActionBar.IsMacroActionWithShowTooltip",
+    name = "IsMacroActionWithShowTooltip",
+    category = "spell",
+    subcategory = "c_actionbar",
+    funcPath = "C_ActionBar.IsMacroActionWithShowTooltip",
+    params = { { name = "actionID", type = "luaIndex", default = nil } },
+    returns = { { name = "isMacroActionWithShowTooltip", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -712,9 +759,10 @@ APIDefs["C_ActionBar.IsOnBarOrSpecialBar"] = {
     category = "spell",
     subcategory = "c_actionbar",
     funcPath = "C_ActionBar.IsOnBarOrSpecialBar",
-    params = { { name = "spellID", type = "number", default = nil } },
+    params = { { name = "spellID", type = "SpellIdentifier", default = nil } },
     returns = { { name = "isOnBarOrSpecialBar", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenTainted",
 }
 
@@ -727,6 +775,7 @@ APIDefs["C_ActionBar.IsPossessBarVisible"] = {
     params = {  },
     returns = { { name = "isPossessBarVisible", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.IsStackableAction"] = {
@@ -738,6 +787,7 @@ APIDefs["C_ActionBar.IsStackableAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isStackableAction", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -750,6 +800,7 @@ APIDefs["C_ActionBar.IsUsableAction"] = {
     params = { { name = "actionID", type = "luaIndex", default = nil } },
     returns = { { name = "isUsable", type = "bool", canBeSecret = false }, { name = "isLackingResources", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -762,6 +813,7 @@ APIDefs["C_ActionBar.PutActionInSlot"] = {
     params = { { name = "slotID", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -774,6 +826,7 @@ APIDefs["C_ActionBar.RegisterActionUIButton"] = {
     params = { { name = "checkboxFrame", type = "SimpleCheckbox", default = nil }, { name = "actionID", type = "luaIndex", default = nil }, { name = "cooldownFrame", type = "CooldownFrame", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -786,6 +839,7 @@ APIDefs["C_ActionBar.SetActionBarPage"] = {
     params = { { name = "pageIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -798,6 +852,7 @@ APIDefs["C_ActionBar.ShouldOverrideBarShowHealthBar"] = {
     params = {  },
     returns = { { name = "showHealthBar", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ActionBar.ShouldOverrideBarShowManaBar"] = {
@@ -809,6 +864,19 @@ APIDefs["C_ActionBar.ShouldOverrideBarShowManaBar"] = {
     params = {  },
     returns = { { name = "showManaBar", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_ActionBar.ShouldShowKeyring"] = {
+    key = "C_ActionBar.ShouldShowKeyring",
+    name = "ShouldShowKeyring",
+    category = "spell",
+    subcategory = "c_actionbar",
+    funcPath = "C_ActionBar.ShouldShowKeyring",
+    params = {  },
+    returns = { { name = "isKeyringEnabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_ActionBar.ToggleAutoCastPetAction"] = {
@@ -820,6 +888,7 @@ APIDefs["C_ActionBar.ToggleAutoCastPetAction"] = {
     params = { { name = "slotID", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -832,5 +901,19 @@ APIDefs["C_ActionBar.UnregisterActionUIButton"] = {
     params = { { name = "checkboxFrame", type = "SimpleCheckbox", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_ActionBar.UsesActionText"] = {
+    key = "C_ActionBar.UsesActionText",
+    name = "UsesActionText",
+    category = "spell",
+    subcategory = "c_actionbar",
+    funcPath = "C_ActionBar.UsesActionText",
+    params = { { name = "actionID", type = "luaIndex", default = nil } },
+    returns = { { name = "usesActionText", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,5 +11,6 @@ APIDefs["C_SystemVisibilityManager.IsSystemVisible"] = {
     params = { { name = "system", type = "UISystemType", default = nil } },
     returns = { { name = "visible", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

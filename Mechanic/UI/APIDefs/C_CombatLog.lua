@@ -11,6 +11,7 @@ APIDefs["C_CombatLog.ApplyFilterSettings"] = {
     params = { { name = "filterSettings", type = "LuaValueVariant", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_CombatLog.AreFilteredEventsEnabled"] = {
     params = {  },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CombatLog.ClearEntries"] = {
@@ -34,6 +36,7 @@ APIDefs["C_CombatLog.ClearEntries"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CombatLog.DoesObjectMatchFilter"] = {
@@ -45,6 +48,7 @@ APIDefs["C_CombatLog.DoesObjectMatchFilter"] = {
     params = { { name = "mask", type = "CombatLogObject", default = nil }, { name = "flags", type = "CombatLogObject", default = nil } },
     returns = { { name = "matches", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -57,6 +61,7 @@ APIDefs["C_CombatLog.GetEntryRetentionTime"] = {
     params = {  },
     returns = { { name = "retentionTime", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CombatLog.GetMessageLimit"] = {
@@ -68,6 +73,7 @@ APIDefs["C_CombatLog.GetMessageLimit"] = {
     params = {  },
     returns = { { name = "messageLimit", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CombatLog.IsCombatLogRestricted"] = {
@@ -79,6 +85,7 @@ APIDefs["C_CombatLog.IsCombatLogRestricted"] = {
     params = {  },
     returns = { { name = "restricted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CombatLog.RefilterEntries"] = {
@@ -90,6 +97,7 @@ APIDefs["C_CombatLog.RefilterEntries"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CombatLog.SetEntryRetentionTime"] = {
@@ -101,6 +109,7 @@ APIDefs["C_CombatLog.SetEntryRetentionTime"] = {
     params = { { name = "retentionTime", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -113,6 +122,7 @@ APIDefs["C_CombatLog.SetFilteredEventsEnabled"] = {
     params = { { name = "enabled", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -125,5 +135,6 @@ APIDefs["C_CombatLog.SetMessageLimit"] = {
     params = { { name = "messageLimit", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

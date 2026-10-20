@@ -11,6 +11,7 @@ APIDefs["C_Texture.ClearTitleIconTexture"] = {
     params = { { name = "texture", type = "SimpleTexture", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_Texture.GetAtlasElementID"] = {
     params = { { name = "atlas", type = "textureAtlas", default = nil } },
     returns = { { name = "elementID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_Texture.GetAtlasElements"] = {
     params = {  },
     returns = { { name = "atlases", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Texture.GetAtlasExists"] = {
@@ -46,6 +49,7 @@ APIDefs["C_Texture.GetAtlasExists"] = {
     params = { { name = "atlas", type = "textureAtlas", default = nil } },
     returns = { { name = "atlasExists", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_Texture.GetAtlasID"] = {
     params = { { name = "atlas", type = "textureAtlas", default = nil } },
     returns = { { name = "atlasID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_Texture.GetAtlasInfo"] = {
     params = { { name = "atlas", type = "textureAtlas", default = nil } },
     returns = { { name = "info", type = "AtlasInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_Texture.GetFilenameFromFileDataID"] = {
     params = { { name = "fileDataID", type = "number", default = nil } },
     returns = { { name = "filename", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +101,7 @@ APIDefs["C_Texture.GetTitleIconTexture"] = {
     params = { { name = "titleID", type = "string", default = nil }, { name = "version", type = "TitleIconVersion", default = nil }, { name = "callback", type = "GetTitleIconTextureCallback", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -106,6 +114,7 @@ APIDefs["C_Texture.IsTitleIconTextureReady"] = {
     params = { { name = "titleID", type = "string", default = nil }, { name = "version", type = "TitleIconVersion", default = nil } },
     returns = { { name = "ready", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,6 +127,7 @@ APIDefs["C_Texture.SetTitleIconTexture"] = {
     params = { { name = "texture", type = "SimpleTexture", default = nil }, { name = "titleID", type = "string", default = nil }, { name = "version", type = "TitleIconVersion", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -130,5 +140,6 @@ APIDefs["C_Texture.SetURLTexture"] = {
     params = { { name = "texture", type = "SimpleTexture", default = nil }, { name = "url", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

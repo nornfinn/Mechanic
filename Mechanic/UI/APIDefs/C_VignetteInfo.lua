@@ -11,6 +11,7 @@ APIDefs["C_VignetteInfo.FindBestUniqueVignette"] = {
     params = { { name = "vignetteGUIDs", type = "table", default = nil } },
     returns = { { name = "bestUniqueVignetteIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_VignetteInfo.GetHealthPercent"] = {
     params = { { name = "vignetteGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "healthPct", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_VignetteInfo.GetRecommendedGroupSize"] = {
     params = { { name = "vignetteGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "minGroupSize", type = "number", canBeSecret = false }, { name = "maxGroupSize", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_VignetteInfo.GetVignetteInfo"] = {
     params = { { name = "vignetteGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "vignetteInfo", type = "VignetteInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_VignetteInfo.GetVignettePosition"] = {
     params = { { name = "vignetteGUID", type = "WOWGUID", default = nil }, { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "vignettePosition", type = "vector2", canBeSecret = false }, { name = "vignetteFacing", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,4 +76,5 @@ APIDefs["C_VignetteInfo.GetVignettes"] = {
     params = {  },
     returns = { { name = "vignetteGUIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

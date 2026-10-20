@@ -11,6 +11,7 @@ APIDefs["C_AlliedRaces.GetAllRacialAbilitiesFromID"] = {
     params = { { name = "raceID", type = "number", default = nil } },
     returns = { { name = "allDisplayInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,5 +24,6 @@ APIDefs["C_AlliedRaces.GetRaceInfoByID"] = {
     params = { { name = "raceID", type = "number", default = nil } },
     returns = { { name = "info", type = "AlliedRaceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

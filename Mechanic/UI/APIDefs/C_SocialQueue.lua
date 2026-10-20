@@ -11,6 +11,7 @@ APIDefs["C_SocialQueue.GetAllGroups"] = {
     params = { { name = "allowNonJoinable", type = "bool", default = false }, { name = "allowNonQueuedGroups", type = "bool", default = false } },
     returns = { { name = "groupGUIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_SocialQueue.GetConfig"] = {
     params = {  },
     returns = { { name = "config", type = "SocialQueueConfig", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialQueue.GetGroupForPlayer"] = {
@@ -34,6 +36,7 @@ APIDefs["C_SocialQueue.GetGroupForPlayer"] = {
     params = { { name = "playerGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "groupGUID", type = "WOWGUID", canBeSecret = false }, { name = "isSoloQueueParty", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_SocialQueue.GetGroupInfo"] = {
     params = { { name = "groupGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "canJoin", type = "bool", canBeSecret = false }, { name = "numQueues", type = "number", canBeSecret = false }, { name = "needTank", type = "bool", canBeSecret = false }, { name = "needHealer", type = "bool", canBeSecret = false }, { name = "needDamage", type = "bool", canBeSecret = false }, { name = "isSoloQueueParty", type = "bool", canBeSecret = false }, { name = "questSessionActive", type = "bool", canBeSecret = false }, { name = "leaderGUID", type = "WOWGUID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_SocialQueue.GetGroupMembers"] = {
     params = { { name = "groupGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "groupMembers", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,7 +75,32 @@ APIDefs["C_SocialQueue.GetGroupQueues"] = {
     params = { { name = "groupGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "queues", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_SocialQueue.IsSystemEnabled"] = {
+    key = "C_SocialQueue.IsSystemEnabled",
+    name = "IsSystemEnabled",
+    category = "general",
+    subcategory = "c_socialqueue",
+    funcPath = "C_SocialQueue.IsSystemEnabled",
+    params = {  },
+    returns = { { name = "isSystemEnabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_SocialQueue.IsSystemSupported"] = {
+    key = "C_SocialQueue.IsSystemSupported",
+    name = "IsSystemSupported",
+    category = "general",
+    subcategory = "c_socialqueue",
+    funcPath = "C_SocialQueue.IsSystemSupported",
+    params = {  },
+    returns = { { name = "isSystemSupported", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SocialQueue.RequestToJoin"] = {
@@ -82,6 +112,7 @@ APIDefs["C_SocialQueue.RequestToJoin"] = {
     params = { { name = "groupGUID", type = "WOWGUID", default = nil }, { name = "applyAsTank", type = "bool", default = false }, { name = "applyAsHealer", type = "bool", default = false }, { name = "applyAsDamage", type = "bool", default = false } },
     returns = { { name = "requestSuccessful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,5 +125,6 @@ APIDefs["C_SocialQueue.SignalToastDisplayed"] = {
     params = { { name = "groupGUID", type = "WOWGUID", default = nil }, { name = "priority", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

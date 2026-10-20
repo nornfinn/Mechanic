@@ -11,6 +11,7 @@ APIDefs["C_DeathRecap.GetRecapEvents"] = {
     params = { { name = "recapID", type = "number", default = nil } },
     returns = { { name = "events", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,20 @@ APIDefs["C_DeathRecap.GetRecapLink"] = {
     params = { { name = "recapID", type = "number", default = nil } },
     returns = { { name = "link", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_DeathRecap.GetRecapMaxHealth"] = {
+    key = "C_DeathRecap.GetRecapMaxHealth",
+    name = "GetRecapMaxHealth",
+    category = "general",
+    subcategory = "c_deathrecap",
+    funcPath = "C_DeathRecap.GetRecapMaxHealth",
+    params = { { name = "recapID", type = "number", default = nil } },
+    returns = { { name = "maxHealth", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,5 +50,6 @@ APIDefs["C_DeathRecap.HasRecapEvents"] = {
     params = { { name = "recapID", type = "number", default = nil } },
     returns = { { name = "hasEvents", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

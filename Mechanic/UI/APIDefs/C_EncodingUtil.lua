@@ -11,6 +11,7 @@ APIDefs["C_EncodingUtil.CompressString"] = {
     params = { { name = "source", type = "stringView", default = nil }, { name = "method", type = "CompressionMethod", default = "Deflate" }, { name = "level", type = "CompressionLevel", default = "Default" } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_EncodingUtil.DecodeBase64"] = {
     params = { { name = "source", type = "stringView", default = nil }, { name = "variant", type = "Base64Variant", default = "Standard" } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_EncodingUtil.DecodeHex"] = {
     params = { { name = "source", type = "string", default = nil } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_EncodingUtil.DecompressString"] = {
     params = { { name = "source", type = "stringView", default = nil }, { name = "method", type = "CompressionMethod", default = "Deflate" } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_EncodingUtil.DeserializeCBOR"] = {
     params = { { name = "source", type = "stringView", default = nil } },
     returns = { { name = "value", type = "LuaValueVariant", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_EncodingUtil.DeserializeJSON"] = {
     params = { { name = "source", type = "string", default = nil } },
     returns = { { name = "value", type = "LuaValueVariant", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_EncodingUtil.EncodeBase64"] = {
     params = { { name = "source", type = "stringView", default = nil }, { name = "variant", type = "Base64Variant", default = "Standard" } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,6 +102,7 @@ APIDefs["C_EncodingUtil.EncodeHex"] = {
     params = { { name = "source", type = "stringView", default = nil } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -107,6 +115,7 @@ APIDefs["C_EncodingUtil.SerializeCBOR"] = {
     params = { { name = "value", type = "LuaValueVariant", default = nil }, { name = "options", type = "CBORSerializationOptions", default = nil } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -119,5 +128,6 @@ APIDefs["C_EncodingUtil.SerializeJSON"] = {
     params = { { name = "value", type = "LuaValueVariant", default = nil }, { name = "options", type = "JSONSerializationOptions", default = nil } },
     returns = { { name = "output", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

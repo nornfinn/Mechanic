@@ -11,4 +11,5 @@ APIDefs["C_TimerunningUI.GetActiveTimerunningSeasonID"] = {
     params = {  },
     returns = { { name = "activeTimerunningSeasonID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

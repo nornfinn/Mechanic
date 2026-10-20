@@ -11,5 +11,6 @@ APIDefs["C_ModifiedInstance.GetModifiedInstanceInfoFromMapID"] = {
     params = { { name = "mapID", type = "number", default = nil } },
     returns = { { name = "info", type = "ModifiedInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

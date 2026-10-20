@@ -11,6 +11,7 @@ APIDefs["C_TaxiMap.GetAllTaxiNodes"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "taxiNodes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_TaxiMap.GetTaxiNodesForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "mapTaxiNodes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,5 +37,6 @@ APIDefs["C_TaxiMap.ShouldMapShowTaxiNodes"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "shouldShowNodes", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,6 +11,7 @@ APIDefs["C_NamePlateManager.GetNamePlateHitTestInsets"] = {
     params = { { name = "type", type = "NamePlateType", default = nil } },
     returns = { { name = "left", type = "uiUnit", canBeSecret = false }, { name = "right", type = "uiUnit", canBeSecret = false }, { name = "top", type = "uiUnit", canBeSecret = false }, { name = "bottom", type = "uiUnit", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -20,21 +21,10 @@ APIDefs["C_NamePlateManager.IsNamePlateUnitBehindCamera"] = {
     category = "general",
     subcategory = "c_nameplatemanager",
     funcPath = "C_NamePlateManager.IsNamePlateUnitBehindCamera",
-    params = { { name = "unitToken", type = "UnitToken", default = "player" } },
+    params = { { name = "unitToken", type = "UnitTokenNamePlate", default = nil } },
     returns = { { name = "isBehindCamera", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
-}
-
-APIDefs["C_NamePlateManager.SetNamePlateHitTestFrame"] = {
-    key = "C_NamePlateManager.SetNamePlateHitTestFrame",
-    name = "SetNamePlateHitTestFrame",
-    category = "general",
-    subcategory = "c_nameplatemanager",
-    funcPath = "C_NamePlateManager.SetNamePlateHitTestFrame",
-    params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "hitTestFrame", type = "SimpleFrame", default = nil } },
-    returns = {  },
-    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +37,7 @@ APIDefs["C_NamePlateManager.SetNamePlateHitTestInsets"] = {
     params = { { name = "type", type = "NamePlateType", default = nil }, { name = "left", type = "uiUnit", default = nil }, { name = "right", type = "uiUnit", default = nil }, { name = "top", type = "uiUnit", default = nil }, { name = "bottom", type = "uiUnit", default = nil } },
     returns = {  },
     midnightImpact = "RESTRICTED",
+    games = { "standard", "forever" },
     protected = true,
     midnightNote = "Secret behavior: SecretArguments=NotAllowed",
 }
@@ -57,8 +48,9 @@ APIDefs["C_NamePlateManager.SetNamePlateSimplified"] = {
     category = "general",
     subcategory = "c_nameplatemanager",
     funcPath = "C_NamePlateManager.SetNamePlateSimplified",
-    params = { { name = "unitToken", type = "UnitToken", default = "player" }, { name = "isSimplified", type = "bool", default = nil } },
+    params = { { name = "unitToken", type = "UnitTokenNamePlate", default = nil }, { name = "isSimplified", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

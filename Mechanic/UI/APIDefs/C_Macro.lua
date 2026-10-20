@@ -11,6 +11,7 @@ APIDefs["C_Macro.GetMacroName"] = {
     params = { { name = "macroId", type = "luaIndex", default = nil } },
     returns = { { name = "name", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_Macro.GetSelectedMacroIcon"] = {
     params = { { name = "macroId", type = "luaIndex", default = nil } },
     returns = { { name = "textureNum", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_Macro.RunMacroText"] = {
     params = { { name = "text", type = "cstring", default = nil }, { name = "button", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,5 +50,6 @@ APIDefs["C_Macro.SetMacroExecuteLineCallback"] = {
     params = { { name = "cb", type = "MacroExecuteLineCallback", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

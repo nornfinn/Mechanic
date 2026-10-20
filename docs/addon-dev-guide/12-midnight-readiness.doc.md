@@ -550,7 +550,7 @@ Scans for removed or modified Blizzard APIs and reports them.
 - **Scan**: `mech call addon.deprecations '{"addon": "MyAddon"}'` (report only; no auto-fix)
 
 ### 2. API Definitions
-The API database behind the API tab and the sandbox stubs is generated from Blizzard's own API documentation (about 4,500 APIs from 12.0.1.64914).
+The API database behind the API tab and the sandbox stubs is generated from Blizzard's own API documentation (about 5,000 APIs from Retail 12.1.5.70448 and WoW: Forever 1.60.1.70450; each entry lists the games that document it, and `api.search`, `api.list` and the sandbox accept a `game` filter).
 - **Action**: `mech call api.refresh '{"source_path": "/path/to/wow-ui-source"}'` regenerates `Mechanic/UI/APIDefs`. `api.search` and `api.info` query it offline.
 
 ### 3. Static Analysis

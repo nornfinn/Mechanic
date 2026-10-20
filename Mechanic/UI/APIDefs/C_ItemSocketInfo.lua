@@ -11,6 +11,7 @@ APIDefs["C_ItemSocketInfo.AcceptSockets"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.ClickSocketButton"] = {
@@ -22,6 +23,7 @@ APIDefs["C_ItemSocketInfo.ClickSocketButton"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_ItemSocketInfo.CloseSocketInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.CompleteSocketing"] = {
@@ -45,6 +48,7 @@ APIDefs["C_ItemSocketInfo.CompleteSocketing"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.GetCurrUIType"] = {
@@ -56,6 +60,7 @@ APIDefs["C_ItemSocketInfo.GetCurrUIType"] = {
     params = {  },
     returns = { { name = "uiType", type = "ItemSocketInfoUIType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.GetExistingSocketInfo"] = {
@@ -67,6 +72,7 @@ APIDefs["C_ItemSocketInfo.GetExistingSocketInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "gemMatchesSocket", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -79,6 +85,7 @@ APIDefs["C_ItemSocketInfo.GetExistingSocketLink"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "existingSocketLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -91,6 +98,7 @@ APIDefs["C_ItemSocketInfo.GetNewSocketInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "gemMatchesSocket", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -103,6 +111,7 @@ APIDefs["C_ItemSocketInfo.GetNewSocketLink"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "newSocketLink", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -115,6 +124,7 @@ APIDefs["C_ItemSocketInfo.GetNumSockets"] = {
     params = {  },
     returns = { { name = "numSockets", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.GetSocketItemBoundTradeable"] = {
@@ -126,6 +136,7 @@ APIDefs["C_ItemSocketInfo.GetSocketItemBoundTradeable"] = {
     params = {  },
     returns = { { name = "socketItemTradeable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.GetSocketItemInfo"] = {
@@ -137,6 +148,7 @@ APIDefs["C_ItemSocketInfo.GetSocketItemInfo"] = {
     params = {  },
     returns = { { name = "name", type = "string", canBeSecret = false }, { name = "icon", type = "fileID", canBeSecret = false }, { name = "quality", type = "ItemQuality", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.GetSocketItemRefundable"] = {
@@ -148,6 +160,7 @@ APIDefs["C_ItemSocketInfo.GetSocketItemRefundable"] = {
     params = {  },
     returns = { { name = "socketItemRefundable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.GetSocketTypes"] = {
@@ -159,6 +172,7 @@ APIDefs["C_ItemSocketInfo.GetSocketTypes"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "socketType", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -171,6 +185,7 @@ APIDefs["C_ItemSocketInfo.HasBoundGemProposed"] = {
     params = {  },
     returns = { { name = "hasBoundGemProposed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ItemSocketInfo.IsArtifactRelicItem"] = {
@@ -182,5 +197,6 @@ APIDefs["C_ItemSocketInfo.IsArtifactRelicItem"] = {
     params = { { name = "info", type = "ItemInfo", default = nil } },
     returns = { { name = "isArtifactRelicItem", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

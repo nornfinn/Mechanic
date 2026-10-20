@@ -11,6 +11,7 @@ APIDefs["C_UIWidgetManager.GetAllWidgetsBySetID"] = {
     params = { { name = "setID", type = "number", default = nil } },
     returns = { { name = "widgets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_UIWidgetManager.GetBelowMinimapWidgetSetID"] = {
     params = {  },
     returns = { { name = "setID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo"] = {
@@ -34,6 +36,7 @@ APIDefs["C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "BulletTextListWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_UIWidgetManager.GetButtonHeaderWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "ButtonHeaderWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "CaptureBarWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_UIWidgetManager.GetCaptureZoneVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "CaptureZoneVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +88,7 @@ APIDefs["C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "DiscreteProgressStepsVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +101,7 @@ APIDefs["C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "DoubleIconAndTextWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -106,6 +114,7 @@ APIDefs["C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "DoubleStateIconRowVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,6 +127,7 @@ APIDefs["C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "DoubleStatusBarWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -130,6 +140,7 @@ APIDefs["C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "FillUpFramesWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -142,6 +153,7 @@ APIDefs["C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "HorizontalCurrenciesWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -154,6 +166,7 @@ APIDefs["C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "IconAndTextWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -166,6 +179,7 @@ APIDefs["C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "IconTextAndBackgroundWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -178,6 +192,7 @@ APIDefs["C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "IconTextAndCurrenciesWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -190,6 +205,7 @@ APIDefs["C_UIWidgetManager.GetItemDisplayVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "ItemDisplayVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -202,6 +218,7 @@ APIDefs["C_UIWidgetManager.GetMapPinAnimationWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "MapPinAnimationWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -214,6 +231,7 @@ APIDefs["C_UIWidgetManager.GetObjectiveTrackerWidgetSetID"] = {
     params = {  },
     returns = { { name = "setID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UIWidgetManager.GetPowerBarWidgetSetID"] = {
@@ -225,6 +243,7 @@ APIDefs["C_UIWidgetManager.GetPowerBarWidgetSetID"] = {
     params = {  },
     returns = { { name = "setID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UIWidgetManager.GetPreyHuntProgressWidgetVisualizationInfo"] = {
@@ -236,6 +255,7 @@ APIDefs["C_UIWidgetManager.GetPreyHuntProgressWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "PreyHuntProgressWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -248,6 +268,7 @@ APIDefs["C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisuali
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -260,6 +281,7 @@ APIDefs["C_UIWidgetManager.GetScenarioHeaderDelvesWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "ScenarioHeaderDelvesWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -272,6 +294,7 @@ APIDefs["C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "ScenarioHeaderTimerWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -284,6 +307,7 @@ APIDefs["C_UIWidgetManager.GetSpacerVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "SpacerVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -296,6 +320,7 @@ APIDefs["C_UIWidgetManager.GetSpellDisplayVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "SpellDisplayVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -308,6 +333,7 @@ APIDefs["C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo"] = 
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "StackedResourceTrackerWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -320,6 +346,7 @@ APIDefs["C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "StatusBarWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -332,6 +359,7 @@ APIDefs["C_UIWidgetManager.GetTextColumnRowVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "TextColumnRowVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -344,6 +372,7 @@ APIDefs["C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "TextWithStateWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -356,6 +385,7 @@ APIDefs["C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "TextWithSubtextWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -368,6 +398,7 @@ APIDefs["C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "TextureAndTextRowVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -380,6 +411,7 @@ APIDefs["C_UIWidgetManager.GetTextureAndTextVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "TextureAndTextVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -392,6 +424,7 @@ APIDefs["C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "TextureWithAnimationVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -404,6 +437,7 @@ APIDefs["C_UIWidgetManager.GetTopCenterWidgetSetID"] = {
     params = {  },
     returns = { { name = "setID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo"] = {
@@ -415,6 +449,7 @@ APIDefs["C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "TugOfWarWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -427,6 +462,7 @@ APIDefs["C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "UnitPowerBarWidgetVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -439,6 +475,7 @@ APIDefs["C_UIWidgetManager.GetWidgetSetInfo"] = {
     params = { { name = "widgetSetID", type = "number", default = nil } },
     returns = { { name = "widgetSetInfo", type = "UIWidgetSetInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -451,6 +488,7 @@ APIDefs["C_UIWidgetManager.GetZoneControlVisualizationInfo"] = {
     params = { { name = "widgetID", type = "number", default = nil } },
     returns = { { name = "widgetInfo", type = "ZoneControlVisualizationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -463,6 +501,7 @@ APIDefs["C_UIWidgetManager.RegisterUnitForWidgetUpdates"] = {
     params = { { name = "unitToken", type = "string", default = nil }, { name = "isGuid", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -475,6 +514,7 @@ APIDefs["C_UIWidgetManager.SetProcessingUnit"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -487,6 +527,7 @@ APIDefs["C_UIWidgetManager.SetProcessingUnitGuid"] = {
     params = { { name = "unit", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -499,5 +540,6 @@ APIDefs["C_UIWidgetManager.UnregisterUnitForWidgetUpdates"] = {
     params = { { name = "unitToken", type = "string", default = nil }, { name = "isGuid", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

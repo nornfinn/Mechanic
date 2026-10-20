@@ -11,6 +11,7 @@ APIDefs["C_CovenantSanctumUI.CanAccessReservoir"] = {
     params = {  },
     returns = { { name = "canAccess", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.CanDepositAnima"] = {
@@ -22,6 +23,7 @@ APIDefs["C_CovenantSanctumUI.CanDepositAnima"] = {
     params = {  },
     returns = { { name = "canDeposit", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.DepositAnima"] = {
@@ -33,6 +35,7 @@ APIDefs["C_CovenantSanctumUI.DepositAnima"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.EndInteraction"] = {
@@ -44,6 +47,7 @@ APIDefs["C_CovenantSanctumUI.EndInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.GetAnimaInfo"] = {
@@ -55,6 +59,7 @@ APIDefs["C_CovenantSanctumUI.GetAnimaInfo"] = {
     params = {  },
     returns = { { name = "currencyID", type = "number", canBeSecret = false }, { name = "maxDisplayableValue", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.GetCurrentTalentTreeID"] = {
@@ -66,6 +71,7 @@ APIDefs["C_CovenantSanctumUI.GetCurrentTalentTreeID"] = {
     params = {  },
     returns = { { name = "currentTalentTreeID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.GetFeatures"] = {
@@ -77,6 +83,7 @@ APIDefs["C_CovenantSanctumUI.GetFeatures"] = {
     params = {  },
     returns = { { name = "features", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.GetRenownLevel"] = {
@@ -88,6 +95,7 @@ APIDefs["C_CovenantSanctumUI.GetRenownLevel"] = {
     params = {  },
     returns = { { name = "level", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.GetRenownLevels"] = {
@@ -99,6 +107,7 @@ APIDefs["C_CovenantSanctumUI.GetRenownLevels"] = {
     params = { { name = "covenantID", type = "number", default = nil } },
     returns = { { name = "levels", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -111,6 +120,7 @@ APIDefs["C_CovenantSanctumUI.GetRenownRewardsForLevel"] = {
     params = { { name = "covenantID", type = "number", default = nil }, { name = "renownLevel", type = "number", default = nil } },
     returns = { { name = "rewards", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -123,6 +133,7 @@ APIDefs["C_CovenantSanctumUI.GetSanctumType"] = {
     params = {  },
     returns = { { name = "sanctumType", type = "GarrTalentFeatureSubtype", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.GetSoulCurrencies"] = {
@@ -134,6 +145,7 @@ APIDefs["C_CovenantSanctumUI.GetSoulCurrencies"] = {
     params = {  },
     returns = { { name = "currencyIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.HasMaximumRenown"] = {
@@ -145,6 +157,7 @@ APIDefs["C_CovenantSanctumUI.HasMaximumRenown"] = {
     params = {  },
     returns = { { name = "hasMaxRenown", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode"] = {
@@ -156,6 +169,7 @@ APIDefs["C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode"] = {
     params = {  },
     returns = { { name = "isInCatchUpMode", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.IsWeeklyRenownCapped"] = {
@@ -167,6 +181,7 @@ APIDefs["C_CovenantSanctumUI.IsWeeklyRenownCapped"] = {
     params = {  },
     returns = { { name = "isWeeklyCapped", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantSanctumUI.RequestCatchUpState"] = {
@@ -178,4 +193,5 @@ APIDefs["C_CovenantSanctumUI.RequestCatchUpState"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

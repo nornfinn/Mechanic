@@ -11,6 +11,7 @@ APIDefs["C_Bank.AreAnyBankTypesViewable"] = {
     params = {  },
     returns = { { name = "areAnyBankTypesViewable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Bank.AutoDepositItemsIntoBank"] = {
@@ -22,6 +23,20 @@ APIDefs["C_Bank.AutoDepositItemsIntoBank"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Bank.BankBagTypeAndIDToInvSlot"] = {
+    key = "C_Bank.BankBagTypeAndIDToInvSlot",
+    name = "BankBagTypeAndIDToInvSlot",
+    category = "item",
+    subcategory = "c_bank",
+    funcPath = "C_Bank.BankBagTypeAndIDToInvSlot",
+    params = { { name = "bankType", type = "BankType", default = nil }, { name = "slotIndex", type = "luaIndex", default = nil } },
+    returns = { { name = "slot", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +49,7 @@ APIDefs["C_Bank.CanDepositMoney"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "canDepositMoney", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +62,7 @@ APIDefs["C_Bank.CanPurchaseBankTab"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "canPurchaseBankTab", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +75,7 @@ APIDefs["C_Bank.CanUseBank"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "canUseBank", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +88,7 @@ APIDefs["C_Bank.CanViewBank"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "canViewBank", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +101,7 @@ APIDefs["C_Bank.CanWithdrawMoney"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "canWithdrawMoney", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +114,7 @@ APIDefs["C_Bank.CloseBankFrame"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Bank.DepositMoney"] = {
@@ -105,6 +126,7 @@ APIDefs["C_Bank.DepositMoney"] = {
     params = { { name = "bankType", type = "BankType", default = nil }, { name = "amount", type = "WOWMONEY", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -117,6 +139,7 @@ APIDefs["C_Bank.DoesBankTypeSupportAutoDeposit"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "doesBankTypeSupportAutoDeposit", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -129,6 +152,7 @@ APIDefs["C_Bank.DoesBankTypeSupportMoneyTransfer"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "doesBankTypeSupportMoneyTransfer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -141,6 +165,7 @@ APIDefs["C_Bank.FetchBankLockedReason"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "reason", type = "BankLockedReason", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -153,6 +178,20 @@ APIDefs["C_Bank.FetchDepositedMoney"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "amount", type = "WOWMONEY", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Bank.FetchMaxNumBankTabs"] = {
+    key = "C_Bank.FetchMaxNumBankTabs",
+    name = "FetchMaxNumBankTabs",
+    category = "item",
+    subcategory = "c_bank",
+    funcPath = "C_Bank.FetchMaxNumBankTabs",
+    params = { { name = "bankType", type = "BankType", default = nil } },
+    returns = { { name = "numPurchasedBankTabs", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -165,6 +204,7 @@ APIDefs["C_Bank.FetchNextPurchasableBankTabData"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "nextPurchasableTabData", type = "PurchasableBankTabData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -177,6 +217,7 @@ APIDefs["C_Bank.FetchNumPurchasedBankTabs"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "numPurchasedBankTabs", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -189,6 +230,7 @@ APIDefs["C_Bank.FetchPurchasedBankTabData"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "purchasedBankTabData", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -201,6 +243,7 @@ APIDefs["C_Bank.FetchPurchasedBankTabIDs"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "purchasedBankTabIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -213,6 +256,7 @@ APIDefs["C_Bank.FetchViewableBankTypes"] = {
     params = {  },
     returns = { { name = "viewableBankTypes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Bank.HasMaxBankTabs"] = {
@@ -224,6 +268,7 @@ APIDefs["C_Bank.HasMaxBankTabs"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = { { name = "hasMaxBankTabs", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -236,6 +281,7 @@ APIDefs["C_Bank.IsItemAllowedInBankType"] = {
     params = { { name = "bankType", type = "BankType", default = nil }, { name = "itemLocation", type = "ItemLocation", default = nil } },
     returns = { { name = "isItemAllowedInBankType", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -248,7 +294,20 @@ APIDefs["C_Bank.PurchaseBankTab"] = {
     params = { { name = "bankType", type = "BankType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_Bank.ShouldUsePlayerBagsInBank"] = {
+    key = "C_Bank.ShouldUsePlayerBagsInBank",
+    name = "ShouldUsePlayerBagsInBank",
+    category = "item",
+    subcategory = "c_bank",
+    funcPath = "C_Bank.ShouldUsePlayerBagsInBank",
+    params = {  },
+    returns = { { name = "shouldUsePlayerBagsInBank", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_Bank.UpdateBankTabSettings"] = {
@@ -260,6 +319,7 @@ APIDefs["C_Bank.UpdateBankTabSettings"] = {
     params = { { name = "bankType", type = "BankType", default = nil }, { name = "tabID", type = "BagIndex", default = nil }, { name = "tabName", type = "cstring", default = nil }, { name = "tabIcon", type = "cstring", default = nil }, { name = "depositFlags", type = "BagSlotFlags", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -272,5 +332,6 @@ APIDefs["C_Bank.WithdrawMoney"] = {
     params = { { name = "bankType", type = "BankType", default = nil }, { name = "amount", type = "WOWMONEY", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

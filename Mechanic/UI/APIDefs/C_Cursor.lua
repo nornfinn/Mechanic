@@ -11,4 +11,5 @@ APIDefs["C_Cursor.GetCursorItem"] = {
     params = {  },
     returns = { { name = "item", type = "ItemLocation", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

@@ -11,4 +11,5 @@ APIDefs["C_ScriptedAnimations.GetAllScriptedAnimationEffects"] = {
     params = {  },
     returns = { { name = "scriptedAnimationEffects", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

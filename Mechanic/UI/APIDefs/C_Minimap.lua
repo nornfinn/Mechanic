@@ -11,6 +11,7 @@ APIDefs["C_Minimap.CanTrackBattlePets"] = {
     params = {  },
     returns = { { name = "CanTrackBattlePets", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.ClearAllTracking"] = {
@@ -22,6 +23,7 @@ APIDefs["C_Minimap.ClearAllTracking"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.ClearMinimapInsetInfo"] = {
@@ -33,6 +35,7 @@ APIDefs["C_Minimap.ClearMinimapInsetInfo"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.GetDefaultTrackingValue"] = {
@@ -44,6 +47,7 @@ APIDefs["C_Minimap.GetDefaultTrackingValue"] = {
     params = { { name = "filterType", type = "MinimapTrackingFilter", default = nil } },
     returns = { { name = "defaultValue", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -56,6 +60,7 @@ APIDefs["C_Minimap.GetDrawGroundTextures"] = {
     params = {  },
     returns = { { name = "draw", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.GetNumQuestPOIWorldEffects"] = {
@@ -67,6 +72,7 @@ APIDefs["C_Minimap.GetNumQuestPOIWorldEffects"] = {
     params = {  },
     returns = { { name = "worldEffectCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.GetNumTrackingTypes"] = {
@@ -78,18 +84,7 @@ APIDefs["C_Minimap.GetNumTrackingTypes"] = {
     params = {  },
     returns = { { name = "numTrackingTypes", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
-}
-
-APIDefs["C_Minimap.GetObjectIconTextureCoords"] = {
-    key = "C_Minimap.GetObjectIconTextureCoords",
-    name = "GetObjectIconTextureCoords",
-    category = "map",
-    subcategory = "c_minimap",
-    funcPath = "C_Minimap.GetObjectIconTextureCoords",
-    params = { { name = "index", type = "number", default = nil } },
-    returns = { { name = "textureCoordsX", type = "number", canBeSecret = false }, { name = "textureCoordsY", type = "number", canBeSecret = false }, { name = "textureCoordsZ", type = "number", canBeSecret = false }, { name = "textureCoordsW", type = "number", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.GetPOITextureCoords"] = {
@@ -101,6 +96,7 @@ APIDefs["C_Minimap.GetPOITextureCoords"] = {
     params = { { name = "index", type = "number", default = nil } },
     returns = { { name = "textureCoordsX", type = "number", canBeSecret = false }, { name = "textureCoordsY", type = "number", canBeSecret = false }, { name = "textureCoordsZ", type = "number", canBeSecret = false }, { name = "textureCoordsW", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -113,6 +109,7 @@ APIDefs["C_Minimap.GetTrackingFilter"] = {
     params = { { name = "spellIndex", type = "luaIndex", default = nil } },
     returns = { { name = "trackingType", type = "MinimapScriptTrackingFilter", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -125,6 +122,7 @@ APIDefs["C_Minimap.GetTrackingInfo"] = {
     params = { { name = "spellIndex", type = "luaIndex", default = nil } },
     returns = { { name = "trackingInfo", type = "MinimapScriptTrackingInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -137,6 +135,7 @@ APIDefs["C_Minimap.GetUiMapID"] = {
     params = {  },
     returns = { { name = "uiMapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.GetViewRadius"] = {
@@ -148,6 +147,7 @@ APIDefs["C_Minimap.GetViewRadius"] = {
     params = {  },
     returns = { { name = "yards", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.IsFilteredOut"] = {
@@ -159,6 +159,7 @@ APIDefs["C_Minimap.IsFilteredOut"] = {
     params = { { name = "filterType", type = "MinimapTrackingFilter", default = nil } },
     returns = { { name = "isFiltered", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -171,6 +172,7 @@ APIDefs["C_Minimap.IsInsideQuestBlob"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isInside", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -183,6 +185,7 @@ APIDefs["C_Minimap.IsRotateMinimapIgnored"] = {
     params = {  },
     returns = { { name = "isIgnored", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.IsTrackingAccountCompletedQuests"] = {
@@ -194,6 +197,7 @@ APIDefs["C_Minimap.IsTrackingAccountCompletedQuests"] = {
     params = {  },
     returns = { { name = "IsTrackingAccountCompletedQuests", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.IsTrackingBattlePets"] = {
@@ -205,6 +209,7 @@ APIDefs["C_Minimap.IsTrackingBattlePets"] = {
     params = {  },
     returns = { { name = "isTrackingBattlePets", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.IsTrackingHiddenQuests"] = {
@@ -216,6 +221,7 @@ APIDefs["C_Minimap.IsTrackingHiddenQuests"] = {
     params = {  },
     returns = { { name = "isTrackingHiddenQuests", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_Minimap.SetDrawGroundTextures"] = {
@@ -227,6 +233,7 @@ APIDefs["C_Minimap.SetDrawGroundTextures"] = {
     params = { { name = "draw", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -239,6 +246,7 @@ APIDefs["C_Minimap.SetIgnoreRotateMinimap"] = {
     params = { { name = "ignore", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -251,6 +259,7 @@ APIDefs["C_Minimap.SetMinimapInsetInfo"] = {
     params = { { name = "minAngle", type = "number", default = nil }, { name = "maxAngle", type = "number", default = nil }, { name = "scalar", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -263,6 +272,7 @@ APIDefs["C_Minimap.SetTracking"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "on", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -275,4 +285,5 @@ APIDefs["C_Minimap.ShouldUseHybridMinimap"] = {
     params = {  },
     returns = { { name = "shouldUse", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

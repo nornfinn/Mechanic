@@ -11,6 +11,7 @@ APIDefs["C_ProfSpecs.CanRefundPath"] = {
     params = { { name = "pathID", type = "number", default = nil }, { name = "configID", type = "number", default = nil } },
     returns = { { name = "canRefund", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ProfSpecs.CanUnlockTab"] = {
     params = { { name = "tabTreeID", type = "number", default = nil }, { name = "configID", type = "number", default = nil } },
     returns = { { name = "canUnlock", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_ProfSpecs.GetChildrenForPath"] = {
     params = { { name = "pathID", type = "number", default = nil } },
     returns = { { name = "childIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_ProfSpecs.GetConfigIDForSkillLine"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "configID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_ProfSpecs.GetCurrencyInfoForSkillLine"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "info", type = "SpecializationCurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_ProfSpecs.GetDefaultSpecSkillLine"] = {
     params = {  },
     returns = { { name = "defaultSpecSkillLine", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ProfSpecs.GetDescriptionForPath"] = {
@@ -82,6 +88,7 @@ APIDefs["C_ProfSpecs.GetDescriptionForPath"] = {
     params = { { name = "pathID", type = "number", default = nil } },
     returns = { { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -94,6 +101,7 @@ APIDefs["C_ProfSpecs.GetDescriptionForPerk"] = {
     params = { { name = "perkID", type = "number", default = nil } },
     returns = { { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -106,6 +114,7 @@ APIDefs["C_ProfSpecs.GetEntryIDForPerk"] = {
     params = { { name = "perkID", type = "number", default = nil } },
     returns = { { name = "entryID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -118,6 +127,7 @@ APIDefs["C_ProfSpecs.GetNewSpecReminderProfName"] = {
     params = {  },
     returns = { { name = "profName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ProfSpecs.GetPerksForPath"] = {
@@ -129,6 +139,7 @@ APIDefs["C_ProfSpecs.GetPerksForPath"] = {
     params = { { name = "pathID", type = "number", default = nil } },
     returns = { { name = "perkInfos", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -141,6 +152,7 @@ APIDefs["C_ProfSpecs.GetRootPathForTab"] = {
     params = { { name = "tabTreeID", type = "number", default = nil } },
     returns = { { name = "rootPathID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -153,6 +165,7 @@ APIDefs["C_ProfSpecs.GetSourceTextForPath"] = {
     params = { { name = "pathID", type = "number", default = nil }, { name = "configID", type = "number", default = nil } },
     returns = { { name = "sourceText", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -165,6 +178,7 @@ APIDefs["C_ProfSpecs.GetSpecTabIDsForSkillLine"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "specTabIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -177,6 +191,7 @@ APIDefs["C_ProfSpecs.GetSpecTabInfo"] = {
     params = {  },
     returns = { { name = "specTabInfo", type = "SpecializationTabInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ProfSpecs.GetSpendCurrencyForPath"] = {
@@ -188,6 +203,7 @@ APIDefs["C_ProfSpecs.GetSpendCurrencyForPath"] = {
     params = { { name = "pathID", type = "number", default = nil } },
     returns = { { name = "currencyID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -200,6 +216,7 @@ APIDefs["C_ProfSpecs.GetSpendEntryForPath"] = {
     params = { { name = "pathID", type = "number", default = nil } },
     returns = { { name = "entryID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -212,6 +229,7 @@ APIDefs["C_ProfSpecs.GetStateForPath"] = {
     params = { { name = "pathID", type = "number", default = nil }, { name = "configID", type = "number", default = nil } },
     returns = { { name = "state", type = "ProfessionsSpecPathState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -224,6 +242,7 @@ APIDefs["C_ProfSpecs.GetStateForPerk"] = {
     params = { { name = "perkID", type = "number", default = nil }, { name = "configID", type = "number", default = nil } },
     returns = { { name = "state", type = "ProfessionsSpecPerkState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -236,6 +255,7 @@ APIDefs["C_ProfSpecs.GetStateForTab"] = {
     params = { { name = "tabTreeID", type = "number", default = nil }, { name = "configID", type = "number", default = nil } },
     returns = { { name = "tabInfo", type = "ProfessionsSpecTabState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -248,6 +268,7 @@ APIDefs["C_ProfSpecs.GetTabInfo"] = {
     params = { { name = "tabTreeID", type = "number", default = nil } },
     returns = { { name = "tabInfo", type = "ProfTabInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -260,6 +281,7 @@ APIDefs["C_ProfSpecs.GetUnlockEntryForPath"] = {
     params = { { name = "pathID", type = "number", default = nil } },
     returns = { { name = "entryID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -272,6 +294,7 @@ APIDefs["C_ProfSpecs.GetUnlockRankForPerk"] = {
     params = { { name = "perkID", type = "number", default = nil } },
     returns = { { name = "unlockRank", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -284,6 +307,7 @@ APIDefs["C_ProfSpecs.ShouldShowPointsReminder"] = {
     params = {  },
     returns = { { name = "showReminder", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ProfSpecs.ShouldShowPointsReminderForSkillLine"] = {
@@ -295,6 +319,7 @@ APIDefs["C_ProfSpecs.ShouldShowPointsReminderForSkillLine"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "showReminder", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -307,6 +332,7 @@ APIDefs["C_ProfSpecs.ShouldShowSpecTab"] = {
     params = {  },
     returns = { { name = "showSpecTab", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ProfSpecs.SkillLineHasSpecialization"] = {
@@ -318,5 +344,6 @@ APIDefs["C_ProfSpecs.SkillLineHasSpecialization"] = {
     params = { { name = "skillLineID", type = "number", default = nil } },
     returns = { { name = "hasSpecialization", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

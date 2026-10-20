@@ -11,6 +11,7 @@ APIDefs["C_FriendList.AddFriend"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "notes", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_FriendList.AddIgnore"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "added", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_FriendList.AddOrDelIgnore"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_FriendList.AddOrRemoveFriend"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "notes", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_FriendList.DelIgnore"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "removed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_FriendList.DelIgnoreByIndex"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,6 +89,7 @@ APIDefs["C_FriendList.GetFriendInfo"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "info", type = "FriendInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -95,6 +102,7 @@ APIDefs["C_FriendList.GetFriendInfoByIndex"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "FriendInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -107,6 +115,7 @@ APIDefs["C_FriendList.GetIgnoreName"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -119,6 +128,7 @@ APIDefs["C_FriendList.GetNumFriends"] = {
     params = {  },
     returns = { { name = "numFriends", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_FriendList.GetNumIgnores"] = {
@@ -130,6 +140,7 @@ APIDefs["C_FriendList.GetNumIgnores"] = {
     params = {  },
     returns = { { name = "numIgnores", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_FriendList.GetNumOnlineFriends"] = {
@@ -141,6 +152,7 @@ APIDefs["C_FriendList.GetNumOnlineFriends"] = {
     params = {  },
     returns = { { name = "numOnline", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_FriendList.GetNumWhoResults"] = {
@@ -152,6 +164,7 @@ APIDefs["C_FriendList.GetNumWhoResults"] = {
     params = {  },
     returns = { { name = "numWhos", type = "number", canBeSecret = false }, { name = "totalNumWhos", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_FriendList.GetSelectedFriend"] = {
@@ -163,6 +176,7 @@ APIDefs["C_FriendList.GetSelectedFriend"] = {
     params = {  },
     returns = { { name = "index", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_FriendList.GetSelectedIgnore"] = {
@@ -174,6 +188,7 @@ APIDefs["C_FriendList.GetSelectedIgnore"] = {
     params = {  },
     returns = { { name = "index", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_FriendList.GetWhoInfo"] = {
@@ -185,7 +200,20 @@ APIDefs["C_FriendList.GetWhoInfo"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "WhoInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_FriendList.GetWhoRaceFilters"] = {
+    key = "C_FriendList.GetWhoRaceFilters",
+    name = "GetWhoRaceFilters",
+    category = "social",
+    subcategory = "c_friendlist",
+    funcPath = "C_FriendList.GetWhoRaceFilters",
+    params = {  },
+    returns = { { name = "filters", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_FriendList.IsFriend"] = {
@@ -197,6 +225,7 @@ APIDefs["C_FriendList.IsFriend"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "isFriend", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -209,6 +238,7 @@ APIDefs["C_FriendList.IsIgnored"] = {
     params = { { name = "token", type = "cstring", default = nil } },
     returns = { { name = "isIgnored", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -221,7 +251,20 @@ APIDefs["C_FriendList.IsIgnoredByGuid"] = {
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "isIgnored", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_FriendList.IsLegacyFriendSystemEnabled"] = {
+    key = "C_FriendList.IsLegacyFriendSystemEnabled",
+    name = "IsLegacyFriendSystemEnabled",
+    category = "social",
+    subcategory = "c_friendlist",
+    funcPath = "C_FriendList.IsLegacyFriendSystemEnabled",
+    params = {  },
+    returns = { { name = "isLegacyFriendSystemEnabled", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_FriendList.IsOnIgnoredList"] = {
@@ -233,6 +276,7 @@ APIDefs["C_FriendList.IsOnIgnoredList"] = {
     params = { { name = "token", type = "cstring", default = nil } },
     returns = { { name = "isIgnored", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -245,6 +289,7 @@ APIDefs["C_FriendList.RemoveFriend"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "removed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -257,6 +302,7 @@ APIDefs["C_FriendList.RemoveFriendByIndex"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -269,6 +315,7 @@ APIDefs["C_FriendList.SendWho"] = {
     params = { { name = "filter", type = "cstring", default = nil }, { name = "origin", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -281,6 +328,7 @@ APIDefs["C_FriendList.SetFriendNotes"] = {
     params = { { name = "name", type = "cstring", default = nil }, { name = "notes", type = "cstring", default = nil } },
     returns = { { name = "found", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -293,6 +341,7 @@ APIDefs["C_FriendList.SetFriendNotesByIndex"] = {
     params = { { name = "index", type = "luaIndex", default = nil }, { name = "notes", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -305,6 +354,7 @@ APIDefs["C_FriendList.SetSelectedFriend"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -317,6 +367,7 @@ APIDefs["C_FriendList.SetSelectedIgnore"] = {
     params = { { name = "index", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -329,6 +380,7 @@ APIDefs["C_FriendList.SetWhoToUi"] = {
     params = { { name = "whoToUi", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -341,6 +393,7 @@ APIDefs["C_FriendList.ShowFriends"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_FriendList.SortWho"] = {
@@ -352,5 +405,6 @@ APIDefs["C_FriendList.SortWho"] = {
     params = { { name = "sorting", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

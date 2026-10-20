@@ -11,6 +11,7 @@ APIDefs["C_ClubFinder.ApplicantAcceptClubInvite"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_ClubFinder.ApplicantDeclineClubInvite"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_ClubFinder.CancelMembershipRequest"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_ClubFinder.CheckAllPlayerApplicantSettings"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.ClearAllFinderCache"] = {
@@ -58,6 +62,7 @@ APIDefs["C_ClubFinder.ClearAllFinderCache"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.ClearClubApplicantsCache"] = {
@@ -69,6 +74,7 @@ APIDefs["C_ClubFinder.ClearClubApplicantsCache"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.ClearClubFinderPostingsCache"] = {
@@ -80,6 +86,7 @@ APIDefs["C_ClubFinder.ClearClubFinderPostingsCache"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.DoesPlayerBelongToClubFromClubGUID"] = {
@@ -91,6 +98,7 @@ APIDefs["C_ClubFinder.DoesPlayerBelongToClubFromClubGUID"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "belongsToClub", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -103,6 +111,7 @@ APIDefs["C_ClubFinder.GetClubFinderDisableReason"] = {
     params = {  },
     returns = { { name = "disableReason", type = "ClubFinderDisableReason", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.GetClubRecruitmentSettings"] = {
@@ -114,6 +123,7 @@ APIDefs["C_ClubFinder.GetClubRecruitmentSettings"] = {
     params = {  },
     returns = { { name = "settings", type = "ClubSettingsInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.GetClubTypeFromFinderGUID"] = {
@@ -125,6 +135,7 @@ APIDefs["C_ClubFinder.GetClubTypeFromFinderGUID"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "clubType", type = "ClubFinderRequestType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -137,6 +148,7 @@ APIDefs["C_ClubFinder.GetFocusIndexFromFlag"] = {
     params = { { name = "flags", type = "number", default = nil } },
     returns = { { name = "index", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -149,6 +161,7 @@ APIDefs["C_ClubFinder.GetPlayerApplicantLocaleFlags"] = {
     params = {  },
     returns = { { name = "localeFlags", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.GetPlayerApplicantSettings"] = {
@@ -160,6 +173,7 @@ APIDefs["C_ClubFinder.GetPlayerApplicantSettings"] = {
     params = {  },
     returns = { { name = "settings", type = "ClubSettingsInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.GetPlayerClubApplicationStatus"] = {
@@ -171,6 +185,7 @@ APIDefs["C_ClubFinder.GetPlayerClubApplicationStatus"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "clubStatus", type = "PlayerClubRequestStatus", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -183,6 +198,7 @@ APIDefs["C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount"] = {
     params = {  },
     returns = { { name = "focusCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.GetPostingIDFromClubFinderGUID"] = {
@@ -194,6 +210,7 @@ APIDefs["C_ClubFinder.GetPostingIDFromClubFinderGUID"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "postingID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -206,6 +223,7 @@ APIDefs["C_ClubFinder.GetRecruitingClubInfoFromClubID"] = {
     params = { { name = "clubId", type = "ClubId", default = nil } },
     returns = { { name = "clubInfo", type = "RecruitingClubInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -218,6 +236,7 @@ APIDefs["C_ClubFinder.GetRecruitingClubInfoFromFinderGUID"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "clubInfo", type = "RecruitingClubInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -230,6 +249,7 @@ APIDefs["C_ClubFinder.GetStatusOfPostingFromClubId"] = {
     params = { { name = "postingID", type = "ClubId", default = nil } },
     returns = { { name = "postingFlags", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -242,6 +262,7 @@ APIDefs["C_ClubFinder.GetTotalMatchingCommunityListSize"] = {
     params = {  },
     returns = { { name = "totalSize", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.GetTotalMatchingGuildListSize"] = {
@@ -253,6 +274,7 @@ APIDefs["C_ClubFinder.GetTotalMatchingGuildListSize"] = {
     params = {  },
     returns = { { name = "totalSize", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.HasAlreadyAppliedToLinkedPosting"] = {
@@ -264,6 +286,7 @@ APIDefs["C_ClubFinder.HasAlreadyAppliedToLinkedPosting"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "hasAlreadyApplied", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -276,6 +299,7 @@ APIDefs["C_ClubFinder.HasPostingBeenDelisted"] = {
     params = { { name = "postingID", type = "ClubId", default = nil } },
     returns = { { name = "postingDelisted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -288,6 +312,7 @@ APIDefs["C_ClubFinder.IsCommunityFinderEnabled"] = {
     params = {  },
     returns = { { name = "isEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.IsEnabled"] = {
@@ -299,6 +324,7 @@ APIDefs["C_ClubFinder.IsEnabled"] = {
     params = {  },
     returns = { { name = "isEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.IsListingEnabledFromFlags"] = {
@@ -310,6 +336,7 @@ APIDefs["C_ClubFinder.IsListingEnabledFromFlags"] = {
     params = { { name = "flags", type = "number", default = nil } },
     returns = { { name = "isListed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -322,6 +349,7 @@ APIDefs["C_ClubFinder.IsPostingBanned"] = {
     params = { { name = "postingID", type = "ClubId", default = nil } },
     returns = { { name = "postingBanned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -334,6 +362,7 @@ APIDefs["C_ClubFinder.IsValidSearchString"] = {
     params = { { name = "name", type = "cstring", default = nil } },
     returns = { { name = "isApproved", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -346,6 +375,7 @@ APIDefs["C_ClubFinder.LookupClubPostingFromClubFinderGUID"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil }, { name = "isLinkedPosting", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -358,6 +388,7 @@ APIDefs["C_ClubFinder.PlayerGetClubInvitationList"] = {
     params = {  },
     returns = { { name = "inviteList", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.PlayerRequestPendingClubsList"] = {
@@ -369,6 +400,7 @@ APIDefs["C_ClubFinder.PlayerRequestPendingClubsList"] = {
     params = { { name = "type", type = "ClubFinderRequestType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -381,6 +413,7 @@ APIDefs["C_ClubFinder.PlayerReturnPendingCommunitiesList"] = {
     params = {  },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.PlayerReturnPendingGuildsList"] = {
@@ -392,6 +425,7 @@ APIDefs["C_ClubFinder.PlayerReturnPendingGuildsList"] = {
     params = {  },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.PostClub"] = {
@@ -403,6 +437,7 @@ APIDefs["C_ClubFinder.PostClub"] = {
     params = { { name = "clubId", type = "ClubId", default = nil }, { name = "itemLevelRequirement", type = "number", default = nil }, { name = "name", type = "string", default = nil }, { name = "description", type = "string", default = nil }, { name = "avatarId", type = "number", default = nil }, { name = "specs", type = "table", default = nil }, { name = "type", type = "ClubFinderRequestType", default = nil }, { name = "crossFaction", type = "bool", default = false } },
     returns = { { name = "succesful", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -415,6 +450,7 @@ APIDefs["C_ClubFinder.RequestApplicantList"] = {
     params = { { name = "type", type = "ClubFinderRequestType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -427,6 +463,7 @@ APIDefs["C_ClubFinder.RequestClubsList"] = {
     params = { { name = "guildListRequested", type = "bool", default = nil }, { name = "searchString", type = "string", default = nil }, { name = "specIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -439,6 +476,7 @@ APIDefs["C_ClubFinder.RequestMembershipToClub"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil }, { name = "comment", type = "string", default = nil }, { name = "specIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -451,6 +489,7 @@ APIDefs["C_ClubFinder.RequestNextCommunityPage"] = {
     params = { { name = "startingIndex", type = "number", default = nil }, { name = "pageSize", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -463,6 +502,7 @@ APIDefs["C_ClubFinder.RequestNextGuildPage"] = {
     params = { { name = "startingIndex", type = "number", default = nil }, { name = "pageSize", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -475,6 +515,7 @@ APIDefs["C_ClubFinder.RequestPostingInformationFromClubId"] = {
     params = { { name = "clubId", type = "ClubId", default = nil } },
     returns = { { name = "success", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -487,6 +528,7 @@ APIDefs["C_ClubFinder.RequestSubscribedClubPostingIDs"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.ResetClubPostingMapCache"] = {
@@ -498,6 +540,7 @@ APIDefs["C_ClubFinder.ResetClubPostingMapCache"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.RespondToApplicant"] = {
@@ -509,6 +552,7 @@ APIDefs["C_ClubFinder.RespondToApplicant"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil }, { name = "playerGUID", type = "WOWGUID", default = nil }, { name = "shouldAccept", type = "bool", default = nil }, { name = "requestType", type = "ClubFinderRequestType", default = nil }, { name = "playerName", type = "string", default = nil }, { name = "forceAccept", type = "bool", default = nil }, { name = "reported", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -521,6 +565,7 @@ APIDefs["C_ClubFinder.ReturnClubApplicantList"] = {
     params = { { name = "clubId", type = "ClubId", default = nil } },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -533,6 +578,7 @@ APIDefs["C_ClubFinder.ReturnMatchingCommunityList"] = {
     params = {  },
     returns = { { name = "recruitingClubs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.ReturnMatchingGuildList"] = {
@@ -544,6 +590,7 @@ APIDefs["C_ClubFinder.ReturnMatchingGuildList"] = {
     params = {  },
     returns = { { name = "recruitingClubs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_ClubFinder.ReturnPendingClubApplicantList"] = {
@@ -555,6 +602,7 @@ APIDefs["C_ClubFinder.ReturnPendingClubApplicantList"] = {
     params = { { name = "clubId", type = "ClubId", default = nil } },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -567,6 +615,7 @@ APIDefs["C_ClubFinder.SendChatWhisper"] = {
     params = { { name = "clubFinderGUID", type = "WOWGUID", default = nil }, { name = "playerGUID", type = "WOWGUID", default = nil }, { name = "applicantType", type = "ClubFinderRequestType", default = nil }, { name = "name", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -579,6 +628,7 @@ APIDefs["C_ClubFinder.SetAllRecruitmentSettings"] = {
     params = { { name = "value", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -591,6 +641,7 @@ APIDefs["C_ClubFinder.SetPlayerApplicantLocaleFlags"] = {
     params = { { name = "localeFlags", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -603,6 +654,7 @@ APIDefs["C_ClubFinder.SetPlayerApplicantSettings"] = {
     params = { { name = "index", type = "number", default = nil }, { name = "checked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -615,6 +667,7 @@ APIDefs["C_ClubFinder.SetRecruitmentLocale"] = {
     params = { { name = "locale", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -627,6 +680,7 @@ APIDefs["C_ClubFinder.SetRecruitmentSettings"] = {
     params = { { name = "index", type = "number", default = nil }, { name = "checked", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -639,4 +693,5 @@ APIDefs["C_ClubFinder.ShouldShowClubFinder"] = {
     params = {  },
     returns = { { name = "shouldShow", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

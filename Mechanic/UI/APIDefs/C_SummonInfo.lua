@@ -11,6 +11,7 @@ APIDefs["C_SummonInfo.CancelSummon"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SummonInfo.ConfirmSummon"] = {
@@ -22,6 +23,7 @@ APIDefs["C_SummonInfo.ConfirmSummon"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SummonInfo.GetSummonConfirmAreaName"] = {
@@ -33,6 +35,7 @@ APIDefs["C_SummonInfo.GetSummonConfirmAreaName"] = {
     params = {  },
     returns = { { name = "areaName", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SummonInfo.GetSummonConfirmSummoner"] = {
@@ -44,6 +47,7 @@ APIDefs["C_SummonInfo.GetSummonConfirmSummoner"] = {
     params = {  },
     returns = { { name = "summoner", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SummonInfo.GetSummonConfirmTimeLeft"] = {
@@ -55,6 +59,7 @@ APIDefs["C_SummonInfo.GetSummonConfirmTimeLeft"] = {
     params = {  },
     returns = { { name = "timeLeft", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SummonInfo.GetSummonReason"] = {
@@ -66,6 +71,7 @@ APIDefs["C_SummonInfo.GetSummonReason"] = {
     params = {  },
     returns = { { name = "summonReason", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_SummonInfo.IsSummonSkippingStartExperience"] = {
@@ -77,4 +83,5 @@ APIDefs["C_SummonInfo.IsSummonSkippingStartExperience"] = {
     params = {  },
     returns = { { name = "isSummonSkippingStartExperience", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

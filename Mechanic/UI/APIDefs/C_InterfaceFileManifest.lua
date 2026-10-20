@@ -11,4 +11,5 @@ APIDefs["C_InterfaceFileManifest.GetInterfaceArtFiles"] = {
     params = {  },
     returns = { { name = "images", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

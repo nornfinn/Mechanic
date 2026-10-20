@@ -11,5 +11,6 @@ APIDefs["C_LimitedInput.LimitedInputAllowed"] = {
     params = { { name = "type", type = "LimitedInputType", default = nil } },
     returns = { { name = "allowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

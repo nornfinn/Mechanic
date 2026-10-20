@@ -11,4 +11,5 @@ APIDefs["C_UIColor.GetColors"] = {
     params = {  },
     returns = { { name = "colors", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

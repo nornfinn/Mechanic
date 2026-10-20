@@ -11,6 +11,7 @@ APIDefs["C_QuestSession.CanStart"] = {
     params = {  },
     returns = { { name = "allowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.CanStop"] = {
@@ -22,6 +23,7 @@ APIDefs["C_QuestSession.CanStop"] = {
     params = {  },
     returns = { { name = "allowed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.Exists"] = {
@@ -33,6 +35,7 @@ APIDefs["C_QuestSession.Exists"] = {
     params = {  },
     returns = { { name = "exists", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.GetAvailableSessionCommand"] = {
@@ -44,6 +47,7 @@ APIDefs["C_QuestSession.GetAvailableSessionCommand"] = {
     params = {  },
     returns = { { name = "command", type = "QuestSessionCommand", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.GetPendingCommand"] = {
@@ -55,6 +59,7 @@ APIDefs["C_QuestSession.GetPendingCommand"] = {
     params = {  },
     returns = { { name = "command", type = "QuestSessionCommand", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.GetProposedMaxLevelForSession"] = {
@@ -66,6 +71,7 @@ APIDefs["C_QuestSession.GetProposedMaxLevelForSession"] = {
     params = {  },
     returns = { { name = "proposedMaxLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.GetSessionBeginDetails"] = {
@@ -77,6 +83,7 @@ APIDefs["C_QuestSession.GetSessionBeginDetails"] = {
     params = {  },
     returns = { { name = "details", type = "QuestSessionPlayerDetails", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.GetSuperTrackedQuest"] = {
@@ -88,6 +95,7 @@ APIDefs["C_QuestSession.GetSuperTrackedQuest"] = {
     params = {  },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.HasJoined"] = {
@@ -99,6 +107,7 @@ APIDefs["C_QuestSession.HasJoined"] = {
     params = {  },
     returns = { { name = "hasJoined", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.HasPendingCommand"] = {
@@ -110,6 +119,7 @@ APIDefs["C_QuestSession.HasPendingCommand"] = {
     params = {  },
     returns = { { name = "hasPendingCommand", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.RequestSessionStart"] = {
@@ -121,6 +131,7 @@ APIDefs["C_QuestSession.RequestSessionStart"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.RequestSessionStop"] = {
@@ -132,6 +143,7 @@ APIDefs["C_QuestSession.RequestSessionStop"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestSession.SendSessionBeginResponse"] = {
@@ -143,6 +155,7 @@ APIDefs["C_QuestSession.SendSessionBeginResponse"] = {
     params = { { name = "beginSession", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -155,5 +168,6 @@ APIDefs["C_QuestSession.SetQuestIsSuperTracked"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "superTrack", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

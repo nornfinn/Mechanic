@@ -11,6 +11,7 @@ APIDefs["C_GossipInfo.CloseGossip"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.ForceGossip"] = {
@@ -22,17 +23,7 @@ APIDefs["C_GossipInfo.ForceGossip"] = {
     params = {  },
     returns = { { name = "forceGossip", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
-}
-
-APIDefs["C_GossipInfo.GetActiveDelveGossip"] = {
-    key = "C_GossipInfo.GetActiveDelveGossip",
-    name = "GetActiveDelveGossip",
-    category = "general",
-    subcategory = "c_gossipinfo",
-    funcPath = "C_GossipInfo.GetActiveDelveGossip",
-    params = {  },
-    returns = { { name = "gossip", type = "GossipOptionUIInfo", canBeSecret = false } },
-    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.GetActiveQuests"] = {
@@ -44,6 +35,7 @@ APIDefs["C_GossipInfo.GetActiveQuests"] = {
     params = {  },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.GetAvailableQuests"] = {
@@ -55,6 +47,7 @@ APIDefs["C_GossipInfo.GetAvailableQuests"] = {
     params = {  },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.GetCompletedOptionDescriptionString"] = {
@@ -66,6 +59,7 @@ APIDefs["C_GossipInfo.GetCompletedOptionDescriptionString"] = {
     params = {  },
     returns = { { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.GetCustomGossipDescriptionString"] = {
@@ -77,6 +71,7 @@ APIDefs["C_GossipInfo.GetCustomGossipDescriptionString"] = {
     params = {  },
     returns = { { name = "description", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.GetFriendshipReputation"] = {
@@ -88,6 +83,7 @@ APIDefs["C_GossipInfo.GetFriendshipReputation"] = {
     params = { { name = "friendshipFactionID", type = "number", default = nil } },
     returns = { { name = "reputationInfo", type = "FriendshipReputationInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -100,18 +96,8 @@ APIDefs["C_GossipInfo.GetFriendshipReputationRanks"] = {
     params = { { name = "friendshipFactionID", type = "number", default = nil } },
     returns = { { name = "rankInfo", type = "FriendshipReputationRankInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
-}
-
-APIDefs["C_GossipInfo.GetGossipDelveMapID"] = {
-    key = "C_GossipInfo.GetGossipDelveMapID",
-    name = "GetGossipDelveMapID",
-    category = "general",
-    subcategory = "c_gossipinfo",
-    funcPath = "C_GossipInfo.GetGossipDelveMapID",
-    params = {  },
-    returns = { { name = "mapID", type = "number", canBeSecret = false } },
-    midnightImpact = "NORMAL",
 }
 
 APIDefs["C_GossipInfo.GetNumActiveQuests"] = {
@@ -123,6 +109,7 @@ APIDefs["C_GossipInfo.GetNumActiveQuests"] = {
     params = {  },
     returns = { { name = "numQuests", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.GetNumAvailableQuests"] = {
@@ -134,6 +121,7 @@ APIDefs["C_GossipInfo.GetNumAvailableQuests"] = {
     params = {  },
     returns = { { name = "numQuests", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID"] = {
@@ -145,6 +133,7 @@ APIDefs["C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID"] = {
     params = { { name = "gossipOptionID", type = "number", default = nil } },
     returns = { { name = "gossipOptionUIWidgetSetsAndTypes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -157,6 +146,7 @@ APIDefs["C_GossipInfo.GetOptions"] = {
     params = {  },
     returns = { { name = "info", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.GetPoiForUiMapID"] = {
@@ -168,6 +158,7 @@ APIDefs["C_GossipInfo.GetPoiForUiMapID"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "gossipPoiID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -180,6 +171,7 @@ APIDefs["C_GossipInfo.GetPoiInfo"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "gossipPoiID", type = "number", default = nil } },
     returns = { { name = "gossipPoiInfo", type = "GossipPoiInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -192,6 +184,7 @@ APIDefs["C_GossipInfo.GetText"] = {
     params = {  },
     returns = { { name = "gossipText", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.RefreshOptions"] = {
@@ -203,6 +196,7 @@ APIDefs["C_GossipInfo.RefreshOptions"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_GossipInfo.SelectActiveQuest"] = {
@@ -214,6 +208,7 @@ APIDefs["C_GossipInfo.SelectActiveQuest"] = {
     params = { { name = "optionID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -226,6 +221,7 @@ APIDefs["C_GossipInfo.SelectAvailableQuest"] = {
     params = { { name = "optionID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -238,6 +234,7 @@ APIDefs["C_GossipInfo.SelectOption"] = {
     params = { { name = "optionID", type = "number", default = nil }, { name = "text", type = "cstring", default = nil }, { name = "confirmed", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -250,5 +247,6 @@ APIDefs["C_GossipInfo.SelectOptionByIndex"] = {
     params = { { name = "optionID", type = "number", default = nil }, { name = "text", type = "cstring", default = nil }, { name = "confirmed", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

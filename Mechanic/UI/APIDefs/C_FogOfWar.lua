@@ -11,6 +11,7 @@ APIDefs["C_FogOfWar.GetFogOfWarForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "fogOfWarID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,5 +24,6 @@ APIDefs["C_FogOfWar.GetFogOfWarInfo"] = {
     params = { { name = "fogOfWarID", type = "number", default = nil } },
     returns = { { name = "fogOfWarInfo", type = "FogOfWarInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

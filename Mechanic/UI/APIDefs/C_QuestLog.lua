@@ -11,6 +11,7 @@ APIDefs["C_QuestLog.AbandonQuest"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.AddQuestWatch"] = {
@@ -22,6 +23,7 @@ APIDefs["C_QuestLog.AddQuestWatch"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "wasWatched", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,6 +36,7 @@ APIDefs["C_QuestLog.AddWorldQuestWatch"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "watchType", type = "QuestWatchType", default = nil } },
     returns = { { name = "wasWatched", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_QuestLog.CanAbandonQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "canAbandon", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_QuestLog.DoesQuestAwardReputationWithFaction"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "targetFactionID", type = "number", default = nil } },
     returns = { { name = "awardsReputation", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +75,7 @@ APIDefs["C_QuestLog.GetAbandonQuest"] = {
     params = {  },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetAbandonQuestItems"] = {
@@ -81,6 +87,7 @@ APIDefs["C_QuestLog.GetAbandonQuestItems"] = {
     params = {  },
     returns = { { name = "itemIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetActivePreyQuest"] = {
@@ -92,6 +99,7 @@ APIDefs["C_QuestLog.GetActivePreyQuest"] = {
     params = {  },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetActiveThreatMaps"] = {
@@ -103,6 +111,7 @@ APIDefs["C_QuestLog.GetActiveThreatMaps"] = {
     params = {  },
     returns = { { name = "uiMapIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetAllCompletedQuestIDs"] = {
@@ -114,6 +123,7 @@ APIDefs["C_QuestLog.GetAllCompletedQuestIDs"] = {
     params = {  },
     returns = { { name = "quests", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetBountiesForMapID"] = {
@@ -125,6 +135,7 @@ APIDefs["C_QuestLog.GetBountiesForMapID"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "bounties", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -137,6 +148,7 @@ APIDefs["C_QuestLog.GetBountySetInfoForMapID"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "displayLocation", type = "MapOverlayDisplayLocation", canBeSecret = false }, { name = "lockQuestID", type = "number", canBeSecret = false }, { name = "bountySetID", type = "number", canBeSecret = false }, { name = "isActivitySet", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -149,6 +161,7 @@ APIDefs["C_QuestLog.GetDistanceSqToQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "distanceSq", type = "number", canBeSecret = false }, { name = "onContinent", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -161,6 +174,7 @@ APIDefs["C_QuestLog.GetHeaderIndexForQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "index", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -173,6 +187,7 @@ APIDefs["C_QuestLog.GetInfo"] = {
     params = { { name = "questLogIndex", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "QuestInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -185,6 +200,7 @@ APIDefs["C_QuestLog.GetLogIndexForQuestID"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "questLogIndex", type = "luaIndex", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -197,6 +213,7 @@ APIDefs["C_QuestLog.GetMapForQuestPOIs"] = {
     params = {  },
     returns = { { name = "uiMapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetMaxNumQuests"] = {
@@ -208,6 +225,7 @@ APIDefs["C_QuestLog.GetMaxNumQuests"] = {
     params = {  },
     returns = { { name = "maxNumQuests", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetMaxNumQuestsCanAccept"] = {
@@ -219,6 +237,7 @@ APIDefs["C_QuestLog.GetMaxNumQuestsCanAccept"] = {
     params = {  },
     returns = { { name = "maxNumQuestsCanAccept", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetNextWaypoint"] = {
@@ -230,6 +249,7 @@ APIDefs["C_QuestLog.GetNextWaypoint"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "mapID", type = "number", canBeSecret = false }, { name = "x", type = "number", canBeSecret = false }, { name = "y", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -242,6 +262,7 @@ APIDefs["C_QuestLog.GetNextWaypointForMap"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "x", type = "number", canBeSecret = false }, { name = "y", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -254,6 +275,7 @@ APIDefs["C_QuestLog.GetNextWaypointText"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "waypointText", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -266,6 +288,7 @@ APIDefs["C_QuestLog.GetNumQuestLogEntries"] = {
     params = {  },
     returns = { { name = "numShownEntries", type = "number", canBeSecret = false }, { name = "numQuests", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetNumQuestObjectives"] = {
@@ -277,6 +300,7 @@ APIDefs["C_QuestLog.GetNumQuestObjectives"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "leaderboardCount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -289,6 +313,7 @@ APIDefs["C_QuestLog.GetNumQuestWatches"] = {
     params = {  },
     returns = { { name = "numQuestWatches", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetNumWorldQuestWatches"] = {
@@ -300,6 +325,7 @@ APIDefs["C_QuestLog.GetNumWorldQuestWatches"] = {
     params = {  },
     returns = { { name = "numQuestWatches", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetQuestAdditionalHighlights"] = {
@@ -311,6 +337,7 @@ APIDefs["C_QuestLog.GetQuestAdditionalHighlights"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "uiMapID", type = "number", canBeSecret = false }, { name = "worldQuests", type = "bool", canBeSecret = false }, { name = "worldQuestsElite", type = "bool", canBeSecret = false }, { name = "dungeons", type = "bool", canBeSecret = false }, { name = "treasures", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -323,6 +350,7 @@ APIDefs["C_QuestLog.GetQuestDetailsTheme"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "theme", type = "QuestTheme", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -335,6 +363,7 @@ APIDefs["C_QuestLog.GetQuestDifficultyLevel"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "level", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -347,6 +376,7 @@ APIDefs["C_QuestLog.GetQuestIDForLogIndex"] = {
     params = { { name = "questLogIndex", type = "luaIndex", default = nil } },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -359,6 +389,7 @@ APIDefs["C_QuestLog.GetQuestIDForQuestWatchIndex"] = {
     params = { { name = "questWatchIndex", type = "luaIndex", default = nil } },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -371,6 +402,7 @@ APIDefs["C_QuestLog.GetQuestIDForWorldQuestWatchIndex"] = {
     params = { { name = "questWatchIndex", type = "luaIndex", default = nil } },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -383,6 +415,7 @@ APIDefs["C_QuestLog.GetQuestLogMajorFactionReputationRewards"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "reputationRewards", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -395,6 +428,7 @@ APIDefs["C_QuestLog.GetQuestLogPortraitGiver"] = {
     params = { { name = "questLogIndex", type = "luaIndex", default = nil } },
     returns = { { name = "portraitGiver", type = "number", canBeSecret = false }, { name = "portraitGiverText", type = "cstring", canBeSecret = false }, { name = "portraitGiverName", type = "cstring", canBeSecret = false }, { name = "portraitGiverMount", type = "number", canBeSecret = false }, { name = "portraitGiverModelSceneID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -407,6 +441,7 @@ APIDefs["C_QuestLog.GetQuestObjectives"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "objectives", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -419,6 +454,7 @@ APIDefs["C_QuestLog.GetQuestRewardCurrencies"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "questRewardCurrencies", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -431,6 +467,7 @@ APIDefs["C_QuestLog.GetQuestRewardCurrencyInfo"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "currencyIndex", type = "luaIndex", default = nil }, { name = "isChoice", type = "bool", default = nil } },
     returns = { { name = "questRewardCurrencyInfo", type = "QuestRewardCurrencyInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -443,7 +480,20 @@ APIDefs["C_QuestLog.GetQuestTagInfo"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "info", type = "QuestTagInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_QuestLog.GetQuestTimers"] = {
+    key = "C_QuestLog.GetQuestTimers",
+    name = "GetQuestTimers",
+    category = "achievement",
+    subcategory = "c_questlog",
+    funcPath = "C_QuestLog.GetQuestTimers",
+    params = {  },
+    returns = { { name = "questTimers", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_QuestLog.GetQuestType"] = {
@@ -455,6 +505,7 @@ APIDefs["C_QuestLog.GetQuestType"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "questType", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -467,6 +518,7 @@ APIDefs["C_QuestLog.GetQuestWatchType"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "watchType", type = "QuestWatchType", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -479,6 +531,7 @@ APIDefs["C_QuestLog.GetQuestsOnMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "quests", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -491,6 +544,7 @@ APIDefs["C_QuestLog.GetRequiredMoney"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "requiredMoney", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -503,6 +557,7 @@ APIDefs["C_QuestLog.GetSelectedQuest"] = {
     params = {  },
     returns = { { name = "questID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.GetSuggestedGroupSize"] = {
@@ -514,6 +569,7 @@ APIDefs["C_QuestLog.GetSuggestedGroupSize"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "suggestedGroupSize", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -526,6 +582,7 @@ APIDefs["C_QuestLog.GetTimeAllowed"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "totalTime", type = "number", canBeSecret = false }, { name = "elapsedTime", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -538,6 +595,7 @@ APIDefs["C_QuestLog.GetTitleForLogIndex"] = {
     params = { { name = "questLogIndex", type = "luaIndex", default = nil } },
     returns = { { name = "title", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -550,7 +608,20 @@ APIDefs["C_QuestLog.GetTitleForQuestID"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "title", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_QuestLog.GetTrivialRange"] = {
+    key = "C_QuestLog.GetTrivialRange",
+    name = "GetTrivialRange",
+    category = "achievement",
+    subcategory = "c_questlog",
+    funcPath = "C_QuestLog.GetTrivialRange",
+    params = {  },
+    returns = { { name = "range", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
 }
 
 APIDefs["C_QuestLog.GetZoneStoryInfo"] = {
@@ -562,6 +633,7 @@ APIDefs["C_QuestLog.GetZoneStoryInfo"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "achievementID", type = "number", canBeSecret = false }, { name = "storyMapID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -574,6 +646,7 @@ APIDefs["C_QuestLog.HasActiveThreats"] = {
     params = {  },
     returns = { { name = "hasActiveThreats", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.IsAccountQuest"] = {
@@ -585,6 +658,7 @@ APIDefs["C_QuestLog.IsAccountQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isAccountQuest", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -597,6 +671,20 @@ APIDefs["C_QuestLog.IsComplete"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isComplete", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_QuestLog.IsEliteQuest"] = {
+    key = "C_QuestLog.IsEliteQuest",
+    name = "IsEliteQuest",
+    category = "achievement",
+    subcategory = "c_questlog",
+    funcPath = "C_QuestLog.IsEliteQuest",
+    params = { { name = "questID", type = "number", default = nil } },
+    returns = { { name = "isEliteQuest", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -609,6 +697,7 @@ APIDefs["C_QuestLog.IsFailed"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isFailed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -621,6 +710,7 @@ APIDefs["C_QuestLog.IsImportantQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isImportant", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -633,6 +723,7 @@ APIDefs["C_QuestLog.IsMetaQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isMeta", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -645,6 +736,7 @@ APIDefs["C_QuestLog.IsOnMap"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "onMap", type = "bool", canBeSecret = false }, { name = "hasLocalPOI", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -657,6 +749,7 @@ APIDefs["C_QuestLog.IsOnQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isOnQuest", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -669,6 +762,7 @@ APIDefs["C_QuestLog.IsPushableQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isPushable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -681,6 +775,7 @@ APIDefs["C_QuestLog.IsQuestBounty"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isBounty", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -693,6 +788,7 @@ APIDefs["C_QuestLog.IsQuestCalling"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isCalling", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -705,6 +801,7 @@ APIDefs["C_QuestLog.IsQuestCriteriaForBounty"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "bountyQuestID", type = "number", default = nil } },
     returns = { { name = "isCriteriaForBounty", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -717,6 +814,7 @@ APIDefs["C_QuestLog.IsQuestDisabledForSession"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isDisabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -729,6 +827,7 @@ APIDefs["C_QuestLog.IsQuestFlaggedCompleted"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isCompleted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -741,6 +840,7 @@ APIDefs["C_QuestLog.IsQuestFlaggedCompletedOnAccount"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isCompletedOnAccount", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -753,6 +853,7 @@ APIDefs["C_QuestLog.IsQuestFromContentPush"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isFromContentPush", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -765,6 +866,7 @@ APIDefs["C_QuestLog.IsQuestInvasion"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isInvasion", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -777,6 +879,7 @@ APIDefs["C_QuestLog.IsQuestReplayable"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isReplayable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -789,6 +892,7 @@ APIDefs["C_QuestLog.IsQuestReplayedRecently"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "recentlyReplayed", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -801,6 +905,7 @@ APIDefs["C_QuestLog.IsQuestTask"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isTask", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -813,6 +918,7 @@ APIDefs["C_QuestLog.IsQuestTrivial"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isTrivial", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -825,6 +931,7 @@ APIDefs["C_QuestLog.IsRepeatableQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isRepeatable", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -837,6 +944,7 @@ APIDefs["C_QuestLog.IsThreatQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isThreat", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -849,6 +957,7 @@ APIDefs["C_QuestLog.IsUnitOnQuest"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" }, { name = "questID", type = "number", default = nil } },
     returns = { { name = "isOnQuest", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -861,6 +970,7 @@ APIDefs["C_QuestLog.IsWorldQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "isWorldQuest", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -873,6 +983,7 @@ APIDefs["C_QuestLog.QuestCanHaveWarModeBonus"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "hasBonus", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -885,6 +996,7 @@ APIDefs["C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "questContainsFirstTimeRepBonusForPlayer", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -897,6 +1009,7 @@ APIDefs["C_QuestLog.QuestHasQuestSessionBonus"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "hasBonus", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -909,6 +1022,7 @@ APIDefs["C_QuestLog.QuestHasWarModeBonus"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "hasBonus", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -921,6 +1035,7 @@ APIDefs["C_QuestLog.QuestIgnoresAccountCompletedFiltering"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "questIgnoresAccountCompletedFiltering", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -933,6 +1048,7 @@ APIDefs["C_QuestLog.ReadyForTurnIn"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "readyForTurnIn", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -945,6 +1061,7 @@ APIDefs["C_QuestLog.RemoveQuestWatch"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "wasRemoved", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -957,6 +1074,7 @@ APIDefs["C_QuestLog.RemoveWorldQuestWatch"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "wasRemoved", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -969,6 +1087,7 @@ APIDefs["C_QuestLog.RequestLoadQuestByID"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -981,6 +1100,7 @@ APIDefs["C_QuestLog.SetAbandonQuest"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.SetMapForQuestPOIs"] = {
@@ -992,6 +1112,7 @@ APIDefs["C_QuestLog.SetMapForQuestPOIs"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1004,6 +1125,7 @@ APIDefs["C_QuestLog.SetSelectedQuest"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1016,6 +1138,7 @@ APIDefs["C_QuestLog.ShouldDisplayTimeRemaining"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "displayTimeRemaining", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1028,6 +1151,7 @@ APIDefs["C_QuestLog.ShouldShowQuestRewards"] = {
     params = { { name = "questID", type = "number", default = nil } },
     returns = { { name = "shouldShow", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1040,6 +1164,7 @@ APIDefs["C_QuestLog.SortQuestWatches"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_QuestLog.UnitIsRelatedToActiveQuest"] = {
@@ -1051,6 +1176,7 @@ APIDefs["C_QuestLog.UnitIsRelatedToActiveQuest"] = {
     params = { { name = "unit", type = "UnitToken", default = "player" } },
     returns = { { name = "isRelatedToActiveQuest", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1063,4 +1189,5 @@ APIDefs["C_QuestLog.UpdateCampaignHeaders"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

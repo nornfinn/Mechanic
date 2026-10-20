@@ -11,6 +11,7 @@ APIDefs["C_PvP.ArePvpTalentsUnlocked"] = {
     params = {  },
     returns = { { name = "arePvpTalentsUnlocked", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.AreTrainingGroundsEnabled"] = {
@@ -22,6 +23,7 @@ APIDefs["C_PvP.AreTrainingGroundsEnabled"] = {
     params = {  },
     returns = { { name = "areTrainingGroundsEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.CanDisplayDeaths"] = {
@@ -33,6 +35,7 @@ APIDefs["C_PvP.CanDisplayDeaths"] = {
     params = {  },
     returns = { { name = "canDisplay", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.CanDisplayHonorableKills"] = {
@@ -44,6 +47,7 @@ APIDefs["C_PvP.CanDisplayHonorableKills"] = {
     params = {  },
     returns = { { name = "canDisplay", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.CanPlayerUseRatedPVPUI"] = {
@@ -55,6 +59,7 @@ APIDefs["C_PvP.CanPlayerUseRatedPVPUI"] = {
     params = {  },
     returns = { { name = "canUse", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.CanPlayerUseTrainingGroundsUI"] = {
@@ -66,6 +71,19 @@ APIDefs["C_PvP.CanPlayerUseTrainingGroundsUI"] = {
     params = {  },
     returns = { { name = "canUseTrainingGroundsUI", type = "bool", canBeSecret = false }, { name = "failureReason", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PvP.CanSurrenderArena"] = {
+    key = "C_PvP.CanSurrenderArena",
+    name = "CanSurrenderArena",
+    category = "general",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.CanSurrenderArena",
+    params = {  },
+    returns = { { name = "CanSurrenderArena", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.CanToggleWarMode"] = {
@@ -77,6 +95,7 @@ APIDefs["C_PvP.CanToggleWarMode"] = {
     params = { { name = "toggle", type = "bool", default = nil } },
     returns = { { name = "canTogglePvP", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -89,6 +108,7 @@ APIDefs["C_PvP.CanToggleWarModeInArea"] = {
     params = {  },
     returns = { { name = "canTogglePvPInArea", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.DoesMatchOutcomeAffectRating"] = {
@@ -100,6 +120,7 @@ APIDefs["C_PvP.DoesMatchOutcomeAffectRating"] = {
     params = {  },
     returns = { { name = "doesAffect", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetActiveBrawlInfo"] = {
@@ -111,6 +132,7 @@ APIDefs["C_PvP.GetActiveBrawlInfo"] = {
     params = {  },
     returns = { { name = "brawlInfo", type = "PvpBrawlInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetActiveMatchBracket"] = {
@@ -122,6 +144,7 @@ APIDefs["C_PvP.GetActiveMatchBracket"] = {
     params = {  },
     returns = { { name = "bracket", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetActiveMatchDuration"] = {
@@ -133,6 +156,7 @@ APIDefs["C_PvP.GetActiveMatchDuration"] = {
     params = {  },
     returns = { { name = "seconds", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetActiveMatchState"] = {
@@ -144,6 +168,7 @@ APIDefs["C_PvP.GetActiveMatchState"] = {
     params = {  },
     returns = { { name = "state", type = "PvPMatchState", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetActiveMatchWinner"] = {
@@ -155,18 +180,46 @@ APIDefs["C_PvP.GetActiveMatchWinner"] = {
     params = {  },
     returns = { { name = "winner", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PvP.GetArenaCrowdControlDuration"] = {
+    key = "C_PvP.GetArenaCrowdControlDuration",
+    name = "GetArenaCrowdControlDuration",
+    category = "general",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.GetArenaCrowdControlDuration",
+    params = { { name = "playerToken", type = "UnitToken", default = "player" } },
+    returns = { { name = "duration", type = "LuaDurationObject", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_PvP.GetArenaCrowdControlInfo"] = {
     key = "C_PvP.GetArenaCrowdControlInfo",
     name = "GetArenaCrowdControlInfo",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_pvp",
     funcPath = "C_PvP.GetArenaCrowdControlInfo",
     params = { { name = "playerToken", type = "UnitToken", default = "player" } },
     returns = { { name = "spellID", type = "number", canBeSecret = false }, { name = "startTime", type = "number", canBeSecret = false }, { name = "duration", type = "number", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretWhenLossOfControlInfoRestricted",
+}
+
+APIDefs["C_PvP.GetArenaOpponentSpec"] = {
+    key = "C_PvP.GetArenaOpponentSpec",
+    name = "GetArenaOpponentSpec",
+    category = "combat_midnight",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.GetArenaOpponentSpec",
+    params = { { name = "index", type = "luaIndex", default = nil } },
+    returns = { { name = "specializationID", type = "number", canBeSecret = true }, { name = "gender", type = "number", canBeSecret = true } },
+    midnightImpact = "HIGH",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretReturns",
 }
 
 APIDefs["C_PvP.GetArenaRewards"] = {
@@ -178,6 +231,7 @@ APIDefs["C_PvP.GetArenaRewards"] = {
     params = { { name = "teamSize", type = "number", default = nil } },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -190,6 +244,7 @@ APIDefs["C_PvP.GetArenaSkirmishRewards"] = {
     params = {  },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetAssignedSpecForBattlefieldQueue"] = {
@@ -201,6 +256,7 @@ APIDefs["C_PvP.GetAssignedSpecForBattlefieldQueue"] = {
     params = { { name = "queueID", type = "number", default = nil } },
     returns = { { name = "specializationID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -213,6 +269,7 @@ APIDefs["C_PvP.GetAvailableBrawlInfo"] = {
     params = {  },
     returns = { { name = "brawlInfo", type = "PvpBrawlInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetBattlefieldFlagPosition"] = {
@@ -224,6 +281,7 @@ APIDefs["C_PvP.GetBattlefieldFlagPosition"] = {
     params = { { name = "flagIndex", type = "luaIndex", default = nil }, { name = "uiMapId", type = "number", default = nil } },
     returns = { { name = "uiPosx", type = "number", canBeSecret = false }, { name = "uiPosy", type = "number", canBeSecret = false }, { name = "flagTexture", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -236,6 +294,7 @@ APIDefs["C_PvP.GetBattlefieldVehicleInfo"] = {
     params = { { name = "vehicleIndex", type = "luaIndex", default = nil }, { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "info", type = "BattlefieldVehicleInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -248,6 +307,7 @@ APIDefs["C_PvP.GetBattlefieldVehicles"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "vehicles", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -260,6 +320,7 @@ APIDefs["C_PvP.GetBattlegroundInfo"] = {
     params = { { name = "battlegroundIndex", type = "luaIndex", default = nil } },
     returns = { { name = "battlegroundInfo", type = "BattlegroundInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -272,6 +333,7 @@ APIDefs["C_PvP.GetBrawlRewards"] = {
     params = { { name = "brawlType", type = "BrawlType", default = nil } },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false }, { name = "hasWon", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -284,6 +346,7 @@ APIDefs["C_PvP.GetBrawlSoloRBGMinItemLevel"] = {
     params = {  },
     returns = { { name = "minItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetCustomVictoryStatID"] = {
@@ -295,6 +358,7 @@ APIDefs["C_PvP.GetCustomVictoryStatID"] = {
     params = {  },
     returns = { { name = "statID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetGlobalPvpScalingInfoForSpecID"] = {
@@ -306,6 +370,7 @@ APIDefs["C_PvP.GetGlobalPvpScalingInfoForSpecID"] = {
     params = { { name = "specializationID", type = "number", default = nil } },
     returns = { { name = "pvpScalingData", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -318,6 +383,7 @@ APIDefs["C_PvP.GetHonorRewardInfo"] = {
     params = { { name = "honorLevel", type = "number", default = nil } },
     returns = { { name = "info", type = "HonorRewardInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -330,6 +396,7 @@ APIDefs["C_PvP.GetLevelUpBattlegrounds"] = {
     params = { { name = "level", type = "number", default = nil } },
     returns = { { name = "battlefields", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -342,6 +409,7 @@ APIDefs["C_PvP.GetMatchPVPStatColumn"] = {
     params = { { name = "pvpStatID", type = "number", default = nil } },
     returns = { { name = "info", type = "MatchPVPStatColumn", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -354,6 +422,7 @@ APIDefs["C_PvP.GetMatchPVPStatColumns"] = {
     params = {  },
     returns = { { name = "columns", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetNextHonorLevelForReward"] = {
@@ -365,6 +434,7 @@ APIDefs["C_PvP.GetNextHonorLevelForReward"] = {
     params = { { name = "honorLevel", type = "number", default = nil } },
     returns = { { name = "nextHonorLevelWithReward", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -377,6 +447,7 @@ APIDefs["C_PvP.GetOutdoorPvPWaitTime"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "pvpWaitTime", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -389,6 +460,7 @@ APIDefs["C_PvP.GetPVPActiveMatchPersonalRatedInfo"] = {
     params = {  },
     returns = { { name = "info", type = "PVPPersonalRatedInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetPVPActiveRatedMatchDeserterPenalty"] = {
@@ -400,6 +472,7 @@ APIDefs["C_PvP.GetPVPActiveRatedMatchDeserterPenalty"] = {
     params = {  },
     returns = { { name = "deserterPenalty", type = "RatedMatchDeserterPenalty", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetPVPSeasonRewardAchievementID"] = {
@@ -411,6 +484,7 @@ APIDefs["C_PvP.GetPVPSeasonRewardAchievementID"] = {
     params = {  },
     returns = { { name = "achievementID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetPersonalRatedBGBlitzSpecStats"] = {
@@ -422,6 +496,7 @@ APIDefs["C_PvP.GetPersonalRatedBGBlitzSpecStats"] = {
     params = {  },
     returns = { { name = "specStats", type = "RatedBGBlitzSpecStats", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetPersonalRatedSoloShuffleSpecStats"] = {
@@ -433,6 +508,7 @@ APIDefs["C_PvP.GetPersonalRatedSoloShuffleSpecStats"] = {
     params = {  },
     returns = { { name = "specStats", type = "RatedSoloShuffleSpecStats", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetPostMatchCurrencyRewards"] = {
@@ -444,6 +520,7 @@ APIDefs["C_PvP.GetPostMatchCurrencyRewards"] = {
     params = {  },
     returns = { { name = "rewards", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetPostMatchItemRewards"] = {
@@ -455,6 +532,7 @@ APIDefs["C_PvP.GetPostMatchItemRewards"] = {
     params = {  },
     returns = { { name = "rewards", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetPvpTalentsUnlockedLevel"] = {
@@ -466,6 +544,7 @@ APIDefs["C_PvP.GetPvpTalentsUnlockedLevel"] = {
     params = {  },
     returns = { { name = "unlockLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetPvpTierID"] = {
@@ -477,6 +556,7 @@ APIDefs["C_PvP.GetPvpTierID"] = {
     params = { { name = "tierEnum", type = "number", default = nil }, { name = "bracketEnum", type = "luaIndex", default = nil } },
     returns = { { name = "id", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -489,6 +569,7 @@ APIDefs["C_PvP.GetPvpTierInfo"] = {
     params = { { name = "tierID", type = "number", default = nil } },
     returns = { { name = "pvpTierInfo", type = "PvpTierInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -501,6 +582,7 @@ APIDefs["C_PvP.GetRandomBGInfo"] = {
     params = {  },
     returns = { { name = "info", type = "RandomBGInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRandomBGRewards"] = {
@@ -512,6 +594,7 @@ APIDefs["C_PvP.GetRandomBGRewards"] = {
     params = {  },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRandomEpicBGInfo"] = {
@@ -523,6 +606,7 @@ APIDefs["C_PvP.GetRandomEpicBGInfo"] = {
     params = {  },
     returns = { { name = "info", type = "RandomBGInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRandomEpicBGRewards"] = {
@@ -534,17 +618,31 @@ APIDefs["C_PvP.GetRandomEpicBGRewards"] = {
     params = {  },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
-APIDefs["C_PvP.GetRandomTrainingGroundRewards"] = {
-    key = "C_PvP.GetRandomTrainingGroundRewards",
-    name = "GetRandomTrainingGroundRewards",
+APIDefs["C_PvP.GetRandomTrainingGroundArenaRewards"] = {
+    key = "C_PvP.GetRandomTrainingGroundArenaRewards",
+    name = "GetRandomTrainingGroundArenaRewards",
     category = "general",
     subcategory = "c_pvp",
-    funcPath = "C_PvP.GetRandomTrainingGroundRewards",
+    funcPath = "C_PvP.GetRandomTrainingGroundArenaRewards",
     params = {  },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PvP.GetRandomTrainingGroundBGRewards"] = {
+    key = "C_PvP.GetRandomTrainingGroundBGRewards",
+    name = "GetRandomTrainingGroundBGRewards",
+    category = "general",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.GetRandomTrainingGroundBGRewards",
+    params = {  },
+    returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRatedBGRewards"] = {
@@ -556,6 +654,7 @@ APIDefs["C_PvP.GetRatedBGRewards"] = {
     params = {  },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRatedSoloRBGMinItemLevel"] = {
@@ -567,6 +666,7 @@ APIDefs["C_PvP.GetRatedSoloRBGMinItemLevel"] = {
     params = {  },
     returns = { { name = "minItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRatedSoloRBGRewards"] = {
@@ -578,6 +678,7 @@ APIDefs["C_PvP.GetRatedSoloRBGRewards"] = {
     params = {  },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRatedSoloShuffleMinItemLevel"] = {
@@ -589,6 +690,7 @@ APIDefs["C_PvP.GetRatedSoloShuffleMinItemLevel"] = {
     params = {  },
     returns = { { name = "minItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRatedSoloShuffleRewards"] = {
@@ -600,6 +702,7 @@ APIDefs["C_PvP.GetRatedSoloShuffleRewards"] = {
     params = {  },
     returns = { { name = "honor", type = "number", canBeSecret = false }, { name = "experience", type = "number", canBeSecret = false }, { name = "itemRewards", type = "table", canBeSecret = false }, { name = "currencyRewards", type = "table", canBeSecret = false }, { name = "roleShortageBonus", type = "RoleShortageReward", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetRewardItemLevelsByTierEnum"] = {
@@ -611,31 +714,34 @@ APIDefs["C_PvP.GetRewardItemLevelsByTierEnum"] = {
     params = { { name = "pvpTierEnum", type = "number", default = nil } },
     returns = { { name = "activityItemLevel", type = "number", canBeSecret = false }, { name = "weeklyItemLevel", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_PvP.GetScoreInfo"] = {
     key = "C_PvP.GetScoreInfo",
     name = "GetScoreInfo",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_pvp",
     funcPath = "C_PvP.GetScoreInfo",
     params = { { name = "offsetIndex", type = "luaIndex", default = nil } },
     returns = { { name = "info", type = "PVPScoreInfo", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInActivePvPMatch",
 }
 
 APIDefs["C_PvP.GetScoreInfoByPlayerGuid"] = {
     key = "C_PvP.GetScoreInfoByPlayerGuid",
     name = "GetScoreInfoByPlayerGuid",
-    category = "general",
+    category = "combat_midnight",
     subcategory = "c_pvp",
     funcPath = "C_PvP.GetScoreInfoByPlayerGuid",
     params = { { name = "guid", type = "WOWGUID", default = nil } },
     returns = { { name = "info", type = "PVPScoreInfo", canBeSecret = false } },
-    midnightImpact = "NORMAL",
-    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+    midnightImpact = "CONDITIONAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted, SecretInActivePvPMatch",
 }
 
 APIDefs["C_PvP.GetSeasonBestInfo"] = {
@@ -647,6 +753,7 @@ APIDefs["C_PvP.GetSeasonBestInfo"] = {
     params = {  },
     returns = { { name = "tierID", type = "number", canBeSecret = false }, { name = "nextTierID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetSkirmishInfo"] = {
@@ -658,6 +765,7 @@ APIDefs["C_PvP.GetSkirmishInfo"] = {
     params = { { name = "pvpBracket", type = "number", default = nil } },
     returns = { { name = "battlemasterListInfo", type = "BattlemasterListInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -670,6 +778,7 @@ APIDefs["C_PvP.GetSpecialEventBrawlInfo"] = {
     params = {  },
     returns = { { name = "brawlInfo", type = "PvpBrawlInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetTeamInfo"] = {
@@ -681,6 +790,7 @@ APIDefs["C_PvP.GetTeamInfo"] = {
     params = { { name = "factionIndex", type = "number", default = nil } },
     returns = { { name = "info", type = "PVPTeamInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -693,6 +803,7 @@ APIDefs["C_PvP.GetTrainingGrounds"] = {
     params = {  },
     returns = { { name = "trainingGrounds", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetUIDisplaySeason"] = {
@@ -704,6 +815,7 @@ APIDefs["C_PvP.GetUIDisplaySeason"] = {
     params = {  },
     returns = { { name = "uiDisplaySeason", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetWarModeRewardBonus"] = {
@@ -715,6 +827,7 @@ APIDefs["C_PvP.GetWarModeRewardBonus"] = {
     params = {  },
     returns = { { name = "rewardBonus", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetWarModeRewardBonusDefault"] = {
@@ -726,6 +839,7 @@ APIDefs["C_PvP.GetWarModeRewardBonusDefault"] = {
     params = {  },
     returns = { { name = "defaultBonus", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetWeeklyChestInfo"] = {
@@ -737,6 +851,7 @@ APIDefs["C_PvP.GetWeeklyChestInfo"] = {
     params = {  },
     returns = { { name = "rewardAchieved", type = "bool", canBeSecret = false }, { name = "lastWeekRewardAchieved", type = "bool", canBeSecret = false }, { name = "lastWeekRewardClaimed", type = "bool", canBeSecret = false }, { name = "pvpTierMaxFromWins", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.GetZonePVPInfo"] = {
@@ -748,6 +863,7 @@ APIDefs["C_PvP.GetZonePVPInfo"] = {
     params = {  },
     returns = { { name = "pvpType", type = "cstring", canBeSecret = false }, { name = "isSubZonePvP", type = "bool", canBeSecret = false }, { name = "factionName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.HasArenaSkirmishWinToday"] = {
@@ -759,6 +875,7 @@ APIDefs["C_PvP.HasArenaSkirmishWinToday"] = {
     params = {  },
     returns = { { name = "hasArenaSkirmishWinToday", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.HasMatchStarted"] = {
@@ -770,17 +887,31 @@ APIDefs["C_PvP.HasMatchStarted"] = {
     params = {  },
     returns = { { name = "hasStarted", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
-APIDefs["C_PvP.HasRandomTrainingGroundWinToday"] = {
-    key = "C_PvP.HasRandomTrainingGroundWinToday",
-    name = "HasRandomTrainingGroundWinToday",
+APIDefs["C_PvP.HasRandomTrainingGroundArenaWinToday"] = {
+    key = "C_PvP.HasRandomTrainingGroundArenaWinToday",
+    name = "HasRandomTrainingGroundArenaWinToday",
     category = "general",
     subcategory = "c_pvp",
-    funcPath = "C_PvP.HasRandomTrainingGroundWinToday",
+    funcPath = "C_PvP.HasRandomTrainingGroundArenaWinToday",
     params = {  },
-    returns = { { name = "hasRandomTrainingGroundWinToday", type = "bool", canBeSecret = false } },
+    returns = { { name = "hasRandomTrainingGroundArenaWinToday", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PvP.HasRandomTrainingGroundBGWinToday"] = {
+    key = "C_PvP.HasRandomTrainingGroundBGWinToday",
+    name = "HasRandomTrainingGroundBGWinToday",
+    category = "general",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.HasRandomTrainingGroundBGWinToday",
+    params = {  },
+    returns = { { name = "hasRandomTrainingGroundBGWinToday", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsActiveBattlefield"] = {
@@ -792,6 +923,7 @@ APIDefs["C_PvP.IsActiveBattlefield"] = {
     params = {  },
     returns = { { name = "isActiveBattlefield", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsActiveMatchRegistered"] = {
@@ -803,6 +935,7 @@ APIDefs["C_PvP.IsActiveMatchRegistered"] = {
     params = {  },
     returns = { { name = "registered", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsArena"] = {
@@ -814,6 +947,7 @@ APIDefs["C_PvP.IsArena"] = {
     params = {  },
     returns = { { name = "isArena", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsBattleground"] = {
@@ -825,6 +959,7 @@ APIDefs["C_PvP.IsBattleground"] = {
     params = {  },
     returns = { { name = "isBattleground", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsBattlegroundEnlistmentBonusActive"] = {
@@ -836,6 +971,7 @@ APIDefs["C_PvP.IsBattlegroundEnlistmentBonusActive"] = {
     params = {  },
     returns = { { name = "battlegroundActive", type = "bool", canBeSecret = false }, { name = "brawlActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsBrawlSoloRBG"] = {
@@ -847,6 +983,7 @@ APIDefs["C_PvP.IsBrawlSoloRBG"] = {
     params = {  },
     returns = { { name = "isBrawlSoloRBG", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsBrawlSoloShuffle"] = {
@@ -858,6 +995,7 @@ APIDefs["C_PvP.IsBrawlSoloShuffle"] = {
     params = {  },
     returns = { { name = "isBrawlSoloShuffle", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsInBrawl"] = {
@@ -869,6 +1007,7 @@ APIDefs["C_PvP.IsInBrawl"] = {
     params = {  },
     returns = { { name = "isInBrawl", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsInRatedMatchWithDeserterPenalty"] = {
@@ -880,6 +1019,7 @@ APIDefs["C_PvP.IsInRatedMatchWithDeserterPenalty"] = {
     params = {  },
     returns = { { name = "isInRatedMatchWithDeserterPenalty", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsMatchActive"] = {
@@ -891,6 +1031,7 @@ APIDefs["C_PvP.IsMatchActive"] = {
     params = {  },
     returns = { { name = "isActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsMatchComplete"] = {
@@ -902,6 +1043,7 @@ APIDefs["C_PvP.IsMatchComplete"] = {
     params = {  },
     returns = { { name = "isComplete", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsMatchConsideredArena"] = {
@@ -913,6 +1055,7 @@ APIDefs["C_PvP.IsMatchConsideredArena"] = {
     params = {  },
     returns = { { name = "asArena", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsMatchFactional"] = {
@@ -924,6 +1067,7 @@ APIDefs["C_PvP.IsMatchFactional"] = {
     params = {  },
     returns = { { name = "isFactional", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsPVPMap"] = {
@@ -935,6 +1079,7 @@ APIDefs["C_PvP.IsPVPMap"] = {
     params = {  },
     returns = { { name = "isPVPMap", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsRatedArena"] = {
@@ -946,6 +1091,7 @@ APIDefs["C_PvP.IsRatedArena"] = {
     params = {  },
     returns = { { name = "isRatedArena", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsRatedBattleground"] = {
@@ -957,6 +1103,7 @@ APIDefs["C_PvP.IsRatedBattleground"] = {
     params = {  },
     returns = { { name = "isRatedBattleground", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsRatedMap"] = {
@@ -968,6 +1115,7 @@ APIDefs["C_PvP.IsRatedMap"] = {
     params = {  },
     returns = { { name = "isRatedMap", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsRatedSoloRBG"] = {
@@ -979,6 +1127,7 @@ APIDefs["C_PvP.IsRatedSoloRBG"] = {
     params = {  },
     returns = { { name = "isRatedSoloRBG", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsRatedSoloShuffle"] = {
@@ -990,6 +1139,7 @@ APIDefs["C_PvP.IsRatedSoloShuffle"] = {
     params = {  },
     returns = { { name = "isRatedSoloShuffle", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsSoloRBG"] = {
@@ -1001,6 +1151,7 @@ APIDefs["C_PvP.IsSoloRBG"] = {
     params = {  },
     returns = { { name = "isSoloRBG", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsSoloShuffle"] = {
@@ -1012,6 +1163,7 @@ APIDefs["C_PvP.IsSoloShuffle"] = {
     params = {  },
     returns = { { name = "isSoloShuffle", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsSubZonePVPPOI"] = {
@@ -1023,6 +1175,33 @@ APIDefs["C_PvP.IsSubZonePVPPOI"] = {
     params = {  },
     returns = { { name = "result", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PvP.IsTrainingGroundsArena"] = {
+    key = "C_PvP.IsTrainingGroundsArena",
+    name = "IsTrainingGroundsArena",
+    category = "general",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.IsTrainingGroundsArena",
+    params = { { name = "lfgDungeonsID", type = "number", default = nil } },
+    returns = { { name = "isTrainingGroundsArena", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PvP.IsTrainingGroundsBG"] = {
+    key = "C_PvP.IsTrainingGroundsBG",
+    name = "IsTrainingGroundsBG",
+    category = "general",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.IsTrainingGroundsBG",
+    params = { { name = "lfgDungeonsID", type = "number", default = nil } },
+    returns = { { name = "isTrainingGroundsBG", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_PvP.IsWarModeActive"] = {
@@ -1034,6 +1213,7 @@ APIDefs["C_PvP.IsWarModeActive"] = {
     params = {  },
     returns = { { name = "warModeActive", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsWarModeDesired"] = {
@@ -1045,6 +1225,7 @@ APIDefs["C_PvP.IsWarModeDesired"] = {
     params = {  },
     returns = { { name = "warModeDesired", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.IsWarModeFeatureEnabled"] = {
@@ -1056,6 +1237,7 @@ APIDefs["C_PvP.IsWarModeFeatureEnabled"] = {
     params = {  },
     returns = { { name = "warModeEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.JoinBattlefield"] = {
@@ -1067,6 +1249,7 @@ APIDefs["C_PvP.JoinBattlefield"] = {
     params = { { name = "battlemasterListId", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1079,7 +1262,32 @@ APIDefs["C_PvP.JoinBrawl"] = {
     params = { { name = "isSpecialBrawl", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_PvP.JoinRandomTrainingGroundArena"] = {
+    key = "C_PvP.JoinRandomTrainingGroundArena",
+    name = "JoinRandomTrainingGroundArena",
+    category = "general",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.JoinRandomTrainingGroundArena",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_PvP.JoinRandomTrainingGroundBG"] = {
+    key = "C_PvP.JoinRandomTrainingGroundBG",
+    name = "JoinRandomTrainingGroundBG",
+    category = "general",
+    subcategory = "c_pvp",
+    funcPath = "C_PvP.JoinRandomTrainingGroundBG",
+    params = {  },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.JoinRatedBGBlitz"] = {
@@ -1091,6 +1299,7 @@ APIDefs["C_PvP.JoinRatedBGBlitz"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.JoinTrainingGround"] = {
@@ -1102,6 +1311,7 @@ APIDefs["C_PvP.JoinTrainingGround"] = {
     params = { { name = "trainingGroundID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1114,6 +1324,7 @@ APIDefs["C_PvP.RequestCrowdControlSpell"] = {
     params = { { name = "playerToken", type = "UnitToken", default = "player" } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1126,6 +1337,7 @@ APIDefs["C_PvP.SetPVP"] = {
     params = { { name = "enablePVP", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1138,6 +1350,7 @@ APIDefs["C_PvP.SetWarModeDesired"] = {
     params = { { name = "warModeDesired", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1150,6 +1363,7 @@ APIDefs["C_PvP.StartSoloRBGWarGameByName"] = {
     params = { { name = "args", type = "cstring", default = nil } },
     returns = { { name = "success", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1162,6 +1376,7 @@ APIDefs["C_PvP.StartSpectatorSoloRBGWarGame"] = {
     params = { { name = "opaqueID1", type = "number", default = nil }, { name = "opaqueID2", type = "number", default = nil }, { name = "specifiedMap", type = "cstring", default = nil }, { name = "tournamentRules", type = "bool", default = nil } },
     returns = { { name = "success", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -1174,6 +1389,7 @@ APIDefs["C_PvP.TogglePVP"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PvP.ToggleWarMode"] = {
@@ -1185,4 +1401,5 @@ APIDefs["C_PvP.ToggleWarMode"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

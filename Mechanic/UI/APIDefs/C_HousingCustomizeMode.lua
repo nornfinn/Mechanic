@@ -11,6 +11,20 @@ APIDefs["C_HousingCustomizeMode.ApplyDyeToSelectedDecor"] = {
     params = { { name = "dyeSlotID", type = "number", default = nil }, { name = "dyeColorID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HousingCustomizeMode.ApplyPetToSelectedDecor"] = {
+    key = "C_HousingCustomizeMode.ApplyPetToSelectedDecor",
+    name = "ApplyPetToSelectedDecor",
+    category = "general",
+    subcategory = "c_housingcustomizemode",
+    funcPath = "C_HousingCustomizeMode.ApplyPetToSelectedDecor",
+    params = { { name = "petID", type = "WOWGUID", default = nil }, { name = "petBehavior", type = "HousingPetBehaviorType", default = nil } },
+    returns = {  },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +37,7 @@ APIDefs["C_HousingCustomizeMode.ApplyThemeToRoom"] = {
     params = { { name = "themeSetID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +50,7 @@ APIDefs["C_HousingCustomizeMode.ApplyThemeToSelectedRoomComponent"] = {
     params = { { name = "themeSetID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +63,7 @@ APIDefs["C_HousingCustomizeMode.ApplyWallpaperToAllWalls"] = {
     params = { { name = "roomComponentTextureRecID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +76,7 @@ APIDefs["C_HousingCustomizeMode.ApplyWallpaperToSelectedRoomComponent"] = {
     params = { { name = "roomComponentTextureRecID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +89,7 @@ APIDefs["C_HousingCustomizeMode.CancelActiveEditing"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.ClearDyesForSelectedDecor"] = {
@@ -82,6 +101,7 @@ APIDefs["C_HousingCustomizeMode.ClearDyesForSelectedDecor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.ClearTargetRoomComponent"] = {
@@ -93,6 +113,7 @@ APIDefs["C_HousingCustomizeMode.ClearTargetRoomComponent"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.CommitDyesForSelectedDecor"] = {
@@ -104,6 +125,7 @@ APIDefs["C_HousingCustomizeMode.CommitDyesForSelectedDecor"] = {
     params = {  },
     returns = { { name = "hasChanges", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetHoveredDecorInfo"] = {
@@ -115,6 +137,7 @@ APIDefs["C_HousingCustomizeMode.GetHoveredDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetHoveredRoomComponentInfo"] = {
@@ -126,6 +149,7 @@ APIDefs["C_HousingCustomizeMode.GetHoveredRoomComponentInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingRoomComponentInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetNumDyesToRemoveOnSelectedDecor"] = {
@@ -137,6 +161,7 @@ APIDefs["C_HousingCustomizeMode.GetNumDyesToRemoveOnSelectedDecor"] = {
     params = {  },
     returns = { { name = "numDyesToRemove", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetNumDyesToSpendOnSelectedDecor"] = {
@@ -148,6 +173,7 @@ APIDefs["C_HousingCustomizeMode.GetNumDyesToSpendOnSelectedDecor"] = {
     params = {  },
     returns = { { name = "numDyesToSpend", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetPreviewDyesOnSelectedDecor"] = {
@@ -159,6 +185,7 @@ APIDefs["C_HousingCustomizeMode.GetPreviewDyesOnSelectedDecor"] = {
     params = {  },
     returns = { { name = "previewDyes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetRecentlyUsedDyes"] = {
@@ -170,6 +197,7 @@ APIDefs["C_HousingCustomizeMode.GetRecentlyUsedDyes"] = {
     params = {  },
     returns = { { name = "recentDyes", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetRecentlyUsedThemeSets"] = {
@@ -181,6 +209,7 @@ APIDefs["C_HousingCustomizeMode.GetRecentlyUsedThemeSets"] = {
     params = {  },
     returns = { { name = "recentThemeSets", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetRecentlyUsedWallpapers"] = {
@@ -192,6 +221,7 @@ APIDefs["C_HousingCustomizeMode.GetRecentlyUsedWallpapers"] = {
     params = {  },
     returns = { { name = "recentWallpapers", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetSelectedDecorInfo"] = {
@@ -203,6 +233,19 @@ APIDefs["C_HousingCustomizeMode.GetSelectedDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingCustomizeMode.GetSelectedDecorPetInfo"] = {
+    key = "C_HousingCustomizeMode.GetSelectedDecorPetInfo",
+    name = "GetSelectedDecorPetInfo",
+    category = "general",
+    subcategory = "c_housingcustomizemode",
+    funcPath = "C_HousingCustomizeMode.GetSelectedDecorPetInfo",
+    params = {  },
+    returns = { { name = "petID", type = "WOWGUID", canBeSecret = false }, { name = "petBehavior", type = "HousingPetBehaviorType", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetSelectedRoomComponentInfo"] = {
@@ -214,6 +257,7 @@ APIDefs["C_HousingCustomizeMode.GetSelectedRoomComponentInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingRoomComponentInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.GetThemeSetInfo"] = {
@@ -225,6 +269,7 @@ APIDefs["C_HousingCustomizeMode.GetThemeSetInfo"] = {
     params = { { name = "themeSetID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -237,6 +282,7 @@ APIDefs["C_HousingCustomizeMode.GetWallpapersForRoomComponentType"] = {
     params = { { name = "type", type = "HousingRoomComponentType", default = nil } },
     returns = { { name = "availableWallpapers", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -249,6 +295,7 @@ APIDefs["C_HousingCustomizeMode.IsDecorSelected"] = {
     params = {  },
     returns = { { name = "hasSelectedDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.IsHouseExteriorDoorHovered"] = {
@@ -260,6 +307,7 @@ APIDefs["C_HousingCustomizeMode.IsHouseExteriorDoorHovered"] = {
     params = {  },
     returns = { { name = "isHouseExteriorDoorHovered", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.IsHoveringDecor"] = {
@@ -271,6 +319,7 @@ APIDefs["C_HousingCustomizeMode.IsHoveringDecor"] = {
     params = {  },
     returns = { { name = "isHoveringDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.IsHoveringRoomComponent"] = {
@@ -282,6 +331,7 @@ APIDefs["C_HousingCustomizeMode.IsHoveringRoomComponent"] = {
     params = {  },
     returns = { { name = "isHovering", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.IsRoomComponentSelected"] = {
@@ -293,6 +343,7 @@ APIDefs["C_HousingCustomizeMode.IsRoomComponentSelected"] = {
     params = {  },
     returns = { { name = "hasSelectedComponent", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingCustomizeMode.RoomComponentSupportsVariant"] = {
@@ -304,6 +355,20 @@ APIDefs["C_HousingCustomizeMode.RoomComponentSupportsVariant"] = {
     params = { { name = "componentID", type = "number", default = nil }, { name = "variant", type = "number", default = nil } },
     returns = { { name = "variantSupported", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HousingCustomizeMode.RoomConnectionSupportsDoorType"] = {
+    key = "C_HousingCustomizeMode.RoomConnectionSupportsDoorType",
+    name = "RoomConnectionSupportsDoorType",
+    category = "general",
+    subcategory = "c_housingcustomizemode",
+    funcPath = "C_HousingCustomizeMode.RoomConnectionSupportsDoorType",
+    params = { { name = "roomGUID", type = "WOWGUID", default = nil }, { name = "componentID", type = "number", default = nil }, { name = "newDoortype", type = "HousingRoomComponentDoorType", default = nil } },
+    returns = { { name = "doorTypeSupported", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -316,6 +381,7 @@ APIDefs["C_HousingCustomizeMode.SetRoomComponentCeilingType"] = {
     params = { { name = "roomGUID", type = "WOWGUID", default = nil }, { name = "componentID", type = "number", default = nil }, { name = "ceilingType", type = "HousingRoomComponentCeilingType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -328,5 +394,6 @@ APIDefs["C_HousingCustomizeMode.SetRoomComponentDoorType"] = {
     params = { { name = "roomGUID", type = "WOWGUID", default = nil }, { name = "componentID", type = "number", default = nil }, { name = "newDoortype", type = "HousingRoomComponentDoorType", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

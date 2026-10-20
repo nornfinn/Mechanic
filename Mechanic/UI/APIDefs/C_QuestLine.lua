@@ -11,6 +11,7 @@ APIDefs["C_QuestLine.GetAvailableQuestLines"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "questLines", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_QuestLine.GetForceVisibleQuests"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = { { name = "questIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -35,6 +37,7 @@ APIDefs["C_QuestLine.GetQuestLineInfo"] = {
     params = { { name = "questID", type = "number", default = nil }, { name = "uiMapID", type = "number", default = nil }, { name = "displayableOnly", type = "bool", default = false } },
     returns = { { name = "questLineInfo", type = "QuestLineInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -47,6 +50,7 @@ APIDefs["C_QuestLine.GetQuestLineQuests"] = {
     params = { { name = "questLineID", type = "number", default = nil } },
     returns = { { name = "questIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -59,6 +63,7 @@ APIDefs["C_QuestLine.IsComplete"] = {
     params = { { name = "questLineID", type = "number", default = nil } },
     returns = { { name = "isComplete", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -71,6 +76,7 @@ APIDefs["C_QuestLine.QuestLineIgnoresAccountCompletedFiltering"] = {
     params = { { name = "uiMapID", type = "number", default = nil }, { name = "questLineID", type = "number", default = nil } },
     returns = { { name = "questLineIgnoresAccountCompletedFiltering", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -83,5 +89,6 @@ APIDefs["C_QuestLine.RequestQuestLinesForMap"] = {
     params = { { name = "uiMapID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

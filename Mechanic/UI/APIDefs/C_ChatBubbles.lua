@@ -11,5 +11,6 @@ APIDefs["C_ChatBubbles.GetAllChatBubbles"] = {
     params = { { name = "includeForbidden", type = "bool", default = false } },
     returns = { { name = "chatBubbles", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

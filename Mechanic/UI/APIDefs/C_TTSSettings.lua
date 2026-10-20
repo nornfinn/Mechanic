@@ -11,6 +11,7 @@ APIDefs["C_TTSSettings.GetChannelEnabled"] = {
     params = { { name = "channelInfo", type = "ChatChannelInfo", default = nil } },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_TTSSettings.GetCharacterSettingsSaved"] = {
     params = {  },
     returns = { { name = "settingsBeenSaved", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TTSSettings.GetChatTypeEnabled"] = {
@@ -34,6 +36,7 @@ APIDefs["C_TTSSettings.GetChatTypeEnabled"] = {
     params = { { name = "chatName", type = "cstring", default = nil } },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,7 @@ APIDefs["C_TTSSettings.GetSetting"] = {
     params = { { name = "setting", type = "TtsBoolSetting", default = nil } },
     returns = { { name = "enabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +62,7 @@ APIDefs["C_TTSSettings.GetSpeechRate"] = {
     params = {  },
     returns = { { name = "rate", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TTSSettings.GetSpeechVolume"] = {
@@ -69,6 +74,7 @@ APIDefs["C_TTSSettings.GetSpeechVolume"] = {
     params = {  },
     returns = { { name = "volume", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TTSSettings.GetVoiceOptionID"] = {
@@ -80,6 +86,7 @@ APIDefs["C_TTSSettings.GetVoiceOptionID"] = {
     params = { { name = "voiceType", type = "TtsVoiceType", default = nil } },
     returns = { { name = "voiceID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -92,6 +99,7 @@ APIDefs["C_TTSSettings.GetVoiceOptionName"] = {
     params = { { name = "voiceType", type = "TtsVoiceType", default = nil } },
     returns = { { name = "voiceName", type = "cstring", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -104,6 +112,7 @@ APIDefs["C_TTSSettings.MarkCharacterSettingsSaved"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TTSSettings.SetChannelEnabled"] = {
@@ -115,6 +124,7 @@ APIDefs["C_TTSSettings.SetChannelEnabled"] = {
     params = { { name = "channelInfo", type = "ChatChannelInfo", default = nil }, { name = "newVal", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -127,6 +137,7 @@ APIDefs["C_TTSSettings.SetChannelKeyEnabled"] = {
     params = { { name = "channelKey", type = "string", default = nil }, { name = "newVal", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -139,6 +150,7 @@ APIDefs["C_TTSSettings.SetChatTypeEnabled"] = {
     params = { { name = "chatName", type = "cstring", default = nil }, { name = "newVal", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -151,6 +163,7 @@ APIDefs["C_TTSSettings.SetDefaultSettings"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_TTSSettings.SetSetting"] = {
@@ -162,6 +175,7 @@ APIDefs["C_TTSSettings.SetSetting"] = {
     params = { { name = "setting", type = "TtsBoolSetting", default = nil }, { name = "newVal", type = "bool", default = false } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -174,6 +188,7 @@ APIDefs["C_TTSSettings.SetSpeechRate"] = {
     params = { { name = "newVal", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -186,6 +201,7 @@ APIDefs["C_TTSSettings.SetSpeechVolume"] = {
     params = { { name = "newVal", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -198,6 +214,7 @@ APIDefs["C_TTSSettings.SetVoiceOption"] = {
     params = { { name = "voiceType", type = "TtsVoiceType", default = nil }, { name = "voiceID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -210,6 +227,7 @@ APIDefs["C_TTSSettings.SetVoiceOptionName"] = {
     params = { { name = "voiceType", type = "TtsVoiceType", default = nil }, { name = "voiceName", type = "string", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -222,5 +240,6 @@ APIDefs["C_TTSSettings.ShouldOverrideMessage"] = {
     params = { { name = "language", type = "number", default = nil }, { name = "messageText", type = "string", default = nil } },
     returns = { { name = "overrideMessage", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

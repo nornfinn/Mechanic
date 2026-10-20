@@ -11,6 +11,7 @@ APIDefs["C_PlayerChoice.GetCurrentPlayerChoiceInfo"] = {
     params = {  },
     returns = { { name = "choiceInfo", type = "PlayerChoiceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerChoice.GetNumRerolls"] = {
@@ -22,6 +23,7 @@ APIDefs["C_PlayerChoice.GetNumRerolls"] = {
     params = {  },
     returns = { { name = "numRerolls", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerChoice.GetRemainingTime"] = {
@@ -33,6 +35,7 @@ APIDefs["C_PlayerChoice.GetRemainingTime"] = {
     params = {  },
     returns = { { name = "remainingTime", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerChoice.IsWaitingForPlayerChoiceResponse"] = {
@@ -44,6 +47,7 @@ APIDefs["C_PlayerChoice.IsWaitingForPlayerChoiceResponse"] = {
     params = {  },
     returns = { { name = "isWaitingForResponse", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerChoice.OnUIClosed"] = {
@@ -55,6 +59,7 @@ APIDefs["C_PlayerChoice.OnUIClosed"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerChoice.RequestRerollPlayerChoice"] = {
@@ -66,6 +71,7 @@ APIDefs["C_PlayerChoice.RequestRerollPlayerChoice"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PlayerChoice.SendPlayerChoiceResponse"] = {
@@ -77,5 +83,6 @@ APIDefs["C_PlayerChoice.SendPlayerChoiceResponse"] = {
     params = { { name = "responseID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

@@ -11,4 +11,5 @@ APIDefs["C_InstanceLeaver.IsPlayerLeaver"] = {
     params = {  },
     returns = { { name = "isLeaver", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

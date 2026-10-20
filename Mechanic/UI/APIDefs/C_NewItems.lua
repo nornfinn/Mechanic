@@ -11,6 +11,7 @@ APIDefs["C_NewItems.ClearAll"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_NewItems.IsNewItem"] = {
@@ -22,6 +23,7 @@ APIDefs["C_NewItems.IsNewItem"] = {
     params = { { name = "containerIndex", type = "BagIndex", default = nil }, { name = "slotIndex", type = "luaIndex", default = nil } },
     returns = { { name = "isNew", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -34,5 +36,6 @@ APIDefs["C_NewItems.RemoveNewItem"] = {
     params = { { name = "containerIndex", type = "BagIndex", default = nil }, { name = "slotIndex", type = "luaIndex", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

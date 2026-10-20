@@ -11,6 +11,7 @@ APIDefs["C_CovenantPreview.CloseFromUI"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_CovenantPreview.GetCovenantInfoForPlayerChoiceResponseID"] = {
@@ -22,5 +23,6 @@ APIDefs["C_CovenantPreview.GetCovenantInfoForPlayerChoiceResponseID"] = {
     params = { { name = "playerChoiceResponseID", type = "number", default = nil } },
     returns = { { name = "previewInfo", type = "CovenantPreviewInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

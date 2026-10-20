@@ -11,6 +11,7 @@ APIDefs["C_RecentAllies.CanSetRecentAllyNote"] = {
     params = { { name = "characterGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "canSetNote", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_RecentAllies.GetRecentAllies"] = {
     params = {  },
     returns = { { name = "recentAlliesData", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecentAllies.GetRecentAllyByFullName"] = {
@@ -34,6 +36,7 @@ APIDefs["C_RecentAllies.GetRecentAllyByFullName"] = {
     params = { { name = "fullCharacterName", type = "cstring", default = nil } },
     returns = { { name = "recentAllyData", type = "RecentAllyData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -46,6 +49,20 @@ APIDefs["C_RecentAllies.GetRecentAllyByGUID"] = {
     params = { { name = "characterGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "recentAllyData", type = "RecentAllyData", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_RecentAllies.IsInteractionCategoryFilterSupportedForCurrentGameType"] = {
+    key = "C_RecentAllies.IsInteractionCategoryFilterSupportedForCurrentGameType",
+    name = "IsInteractionCategoryFilterSupportedForCurrentGameType",
+    category = "general",
+    subcategory = "c_recentallies",
+    funcPath = "C_RecentAllies.IsInteractionCategoryFilterSupportedForCurrentGameType",
+    params = { { name = "interactionCategoryFilter", type = "RecentAlliesInteractionCategoryFilter", default = nil } },
+    returns = { { name = "isInteractionCategoryFilterSupportedForCurrentGameType", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -58,6 +75,7 @@ APIDefs["C_RecentAllies.IsRecentAllyByFullName"] = {
     params = { { name = "fullCharacterName", type = "cstring", default = nil } },
     returns = { { name = "isRecentAlly", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -70,6 +88,7 @@ APIDefs["C_RecentAllies.IsRecentAllyByGUID"] = {
     params = { { name = "characterGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "isRecentAlly", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -82,6 +101,7 @@ APIDefs["C_RecentAllies.IsRecentAllyDataReady"] = {
     params = {  },
     returns = { { name = "isReady", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecentAllies.IsRecentAllyPinned"] = {
@@ -93,6 +113,7 @@ APIDefs["C_RecentAllies.IsRecentAllyPinned"] = {
     params = { { name = "characterGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "isPinned", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -105,6 +126,7 @@ APIDefs["C_RecentAllies.IsSystemEnabled"] = {
     params = {  },
     returns = { { name = "isRecentAllySystemEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_RecentAllies.IsSystemSupported"] = {
@@ -116,6 +138,20 @@ APIDefs["C_RecentAllies.IsSystemSupported"] = {
     params = {  },
     returns = { { name = "isRecentAllySystemSupported", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_RecentAllies.SearchRecentAllies"] = {
+    key = "C_RecentAllies.SearchRecentAllies",
+    name = "SearchRecentAllies",
+    category = "general",
+    subcategory = "c_recentallies",
+    funcPath = "C_RecentAllies.SearchRecentAllies",
+    params = { { name = "searchInfo", type = "RecentAlliesSearchInfo", default = nil } },
+    returns = { { name = "recentAlliesData", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_RecentAllies.SetRecentAllyNote"] = {
@@ -127,6 +163,7 @@ APIDefs["C_RecentAllies.SetRecentAllyNote"] = {
     params = { { name = "characterGUID", type = "WOWGUID", default = nil }, { name = "note", type = "cstring", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -139,6 +176,7 @@ APIDefs["C_RecentAllies.SetRecentAllyPinned"] = {
     params = { { name = "characterGUID", type = "WOWGUID", default = nil }, { name = "isPinned", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -151,4 +189,5 @@ APIDefs["C_RecentAllies.TryRequestRecentAlliesData"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

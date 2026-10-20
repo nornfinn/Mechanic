@@ -11,6 +11,7 @@ APIDefs["C_EventToastManager.GetLevelUpDisplayToastsFromLevel"] = {
     params = { { name = "level", type = "number", default = nil } },
     returns = { { name = "toastInfo", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -23,6 +24,7 @@ APIDefs["C_EventToastManager.GetNextToastToDisplay"] = {
     params = {  },
     returns = { { name = "toastInfo", type = "EventToastInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_EventToastManager.RemoveCurrentToast"] = {
@@ -34,4 +36,5 @@ APIDefs["C_EventToastManager.RemoveCurrentToast"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }

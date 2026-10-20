@@ -2,6 +2,19 @@
 local _, ns = ...
 local APIDefs = ns.APIDefinitions
 
+APIDefs["C_HousingDecor.AnyDecorPlacedInRoom"] = {
+    key = "C_HousingDecor.AnyDecorPlacedInRoom",
+    name = "AnyDecorPlacedInRoom",
+    category = "general",
+    subcategory = "c_housingdecor",
+    funcPath = "C_HousingDecor.AnyDecorPlacedInRoom",
+    params = { { name = "roomGUID", type = "WOWGUID", default = nil } },
+    returns = { { name = "isPlaced", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
 APIDefs["C_HousingDecor.CancelActiveEditing"] = {
     key = "C_HousingDecor.CancelActiveEditing",
     name = "CancelActiveEditing",
@@ -11,6 +24,7 @@ APIDefs["C_HousingDecor.CancelActiveEditing"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.CommitDecorMovement"] = {
@@ -22,6 +36,7 @@ APIDefs["C_HousingDecor.CommitDecorMovement"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.EnterPreviewState"] = {
@@ -33,6 +48,7 @@ APIDefs["C_HousingDecor.EnterPreviewState"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.ExitPreviewState"] = {
@@ -44,6 +60,19 @@ APIDefs["C_HousingDecor.ExitPreviewState"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingDecor.GetAllMaxPlacementBudgets"] = {
+    key = "C_HousingDecor.GetAllMaxPlacementBudgets",
+    name = "GetAllMaxPlacementBudgets",
+    category = "general",
+    subcategory = "c_housingdecor",
+    funcPath = "C_HousingDecor.GetAllMaxPlacementBudgets",
+    params = {  },
+    returns = { { name = "interiorMaxBudgets", type = "table", canBeSecret = false }, { name = "exteriorMaxBudgets", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.GetAllPlacedDecor"] = {
@@ -55,6 +84,58 @@ APIDefs["C_HousingDecor.GetAllPlacedDecor"] = {
     params = {  },
     returns = { { name = "placedDecor", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingDecor.GetAllSpentPlacementBudgets"] = {
+    key = "C_HousingDecor.GetAllSpentPlacementBudgets",
+    name = "GetAllSpentPlacementBudgets",
+    category = "general",
+    subcategory = "c_housingdecor",
+    funcPath = "C_HousingDecor.GetAllSpentPlacementBudgets",
+    params = {  },
+    returns = { { name = "interiorSpentBudgets", type = "table", canBeSecret = false }, { name = "exteriorSpentBudgets", type = "table", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingDecor.GetDecorAssignedPetName"] = {
+    key = "C_HousingDecor.GetDecorAssignedPetName",
+    name = "GetDecorAssignedPetName",
+    category = "general",
+    subcategory = "c_housingdecor",
+    funcPath = "C_HousingDecor.GetDecorAssignedPetName",
+    params = { { name = "decorGUID", type = "WOWGUID", default = nil } },
+    returns = { { name = "name", type = "string", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HousingDecor.GetDecorCanAttachPet"] = {
+    key = "C_HousingDecor.GetDecorCanAttachPet",
+    name = "GetDecorCanAttachPet",
+    category = "general",
+    subcategory = "c_housingdecor",
+    funcPath = "C_HousingDecor.GetDecorCanAttachPet",
+    params = { { name = "decorID", type = "number", default = nil } },
+    returns = { { name = "canAttachPet", type = "bool", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
+}
+
+APIDefs["C_HousingDecor.GetDecorHyperlink"] = {
+    key = "C_HousingDecor.GetDecorHyperlink",
+    name = "GetDecorHyperlink",
+    category = "general",
+    subcategory = "c_housingdecor",
+    funcPath = "C_HousingDecor.GetDecorHyperlink",
+    params = { { name = "decorID", type = "number", default = nil } },
+    returns = { { name = "hyperLink", type = "string", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+    midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
 APIDefs["C_HousingDecor.GetDecorIcon"] = {
@@ -66,6 +147,7 @@ APIDefs["C_HousingDecor.GetDecorIcon"] = {
     params = { { name = "decorID", type = "number", default = nil } },
     returns = { { name = "icon", type = "fileID", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -78,6 +160,7 @@ APIDefs["C_HousingDecor.GetDecorInstanceInfoForGUID"] = {
     params = { { name = "decorGUID", type = "WOWGUID", default = nil } },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -90,6 +173,7 @@ APIDefs["C_HousingDecor.GetDecorName"] = {
     params = { { name = "decorID", type = "number", default = nil } },
     returns = { { name = "name", type = "string", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -102,6 +186,19 @@ APIDefs["C_HousingDecor.GetHoveredDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingDecor.GetMaxPetPlacementBudget"] = {
+    key = "C_HousingDecor.GetMaxPetPlacementBudget",
+    name = "GetMaxPetPlacementBudget",
+    category = "general",
+    subcategory = "c_housingdecor",
+    funcPath = "C_HousingDecor.GetMaxPetPlacementBudget",
+    params = {  },
+    returns = { { name = "maxBudget", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.GetMaxPlacementBudget"] = {
@@ -113,6 +210,7 @@ APIDefs["C_HousingDecor.GetMaxPlacementBudget"] = {
     params = {  },
     returns = { { name = "maxBudget", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.GetNumDecorPlaced"] = {
@@ -124,6 +222,7 @@ APIDefs["C_HousingDecor.GetNumDecorPlaced"] = {
     params = {  },
     returns = { { name = "numPlaced", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.GetNumPreviewDecor"] = {
@@ -135,6 +234,7 @@ APIDefs["C_HousingDecor.GetNumPreviewDecor"] = {
     params = {  },
     returns = { { name = "numDecor", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.GetSelectedDecorInfo"] = {
@@ -146,6 +246,19 @@ APIDefs["C_HousingDecor.GetSelectedDecorInfo"] = {
     params = {  },
     returns = { { name = "info", type = "HousingDecorInstanceInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
+}
+
+APIDefs["C_HousingDecor.GetSpentPetPlacementBudget"] = {
+    key = "C_HousingDecor.GetSpentPetPlacementBudget",
+    name = "GetSpentPetPlacementBudget",
+    category = "general",
+    subcategory = "c_housingdecor",
+    funcPath = "C_HousingDecor.GetSpentPetPlacementBudget",
+    params = {  },
+    returns = { { name = "totalCost", type = "number", canBeSecret = false } },
+    midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.GetSpentPlacementBudget"] = {
@@ -157,6 +270,7 @@ APIDefs["C_HousingDecor.GetSpentPlacementBudget"] = {
     params = {  },
     returns = { { name = "totalCost", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.HasMaxPlacementBudget"] = {
@@ -168,6 +282,7 @@ APIDefs["C_HousingDecor.HasMaxPlacementBudget"] = {
     params = {  },
     returns = { { name = "hasMaxBudget", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.IsDecorSelected"] = {
@@ -179,6 +294,7 @@ APIDefs["C_HousingDecor.IsDecorSelected"] = {
     params = {  },
     returns = { { name = "hasSelectedDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.IsGridVisible"] = {
@@ -190,6 +306,7 @@ APIDefs["C_HousingDecor.IsGridVisible"] = {
     params = {  },
     returns = { { name = "gridVisible", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.IsHouseExteriorDoorHovered"] = {
@@ -201,6 +318,7 @@ APIDefs["C_HousingDecor.IsHouseExteriorDoorHovered"] = {
     params = {  },
     returns = { { name = "isHouseExteriorDoorHovered", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.IsHouseExteriorHovered"] = {
@@ -212,6 +330,7 @@ APIDefs["C_HousingDecor.IsHouseExteriorHovered"] = {
     params = {  },
     returns = { { name = "isHouseExteriorHovered", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.IsHoveringDecor"] = {
@@ -223,6 +342,7 @@ APIDefs["C_HousingDecor.IsHoveringDecor"] = {
     params = {  },
     returns = { { name = "isHoveringDecor", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.IsModeDisabledForPreviewState"] = {
@@ -234,6 +354,7 @@ APIDefs["C_HousingDecor.IsModeDisabledForPreviewState"] = {
     params = { { name = "mode", type = "HouseEditorMode", default = nil } },
     returns = { { name = "isModeDisabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -246,6 +367,7 @@ APIDefs["C_HousingDecor.IsPreviewState"] = {
     params = {  },
     returns = { { name = "isPreviewState", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.RemovePlacedDecorEntry"] = {
@@ -257,6 +379,7 @@ APIDefs["C_HousingDecor.RemovePlacedDecorEntry"] = {
     params = { { name = "decorGUID", type = "WOWGUID", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -269,6 +392,7 @@ APIDefs["C_HousingDecor.RemoveSelectedDecor"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_HousingDecor.SetGridVisible"] = {
@@ -280,6 +404,7 @@ APIDefs["C_HousingDecor.SetGridVisible"] = {
     params = { { name = "gridVisible", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -292,6 +417,7 @@ APIDefs["C_HousingDecor.SetPlacedDecorEntryHovered"] = {
     params = { { name = "decorGUID", type = "WOWGUID", default = nil }, { name = "hovered", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -304,5 +430,6 @@ APIDefs["C_HousingDecor.SetPlacedDecorEntrySelected"] = {
     params = { { name = "decorGUID", type = "WOWGUID", default = nil }, { name = "selected", type = "bool", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }

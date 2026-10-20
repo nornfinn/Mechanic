@@ -11,6 +11,7 @@ APIDefs["C_PerksProgram.ClearFrozenPerksVendorItem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.CloseInteraction"] = {
@@ -22,6 +23,7 @@ APIDefs["C_PerksProgram.CloseInteraction"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.GetAvailableCategoryIDs"] = {
@@ -33,6 +35,7 @@ APIDefs["C_PerksProgram.GetAvailableCategoryIDs"] = {
     params = {  },
     returns = { { name = "categoryIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.GetAvailableVendorItemIDs"] = {
@@ -44,6 +47,7 @@ APIDefs["C_PerksProgram.GetAvailableVendorItemIDs"] = {
     params = {  },
     returns = { { name = "vendorItemIDs", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.GetCategoryInfo"] = {
@@ -55,6 +59,7 @@ APIDefs["C_PerksProgram.GetCategoryInfo"] = {
     params = { { name = "categoryID", type = "number", default = nil } },
     returns = { { name = "categoryInfo", type = "PerksVendorCategoryInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -67,6 +72,7 @@ APIDefs["C_PerksProgram.GetCurrencyAmount"] = {
     params = {  },
     returns = { { name = "currencyAmount", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.GetDraggedPerksVendorItem"] = {
@@ -78,6 +84,7 @@ APIDefs["C_PerksProgram.GetDraggedPerksVendorItem"] = {
     params = {  },
     returns = { { name = "perksVendorItemID", type = "number", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.GetFrozenPerksVendorItemInfo"] = {
@@ -89,6 +96,7 @@ APIDefs["C_PerksProgram.GetFrozenPerksVendorItemInfo"] = {
     params = {  },
     returns = { { name = "vendorItemInfo", type = "PerksVendorItemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.GetPendingChestRewards"] = {
@@ -100,6 +108,7 @@ APIDefs["C_PerksProgram.GetPendingChestRewards"] = {
     params = {  },
     returns = { { name = "pendingRewards", type = "table", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.GetPerksProgramItemDisplayInfo"] = {
@@ -111,6 +120,7 @@ APIDefs["C_PerksProgram.GetPerksProgramItemDisplayInfo"] = {
     params = { { name = "id", type = "number", default = nil } },
     returns = { { name = "item", type = "PerksProgramItemDisplayInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -123,6 +133,7 @@ APIDefs["C_PerksProgram.GetTimeRemaining"] = {
     params = { { name = "vendorItemID", type = "number", default = nil } },
     returns = { { name = "timeRemaining", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -135,6 +146,7 @@ APIDefs["C_PerksProgram.GetVendorItemInfo"] = {
     params = { { name = "vendorItemID", type = "number", default = nil } },
     returns = { { name = "vendorItemInfo", type = "PerksVendorItemInfo", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -147,6 +159,7 @@ APIDefs["C_PerksProgram.GetVendorItemInfoRefundTimeLeft"] = {
     params = { { name = "vendorItemID", type = "number", default = nil } },
     returns = { { name = "refundTimeRemaining", type = "time_t", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -159,6 +172,7 @@ APIDefs["C_PerksProgram.IsAttackAnimToggleEnabled"] = {
     params = {  },
     returns = { { name = "isAttackAnimToggleEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.IsFrozenPerksVendorItem"] = {
@@ -170,6 +184,7 @@ APIDefs["C_PerksProgram.IsFrozenPerksVendorItem"] = {
     params = { { name = "perksVendorItemID", type = "number", default = nil } },
     returns = { { name = "isFrozen", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -182,6 +197,7 @@ APIDefs["C_PerksProgram.IsMountSpecialAnimToggleEnabled"] = {
     params = {  },
     returns = { { name = "isMountSpecialAnimToggleEnabled", type = "bool", canBeSecret = false } },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.ItemSelectedTelemetry"] = {
@@ -193,6 +209,7 @@ APIDefs["C_PerksProgram.ItemSelectedTelemetry"] = {
     params = { { name = "perksVendorItemID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -205,6 +222,7 @@ APIDefs["C_PerksProgram.PickupPerksVendorItem"] = {
     params = { { name = "perksVendorItemID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -217,6 +235,7 @@ APIDefs["C_PerksProgram.RequestCartCheckout"] = {
     params = { { name = "perksVendorItemIDs", type = "table", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -229,6 +248,7 @@ APIDefs["C_PerksProgram.RequestPendingChestRewards"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.RequestPurchase"] = {
@@ -240,6 +260,7 @@ APIDefs["C_PerksProgram.RequestPurchase"] = {
     params = { { name = "perksVendorItemID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -252,6 +273,7 @@ APIDefs["C_PerksProgram.RequestRefund"] = {
     params = { { name = "perksVendorItemID", type = "number", default = nil } },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
     midnightNote = "Secret behavior: SecretArguments=AllowedWhenUntainted",
 }
 
@@ -264,6 +286,7 @@ APIDefs["C_PerksProgram.ResetHeldItemDragAndDrop"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
 
 APIDefs["C_PerksProgram.SetFrozenPerksVendorItem"] = {
@@ -275,4 +298,5 @@ APIDefs["C_PerksProgram.SetFrozenPerksVendorItem"] = {
     params = {  },
     returns = {  },
     midnightImpact = "NORMAL",
+    games = { "standard", "forever" },
 }
