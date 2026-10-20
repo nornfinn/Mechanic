@@ -231,3 +231,30 @@ def test_deprecation_scan_filters_by_game(tmp_path):
     assert sorted(i["old_api"] for i in issues) == ["GetEverywhere", "GetForeverThing"]
     everything, _ = development.scan_addon_deprecations(addon, apis, None, "info")
     assert len(everything) == 3
+
+
+def test_rebuild_keeps_removed_shims_as_errors(tmp_path):
+    import json
+
+    from mechanic import deprecations_builder as builder
+
+    out = tmp_path / "deprecated.json"
+    first = _deprecated_source(
+        tmp_path, "old", "12.0.1.64914", [("GetGoneThing", "C_Thing.GetGone")]
+    )
+    assert builder.main([str(first), str(out)]) == 0
+    second = _deprecated_source(
+        tmp_path, "new", "12.1.5.70448", [("GetKeptThing", "C_Thing.GetKept")]
+    )
+
+    assert builder.main([str(second), str(out)]) == 0
+    by_old = {e["old"]: e for e in json.loads(out.read_text("utf-8"))["apis"]}
+    gone = by_old["GetGoneThing"]
+    assert gone["origin"] == "removed" and gone["severity"] == "error"
+    assert gone["removed_in"] == "12.1.5.70448" and "12.1.5.70448" in gone["notes"]
+    assert by_old["GetKeptThing"]["origin"] != "removed"
+
+    assert builder.main([str(second), str(out), "--drop-removed"]) == 0
+    assert "GetGoneThing" not in {
+        e["old"] for e in json.loads(out.read_text("utf-8"))["apis"]
+    }

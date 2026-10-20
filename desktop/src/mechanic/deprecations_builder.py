@@ -9,6 +9,10 @@ With ``--compare`` the sources are merged and every sourced entry lists the
 game types (``standard``, ``forever``, ...) whose UI ships its shim; the game
 type is read from each source's ``version.txt`` unless given as ``game=path``.
 
+Entries in the existing output file that the new source no longer contains
+are kept with ``"origin": "removed"`` and severity ``error`` (Blizzard deleted
+the shim, so the old name no longer exists); pass ``--drop-removed`` to omit them.
+
 Sources (read-only):
 
 * ``Blizzard_Deprecated*/Deprecated*.lua`` - the shims behind
@@ -326,15 +330,52 @@ def build_game_database(sources: List[Tuple[str, Path, Optional[str]]]) -> dict:
     return merged
 
 
-def _parse_args(argv: List[str]) -> Tuple[List[str], List[str]]:
-    positional, compare = [], []
+REMOVED_NOTE = (
+    "Blizzard removed this compatibility shim in {version}; the old name no "
+    "longer exists there, so calling it errors"
+)
+
+
+def carry_removed(database: dict, previous: dict) -> int:
+    """Keep entries the new source dropped, marked ``"origin": "removed"``.
+
+    A shim disappearing from ``Blizzard_Deprecated`` means the old global was
+    deleted, which is worse than deprecated, so the entry stays (as an error)
+    instead of silently leaving the scan. Returns the number carried over.
+    """
+    present = {entry["old"] for entry in database["apis"]}
+    version = database["source"].get("ui_version") or "the current UI"
+    carried = 0
+    for entry in previous.get("apis", []):
+        old = entry.get("old")
+        if not old or old in present or entry.get("origin") == "curated":
+            continue
+        kept = dict(entry)
+        if kept.get("origin") != "removed":
+            kept["origin"] = "removed"
+            kept["severity"] = "error"
+            kept["removed_in"] = version
+            kept["notes"] = REMOVED_NOTE.format(version=version)
+        kept.pop("games", None)
+        database["apis"].append(kept)
+        present.add(old)
+        carried += 1
+    database["apis"].sort(key=lambda e: e["old"])
+    database["source"]["removed"] = carried
+    return carried
+
+
+def _parse_args(argv: List[str]) -> Tuple[List[str], List[str], bool]:
+    positional, compare, drop_removed = [], [], False
     items = iter(argv)
     for item in items:
         if item == "--compare":
             compare.append(next(items, ""))
+        elif item == "--drop-removed":
+            drop_removed = True
         else:
             positional.append(item)
-    return positional, [c for c in compare if c]
+    return positional, [c for c in compare if c], drop_removed
 
 
 def _game_source(spec: str) -> Tuple[Optional[str], Path]:
@@ -345,7 +386,7 @@ def _game_source(spec: str) -> Tuple[Optional[str], Path]:
 
 
 def main(argv: List[str]) -> int:
-    positional, compare = _parse_args(argv)
+    positional, compare, drop_removed = _parse_args(argv)
     if not positional:
         print(__doc__)
         return 2
@@ -373,11 +414,18 @@ def main(argv: List[str]) -> int:
     if not database["source"]["from_source"]:
         print(f"No deprecated API shims found under {source}", file=sys.stderr)
         return 1
+    carried = 0
+    if not drop_removed and target.is_file():
+        try:
+            previous = json.loads(target.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            previous = {}
+        carried = carry_removed(database, previous)
     target.write_text(render(database), encoding="utf-8")
     print(
         f"Wrote {len(database['apis'])} APIs to {target} "
         f"({database['source']['from_source']} from source, "
-        f"{database['source']['curated']} curated)"
+        f"{database['source']['curated']} curated, {carried} removed)"
     )
     return 0
 
