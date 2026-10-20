@@ -9,7 +9,7 @@ For the architecture findings and validation limits, see the [September 2026 qua
 ## Features
 
 - **Dashboard and watcher** - WebSocket updates from watched SavedVariables folders (unrelated SavedVariables files are skipped), with bounded local SQLite history.
-- **60 registered commands** - Lint, test, format, inspect, release, API, sandbox, performance, and asset workflows.
+- **61 registered commands** - Lint, test, format, inspect, release, API, sandbox, performance, and asset workflows.
 - **Schema-driven forms** - The dashboard reads `commands.list` input/output schemas, defaults, descriptions, and mutation flags. Supported object schemas get forms; complex schemas retain a raw JSON editor.
 - **Deterministic diagnostics** - `diagnostic.targets` discovers client, account, character, and profile combinations. Pass the selected target to commands that read or write diagnostic data.
 - **Previewable operations** - `release.all`, `addon.sync`, and `libs.sync` accept `dry_run: true` to show their plan.
@@ -142,24 +142,25 @@ python -m pip install -e ".[all]"       # All runtime extras
 
 ## Registered commands
 
-`mech commands` lists commands; `mech --json call commands.list` returns their complete schemas and mutation metadata. The current registry contains these 60 names:
+`mech commands` lists commands; `mech --json call commands.list` returns their complete schemas and mutation metadata. The current registry contains these 61 names:
 
 ~~~text
-addon.complexity   addon.create       addon.deadcode      addon.deprecations
-addon.format       addon.lint         addon.output        addon.security
-addon.sync         addon.test         addon.validate      api.download
-api.generate       api.info           api.list            api.populate
-api.queue          api.refresh        api.search          api.stats
-assets.list        assets.sync        atlas.scan          atlas.search
-changelog.add      commands.list      dashboard.metrics   diagnostic.metrics
-diagnostic.targets docs.generate      docs.stale          env.status
-fencore-catalog    fencore-info       fencore-search      git.commit
-git.tag            libs.check         libs.init           libs.sync
-locale.extract     locale.validate    lua.queue           lua.results
-perf.baseline      perf.compare       perf.list           perf.report
-release.all        research.query     sandbox.exec        sandbox.generate
-sandbox.status     sandbox.test       server.shutdown     sv.discover
-sv.parse           system.pick_file   tools.status        version.bump
+addon.complexity   addon.create       addon.deadcode     addon.deprecations
+addon.format       addon.lint         addon.output       addon.security
+addon.sync         addon.test         addon.validate     api.download
+api.generate       api.info           api.list           api.populate
+api.queue          api.refresh        api.search         api.stats
+assets.list        assets.sync        atlas.scan         atlas.search
+changelog.add      commands.list      dashboard.metrics  diagnostic.metrics
+diagnostic.taint   diagnostic.targets docs.generate      docs.stale
+env.status         fencore-catalog    fencore-info       fencore-search
+git.commit         git.tag            libs.check         libs.init
+libs.sync          locale.extract     locale.validate    lua.queue
+lua.results        perf.baseline      perf.compare       perf.list
+perf.report        release.all        research.query     sandbox.exec
+sandbox.generate   sandbox.status     sandbox.test       server.shutdown
+sv.discover        sv.parse           system.pick_file   tools.status
+version.bump
 ~~~
 
 ## Targets, previews, and metrics

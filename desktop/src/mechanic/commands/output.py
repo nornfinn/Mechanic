@@ -69,6 +69,13 @@ class AddonOutputResult(BaseModel):
     lua_eval: Dict[str, Any] = Field(
         default_factory=dict, description="Lua eval queue results"
     )
+    blocked_action_count: int = Field(
+        default=0, description="ADDON_ACTION_BLOCKED/FORBIDDEN events this session"
+    )
+    blocked_actions: List[Dict[str, Any]] = Field(
+        default_factory=list,
+        description="Blocked or forbidden protected calls recorded by !Mechanic (latest session)",
+    )
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -475,6 +482,33 @@ def parse_lua_eval_from_mechanic_db(addon_data: dict) -> dict:
     }
 
 
+def parse_blocked_actions_from_mechanic_db(addon_data: dict) -> list:
+    """Blocked/forbidden actions from the latest recorded session, oldest first."""
+    records = [
+        r for r in _as_list(addon_data.get("blockedActions")) if isinstance(r, dict)
+    ]
+    sessions = [
+        r.get("session") for r in records if isinstance(r.get("session"), (int, float))
+    ]
+    latest = max(sessions) if sessions else None
+    result = []
+    for record in records:
+        if latest is not None and record.get("session") != latest:
+            continue
+        result.append(
+            {
+                "event": str(record.get("event") or "ADDON_ACTION_BLOCKED"),
+                "addon": str(record.get("addon") or "?"),
+                "function": str(record.get("function") or "?"),
+                "count": _safe_int(record.get("count"), 1),
+                "in_combat": bool(record.get("inCombat")),
+                "at": record.get("at"),
+                "last_at": record.get("lastAt"),
+            }
+        )
+    return result
+
+
 def profile_timestamp(profile_data: dict) -> Optional[str]:
     """Freshness of the saved profile: hub ``lastSync`` else the last Lua eval run."""
     last_sync = profile_data.get("lastSync")
@@ -781,6 +815,25 @@ def _lua_eval_section(lua_eval: dict) -> List[str]:
     return lines
 
 
+def _blocked_actions_section(blocked: list) -> List[str]:
+    if not blocked:
+        return []
+    total = sum(item["count"] for item in blocked)
+    lines = [f"### Blocked Actions ({total})\n"]
+    for item in blocked:
+        kind = "forbidden" if item["event"] == "ADDON_ACTION_FORBIDDEN" else "blocked"
+        where = " in combat" if item["in_combat"] else ""
+        times = f" x{item['count']}" if item["count"] > 1 else ""
+        lines.append(
+            f"- **{item['addon']}** {kind}{where}: `{item['function']}`{times}"
+        )
+    lines.append(
+        "\nRun diagnostic.taint (after `/console taintLog 1` and a reload) for the code path."
+    )
+    lines.append("")
+    return lines
+
+
 def format_output(data: dict, agent_mode: bool, warnings: List[str]) -> str:
     """Render the collected diagnostics as markdown."""
     lines: List[str] = []
@@ -800,6 +853,7 @@ def format_output(data: dict, agent_mode: bool, warnings: List[str]) -> str:
         lines.append(f"**Libraries:** {libs_str}\n")
 
     lines += _errors_section(data["errors"], agent_mode)
+    lines += _blocked_actions_section(data.get("blocked_actions", []))
     lines += _tests_section(data["tests"])
     lines += _console_section(data["console"], agent_mode)
     lines += _hub_logs_section(data["hub_logs"])
@@ -893,6 +947,7 @@ def collect_diagnostics(selected: SelectedTarget) -> Tuple[dict, list, List[str]
         "perf": parse_hub_performance_from_mechanic_db(profile_data),
         "api_tests": parse_api_tests_from_mechanic_db(profile_data),
         "lua_eval": parse_lua_eval_from_mechanic_db(profile_data),
+        "blocked_actions": parse_blocked_actions_from_mechanic_db(profile_data),
     }
     return data, sources, warnings
 
@@ -918,6 +973,8 @@ def build_addon_output(
         perf=data["perf"],
         api_tests=data["api_tests"],
         lua_eval=data["lua_eval"],
+        blocked_action_count=sum(i["count"] for i in data["blocked_actions"]),
+        blocked_actions=data["blocked_actions"],
     )
     return result, sources, warnings
 

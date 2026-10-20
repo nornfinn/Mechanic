@@ -5,7 +5,7 @@
      Source: the command registry (the data `commands.list` returns).
      Guard: desktop/tests/test_agent_docs.py fails when this file is stale. -->
 
-60 registered commands: 33 read-only, 27 mutating. The registry uses dotted
+61 registered commands: 34 read-only, 27 mutating. The registry uses dotted
 names (`addon.output`); the MCP adapter exposes the same commands with dashes
 (`addon-output`). `fencore-*` commands are registered with dashes already. Protocol for
 `target`, reload and previews: see [using-mechanic](../SKILL.md).
@@ -49,6 +49,7 @@ profile}` (all strings or null); take its values from `diagnostic.targets`.
 | `commands.list` | no | none | List command schemas and mutation metadata |
 | `dashboard.metrics` | no | none | Get the latest reload and test metrics from the local history |
 | `diagnostic.metrics` | no | none | Read bounded desktop overhead and optional explicitly selected addon snapshot |
+| `diagnostic.taint` | no | none | Read the client's Logs/taint.log (enable with /console taintLog 1) and group blocked actions and tainted variables by the addon blamed |
 | `diagnostic.targets` | no | none | List deterministic client/account/character/profile diagnostic targets |
 | `docs.generate` | yes | none | Generate CLI reference documentation from registered commands |
 | `docs.stale` | no | `addon` | Detect stale or broken documentation in a WoW addon |
@@ -174,7 +175,7 @@ Get all addon output (errors, tests, console) for agent consumption. Use agent_m
 | `target` | `target` object | no | null |  |
 | `agent_mode` | boolean | no | `false` | Enable smart compression for AI agents |
 
-Output fields: `target`, `output`, `error_count`, `test_count`, `console_count`, `api_test_count`, `lua_eval_count`, `timestamp`, `errors`, `tests`, `console`, `libraries`, `perf`, `api_tests`, `lua_eval`
+Output fields: `target`, `output`, `error_count`, `test_count`, `console_count`, `api_test_count`, `lua_eval_count`, `timestamp`, `errors`, `tests`, `console`, `libraries`, `perf`, `api_tests`, `lua_eval`, `blocked_action_count`, `blocked_actions`
 
 #### `addon.security` (read-only)
 
@@ -431,6 +432,20 @@ Read bounded desktop overhead and optional explicitly selected addon snapshot
 | `target` | `target` object | no | null | Explicit target to include its last saved addon overhead snapshot |
 
 Output fields: `desktop`, `runtime`, `history`, `target`, `addon`, `addon_status`
+
+#### `diagnostic.taint` (read-only)
+
+Read the client's Logs/taint.log (enable with /console taintLog 1) and group blocked actions and tainted variables by the addon blamed
+
+| Input | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `target` | `target` object | no | null | Diagnostic target; only its client folder is used |
+| `log_path` | string | no | null | Read this taint.log instead of <client>/Logs/taint.log |
+| `addon` | string | no | null | Only entries blamed on this addon (case-insensitive) |
+| `kind` | string | no | null | Only this kind: blocked, global, execution or other |
+| `limit` | integer | no | `50` | Max entries to return |
+
+Output fields: `log_file`, `total`, `truncated`, `by_addon`, `by_kind`, `entries`
 
 #### `diagnostic.targets` (read-only)
 

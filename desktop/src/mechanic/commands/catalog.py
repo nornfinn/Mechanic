@@ -16,6 +16,7 @@ addon.deadcode addon.complexity addon.security docs.stale locale.validate locale
 atlas.search libs.check env.status tools.status addon.output api.search api.info api.list
 api.stats lua.results sandbox.status assets.list fencore-catalog fencore-search fencore-info
 commands.list diagnostic.targets diagnostic.metrics perf.compare perf.report perf.list
+diagnostic.taint
 """.split()
 )
 MUTATING = frozenset(

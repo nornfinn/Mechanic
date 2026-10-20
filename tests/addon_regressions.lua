@@ -161,7 +161,8 @@ local function loadBootstrap(target)
     MECHANIC_LUA_QUEUE = { { label = "probe", code = "1 + 1" } }
     local ns = {}
     assert(loadfile("!Mechanic/Bootstrap.lua"))("!Mechanic", ns)
-    assert(#events == 1 and events[1] == "ADDON_LOADED", "bootstrap must not register unused events")
+    assert(#events == 3 and events[1] == "ADDON_LOADED" and events[2] == "ADDON_ACTION_BLOCKED"
+        and events[3] == "ADDON_ACTION_FORBIDDEN", "bootstrap registers only its load and blocked-action events")
     bootFrame.scripts.OnEvent(bootFrame, "ADDON_LOADED", "!Mechanic")
     return ns
 end
@@ -171,6 +172,36 @@ assert(not ran(loadBootstrap("not a table")) and MECHANIC_LUA_QUEUE == nil, "non
 assert(not ran(loadBootstrap({ character = "Other - Realm" })), "other character is rejected")
 assert(ran(loadBootstrap({ character = "Player - Realm", profile = "Default" })), "matching target runs")
 MECHANIC_DIAGNOSTIC_TARGET = nil
+
+-- Blocked actions: recorded before and after load, repeats merged, bounded, per session.
+do
+    local bootFrame = newFrame()
+    rawset(bootFrame, "RegisterEvent", function() end)
+    CreateFrame = function() return bootFrame end
+    MechanicDB, MECHANIC_LUA_QUEUE = nil, nil
+    local combat = false
+    InCombatLockdown = function() return combat end
+    time = function() return 1000 end
+    local ns = {}
+    assert(loadfile("!Mechanic/Bootstrap.lua"))("!Mechanic", ns)
+    local onEvent = bootFrame.scripts.OnEvent
+    onEvent(bootFrame, "ADDON_ACTION_BLOCKED", "EarlyAddon", "Early()")
+    onEvent(bootFrame, "ADDON_LOADED", "!Mechanic")
+    local list = ns.rawDB.blockedActions
+    assert(#list == 1 and list[1].addon == "EarlyAddon" and list[1].session == 1000, "early event is flushed")
+    combat = true
+    onEvent(bootFrame, "ADDON_ACTION_BLOCKED", "fSuite", "ActionButton9:Show()")
+    onEvent(bootFrame, "ADDON_ACTION_BLOCKED", "fSuite", "ActionButton9:Show()")
+    assert(#list == 2 and list[2].count == 2 and list[2].inCombat == true, "repeats merge")
+    onEvent(bootFrame, "ADDON_ACTION_FORBIDDEN", "fSuite", "CastSpellByName()")
+    assert(list[3].event == "ADDON_ACTION_FORBIDDEN" and list[3]["function"] == "CastSpellByName()")
+    for i = 1, 60 do
+        onEvent(bootFrame, "ADDON_ACTION_BLOCKED", "Spam", "F" .. i .. "()")
+    end
+    assert(#list == 50 and list[50]["function"] == "F60()", "list is bounded, newest kept")
+    assert(#Mechanic:GetBlockedActions() == 50, "current session only")
+    InCombatLockdown, time = nil, nil
+end
 
 -- Utils: error-source detection, library listing, and the single reusable help dialog.
 local libStubTable = setmetatable({ minors = {}, IterateLibraries = function() return next, {} end }, {
