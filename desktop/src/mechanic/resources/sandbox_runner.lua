@@ -172,7 +172,9 @@ end
 -- Game filter: drop stubs for APIs the requested game type does not document,
 -- so code calling them fails the way it would in that client.
 local stub_games = rawget(env, "__MechanicStubGames")
+local stub_secrets = rawget(env, "__MechanicStubSecrets")
 env.__MechanicStubGames = nil
+env.__MechanicStubSecrets = nil
 if cfg.game and type(stub_games) == "table" then
 	local wanted = "," .. cfg.game .. ","
 	for key, games in pairs(stub_games) do
@@ -188,6 +190,16 @@ if cfg.game and type(stub_games) == "table" then
 			end
 		end
 	end
+end
+
+-- Secret values (runs with the real globals; installs helpers into env).
+if cfg.secrets_lib then
+	local install, install_err = real_loadfile(cfg.secrets_lib)
+	if not install then
+		real_stderr:write("sandbox_runner: cannot load secrets: " .. tostring(install_err) .. "\n")
+		real_exit(3)
+	end
+	install(env, type(stub_secrets) == "table" and stub_secrets or {})
 end
 
 if cfg.mode == "exec" then

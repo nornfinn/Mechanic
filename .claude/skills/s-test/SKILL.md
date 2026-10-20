@@ -45,6 +45,20 @@ describe("Core math", function()
 end)
 ```
 
+### Secret values and game types (`sandbox.exec` / `sandbox.test`)
+
+- `secrets` (default on) emulates secret values: `issecretvalue`, `canaccessvalue`, `issecrettable`, `canaccesstable`, plus `Sandbox.Secret(v)`, `Sandbox.Reveal(v)`, `Sandbox.SetRestricted(bool)` (simulated combat; `InCombatLockdown()` follows it) and `Sandbox.Mock(path, valueOrFunction)`. Mocked returns become secrets when the API's documentation says so: always for `SecretReturns`, and while restricted for conditional secrets such as `SecretWhenInCombat`. Arithmetic, ordering comparisons, `#`, indexing and calling a secret raise errors; concatenation, `string.format` and `tostring` return secrets, and `type()` reports the real type.
+- Limits: Lua 5.1 cannot intercept truth tests (a secret boolean is always truthy) or a secret used as a table key, the error wording differs from the client's, and `tonumber` on a secret errors because its in-game behaviour is not documented.
+- `game` (for example `forever` or `standard`) removes stubs for APIs that game's documentation does not list, so calling a Retail-only API fails as it would in WoW: Forever.
+
+```lua
+it("skips secret health in combat", function()
+    Sandbox.Mock("UnitHealth", 900)
+    Sandbox.SetRestricted(true)
+    assert.equals("?", Core.FormatHealth("target")) -- must check issecretvalue first
+end)
+```
+
 ## `addon.test` (Busted)
 
 Runs the system/`desktop/bin` `busted` over `*_spec.lua` files; with a `.busted` file in the addon its `ROOT` is respected, otherwise `Tests/`, `tests/` or `spec/` are used. The result reports totals, per-test errors and busted errors. Needs the Lua toolchain (`tools.status`). `coverage=true` adds a coverage report.

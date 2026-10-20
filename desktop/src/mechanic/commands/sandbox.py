@@ -60,6 +60,17 @@ GLOBAL_SECTION = "_GLOBAL"
 # Stubs record which game types document each API; the runner removes the stubs
 # a requested game lacks and then deletes this table from the environment.
 STUB_GAMES_TABLE = "__MechanicStubGames"
+# Secret-return policy per API ("always" for SecretReturns, "conditional" for
+# secret predicates such as SecretWhenInCombat), read by Sandbox.Mock.
+STUB_SECRETS_TABLE = "__MechanicStubSecrets"
+_SECRET_POLICY = {"HIGH": "always", "CONDITIONAL": "conditional"}
+
+_SECRETS_DESCRIPTION = (
+    "Emulate secret values: issecretvalue/canaccessvalue, Sandbox.Secret, "
+    "Sandbox.Mock (returns become secrets as the API's documentation says) and "
+    "Sandbox.SetRestricted to simulate combat. Arithmetic, comparison, # and "
+    "indexing on a secret raise errors as in tainted game code"
+)
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -117,6 +128,7 @@ class ExecInput(BaseModel):
             "game does not document are removed, so calling them errors like in game"
         ),
     )
+    secrets: bool = Field(True, description=_SECRETS_DESCRIPTION)
 
 
 class ExecResult(BaseModel):
@@ -139,6 +151,7 @@ class TestInput(BaseModel):
             "game does not document are removed, so calling them errors like in game"
         ),
     )
+    secrets: bool = Field(True, description=_SECRETS_DESCRIPTION)
 
 
 class TestCase(BaseModel):
@@ -273,6 +286,12 @@ def _render_section(namespace: str, apis: List[Dict[str, Any]]) -> str:
                 f"{STUB_GAMES_TABLE}[{quote_lua_string(api['key'])}] = "
                 f"{quote_lua_string(','.join(games))}"
             )
+        policy = _SECRET_POLICY.get(api.get("midnightImpact", "NORMAL"))
+        if policy:
+            lines.append(
+                f"{STUB_SECRETS_TABLE}[{quote_lua_string(api['key'])}] = "
+                f"{quote_lua_string(policy)}"
+            )
         lines.append("")
     lines.append("-- @@end")
     return "\n".join(lines) + "\n"
@@ -298,6 +317,7 @@ def _render_stubs_file(sections: Dict[str, str]) -> str:
         '-- Sections are delimited by "-- @@ns <name>" / "-- @@end" so a single',
         "-- namespace can be regenerated in place.",
         f"{STUB_GAMES_TABLE} = {STUB_GAMES_TABLE} or {{}}",
+        f"{STUB_SECRETS_TABLE} = {STUB_SECRETS_TABLE} or {{}}",
         "",
     ]
     body = "".join(sections[ns] + "\n" for ns in sorted(sections))
@@ -643,6 +663,8 @@ def register_commands(server):
             config["stubs"] = str(stubs_path)
         if input.game:
             config["game"] = input.game.lower()
+        if input.secrets:
+            config["secrets_lib"] = str(resource_path("sandbox_secrets.lua"))
 
         if input.addon:
             addon_path = find_dev_addon_path(input.addon)
@@ -786,6 +808,8 @@ def register_commands(server):
             config["filter"] = input.filter
         if input.game:
             config["game"] = input.game.lower()
+        if input.secrets:
+            config["secrets_lib"] = str(resource_path("sandbox_secrets.lua"))
 
         start_time = time.perf_counter()
         try:

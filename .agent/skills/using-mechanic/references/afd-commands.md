@@ -717,6 +717,7 @@ Execute Lua code in a restricted sandbox with WoW API stubs. User code sees only
 | `addon` | string | no | null | Name of addon to load before execution (looks in _dev_ folder) |
 | `load_stubs` | boolean | no | `true` | Whether to load WoW API stubs |
 | `game` | string | no | null | Game type to emulate (e.g. forever, standard): stubs for APIs that game does not document are removed, so calling them errors like in game |
+| `secrets` | boolean | no | `true` | Emulate secret values: issecretvalue/canaccessvalue, Sandbox.Secret, Sandbox.Mock (returns become secrets as the API's documentation says) and Sandbox.SetRestricted to simulate combat. Arithmetic, comparison, # and indexing on a secret raise errors as in tainted game code |
 
 Output fields: `result`, `output`, `error`, `exit_code`
 
@@ -748,6 +749,7 @@ Run an addon's *_spec.lua tests (Core/ and Tests/) in the restricted sandbox wit
 | `addon` | string | yes |  | Name of addon to test (looks in _dev_ folder) |
 | `filter` | string | no | null | Only run tests whose full name contains this text (case-insensitive) |
 | `game` | string | no | null | Game type to emulate (e.g. forever, standard): stubs for APIs that game does not document are removed, so calling them errors like in game |
+| `secrets` | boolean | no | `true` | Emulate secret values: issecretvalue/canaccessvalue, Sandbox.Secret, Sandbox.Mock (returns become secrets as the API's documentation says) and Sandbox.SetRestricted to simulate combat. Arithmetic, comparison, # and indexing on a secret raise errors as in tainted game code |
 
 Output fields: `addon`, `passed`, `total`, `passed_count`, `failed_count`, `tests`, `source_files`, `spec_files`, `duration_ms`
 
