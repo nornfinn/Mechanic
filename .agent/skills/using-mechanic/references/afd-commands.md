@@ -138,6 +138,7 @@ Scan a WoW addon's Lua files for deprecated API calls
 | `path` | string | no | null | Override path to addon folder |
 | `category` | string | no | null | Filter by category (e.g., spells, items, containers) |
 | `min_severity` | string | no | `"warning"` | Minimum severity: info, warning, or error |
+| `game` | string | no | null | Only deprecations shipped by this game type's UI (e.g. forever, standard) when the database is game-tagged |
 
 Output fields: `addon`, `clean`, `issue_count`, `issues`, `by_category`, `by_severity`, `database_version`
 
@@ -268,6 +269,7 @@ List APIs by namespace or category
 |---|---|---|---|---|
 | `namespace` | string | no | null | Namespace to list (e.g., C_Spell) |
 | `category` | string | no | null | Category to list |
+| `game` | string | no | null | Only APIs documented for this game type (e.g. forever, standard); APIs without game data are kept |
 | `limit` | integer | no | `50` | Max results |
 
 Output fields: `apis`, `total`, `filter`
@@ -280,8 +282,10 @@ Parse Blizzard API documentation and generate api_database.json
 |---|---|---|---|---|
 | `source_path` | string | yes |  | Path to wow-ui-source repository root |
 | `output_path` | string | no | null | Output path for api_database.json (defaults to data_dir) |
+| `game` | string | no | null | Game type of the source (standard, forever, mists, cata, wrath, tbc, vanilla); detected from version.txt when omitted |
+| `compare_sources` | array of string | no |  | More source trees (wow-ui-source checkouts or extracts) whose APIs are merged in; each API is tagged with the game types that document it. Use 'game=path' to name the game type, or a bare path to detect it |
 
-Output fields: `api_count`, `category_counts`, `output_file`, `wow_version`, `skipped_files`
+Output fields: `api_count`, `category_counts`, `output_file`, `wow_version`, `skipped_files`, `games`, `game_counts`
 
 #### `api.queue` (mutating)
 
@@ -305,6 +309,8 @@ Full refresh: parse Blizzard docs and regenerate all APIDefs in one step
 | `output_path` | string | no | null | APIDefs output folder (see api.generate) |
 | `database_path` | string | no | null | api_database.json location (defaults to data_dir) |
 | `allow_any_output_dir` | boolean | no | `false` | Allow an output folder that is not named 'APIDefs' |
+| `game` | string | no | null | Game type of the source (standard, forever, mists, cata, wrath, tbc, vanilla); detected from version.txt when omitted |
+| `compare_sources` | array of string | no |  | More source trees (wow-ui-source checkouts or extracts) whose APIs are merged in; each API is tagged with the game types that document it. Use 'game=path' to name the game type, or a bare path to detect it |
 
 Output fields: `api_count`, `namespace_count`, `database_file`, `apidefs_dir`
 
@@ -317,6 +323,7 @@ Search WoW APIs by name pattern. Works offline (reads static definitions).
 | `query` | string | yes |  | Search pattern (supports * wildcards) |
 | `category` | string | no | null | Filter by category |
 | `namespace` | string | no | null | Filter by namespace |
+| `game` | string | no | null | Only APIs documented for this game type (e.g. forever, standard); APIs without game data are kept |
 | `limit` | integer | no | `20` | Max results to return |
 
 Output fields: `apis`, `total`, `query`
@@ -709,6 +716,7 @@ Execute Lua code in a restricted sandbox with WoW API stubs. User code sees only
 | `code` | string | yes |  | Lua code to execute |
 | `addon` | string | no | null | Name of addon to load before execution (looks in _dev_ folder) |
 | `load_stubs` | boolean | no | `true` | Whether to load WoW API stubs |
+| `game` | string | no | null | Game type to emulate (e.g. forever, standard): stubs for APIs that game does not document are removed, so calling them errors like in game |
 
 Output fields: `result`, `output`, `error`, `exit_code`
 
@@ -739,6 +747,7 @@ Run an addon's *_spec.lua tests (Core/ and Tests/) in the restricted sandbox wit
 |---|---|---|---|---|
 | `addon` | string | yes |  | Name of addon to test (looks in _dev_ folder) |
 | `filter` | string | no | null | Only run tests whose full name contains this text (case-insensitive) |
+| `game` | string | no | null | Game type to emulate (e.g. forever, standard): stubs for APIs that game does not document are removed, so calling them errors like in game |
 
 Output fields: `addon`, `passed`, `total`, `passed_count`, `failed_count`, `tests`, `source_files`, `spec_files`, `duration_ms`
 

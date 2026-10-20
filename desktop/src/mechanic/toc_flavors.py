@@ -94,6 +94,22 @@ for _family, _games in FAMILY_SUFFIXES.items():
     _SUFFIX_TO_GAMES[_family] = _games
 
 
+def game_for_version(wow_version: str) -> Optional[str]:
+    """Game type for a client version: 12.x -> standard, 1.60.x -> forever, ...
+
+    WoW: Forever numbers its builds 1.60+, above Classic Era's 1.15.
+    """
+    match = re.match(r"^(\d+)\.(\d+)", wow_version or "")
+    if not match:
+        return None
+    major, minor = int(match.group(1)), int(match.group(2))
+    if major >= 10:
+        return "standard"
+    if major == 1:
+        return "forever" if minor >= 60 else "vanilla"
+    return {2: "tbc", 3: "wrath", 4: "cata", 5: "mists"}.get(major)
+
+
 @dataclass
 class TocFlavor:
     """Which clients a TOC file is written for."""

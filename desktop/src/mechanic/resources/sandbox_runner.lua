@@ -169,6 +169,27 @@ if cfg.stubs then
 	load_list({ cfg.stubs }, "stubs")
 end
 
+-- Game filter: drop stubs for APIs the requested game type does not document,
+-- so code calling them fails the way it would in that client.
+local stub_games = rawget(env, "__MechanicStubGames")
+env.__MechanicStubGames = nil
+if cfg.game and type(stub_games) == "table" then
+	local wanted = "," .. cfg.game .. ","
+	for key, games in pairs(stub_games) do
+		if not ("," .. games .. ","):find(wanted, 1, true) then
+			local namespace, name = key:match("^([%w_]+)%.([%w_]+)$")
+			if namespace then
+				local container = rawget(env, namespace)
+				if type(container) == "table" then
+					container[name] = nil
+				end
+			else
+				env[key] = nil
+			end
+		end
+	end
+end
+
 if cfg.mode == "exec" then
 	load_list(cfg.sources, "addon file")
 

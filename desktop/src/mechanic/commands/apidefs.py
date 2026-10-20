@@ -30,6 +30,7 @@ from ..config import get_config
 from ..lua_strings import quote_lua_string
 from ..pipeline_paths import find_lua_exe, get_apidefs_dir
 from ..resources import resource_path
+from ..toc_flavors import game_for_version as detect_game
 
 
 # Townlong Yak constants
@@ -49,11 +50,36 @@ VERSION_RE = re.compile(r"^\d{1,3}(?:\.\d{1,6}){1,3}$")
 # ═══════════════════════════════════════════════════════════════════════════════
 
 
+GAME_TYPES = (
+    "standard",
+    "forever",
+    "mists",
+    "cata",
+    "wrath",
+    "tbc",
+    "vanilla",
+)
+
+_GAME_DESCRIPTION = (
+    "Game type of the source (standard, forever, mists, cata, wrath, tbc, "
+    "vanilla); detected from version.txt when omitted"
+)
+_COMPARE_DESCRIPTION = (
+    "More source trees (wow-ui-source checkouts or extracts) whose APIs are "
+    "merged in; each API is tagged with the game types that document it. "
+    "Use 'game=path' to name the game type, or a bare path to detect it"
+)
+
+
 class APIPopulateInput(BaseModel):
     source_path: str = Field(..., description="Path to wow-ui-source repository root")
     output_path: Optional[str] = Field(
         default=None,
         description="Output path for api_database.json (defaults to data_dir)",
+    )
+    game: Optional[str] = Field(default=None, description=_GAME_DESCRIPTION)
+    compare_sources: List[str] = Field(
+        default_factory=list, description=_COMPARE_DESCRIPTION
     )
 
 
@@ -65,6 +91,12 @@ class APIPopulateOutput(BaseModel):
     skipped_files: List[str] = Field(
         default_factory=list,
         description="Documentation files that could not be parsed (with reason)",
+    )
+    games: Dict[str, str] = Field(
+        default_factory=dict, description="Game type -> client version of each source"
+    )
+    game_counts: Dict[str, int] = Field(
+        default_factory=dict, description="APIs documented for each game type"
     )
 
 
@@ -106,6 +138,10 @@ class APIRefreshInput(BaseModel):
     allow_any_output_dir: bool = Field(
         default=False,
         description="Allow an output folder that is not named 'APIDefs'",
+    )
+    game: Optional[str] = Field(default=None, description=_GAME_DESCRIPTION)
+    compare_sources: List[str] = Field(
+        default_factory=list, description=_COMPARE_DESCRIPTION
     )
 
 
@@ -505,6 +541,24 @@ def _detect_wow_version(source_path: Path, doc_dir: Path) -> str:
     return "unknown"
 
 
+def _find_doc_dir(source_path: Path) -> Optional[Path]:
+    for doc_dir in (
+        source_path / "Interface" / "AddOns" / "Blizzard_APIDocumentationGenerated",
+        source_path / "Blizzard_APIDocumentationGenerated",
+    ):
+        if doc_dir.is_dir():
+            return doc_dir
+    return None
+
+
+def _split_compare_source(spec: str) -> Tuple[Optional[str], str]:
+    """'forever=/path' -> ('forever', '/path'); a bare path -> (None, path)."""
+    name, sep, path = spec.partition("=")
+    if sep and name.strip().lower() in GAME_TYPES:
+        return name.strip().lower(), path.strip()
+    return None, spec
+
+
 def _parse_blizzard_file(
     lua_exe: Optional[Path], dumper_script: Optional[Path], file_path: Path
 ) -> Tuple[Optional[Dict], Optional[str]]:
@@ -682,6 +736,13 @@ def _render_namespace_file(namespace: str, entries: List[Tuple[str, Dict]]) -> s
             f"    returns = {_generate_lua_returns(data.get('returns', []), flags)},\n"
         )
         entry += f"    midnightImpact = {quote_lua_string(impact)},\n"
+        games = [g for g in data.get("games", []) if isinstance(g, str)]
+        if games:
+            entry += (
+                "    games = { "
+                + ", ".join(quote_lua_string(g) for g in games)
+                + " },\n"
+            )
         if impact == "RESTRICTED":
             entry += "    protected = true,\n"
         if note:
@@ -763,41 +824,127 @@ async def _api_populate(
     lua_exe = _get_lua_exe()
     dumper_script = _get_lua_dumper() if lua_exe else None
 
-    source_path = Path(input.source_path)
-    if not source_path.exists():
-        return error(
-            code="SOURCE_NOT_FOUND",
-            message=f"Source path not found: {source_path}",
-            suggestion="Clone wow-ui-source: git clone https://github.com/Gethe/wow-ui-source",
-        )
-
-    doc_dir = (
-        source_path / "Interface" / "AddOns" / "Blizzard_APIDocumentationGenerated"
-    )
-    if not doc_dir.exists():
-        doc_dir = source_path / "Blizzard_APIDocumentationGenerated"
-        if not doc_dir.exists():
+    # Resolve the primary source and every comparison source up front.
+    sources: List[Tuple[str, Path, Path, str]] = []  # (game, path, doc_dir, version)
+    specs = [(input.game, input.source_path)] + [
+        _split_compare_source(spec) for spec in input.compare_sources
+    ]
+    for index, (game, path_text) in enumerate(specs):
+        source_path = Path(path_text)
+        role = "Source" if index == 0 else "Compare source"
+        if not source_path.exists():
+            return error(
+                code="SOURCE_NOT_FOUND",
+                message=f"{role} path not found: {source_path}",
+                suggestion="Clone wow-ui-source: git clone https://github.com/Gethe/wow-ui-source",
+            )
+        doc_dir = _find_doc_dir(source_path)
+        if doc_dir is None:
             return error(
                 code="DOCS_NOT_FOUND",
-                message="Blizzard_APIDocumentationGenerated folder not found",
+                message=f"Blizzard_APIDocumentationGenerated folder not found in {source_path}",
                 suggestion="Ensure source_path points to wow-ui-source root",
             )
+        version = _detect_wow_version(source_path, doc_dir)
+        game = (game or "").lower() or detect_game(version)
+        if game is None and len(specs) == 1:
+            pass  # a single untagged source works as before: no games tags
+        elif game not in GAME_TYPES:
+            return error(
+                code="GAME_UNKNOWN",
+                message=f"Could not tell which game {source_path} documents (version {version})",
+                suggestion="Pass game (or 'game=path' in compare_sources), e.g. forever",
+            )
+        if any(game == existing[0] for existing in sources):
+            return error(
+                code="GAME_DUPLICATE",
+                message=f"More than one source documents game type '{game}'",
+                suggestion="Give each source a different game type",
+            )
+        sources.append((game, source_path, doc_dir, version))
 
     output_file = (
         Path(input.output_path) if input.output_path else _get_default_database_path()
     )
     output_file.parent.mkdir(parents=True, exist_ok=True)
 
+    primary_game, _, primary_doc_dir, primary_version = sources[0]
     database = {
         "meta": {
             "generated": datetime.now().isoformat(),
             "sources": ["blizzard_doc"],
-            "wow_version": _detect_wow_version(source_path, doc_dir),
+            "wow_version": primary_version,
+            "games": {game: version for game, _, _, version in sources if game},
         },
         "categories": CATEGORIES,
         "apis": {},
     }
 
+    skipped: List[str] = []
+    files_parsed = 0
+    for game, _, doc_dir, _ in sources:
+        apis, source_skipped, file_count = await _collect_apis(
+            doc_dir, lua_exe, dumper_script
+        )
+        skipped.extend(
+            f"[{game}] {item}" if game != primary_game else item
+            for item in source_skipped
+        )
+        files_parsed += file_count
+        for full_name, entry in apis.items():
+            existing = database["apis"].get(full_name)
+            if existing is None:
+                # The first source that documents an API supplies its metadata.
+                entry["games"] = [game] if game else []
+                database["apis"][full_name] = entry
+            elif game and game not in existing["games"]:
+                existing["games"].append(game)
+
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(database, f, indent=2)
+
+    category_counts: Dict[str, int] = defaultdict(int)
+    game_counts: Dict[str, int] = defaultdict(int)
+    for api in database["apis"].values():
+        category_counts[api["category"]] += 1
+        for game in api["games"]:
+            game_counts[game] += 1
+
+    reasoning = (
+        f"Parsed {files_parsed} documentation files from {len(sources)} source(s), "
+        f"generated {len(database['apis'])} API entries"
+    )
+    if len(sources) > 1:
+        reasoning += (
+            " (" + ", ".join(f"{g}: {game_counts[g]}" for g, *_ in sources) + ")"
+        )
+    if skipped:
+        reasoning += f"; {len(skipped)} file(s) could not be parsed"
+
+    return success(
+        data=APIPopulateOutput(
+            api_count=len(database["apis"]),
+            category_counts=dict(category_counts),
+            output_file=str(output_file),
+            wow_version=primary_version,
+            skipped_files=skipped,
+            games=database["meta"]["games"],
+            game_counts=dict(game_counts),
+        ),
+        reasoning=reasoning,
+        sources=[
+            create_source(
+                type="file", id="blizzard_docs", title="Blizzard API Documentation"
+            )
+        ],
+    )
+
+
+async def _collect_apis(
+    doc_dir: Path, lua_exe: Optional[Path], dumper_script: Optional[Path]
+) -> Tuple[Dict[str, Dict[str, Any]], List[str], int]:
+    """Parse one Blizzard_APIDocumentationGenerated folder into API entries."""
+    collected: Dict[str, Dict[str, Any]] = {}
     files = sorted(f for f in doc_dir.iterdir() if f.name.endswith("Documentation.lua"))
     skipped: List[str] = []
 
@@ -845,7 +992,7 @@ async def _api_populate(
                 for ret in func.get("Returns", [])
             ]
 
-            database["apis"][full_name] = {
+            collected[full_name] = {
                 "namespace": namespace,
                 "name": name,
                 "category": category,
@@ -857,35 +1004,7 @@ async def _api_populate(
                 "examples": [],
             }
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(database, f, indent=2)
-
-    category_counts: Dict[str, int] = defaultdict(int)
-    for api in database["apis"].values():
-        category_counts[api["category"]] += 1
-
-    reasoning = (
-        f"Parsed {len(files)} documentation files, generated "
-        f"{len(database['apis'])} API entries"
-    )
-    if skipped:
-        reasoning += f"; {len(skipped)} file(s) could not be parsed"
-
-    return success(
-        data=APIPopulateOutput(
-            api_count=len(database["apis"]),
-            category_counts=dict(category_counts),
-            output_file=str(output_file),
-            wow_version=database["meta"]["wow_version"],
-            skipped_files=skipped,
-        ),
-        reasoning=reasoning,
-        sources=[
-            create_source(
-                type="file", id="blizzard_docs", title="Blizzard API Documentation"
-            )
-        ],
-    )
+    return collected, skipped, len(files)
 
 
 async def _api_generate(
@@ -976,7 +1095,10 @@ async def _api_refresh(
     """
     populate_result = await _api_populate(
         APIPopulateInput(
-            source_path=input.source_path, output_path=input.database_path
+            source_path=input.source_path,
+            output_path=input.database_path,
+            game=input.game,
+            compare_sources=input.compare_sources,
         ),
         context,
     )

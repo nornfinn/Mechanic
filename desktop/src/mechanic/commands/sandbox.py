@@ -57,6 +57,9 @@ _NAMESPACE_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 _API_KEY_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)?$")
 _SECTION_RE = re.compile(r"^-- @@ns (\S+)\n(.*?)^-- @@end\n", re.MULTILINE | re.DOTALL)
 GLOBAL_SECTION = "_GLOBAL"
+# Stubs record which game types document each API; the runner removes the stubs
+# a requested game lacks and then deletes this table from the environment.
+STUB_GAMES_TABLE = "__MechanicStubGames"
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -107,6 +110,13 @@ class ExecInput(BaseModel):
         description="Name of addon to load before execution (looks in _dev_ folder)",
     )
     load_stubs: bool = Field(True, description="Whether to load WoW API stubs")
+    game: Optional[str] = Field(
+        None,
+        description=(
+            "Game type to emulate (e.g. forever, standard): stubs for APIs that "
+            "game does not document are removed, so calling them errors like in game"
+        ),
+    )
 
 
 class ExecResult(BaseModel):
@@ -121,6 +131,13 @@ class TestInput(BaseModel):
     filter: Optional[str] = Field(
         None,
         description="Only run tests whose full name contains this text (case-insensitive)",
+    )
+    game: Optional[str] = Field(
+        None,
+        description=(
+            "Game type to emulate (e.g. forever, standard): stubs for APIs that "
+            "game does not document are removed, so calling them errors like in game"
+        ),
     )
 
 
@@ -199,6 +216,7 @@ def parse_apidef_file(filepath: Path) -> List[Dict[str, Any]]:
                 "returns": entry.get("returns", []),
                 "midnightImpact": entry.get("midnightImpact", "NORMAL"),
                 "protected": bool(entry.get("protected", False)),
+                "games": [g for g in entry.get("games") or [] if isinstance(g, str)],
             }
         )
     return apis
@@ -248,6 +266,13 @@ def _render_section(namespace: str, apis: List[Dict[str, Any]]) -> str:
         lines.append(f"{namespace} = {namespace} or {{}}")
     for api in sorted(apis, key=lambda item: item["key"]):
         lines.append(generate_stub_code(api))
+        games = api.get("games") or []
+        if games:
+            # Read by the runner's game filter (sandbox exec/test with `game`).
+            lines.append(
+                f"{STUB_GAMES_TABLE}[{quote_lua_string(api['key'])}] = "
+                f"{quote_lua_string(','.join(games))}"
+            )
         lines.append("")
     lines.append("-- @@end")
     return "\n".join(lines) + "\n"
@@ -272,6 +297,7 @@ def _render_stubs_file(sections: Dict[str, str]) -> str:
         f"-- Generated: {datetime.now().isoformat()}",
         '-- Sections are delimited by "-- @@ns <name>" / "-- @@end" so a single',
         "-- namespace can be regenerated in place.",
+        f"{STUB_GAMES_TABLE} = {STUB_GAMES_TABLE} or {{}}",
         "",
     ]
     body = "".join(sections[ns] + "\n" for ns in sorted(sections))
@@ -615,6 +641,8 @@ def register_commands(server):
         config: Dict[str, Any] = {"mode": "exec", "marker": secrets.token_hex(8)}
         if input.load_stubs and stubs_path.exists():
             config["stubs"] = str(stubs_path)
+        if input.game:
+            config["game"] = input.game.lower()
 
         if input.addon:
             addon_path = find_dev_addon_path(input.addon)
@@ -756,6 +784,8 @@ def register_commands(server):
             config["stubs"] = str(stubs_path)
         if input.filter:
             config["filter"] = input.filter
+        if input.game:
+            config["game"] = input.game.lower()
 
         start_time = time.perf_counter()
         try:

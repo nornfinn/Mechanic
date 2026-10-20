@@ -44,6 +44,13 @@ class APISearchInput(BaseModel):
     query: str = Field(..., description="Search pattern (supports * wildcards)")
     category: Optional[str] = Field(None, description="Filter by category")
     namespace: Optional[str] = Field(None, description="Filter by namespace")
+    game: Optional[str] = Field(
+        None,
+        description=(
+            "Only APIs documented for this game type (e.g. forever, standard); "
+            "APIs without game data are kept"
+        ),
+    )
     limit: int = Field(20, ge=1, description="Max results to return")
 
 
@@ -67,6 +74,13 @@ class APIListInput(BaseModel):
         None, description="Namespace to list (e.g., C_Spell)"
     )
     category: Optional[str] = Field(None, description="Category to list")
+    game: Optional[str] = Field(
+        None,
+        description=(
+            "Only APIs documented for this game type (e.g. forever, standard); "
+            "APIs without game data are kept"
+        ),
+    )
     limit: int = Field(50, ge=1, description="Max results")
 
 
@@ -205,6 +219,19 @@ def load_all_apis() -> Dict[str, Dict[str, Any]]:
 
         _APIS_CACHE.update(path=str(path), signature=signature, apis=all_apis)
         return all_apis
+
+
+def api_games(api: Dict[str, Any]) -> List[str]:
+    """Game types that document an API; empty when the APIDefs carry no game data."""
+    games = api.get("games")
+    return [g for g in games if isinstance(g, str)] if isinstance(games, list) else []
+
+
+def matches_game(api: Dict[str, Any], game: Optional[str]) -> bool:
+    if not game:
+        return True
+    games = api_games(api)
+    return not games or game.lower() in games
 
 
 def format_signature(api: Dict[str, Any]) -> str:
@@ -351,6 +378,8 @@ def register_commands(server):
                     ns = key.split(".")[0] if "." in key else key
                     if ns.lower() != input.namespace.lower():
                         continue
+                if not matches_game(api, input.game):
+                    continue
 
                 matches.append(
                     {
@@ -359,6 +388,7 @@ def register_commands(server):
                         "category": api.get("category"),
                         "protected": api.get("protected", False),
                         "midnightImpact": api.get("midnightImpact"),
+                        "games": api_games(api),
                     }
                 )
 
@@ -443,6 +473,9 @@ def register_commands(server):
                     continue
                 filter_desc = f"category:{input.category}"
 
+            if not matches_game(api, input.game):
+                continue
+
             matches.append(
                 {
                     "key": key,
@@ -450,8 +483,11 @@ def register_commands(server):
                     "signature": format_signature(api),
                     "category": api.get("category"),
                     "protected": api.get("protected", False),
+                    "games": api_games(api),
                 }
             )
+        if input.game:
+            filter_desc += f" game:{input.game}"
 
         matches.sort(key=lambda x: x["key"])
         total = len(matches)

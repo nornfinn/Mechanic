@@ -3,6 +3,11 @@
 Usage::
 
     python -m mechanic.deprecations_builder <wow-ui-source-dir> [output.json]
+        [--compare [game=]<other-source-dir>] ...
+
+With ``--compare`` the sources are merged and every sourced entry lists the
+game types (``standard``, ``forever``, ...) whose UI ships its shim; the game
+type is read from each source's ``version.txt`` unless given as ``game=path``.
 
 Sources (read-only):
 
@@ -24,9 +29,10 @@ import subprocess
 import sys
 from datetime import date
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from .resources import resource_path
+from .toc_flavors import GAME_SUFFIXES, game_for_version
 
 _NAME = r"[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*"
 _ALIAS = re.compile(rf"^\t?({_NAME})\s*=\s*({_NAME})\s*;?\s*(?:--.*)?$")
@@ -286,13 +292,84 @@ def render(database: dict) -> str:
     return f'{head},\n  "apis": [\n{rows}\n  ]\n}}\n'
 
 
+def build_game_database(sources: List[Tuple[str, Path, Optional[str]]]) -> dict:
+    """Merge per-game databases; each sourced entry lists the games shipping its shim.
+
+    ``sources`` is ``[(game, source_dir, commit), ...]``; the first is primary
+    and supplies the header. Curated entries carry no ``games`` (they apply to
+    every client).
+    """
+    merged: Optional[dict] = None
+    games: Dict[str, Optional[str]] = {}
+    by_old: Dict[str, dict] = {}
+    for game, source_dir, commit in sources:
+        database = build_database(source_dir, commit)
+        games[game] = database["source"]["ui_version"]
+        if merged is None:
+            merged = database
+        for entry in database["apis"]:
+            if entry.get("origin") == "curated":
+                by_old.setdefault(entry["old"], entry)
+                continue
+            existing = by_old.get(entry["old"])
+            if existing is None or existing.get("origin") == "curated":
+                by_old[entry["old"]] = dict(entry, games=[game])
+            elif game not in existing.setdefault("games", []):
+                existing["games"].append(game)
+    assert merged is not None
+    merged["games"] = games
+    merged["apis"] = sorted(by_old.values(), key=lambda e: e["old"])
+    merged["source"]["from_source"] = sum(
+        1 for e in merged["apis"] if e.get("origin") != "curated"
+    )
+    merged["source"]["curated"] = len(merged["apis"]) - merged["source"]["from_source"]
+    return merged
+
+
+def _parse_args(argv: List[str]) -> Tuple[List[str], List[str]]:
+    positional, compare = [], []
+    items = iter(argv)
+    for item in items:
+        if item == "--compare":
+            compare.append(next(items, ""))
+        else:
+            positional.append(item)
+    return positional, [c for c in compare if c]
+
+
+def _game_source(spec: str) -> Tuple[Optional[str], Path]:
+    name, sep, path = spec.partition("=")
+    if sep and name.strip().lower() in GAME_SUFFIXES:
+        return name.strip().lower(), Path(path.strip())
+    return None, Path(spec)
+
+
 def main(argv: List[str]) -> int:
-    if not argv:
+    positional, compare = _parse_args(argv)
+    if not positional:
         print(__doc__)
         return 2
-    source = Path(argv[0])
-    target = Path(argv[1]) if len(argv) > 1 else resource_path("deprecated_apis.json")
-    database = build_database(source, _git_commit(source))
+    source = Path(positional[0])
+    target = (
+        Path(positional[1])
+        if len(positional) > 1
+        else resource_path("deprecated_apis.json")
+    )
+    if compare:
+        specs = [(None, source)] + [_game_source(c) for c in compare]
+        sources = []
+        for game, path in specs:
+            game = game or game_for_version(_source_version(path) or "")
+            if not game:
+                print(
+                    f"Cannot tell which game {path} is for; use --compare game=path",
+                    file=sys.stderr,
+                )
+                return 2
+            sources.append((game, path, _git_commit(path)))
+        database = build_game_database(sources)
+    else:
+        database = build_database(source, _git_commit(source))
     if not database["source"]["from_source"]:
         print(f"No deprecated API shims found under {source}", file=sys.stderr)
         return 1

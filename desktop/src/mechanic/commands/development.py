@@ -437,6 +437,7 @@ def load_deprecated_apis() -> Tuple[Dict[str, Dict[str, str]], str, Optional[str
                 "category": entry.get("category", "general"),
                 "since": entry.get("since", ""),
                 "notes": entry.get("notes", ""),
+                "games": [g for g in entry.get("games") or [] if isinstance(g, str)],
             }
         if apis:
             note = None
@@ -497,14 +498,21 @@ def scan_addon_deprecations(
     apis: Dict[str, Dict[str, str]],
     category: Optional[str],
     min_severity: str,
+    game: Optional[str] = None,
 ) -> Tuple[List[dict], int]:
-    """Scan non-library Lua files (blocking). Returns ``(issues, files_scanned)``."""
+    """Scan non-library Lua files (blocking). Returns ``(issues, files_scanned)``.
+
+    With ``game``, entries tagged for other game types only are skipped;
+    untagged (curated or single-source) entries always apply.
+    """
     min_level = _SEVERITY_LEVELS.get(min_severity, 1)
+    wanted_game = game.lower() if game else None
     active = {
         name: info
         for name, info in apis.items()
         if (not category or info.get("category") == category)
         and _SEVERITY_LEVELS.get(info.get("severity", "warning"), 1) >= min_level
+        and (not wanted_game or not info.get("games") or wanted_game in info["games"])
     }
     pattern = compile_deprecation_pattern(list(active))
     lua_files = [
@@ -531,6 +539,7 @@ def scan_addon_deprecations(
                     "category": info.get("category", "general"),
                     "since": info.get("since", ""),
                     "notes": info.get("notes", ""),
+                    "games": info.get("games", []),
                 }
             )
     return issues, len(lua_files)
@@ -1006,6 +1015,13 @@ def register_commands(server):
         min_severity: str = Field(
             "warning", description="Minimum severity: info, warning, or error"
         )
+        game: Optional[str] = Field(
+            None,
+            description=(
+                "Only deprecations shipped by this game type's UI (e.g. forever, "
+                "standard) when the database is game-tagged"
+            ),
+        )
 
     class DeprecationIssue(BaseModel):
         file: str
@@ -1016,6 +1032,9 @@ def register_commands(server):
         category: str = "general"
         since: str = ""
         notes: str = ""
+        games: List[str] = Field(
+            [], description="Game types whose UI ships this deprecation shim"
+        )
 
     class DeprecationResult(BaseModel):
         addon: str
@@ -1046,6 +1065,7 @@ def register_commands(server):
             apis,
             input.category,
             input.min_severity,
+            input.game,
         )
 
         by_category: Dict[str, int] = {}
