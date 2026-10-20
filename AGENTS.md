@@ -19,6 +19,7 @@ If Mechanic MCP is unavailable, state that limitation and use source inspection 
 |------|-------------|
 | `diagnostic.targets` | Discover client/account/character/profile identities |
 | `diagnostic.taint` | Read the client's Logs/taint.log grouped by the addon blamed (enable with `/console taintLog 1`) |
+| `screenshot.queue` / `screenshot.results` | Queue in-game screenshots for the next reload (optional setup/teardown Lua per shot); read their status and image paths |
 | `addon.output` | Get errors, tests, console logs (after the user confirms a reload) |
 | `lua.queue` / `api.queue` / `lua.results` | Queue code or API tests for the next load; read the results |
 | `addon.test`, `sandbox.test` | Busted tests / offline Core tests in the restricted sandbox |
@@ -158,11 +159,12 @@ For registered input/output schemas and mutation metadata, call `commands.list`.
 
 ### Command Categories (Summary)
 
-61 commands are registered. `pytest` checks that every one is mentioned here (by name or as `group.*`).
+63 commands are registered. `pytest` checks that every one is mentioned here (by name or as `group.*`).
 
 | Category | Commands | File |
 |----------|----------|------|
 | Diagnostics | `diagnostic.targets`, `diagnostic.metrics`, `diagnostic.taint`, `commands.list` | `targets.py`, `diagnostics.py`, `taint.py`, `catalog.py` |
+| Screenshots | `screenshot.queue`, `screenshot.results` | `screenshot.py` |
 | Core | `sv.parse`, `sv.discover`, `dashboard.metrics`, `server.shutdown` | `core.py` |
 | Development | `addon.validate`, `addon.lint`, `addon.format`, `addon.test`, `addon.deprecations` | `development.py` |
 | Analysis | `addon.security`, `addon.complexity`, `addon.deadcode`, `docs.stale` | `security.py`, `complexity.py`, `deadcode.py`, `staledocs.py` |

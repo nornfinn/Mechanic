@@ -9,6 +9,7 @@ TOC version is not bumped yet (1.4.6); these changes ship with the next release.
 - A malformed (non-table) queue `target` now fails closed: queued Lua/API code runs only when the target character and profile match.
 - Queue ownership is handed to the main addon once it loads (the bootstrap defers queues that need the API definitions).
 - The addon version fallback is `unknown` instead of a stale hard-coded number.
+- Run `MECHANIC_SCREENSHOT_QUEUE` (written by `screenshot.queue`) after `PLAYER_ENTERING_WORLD`: per shot, optional setup Lua, a delay, `Screenshot()`, then optional teardown; results go to `screenshotResults`. The queue is dropped for a non-matching target like the other queues.
 - Record `ADDON_ACTION_BLOCKED` and `ADDON_ACTION_FORBIDDEN` (addon, function, combat state, time, repeat count) in `blockedActions`, independent of !BugGrabber. The last 50 are kept per profile; `Mechanic:GetBlockedActions()` returns the current session's, and `addon.output` reports them.
 
 ## [1.4.6] - 2026-09-23

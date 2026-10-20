@@ -5,7 +5,7 @@
      Source: the command registry (the data `commands.list` returns).
      Guard: desktop/tests/test_agent_docs.py fails when this file is stale. -->
 
-61 registered commands: 34 read-only, 27 mutating. The registry uses dotted
+63 registered commands: 35 read-only, 28 mutating. The registry uses dotted
 names (`addon.output`); the MCP adapter exposes the same commands with dashes
 (`addon-output`). `fencore-*` commands are registered with dashes already. Protocol for
 `target`, reload and previews: see [using-mechanic](../SKILL.md).
@@ -76,6 +76,8 @@ profile}` (all strings or null); take its values from `diagnostic.targets`.
 | `sandbox.generate` | yes | none | Generate WoW API stubs from APIDefs for sandbox testing. A namespace is regenerated in place; existing stubs are kept unless force is set or the APIDefs are newer. |
 | `sandbox.status` | no | none | Get status of generated WoW API stubs |
 | `sandbox.test` | yes | `addon` | Run an addon's *_spec.lua tests (Core/ and Tests/) in the restricted sandbox with WoW API stubs and the bundled busted-style framework. filter limits tests by name; failures are listed first. |
+| `screenshot.queue` | yes | `shots` | Queue in-game screenshots for the next /reload: each shot runs optional setup Lua, waits, calls Screenshot() and runs teardown. Replaces queued Lua/API tests |
+| `screenshot.results` | no | none | Per-shot results of the last screenshot.queue run (after a /reload) matched to image files, plus the newest files in the client's Screenshots folder |
 | `server.shutdown` | yes | none | Gracefully shut down the Mechanic Desktop server |
 | `sv.discover` | no | none | Automatically discover SavedVariables paths for all WoW flavors |
 | `sv.parse` | no | `file_path` | Parse a WoW SavedVariables file and extract !Mechanic data |
@@ -767,6 +769,30 @@ Run an addon's *_spec.lua tests (Core/ and Tests/) in the restricted sandbox wit
 | `secrets` | boolean | no | `true` | Emulate secret values: issecretvalue/canaccessvalue, Sandbox.Secret, Sandbox.Mock (returns become secrets as the API's documentation says) and Sandbox.SetRestricted to simulate combat. Arithmetic, comparison, # and indexing on a secret raise errors as in tainted game code |
 
 Output fields: `addon`, `passed`, `total`, `passed_count`, `failed_count`, `tests`, `source_files`, `spec_files`, `duration_ms`
+
+### screenshot
+
+#### `screenshot.queue` (mutating)
+
+Queue in-game screenshots for the next /reload: each shot runs optional setup Lua, waits, calls Screenshot() and runs teardown. Replaces queued Lua/API tests
+
+| Input | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `target` | `target` object | no | null |  |
+| `shots` | array of object (Shot) | yes |  |  |
+
+Output fields: `target`, `queued`, `queue_file`, `message`
+
+#### `screenshot.results` (read-only)
+
+Per-shot results of the last screenshot.queue run (after a /reload) matched to image files, plus the newest files in the client's Screenshots folder
+
+| Input | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `target` | `target` object | no | null |  |
+| `recent` | integer | no | `5` | Also list this many newest screenshot files |
+
+Output fields: `target`, `screenshots_dir`, `requested_at`, `last_run`, `results`, `recent_files`
 
 ### server
 

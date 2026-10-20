@@ -417,6 +417,9 @@ def get_server():
         from . import taint
 
         taint.register_commands(server)
+        from . import screenshot
+
+        screenshot.register_commands(server)
         _load_external_modules(server, catalog)
         catalog.apply_mutation_audit(server)
         from ..telemetry import instrument_server

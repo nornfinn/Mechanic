@@ -23,6 +23,7 @@ TOOL_CATEGORIES = {
     # Core Operations
     "sv": "SavedVariables - Parse and discover WoW addon data files",
     "reload": "Reload - Trigger in-game reloads",
+    "screenshot": "Screenshots - Capture the in-game UI after a reload",
     "server": "Server - Control the Mechanic server",
     "dashboard": "Dashboard - Metrics and monitoring",
     # Development Tools
@@ -73,6 +74,7 @@ TOOL_ANNOTATIONS = {
     "dashboard.metrics": {"idempotent": True},
     "addon.validate": {"idempotent": True},
     "diagnostic.taint": {"idempotent": True},
+    "screenshot.results": {"idempotent": True},
     "addon.lint": {"idempotent": True},
     "addon.deprecations": {"idempotent": True},
     "addon.output": {"idempotent": True},
@@ -114,6 +116,8 @@ TOOL_TITLES = {
     "sv.discover": "Discover SV Paths",
     "addon.validate": "Validate Addon TOC",
     "diagnostic.taint": "Read Taint Log",
+    "screenshot.queue": "Queue In-Game Screenshots",
+    "screenshot.results": "Read Screenshot Results",
     "addon.lint": "Lint Addon Code",
     "addon.format": "Format Addon Code",
     "addon.test": "Run Addon Tests",
@@ -155,6 +159,8 @@ TOOL_INTENTS = {
     "sv.discover": "Use this first to find all available SavedVariables paths before parsing.",
     "addon.validate": "Use this to check if an addon's TOC file is valid before release.",
     "diagnostic.taint": "Use this after an 'action blocked' or 'interface action failed' report to find which addon and code path caused taint.",
+    "screenshot.queue": "Use this to see how a UI change looks in the real client: open a panel in setup, then read the image after the user reloads.",
+    "screenshot.results": "Use this after a reload that ran screenshot.queue to get the image file paths.",
     "addon.lint": "Use this to find code quality issues and potential bugs in addon Lua code.",
     "addon.format": "Use this to auto-format Lua code to match style guidelines.",
     "addon.test": "Use this to run unit tests for an addon.",
@@ -192,6 +198,8 @@ TOOL_EXAMPLES = {
     # Addon Development
     "addon.validate": '{"addon": "Weekly"}',
     "diagnostic.taint": '{"addon": "Weekly", "kind": "blocked"}',
+    "screenshot.queue": '{"shots": [{"label": "character", "setup": "ToggleCharacter(\\"PaperDollFrame\\")", "teardown": "HideUIPanel(CharacterFrame)"}]}',
+    "screenshot.results": "{}",
     "addon.lint": '{"addon": "Weekly"}',
     "addon.format": '{"addon": "Weekly", "check": true}',
     "addon.test": '{"addon": "Weekly"}',

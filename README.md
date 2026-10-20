@@ -17,7 +17,7 @@ Mechanic combines a WoW diagnostic hub, a local desktop dashboard, and a shared 
 |---|---|
 | In-game hub | Frame inspection, console logs, BugGrabber errors, addon tests, performance metrics, tools, and API testing |
 | Desktop dashboard | Saved diagnostic output, explicit client/account/character/profile selection, command forms generated from schemas, and raw JSON input |
-| Shared commands | 61 registered commands for diagnostics, addon development, libraries, localization, assets, API research, and releases |
+| Shared commands | 63 registered commands for diagnostics, addon development, libraries, localization, assets, API research, and releases |
 | Queue workflow | Queue Lua snippets or API tests, reload in game, then read the selected profile's saved results |
 | Offline testing | Python command tests and Lua sandbox tests (restricted Lua 5.1 environment with generated WoW API stubs) without a running WoW client |
 | Release and sync | Preview plans, preflight checks, mutation metadata, and partial-failure recovery guidance |

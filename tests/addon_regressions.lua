@@ -203,6 +203,47 @@ do
     InCombatLockdown, time = nil, nil
 end
 
+-- Screenshot queue: waits for the world, runs setup, shoots, records, runs teardown.
+do
+    local bootFrame, registered = newFrame(), {}
+    rawset(bootFrame, "RegisterEvent", function(_, event) registered[event] = true end)
+    rawset(bootFrame, "UnregisterEvent", function(_, event) registered[event] = nil end)
+    CreateFrame = function() return bootFrame end
+    MechanicDB, MECHANIC_LUA_QUEUE, MECHANIC_DIAGNOSTIC_TARGET = nil, nil, nil
+    local timers = {}
+    C_Timer = { After = function(_, fn) timers[#timers + 1] = fn end }
+    local function drain()
+        while #timers > 0 do table.remove(timers, 1)() end
+    end
+    local shots, failNext = 0, false
+    local onEvent
+    Screenshot = function()
+        shots = shots + 1
+        onEvent(bootFrame, failNext and "SCREENSHOT_FAILED" or "SCREENSHOT_SUCCEEDED")
+    end
+    MECHANIC_SCREENSHOT_QUEUE = {
+        { label = "character", setup = "OPENED = true", teardown = "OPENED = false", delay = 1 },
+        { label = "broken", setup = "error('nope')" },
+        { label = "last" },
+    }
+    local ns = {}
+    assert(loadfile("!Mechanic/Bootstrap.lua"))("!Mechanic", ns)
+    onEvent = bootFrame.scripts.OnEvent
+    onEvent(bootFrame, "ADDON_LOADED", "!Mechanic")
+    assert(MECHANIC_SCREENSHOT_QUEUE == nil and registered.PLAYER_ENTERING_WORLD, "queue waits for the world")
+    assert(shots == 0, "no shot before the world is loaded")
+    onEvent(bootFrame, "PLAYER_ENTERING_WORLD")
+    drain()
+    local saved = ns.rawDB.screenshotResults
+    assert(saved and #saved.results == 3, "every step is recorded")
+    assert(saved.results[1].status == "taken" and saved.results[1].takenAt, "first shot taken")
+    assert(OPENED == false, "teardown ran after the shot")
+    assert(saved.results[2].status == "setup_failed" and saved.results[2].error:find("nope"), "setup error kept")
+    assert(saved.results[3].status == "taken" and shots == 2, "failed setup skips its shot only")
+    assert(not registered.SCREENSHOT_SUCCEEDED, "screenshot events are released when done")
+    C_Timer, Screenshot, OPENED = nil, nil, nil
+end
+
 -- Utils: error-source detection, library listing, and the single reusable help dialog.
 local libStubTable = setmetatable({ minors = {}, IterateLibraries = function() return next, {} end }, {
     __call = function(_, name)

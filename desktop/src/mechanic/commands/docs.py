@@ -147,6 +147,7 @@ CATEGORY_BY_PREFIX = {
     "api": "API Reference",
     "sandbox": "Testing",
     "lua": "Testing",
+    "screenshot": "Testing",
     "perf": "Performance",
     "assets": "Assets",
     "research": "Research",

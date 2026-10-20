@@ -1,6 +1,6 @@
 # CLI Reference
 
-> Auto-generated from `mechanic-desktop` v0.5.0 on 2026-09-30
+> Auto-generated from `mechanic-desktop` v0.5.0 on 2026-10-20
 
 This document lists all available Mechanic CLI commands and their input parameters.
 Examples are invocation templates: replace placeholders and supply valid values for your addon. Empty arrays/objects and numeric samples illustrate JSON types, not every command's validation rules. For complete schemas and mutation metadata, use `mech --json call commands.list`.
@@ -12,6 +12,7 @@ Examples are invocation templates: replace placeholders and supply valid values 
 | `commands.list` | List command schemas and mutation metadata |
 | `dashboard.metrics` | Get the latest reload and test metrics from the local histor... |
 | `diagnostic.metrics` | Read bounded desktop overhead and optional explicitly select... |
+| `diagnostic.taint` | Read the client's Logs/taint.log (enable with /console taint... |
 | `diagnostic.targets` | List deterministic client/account/character/profile diagnost... |
 | `server.shutdown` | Gracefully shut down the Mechanic Desktop server |
 | `sv.discover` | Automatically discover SavedVariables paths for all WoW flav... |
@@ -57,6 +58,8 @@ Examples are invocation templates: replace placeholders and supply valid values 
 | `sandbox.generate` | Generate WoW API stubs from APIDefs for sandbox testing. A n... |
 | `sandbox.status` | Get status of generated WoW API stubs |
 | `sandbox.test` | Run an addon's *_spec.lua tests (Core/ and Tests/) in the re... |
+| `screenshot.queue` | Queue in-game screenshots for the next /reload: each shot ru... |
+| `screenshot.results` | Per-shot results of the last screenshot.queue run (after a /... |
 | `perf.baseline` | Record a performance baseline measurement for an addon |
 | `perf.compare` | Compare current performance against baseline and detect regr... |
 | `perf.list` | List all addons with performance baselines |
@@ -116,6 +119,28 @@ Read bounded desktop overhead and optional explicitly selected addon snapshot
 
 ```bash
 mech call diagnostic.metrics '{}'
+```
+
+---
+
+### `diagnostic.taint`
+
+Read the client's Logs/taint.log (enable with /console taintLog 1) and group blocked actions and tainted variables by the addon blamed
+
+**Parameters:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `target` | `object \| null` | No (default: `None`) | Diagnostic target; only its client folder is used |
+| `log_path` | `string \| null` | No (default: `None`) | Read this taint.log instead of <client>/Logs/taint.log |
+| `addon` | `string \| null` | No (default: `None`) | Only entries blamed on this addon (case-insensitive) |
+| `kind` | `string \| null` | No (default: `None`) | Only this kind: blocked, global, execution or other |
+| `limit` | `integer` | No (default: `50`) | Max entries to return |
+
+**Example:**
+
+```bash
+mech call diagnostic.taint '{}'
 ```
 
 ---
@@ -280,6 +305,7 @@ Scan a WoW addon's Lua files for deprecated API calls
 | `path` | `string \| null` | No (default: `None`) | Override path to addon folder |
 | `category` | `string \| null` | No (default: `None`) | Filter by category (e.g., spells, items, containers) |
 | `min_severity` | `string` | No (default: `'warning'`) | Minimum severity: info, warning, or error |
+| `game` | `string \| null` | No (default: `None`) | Only deprecations shipped by this game type's UI (e.g. forever, standard) when the database is game-tagged |
 
 **Example:**
 
@@ -777,6 +803,7 @@ List APIs by namespace or category
 |-------|------|----------|-------------|
 | `namespace` | `string \| null` | No (default: `None`) | Namespace to list (e.g., C_Spell) |
 | `category` | `string \| null` | No (default: `None`) | Category to list |
+| `game` | `string \| null` | No (default: `None`) | Only APIs documented for this game type (e.g. forever, standard); APIs without game data are kept |
 | `limit` | `integer` | No (default: `50`) | Max results |
 
 **Example:**
@@ -797,6 +824,8 @@ Parse Blizzard API documentation and generate api_database.json
 |-------|------|----------|-------------|
 | `source_path` | `string` | Yes | Path to wow-ui-source repository root |
 | `output_path` | `string \| null` | No (default: `None`) | Output path for api_database.json (defaults to data_dir) |
+| `game` | `string \| null` | No (default: `None`) | Game type of the source (standard, forever, mists, cata, wrath, tbc, vanilla); detected from version.txt when omitted |
+| `compare_sources` | `array` | No (default: `None`) | More source trees (wow-ui-source checkouts or extracts) whose APIs are merged in; each API is tagged with the game types that document it. Use 'game=path' to name the game type, or a bare path to detect it |
 
 **Example:**
 
@@ -838,6 +867,8 @@ Full refresh: parse Blizzard docs and regenerate all APIDefs in one step
 | `output_path` | `string \| null` | No (default: `None`) | APIDefs output folder (see api.generate) |
 | `database_path` | `string \| null` | No (default: `None`) | api_database.json location (defaults to data_dir) |
 | `allow_any_output_dir` | `boolean` | No (default: `False`) | Allow an output folder that is not named 'APIDefs' |
+| `game` | `string \| null` | No (default: `None`) | Game type of the source (standard, forever, mists, cata, wrath, tbc, vanilla); detected from version.txt when omitted |
+| `compare_sources` | `array` | No (default: `None`) | More source trees (wow-ui-source checkouts or extracts) whose APIs are merged in; each API is tagged with the game types that document it. Use 'game=path' to name the game type, or a bare path to detect it |
 
 **Example:**
 
@@ -858,6 +889,7 @@ Search WoW APIs by name pattern. Works offline (reads static definitions).
 | `query` | `string` | Yes | Search pattern (supports * wildcards) |
 | `category` | `string \| null` | No (default: `None`) | Filter by category |
 | `namespace` | `string \| null` | No (default: `None`) | Filter by namespace |
+| `game` | `string \| null` | No (default: `None`) | Only APIs documented for this game type (e.g. forever, standard); APIs without game data are kept |
 | `limit` | `integer` | No (default: `20`) | Max results to return |
 
 **Example:**
@@ -933,6 +965,8 @@ Execute Lua code in a restricted sandbox with WoW API stubs. User code sees only
 | `code` | `string` | Yes | Lua code to execute |
 | `addon` | `string \| null` | No (default: `None`) | Name of addon to load before execution (looks in _dev_ folder) |
 | `load_stubs` | `boolean` | No (default: `True`) | Whether to load WoW API stubs |
+| `game` | `string \| null` | No (default: `None`) | Game type to emulate (e.g. forever, standard): stubs for APIs that game does not document are removed, so calling them errors like in game |
+| `secrets` | `boolean` | No (default: `True`) | Emulate secret values: issecretvalue/canaccessvalue, Sandbox.Secret, Sandbox.Mock (returns become secrets as the API's documentation says) and Sandbox.SetRestricted to simulate combat. Arithmetic, comparison, # and indexing on a secret raise errors as in tainted game code |
 
 **Example:**
 
@@ -985,11 +1019,51 @@ Run an addon's *_spec.lua tests (Core/ and Tests/) in the restricted sandbox wit
 |-------|------|----------|-------------|
 | `addon` | `string` | Yes | Name of addon to test (looks in _dev_ folder) |
 | `filter` | `string \| null` | No (default: `None`) | Only run tests whose full name contains this text (case-insensitive) |
+| `game` | `string \| null` | No (default: `None`) | Game type to emulate (e.g. forever, standard): stubs for APIs that game does not document are removed, so calling them errors like in game |
+| `secrets` | `boolean` | No (default: `True`) | Emulate secret values: issecretvalue/canaccessvalue, Sandbox.Secret, Sandbox.Mock (returns become secrets as the API's documentation says) and Sandbox.SetRestricted to simulate combat. Arithmetic, comparison, # and indexing on a secret raise errors as in tainted game code |
 
 **Example:**
 
 ```bash
 mech call sandbox.test '{"addon": "<addon>"}'
+```
+
+---
+
+### `screenshot.queue`
+
+Queue in-game screenshots for the next /reload: each shot runs optional setup Lua, waits, calls Screenshot() and runs teardown. Replaces queued Lua/API tests
+
+**Parameters:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `target` | `object \| null` | No (default: `None`) |  |
+| `shots` | `array` | Yes |  |
+
+**Example:**
+
+```bash
+mech call screenshot.queue '{"shots": []}'
+```
+
+---
+
+### `screenshot.results`
+
+Per-shot results of the last screenshot.queue run (after a /reload) matched to image files, plus the newest files in the client's Screenshots folder
+
+**Parameters:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `target` | `object \| null` | No (default: `None`) |  |
+| `recent` | `integer` | No (default: `5`) | Also list this many newest screenshot files |
+
+**Example:**
+
+```bash
+mech call screenshot.results '{}'
 ```
 
 ---

@@ -153,6 +153,13 @@
         "required": false,
         "description": "Minimum severity: info, warning, or error",
         "default": "'warning'"
+      },
+      {
+        "name": "game",
+        "type": "string | null",
+        "required": false,
+        "description": "Only deprecations shipped by this game type's UI (e.g. forever, standard) when the database is game-tagged",
+        "default": "None"
       }
     ]
   },
@@ -424,6 +431,13 @@
         "default": "None"
       },
       {
+        "name": "game",
+        "type": "string | null",
+        "required": false,
+        "description": "Only APIs documented for this game type (e.g. forever, standard); APIs without game data are kept",
+        "default": "None"
+      },
+      {
         "name": "limit",
         "type": "integer",
         "required": false,
@@ -449,6 +463,20 @@
         "required": false,
         "description": "Output path for api_database.json (defaults to data_dir)",
         "default": "None"
+      },
+      {
+        "name": "game",
+        "type": "string | null",
+        "required": false,
+        "description": "Game type of the source (standard, forever, mists, cata, wrath, tbc, vanilla); detected from version.txt when omitted",
+        "default": "None"
+      },
+      {
+        "name": "compare_sources",
+        "type": "array",
+        "required": false,
+        "description": "More source trees (wow-ui-source checkouts or extracts) whose APIs are merged in; each API is tagged with the game types that document it. Use 'game=path' to name the game type, or a bare path to detect it",
+        "default": null
       }
     ]
   },
@@ -510,6 +538,20 @@
         "required": false,
         "description": "Allow an output folder that is not named 'APIDefs'",
         "default": "False"
+      },
+      {
+        "name": "game",
+        "type": "string | null",
+        "required": false,
+        "description": "Game type of the source (standard, forever, mists, cata, wrath, tbc, vanilla); detected from version.txt when omitted",
+        "default": "None"
+      },
+      {
+        "name": "compare_sources",
+        "type": "array",
+        "required": false,
+        "description": "More source trees (wow-ui-source checkouts or extracts) whose APIs are merged in; each API is tagged with the game types that document it. Use 'game=path' to name the game type, or a bare path to detect it",
+        "default": null
       }
     ]
   },
@@ -536,6 +578,13 @@
         "type": "string | null",
         "required": false,
         "description": "Filter by namespace",
+        "default": "None"
+      },
+      {
+        "name": "game",
+        "type": "string | null",
+        "required": false,
+        "description": "Only APIs documented for this game type (e.g. forever, standard); APIs without game data are kept",
         "default": "None"
       },
       {
@@ -693,6 +742,47 @@
         "required": false,
         "description": "Explicit target to include its last saved addon overhead snapshot",
         "default": "None"
+      }
+    ]
+  },
+  {
+    "name": "diagnostic.taint",
+    "description": "Read the client's Logs/taint.log (enable with /console taintLog 1) and group blocked actions and tainted variables by the addon blamed",
+    "parameters": [
+      {
+        "name": "target",
+        "type": "object | null",
+        "required": false,
+        "description": "Diagnostic target; only its client folder is used",
+        "default": "None"
+      },
+      {
+        "name": "log_path",
+        "type": "string | null",
+        "required": false,
+        "description": "Read this taint.log instead of <client>/Logs/taint.log",
+        "default": "None"
+      },
+      {
+        "name": "addon",
+        "type": "string | null",
+        "required": false,
+        "description": "Only entries blamed on this addon (case-insensitive)",
+        "default": "None"
+      },
+      {
+        "name": "kind",
+        "type": "string | null",
+        "required": false,
+        "description": "Only this kind: blocked, global, execution or other",
+        "default": "None"
+      },
+      {
+        "name": "limit",
+        "type": "integer",
+        "required": false,
+        "description": "Max entries to return",
+        "default": "50"
       }
     ]
   },
@@ -1255,6 +1345,20 @@
         "required": false,
         "description": "Whether to load WoW API stubs",
         "default": "True"
+      },
+      {
+        "name": "game",
+        "type": "string | null",
+        "required": false,
+        "description": "Game type to emulate (e.g. forever, standard): stubs for APIs that game does not document are removed, so calling them errors like in game",
+        "default": "None"
+      },
+      {
+        "name": "secrets",
+        "type": "boolean",
+        "required": false,
+        "description": "Emulate secret values: issecretvalue/canaccessvalue, Sandbox.Secret, Sandbox.Mock (returns become secrets as the API's documentation says) and Sandbox.SetRestricted to simulate combat. Arithmetic, comparison, # and indexing on a secret raise errors as in tainted game code",
+        "default": "True"
       }
     ]
   },
@@ -1300,6 +1404,60 @@
         "required": false,
         "description": "Only run tests whose full name contains this text (case-insensitive)",
         "default": "None"
+      },
+      {
+        "name": "game",
+        "type": "string | null",
+        "required": false,
+        "description": "Game type to emulate (e.g. forever, standard): stubs for APIs that game does not document are removed, so calling them errors like in game",
+        "default": "None"
+      },
+      {
+        "name": "secrets",
+        "type": "boolean",
+        "required": false,
+        "description": "Emulate secret values: issecretvalue/canaccessvalue, Sandbox.Secret, Sandbox.Mock (returns become secrets as the API's documentation says) and Sandbox.SetRestricted to simulate combat. Arithmetic, comparison, # and indexing on a secret raise errors as in tainted game code",
+        "default": "True"
+      }
+    ]
+  },
+  {
+    "name": "screenshot.queue",
+    "description": "Queue in-game screenshots for the next /reload: each shot runs optional setup Lua, waits, calls Screenshot() and runs teardown. Replaces queued Lua/API tests",
+    "parameters": [
+      {
+        "name": "target",
+        "type": "object | null",
+        "required": false,
+        "description": "",
+        "default": "None"
+      },
+      {
+        "name": "shots",
+        "type": "array",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ]
+  },
+  {
+    "name": "screenshot.results",
+    "description": "Per-shot results of the last screenshot.queue run (after a /reload) matched to image files, plus the newest files in the client's Screenshots folder",
+    "parameters": [
+      {
+        "name": "target",
+        "type": "object | null",
+        "required": false,
+        "description": "",
+        "default": "None"
+      },
+      {
+        "name": "recent",
+        "type": "integer",
+        "required": false,
+        "description": "Also list this many newest screenshot files",
+        "default": "5"
       }
     ]
   },

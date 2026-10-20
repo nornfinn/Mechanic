@@ -16,7 +16,7 @@ addon.deadcode addon.complexity addon.security docs.stale locale.validate locale
 atlas.search libs.check env.status tools.status addon.output api.search api.info api.list
 api.stats lua.results sandbox.status assets.list fencore-catalog fencore-search fencore-info
 commands.list diagnostic.targets diagnostic.metrics perf.compare perf.report perf.list
-diagnostic.taint
+diagnostic.taint screenshot.results
 """.split()
 )
 MUTATING = frozenset(
@@ -25,6 +25,7 @@ server.shutdown addon.format addon.test version.bump changelog.add git.commit gi
 release.all addon.create addon.sync libs.init libs.sync system.pick_file atlas.scan
 docs.generate api.queue lua.queue sandbox.generate sandbox.exec sandbox.test research.query
 assets.sync perf.baseline api.populate api.generate api.refresh api.download
+screenshot.queue
 """.split()
 )
 # Code execution (sandbox.exec/test) may write arbitrary files, so it is advertised as
